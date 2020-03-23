@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import 'config';
+@import 'mixins';
+
+
+.tabs-bar {
+    background: $top-bar-color;
+
+    &__link {
+        padding: 16px 16px 12px 16px;
+        color: $top-bar-icon-color;
+        border-bottom: 4px solid transparent;
+
+        &.active {
+            border-bottom: 4px solid $tab-indicator-color;
+            color: $tab-indicator-color;
+        }
+
+        .fa { font-size: 20px }
+    }
+
+    &__wrapper { @include shadow-4dp }
+}
+
+
+#tabs-bar__portal { overflow-y: hidden }
+
+.floating-action-button {
+    @include shadow-6dp;
+    background: $floating-action-button-color;
+    color: $floating-action-button-icon-color;
+    font-size: 24px;
+
+    &:hover { background: $floating-action-button-hover-color }
+
+    &:active,
+    &:focus { background: $floating-action-button-active-color }
+}
+
+.columns-area--mobile {
+    
+    .column { margin: 0 !important }
+
+    .search__input { padding: 16px 38px }
+}

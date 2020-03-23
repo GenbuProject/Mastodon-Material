@@ -1,0 +1,1937 @@
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.account {
+  border-bottom: 1px solid #dadce0;
+}
+.account .account__display-name,
+.account .account__display-name strong {
+  color: #5f6368;
+}
+.account__avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.account__avatar-overlay-base {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-size: 44px;
+}
+.account__header__bar {
+  background: #ffffff;
+  padding: 8px;
+  border-bottom: 1px solid #dadce0;
+}
+.account__header__bar .avatar .account__avatar {
+  border: none;
+}
+.account__header__tabs {
+  padding: 8px;
+}
+.account__header__tabs__name {
+  padding: 8px;
+}
+.account__header__tabs__name h1 {
+  color: #000000;
+}
+.account__header__tabs__name h1 small {
+  color: #5f6368;
+}
+.account__header__tabs__buttons .icon-button {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+.account__header__extra {
+  margin-top: 0;
+}
+.account__header__extra__links {
+  color: #5f6368;
+  padding: 10px 0;
+}
+.account__header__extra__links a {
+  color: #5f6368;
+  padding: 4px 12px;
+}
+.account__header__extra__links a strong {
+  color: #202124;
+}
+.account__header__bio {
+  margin: 0;
+}
+.account__header__bio .account__header__content {
+  color: #000000;
+  padding: 8px;
+}
+.account__header__bio .account__header__fields {
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+}
+.account__header__bio .account__header__fields .verified {
+  border: none;
+  background: #92cf94;
+}
+.account__header__bio .account__header__fields .verified a, .account__header__bio .account__header__fields .verified__mark {
+  color: #000000;
+}
+.account__header__bio .account__header__fields dl {
+  border-bottom: 1px solid #dadce0;
+}
+.account__header__bio .account__header__fields dl:first-child .verified {
+  border-radius: 0;
+}
+.account__header__bio .account__header__fields dl:last-child {
+  border-bottom: 0;
+}
+.account__header__bio .account__header__fields dt {
+  color: #000000;
+  background: #f0f0f0;
+}
+.account__header__bio .account__header__fields dd {
+  color: #000000;
+}
+.account__section-headline {
+  background: #ffffff;
+  border-bottom: 1px solid #dadce0;
+}
+.account__section-headline a {
+  padding: 16px 0;
+  color: #5f6368;
+}
+.account__section-headline a.active {
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff;
+}
+.account__section-headline a.active:before, .account__section-headline a.active:after {
+  border: none;
+}
+.account__section-headline a.active:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+.account__section-headline a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.account-role {
+  padding: 4px 8px;
+  border-radius: 17px;
+  color: #202124;
+  background-color: #e0e0e0;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+body {
+  background: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aeaeae;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #999999;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: transparent !important;
+}
+
+html {
+  scrollbar-color: #c7c7c7 transparent;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.icon-button {
+  color: #757575;
+  border-radius: 50%;
+}
+.icon-button.active {
+  color: #4285f4;
+}
+.icon-button.active:hover {
+  color: #72a4f7;
+}
+.icon-button.disabled {
+  color: #9e9e9e;
+}
+.icon-button.inverted {
+  color: #757575;
+}
+.icon-button.inverted:hover {
+  color: #292929;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.icon-button:hover {
+  color: #292929;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.icon-button:active, .icon-button:focus {
+  background-color: transparent;
+}
+
+.text-icon-button {
+  color: #757575;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.text-icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #292929;
+}
+
+.button,
+.button:active,
+.button:focus {
+  background-color: #4285f4;
+  border-radius: 2px;
+}
+
+.button:hover {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #72a4f7;
+}
+
+.button.logo-button {
+  background: #4285f4;
+  margin: 2px;
+}
+.button.logo-button:hover {
+  background: #72a4f7;
+}
+.button.logo-button .button--destructive:hover {
+  background: #72a4f7;
+}
+
+.button.button--block {
+  margin: 8px 0;
+}
+
+.button.confirmation-modal__cancel-button {
+  box-shadow: none;
+  background-color: transparent;
+  margin: 0 8px;
+  color: #4285f4;
+}
+.button.confirmation-modal__cancel-button:hover {
+  background: rgba(66, 133, 244, 0.2);
+}
+.button.confirmation-modal__cancel-button:focus {
+  background: rgba(66, 133, 244, 0.3);
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.column {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  padding: 0;
+  margin: 10px 8px;
+  border-radius: 2px;
+}
+.column > .scrollable {
+  background: #ffffff;
+}
+.column:last-child {
+  box-shadow: none;
+}
+
+.column-header {
+  background: #2196f3;
+  border-radius: 0;
+}
+.column-header > button {
+  padding: 16px 0 16px 16px;
+  color: #ffffff;
+}
+.column-header.active .column-header__icon {
+  color: #4285f4;
+  text-shadow: none;
+}
+.column-header__icon {
+  margin-right: 16px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.column-header__buttons {
+  height: 56px;
+}
+.column-header__button {
+  background: #2196f3;
+  color: #ffffff;
+  margin: 8px 10px;
+  padding: 10px 12px;
+  border-radius: 50%;
+}
+.column-header__button.active {
+  color: #d1d1d1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.column-header__button.active:hover {
+  color: #e6e6e6;
+  background: rgba(0, 0, 0, 0.1);
+}
+.column-header__button:hover {
+  color: #e6e6e6;
+  background: rgba(0, 0, 0, 0.1);
+}
+.column-header__setting-btn {
+  color: #757575;
+}
+.column-header__setting-btn:hover {
+  color: #292929;
+  background: rgba(0, 0, 0, 0.1);
+}
+.column-header__setting-arrows {
+  font-size: 16px;
+}
+.column-header__wrapper {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+}
+.column-header__wrapper .announcements {
+  border-top: 1px solid #dadce0;
+}
+.column-header__wrapper.active {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.column-header__wrapper.active:before {
+  background: transparent;
+}
+.column-header__collapsible {
+  color: #202124;
+  border-top: 1px solid #dadce0;
+}
+.column-header__collapsible-inner {
+  background: #ffffff;
+  padding: 16px;
+}
+.column-header__collapsible.collapsed {
+  border-top: none;
+}
+.column-header__back-button {
+  background: #2196f3;
+  color: #757575;
+  padding: 8px;
+  margin: auto 0;
+  border-radius: 50%;
+}
+.column-header__back-button span {
+  display: none;
+}
+
+.column-subheading {
+  color: #4285f4;
+  background: #fafafa;
+  padding: 12px 16px;
+  border-top: 1px solid #dadce0;
+}
+
+.column-link {
+  color: #202124;
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 0;
+}
+.column-link:hover {
+  background: #f0f0f0;
+}
+.column-link:active, .column-link:focus {
+  background: #e6e6e6;
+}
+.column-link__icon {
+  margin-right: 32px;
+  font-size: 20px;
+}
+.column-link--transparent.active {
+  color: #202124;
+  background: #e6e6e6;
+}
+.column-link--transparent.active:hover {
+  background: #d6d6d6;
+}
+.column-link--transparent.active .fa {
+  color: #757575;
+}
+.column-link--transparent:hover {
+  color: #202124;
+}
+.column-link--transparent:hover .fa {
+  color: #757575;
+}
+.column-link .fa {
+  color: #757575;
+}
+
+.column-settings__section {
+  color: #4285f4;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.column-back-button {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  background: #2196f3;
+  color: #757575;
+  padding: 16px;
+}
+
+.column-inline-form {
+  padding: 16px 0 16px 16px;
+  background: #ffffff;
+}
+.column-inline-form .icon-button {
+  margin: 0 16px;
+}
+
+.setting-text {
+  color: #000000;
+  background: #ebebeb;
+  border-radius: 0;
+}
+.setting-text::placeholder {
+  color: #c0c0c0;
+}
+.setting-text:focus {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background: #fafafa;
+}
+
+.empty-column-indicator {
+  color: #5f6368;
+  background: #ffffff;
+  font-size: 16px;
+}
+
+.conversation {
+  border-bottom: 1px solid #dadce0;
+  padding: 12px;
+  background: #f0f0f0;
+}
+.conversation--unread {
+  background: #ffffff;
+}
+.conversation--unread .conversation__content__relative-time {
+  color: #5e5e5e;
+}
+.conversation__unread {
+  background: #4285f4;
+}
+.conversation__avatar {
+  padding: 0 16px 0 0;
+}
+.conversation__content {
+  padding: 0;
+}
+.conversation__content__relative-time {
+  font-size: 14px;
+  color: #5e5e5e;
+}
+.conversation__content__names, .conversation__content__names a {
+  color: #000000;
+  font-size: 16px;
+}
+
+.muted .status__content {
+  color: #000000;
+}
+.muted .status__content p {
+  color: #000000;
+}
+.muted .status__content a {
+  color: #5f6368;
+}
+.muted .status__display-name strong {
+  color: #000000;
+}
+
+.load-gap {
+  border-bottom: 1px solid #dadce0;
+}
+
+.load-more {
+  color: #757575;
+  padding: 16px;
+}
+.load-more:hover {
+  background: #f0f0f0;
+}
+
+.getting-started {
+  background: #fafafa;
+  color: #202124;
+}
+.getting-started__wrapper {
+  background: #fafafa;
+  height: auto !important;
+  border-bottom: 1px solid #dadce0;
+}
+.getting-started__footer {
+  padding: 16px;
+}
+.getting-started__footer p {
+  color: #5f6368;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+.getting-started__footer a {
+  color: #202124;
+}
+.getting-started__footer p a {
+  color: #4285f4;
+}
+
+.setting-toggle__label {
+  color: #202124;
+  margin: 8px 8px 8px 14px;
+}
+
+.announcements {
+  background: #ffffff;
+  padding: 0;
+}
+.announcements__container {
+  color: #000000;
+}
+.announcements__item {
+  padding: 16px;
+  font-size: 16px;
+}
+.announcements__item__unread {
+  background: #4285f4;
+}
+
+.reactions-bar .emoji-button {
+  color: #757575;
+  font-size: 20px;
+}
+.reactions-bar .emoji-button:hover {
+  color: #292929;
+}
+.reactions-bar .emoji-button:active {
+  color: #4285f4;
+}
+.reactions-bar__item {
+  background: #e0e0e0;
+  border-radius: 17px;
+  margin: 2px 4px;
+}
+.reactions-bar__item.active {
+  background-color: #c1c1c1;
+}
+.reactions-bar__item.active .reactions-bar__item__count {
+  color: #202124;
+}
+.reactions-bar__item__emoji {
+  width: 24px;
+  height: 24px;
+  margin: 4px 0 4px 2px;
+}
+.reactions-bar__item__count {
+  font-size: 16px;
+  margin: 0 8px;
+  color: #5f6368;
+}
+.reactions-bar__item:hover {
+  background: #d1d1d1;
+}
+
+.notification__filter-bar {
+  background: #2196f3;
+  border-bottom: 1px solid #dadce0;
+  z-index: 1;
+}
+.notification__filter-bar button {
+  background: #2196f3;
+  color: #ffffff;
+  font-size: 16px;
+}
+.notification__filter-bar button span {
+  font-size: 14px;
+}
+.notification__filter-bar button.active {
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff;
+}
+.notification__filter-bar button.active:before, .notification__filter-bar button.active:after {
+  border: none;
+}
+.notification__filter-bar button.active:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+.notification__filter-bar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.notification__message {
+  color: #5f6368;
+  margin: 0 16px 0 70px;
+  font-size: 16px;
+}
+.notification__display-name:hover {
+  color: inherit;
+}
+
+.notification-favourite .status.status-direct {
+  background: transparent;
+}
+.notification-favourite .status.status-direct .icon-button.disabled {
+  color: #9e9e9e;
+}
+
+.notification.notification-favourite.focusable,
+.notification.notification-follow.focusable {
+  background: #f0f0f0;
+}
+
+.relationship-tag {
+  color: #202124;
+  background-color: #e0e0e0;
+  font-size: 12px;
+  border-radius: 17px;
+  padding: 4px 8px;
+  opacity: 1;
+}
+
+.react-swipeable-view-container {
+  height: auto;
+}
+
+.tabs-bar__wrapper {
+  background: transparent;
+}
+
+.attachment-list__list a {
+  color: #5f6368;
+}
+
+.focusable {
+  background: transparent !important;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.drawer__header {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  background: #2196f3;
+  border-radius: 2px;
+  justify-content: space-around;
+}
+.drawer__header a {
+  transition: none;
+}
+.drawer__header a:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.drawer__tab {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 10px auto 10px;
+  padding: 8px;
+  flex: none;
+  height: 20px;
+  width: 20px;
+  border-bottom: none;
+  text-align: justify;
+}
+.drawer__tab:hover {
+  color: #e6e6e6;
+}
+.drawer__pager {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+.drawer__inner {
+  background: #ffffff;
+}
+.drawer__inner.darker {
+  background: #ffffff;
+}
+.drawer__inner__mastodon {
+  background: #ffffff;
+}
+
+.search__input {
+  background: #ebebeb;
+  color: #c0c0c0;
+  border-radius: 2px;
+  padding: 12px 12px 12px 40px;
+}
+.search__input:focus {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #fafafa;
+  color: #000000;
+}
+.search__input::placeholder {
+  color: #c0c0c0;
+}
+.search__icon .fa {
+  color: #757575;
+  font-size: 20px;
+  top: 12px;
+  right: unset;
+  left: 12px;
+  height: 6px;
+  transition: none;
+}
+.search__icon .fa.active {
+  opacity: 1;
+}
+.search__icon .fa-search {
+  transform: none;
+  opacity: 1;
+}
+.search__icon .fa-times-circle.active {
+  right: 10px;
+  left: unset;
+  transform: none;
+}
+
+.search-popout {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #fafafa;
+  border-radius: 0px 0;
+  border-top: 1px solid #dadce0;
+  margin-top: 0;
+  color: #c0c0c0;
+}
+.search-popout h4 {
+  color: #5f6368;
+}
+.search-popout em {
+  color: #000000;
+}
+
+.search-results__header {
+  color: #5f6368;
+  background-color: #ffffff;
+  padding: 16px;
+}
+.search-results__header .fa {
+  margin-right: 8px;
+}
+.search-results__section h5 {
+  background: #ffffff;
+  border-bottom: 1px solid #dadce0;
+  padding: 16px;
+  color: #4285f4;
+}
+.search-results__section h5 .fa {
+  margin-right: 8px;
+}
+
+.navigation-bar {
+  color: #5f6368;
+  padding: 14px;
+}
+.navigation-bar strong {
+  color: #202124;
+}
+
+.navigation-panel hr {
+  border-top: 1px solid #dadce0;
+  margin: 8px 0;
+}
+
+.dropdown-menu {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  padding: 8px 0;
+  border-radius: 2px;
+}
+.dropdown-menu__arrow {
+  visibility: hidden;
+}
+.dropdown-menu__item a {
+  font-size: 14px;
+  padding: 9px 16px;
+  background: #ffffff;
+  color: #202124;
+}
+.dropdown-menu__item a:hover, .dropdown-menu__item a:active {
+  background: #f0f0f0;
+  color: #202124;
+}
+.dropdown-menu__separator {
+  margin: 8px 0;
+  border-bottom: 1px solid #dadce0;
+}
+
+.compose-form .autosuggest-textarea__textarea {
+  background: #ffffff;
+  color: #202124;
+}
+.compose-form .autosuggest-textarea__textarea::placeholder {
+  color: #c0c0c0;
+}
+.compose-form .spoiler-input__input {
+  color: #202124;
+  background: #ffffff;
+}
+.compose-form .spoiler-input__input::placeholder {
+  color: #c0c0c0;
+}
+.compose-form .compose-form__warning {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  color: #5f6368;
+  background: #ffffff;
+  padding: 16px;
+}
+.compose-form .compose-form__warning a {
+  color: #4285f4;
+}
+.compose-form .compose-form__modifiers {
+  background: #ffffff;
+  color: #c0c0c0;
+}
+.compose-form .compose-form__buttons-wrapper {
+  background: #ffffff;
+  color: #c0c0c0;
+}
+.compose-form .compose-form__poll-wrapper {
+  border-top: 1px solid #dadce0;
+}
+.compose-form .compose-form__poll-wrapper ul {
+  padding: 12px;
+}
+.compose-form .compose-form__poll-wrapper select {
+  color: #202124;
+  background-color: #fafafa;
+  border: 0;
+}
+.compose-form .compose-form__poll-wrapper select:focus {
+  border-color: #878d9a;
+}
+.compose-form .compose-form__poll-wrapper .button.button-secondary {
+  box-shadow: none;
+  color: #4285f4;
+  border-color: #4285f4;
+}
+.compose-form .compose-form__poll-wrapper .button.button-secondary:hover {
+  background-color: #f0f5fe;
+}
+.compose-form .compose-form__poll-wrapper .button.button-secondary:active {
+  background-color: #d3e2fc;
+}
+.compose-form .compose-form__poll-wrapper .button.button-secondary:focus {
+  background-color: #4285f4;
+}
+.compose-form .compose-form__utilBtns {
+  padding-top: 0;
+}
+.compose-form .compose-form__publish .compose-form__publish-button-wrapper {
+  box-shadow: none;
+}
+
+.poll__input {
+  border: 2px solid #757575;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+.poll__text input[type=text] {
+  color: #202124;
+  background: #fafafa;
+  border: 1px solid #dadce0;
+  padding: 8px 12px;
+}
+.poll__text input[type=text]:focus {
+  border-color: #878d9a;
+}
+
+.privacy-dropdown.active .privacy-dropdown__value.active {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-shadow: none;
+}
+.privacy-dropdown.active .privacy-dropdown__value.active .icon-button {
+  color: #4285f4;
+}
+.privacy-dropdown__dropdown {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  border-radius: 2px;
+}
+.privacy-dropdown__option {
+  color: #757575;
+  padding: 8px 16px;
+}
+.privacy-dropdown__option__icon {
+  font-size: 20px;
+  margin-right: 12px;
+}
+.privacy-dropdown__option__content {
+  color: #5f6368;
+}
+.privacy-dropdown__option__content strong {
+  color: #202124;
+}
+.privacy-dropdown__option.active {
+  background: #e6e6e6;
+  color: #292929;
+}
+.privacy-dropdown__option.active .privacy-dropdown__option__content {
+  color: #5f6368;
+}
+.privacy-dropdown__option.active .privacy-dropdown__option__content strong {
+  color: #202124;
+}
+.privacy-dropdown__option.active:hover {
+  background: #e6e6e6;
+}
+.privacy-dropdown__option.active:hover .privacy-dropdown__option__content {
+  color: #5f6368;
+}
+.privacy-dropdown__option.active:hover .privacy-dropdown__option__content strong {
+  color: #202124;
+}
+.privacy-dropdown__option:hover {
+  background: #f0f0f0;
+  color: #292929;
+}
+.privacy-dropdown__option:hover .privacy-dropdown__option__content {
+  color: #5f6368;
+}
+.privacy-dropdown__option:hover .privacy-dropdown__option__content strong {
+  color: #202124;
+}
+
+.character-counter {
+  color: #5f6368;
+}
+
+.reply-indicator {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  background: #ffffff;
+  padding: 16px;
+}
+.reply-indicator__header {
+  margin-bottom: 4px;
+}
+.reply-indicator__display-name {
+  color: #000000;
+  padding-right: 24px;
+}
+.reply-indicator__display-avatar {
+  margin-right: 8px;
+}
+.reply-indicator__content {
+  color: #000000;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.react-toggle {
+  width: 36px;
+  height: 16px;
+  border-radius: 15px;
+}
+.react-toggle-track {
+  background-color: #d1d1d1;
+  margin: 4px;
+  width: 36px;
+  height: 16px;
+}
+.react-toggle-track-check {
+  visibility: hidden;
+}
+.react-toggle-track-x {
+  visibility: hidden;
+}
+.react-toggle-thumb {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-color: #ffffff;
+}
+.react-toggle--checked .react-toggle-track {
+  background-color: #6da6f0;
+}
+.react-toggle--checked .react-toggle-thumb {
+  background-color: #1a73e8;
+  left: 22px;
+}
+.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #6da6f0 !important;
+}
+.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #d1d1d1;
+}
+
+.radio-button {
+  padding: 8px 0;
+}
+.radio-button__input {
+  border: 2px solid #dadce0;
+}
+.radio-button__input.checked {
+  border-color: #4285f4;
+  background: #4285f4;
+  padding: 3px;
+  background-clip: content-box;
+}
+
+.compose-form__sensitive-button .checkbox {
+  border: 2px solid #dadce0;
+  border-radius: 2px;
+}
+.compose-form__sensitive-button .checkbox.active {
+  border-color: #4285f4;
+  background: #4285f4;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.emoji-picker-dropdown__menu {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  border-radius: 2px;
+}
+.emoji-picker-dropdown__modifiers__menu {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  border-radius: 2px;
+}
+.emoji-picker-dropdown__modifiers__menu button {
+  padding: 8px;
+}
+
+.emoji-mart {
+  width: 388px !important;
+  font-size: 14px;
+  color: #202124;
+}
+.emoji-mart-bar {
+  border: 0 solid #dadce0;
+}
+.emoji-mart-bar:first-child {
+  background: #ffffff;
+}
+.emoji-mart-anchors {
+  color: #757575;
+  padding: 0;
+}
+.emoji-mart-anchor {
+  padding: 10px 4px;
+}
+.emoji-mart-anchor-selected {
+  color: #4285f4;
+}
+.emoji-mart-anchor-bar {
+  background-color: #ffffff;
+}
+.emoji-mart-anchor:hover {
+  color: #292929;
+}
+.emoji-mart-search {
+  background: #ffffff;
+}
+.emoji-mart-search input {
+  outline: none;
+  padding: 8px;
+  background: #ebebeb;
+  color: #202124;
+  border: 0;
+  border-radius: 0;
+}
+.emoji-mart-search input:focus {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #fafafa;
+}
+.emoji-mart-scroll {
+  padding: 0 8px 8px;
+  background: #ffffff;
+}
+.emoji-mart-category-label span {
+  padding: 4px 6px;
+  background: #ffffff;
+}
+.emoji-mart-emoji:hover:before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.emoji-mart-no-results {
+  color: #5f6368;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.fa.fa-users.column-link__icon.fa-fw,
+.fa.fa-globe.column-link__icon.fa-fw,
+.fa.fa-address-book.column-link__icon.fa-fw,
+.fa.fa-bullhorn.column-link__icon.fa-fw,
+.fa.fa-envelope.column-link__icon.fa-fw,
+.fa.fa-bookmark.column-link__icon.fa-fw,
+.fa.fa-star.column-link__icon.fa-fw,
+.fa.fa-list-ul.column-link__icon.fa-fw {
+  color: #757575;
+}
+
+.fa {
+  vertical-align: sub;
+}
+
+.fa.fa-times,
+.fa.fa-eraser {
+  vertical-align: middle;
+}
+
+.fa.fa-lock {
+  text-transform: none;
+}
+
+.fa-fw {
+  width: 16px;
+}
+
+.fa.fa-chevron-left.column-back-button__icon.fa-fw {
+  font-size: 20px;
+  margin-right: 16px;
+}
+
+.icon-with-badge__badge {
+  background: #4285f4;
+  border: none;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.fa.fa-bars, .fa.fa-navicon, .fa.fa-reorder, .fa.fa-globe, .fa.fa-cog, .fa.fa-cogs, .fa.fa-gears, .fa.fa-sign-out, .fa.fa-search, .fa.fa-times, .fa.fa-times-circle, .fa.fa-close, .fa.fa-remove, .fa.fa-chevron-down, .fa.fa-ellipsis-v, .fa.fa-paperclip, .fa.fa-tasks, .fa.fa-plus, .fa.fa-unlock, .fa.fa-lock, .fa.fa-envelope, .fa.fa-home, .fa.fa-bullhorn, .fa.fa-sliders, .fa.fa-chevron-left, .fa.fa-chevron-right, .fa.fa-reply, .fa.fa-reply-all, .fa.fa-star, .fa.fa-bookmark, .fa.fa-ellipsis-h, .fa.fa-bell, .fa.fa-eraser, .fa.fa-users, .fa.fa-file-text, .fa.fa-user-plus, .fa.fa-address-book, .fa.fa-address-book-o, .fa.fa-list, .fa.fa-list-ul, .fa.fa-eye, .fa.fa-eye-slash, .fa.fa-pencil, .fa.fa-trash {
+  font-family: "Material Icons";
+}
+
+.fa.fa-bars:before, .fa.fa-navicon:before, .fa.fa-reorder:before {
+  content: "menu";
+}
+.fa.fa-globe:before {
+  content: "public";
+}
+.fa.fa-cog:before, .fa.fa-cogs:before, .fa.fa-gears:before {
+  content: "settings";
+}
+.fa.fa-sign-out:before {
+  content: "exit_to_app";
+}
+.fa.fa-search:before {
+  content: "search";
+}
+.fa.fa-times:before, .fa.fa-times-circle:before, .fa.fa-close:before, .fa.fa-remove:before {
+  content: "close";
+}
+.fa.fa-chevron-down:before, .fa.fa-ellipsis-v:before {
+  content: "more_vert";
+}
+.fa.fa-paperclip:before {
+  content: "attach_file";
+}
+.fa.fa-tasks:before {
+  content: "poll";
+}
+.fa.fa-plus:before {
+  content: "add";
+}
+.fa.fa-unlock:before {
+  content: "lock_open";
+}
+.fa.fa-lock:before {
+  content: "lock";
+}
+.fa.fa-envelope:before {
+  content: "mail";
+}
+.fa.fa-home:before {
+  content: "home";
+}
+.fa.fa-bullhorn:before {
+  content: "announcement";
+}
+.fa.fa-sliders:before {
+  content: "tune";
+}
+.fa.fa-chevron-left:before {
+  content: "arrow_back";
+}
+.fa.fa-chevron-right:before {
+  content: "arrow_forward";
+}
+.fa.fa-reply:before {
+  content: "reply";
+}
+.fa.fa-reply-all:before {
+  content: "reply_all";
+}
+.fa.fa-bookmark:before {
+  content: "bookmark";
+}
+.fa.fa-ellipsis-h:before {
+  content: "more_horiz";
+}
+.fa.fa-bell:before {
+  content: "notifications";
+}
+.fa.fa-eraser:before {
+  content: "clear_all";
+}
+.fa.fa-users:before {
+  content: "people";
+}
+.fa.fa-file-text:before {
+  content: "web";
+}
+.fa.fa-user-plus:before {
+  content: "person_add";
+}
+.fa.fa-address-book:before {
+  content: "explore";
+}
+.fa.fa-address-book-o:before {
+  content: "explore";
+}
+.fa.fa-list:before {
+  content: "list";
+}
+.fa.fa-list-ul:before {
+  content: "list";
+}
+.fa.fa-eye:before {
+  content: "visibility";
+}
+.fa.fa-eye-slash:before {
+  content: "visibility_off";
+}
+.fa.fa-pencil:before {
+  content: "create";
+}
+.fa.fa-trash:before {
+  content: "delete";
+}
+
+.status__action-bar-button.icon-button .fa.fa-bookmark:before,
+.bookmark-icon.icon-button .fa.fa-bookmark:before {
+  content: "bookmark_border";
+}
+.status__action-bar-button.icon-button.active .fa.fa-bookmark:before,
+.bookmark-icon.icon-button.active .fa.fa-bookmark:before {
+  content: "bookmark";
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.media-gallery {
+  border-radius: 2px;
+}
+
+.media-modal__close {
+  align-content: center;
+}
+.media-modal__close.icon-button {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+}
+.media-modal__close.icon-button:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.icon-button.overlayed {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.6);
+}
+.icon-button.overlayed:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.tabs-bar {
+  background: #2196f3;
+}
+.tabs-bar__link {
+  padding: 16px 16px 12px 16px;
+  color: #ffffff;
+  border-bottom: 4px solid transparent;
+}
+.tabs-bar__link.active {
+  border-bottom: 4px solid #ffffff;
+  color: #ffffff;
+}
+.tabs-bar__link .fa {
+  font-size: 20px;
+}
+.tabs-bar__wrapper {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#tabs-bar__portal {
+  overflow-y: hidden;
+}
+
+.floating-action-button {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  background: #db4437;
+  color: #ffffff;
+  font-size: 24px;
+}
+.floating-action-button:hover {
+  background: #e05c51;
+}
+.floating-action-button:active, .floating-action-button:focus {
+  background: #e36c62;
+}
+
+.columns-area--mobile .column {
+  margin: 0 !important;
+}
+.columns-area--mobile .search__input {
+  padding: 16px 38px;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.confirmation-modal {
+  background: #ffffff;
+  color: #202124;
+  border-radius: 2px;
+  width: 280px;
+}
+.confirmation-modal__container {
+  text-align: left;
+  padding: 24px;
+}
+.confirmation-modal__action-bar {
+  justify-content: flex-end;
+  background: #ffffff;
+  padding: 8px;
+}
+
+.actions-modal {
+  background: #ffffff;
+  border-radius: 2px;
+}
+.actions-modal ul li:not(:empty) a {
+  color: #202124;
+  font-size: 16px;
+}
+.actions-modal .dropdown-menu__separator {
+  border-bottom-color: #dadce0;
+}
+
+.report-modal {
+  background: #ffffff;
+  color: #202124;
+  border-radius: 2px;
+}
+.report-modal__target {
+  padding: 24px;
+  text-align: left;
+  font-weight: bold;
+}
+.report-modal__container {
+  border-top: none;
+}
+
+.embed-modal .embed-modal__container {
+  padding: 0 24px 24px 24px;
+}
+.embed-modal .embed-modal__container .hint {
+  margin-bottom: 16px;
+  color: #5f6368;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
+.fa.fa-star:before {
+  content: "star";
+}
+
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
+.status__action-bar-button.star-icon.icon-button .fa.fa-star:before,
+.star-icon.icon-button .fa.fa-star:before {
+  content: "star_border";
+}
+.status__action-bar-button.star-icon.icon-button.active .fa.fa-star:before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star:before,
+.star-icon.icon-button.active .fa.fa-star:before,
+.star-icon.icon-button.active.activate .fa.fa-star:before {
+  content: "star";
+}
+
+.status {
+  padding: 12px 12px 12px 70px;
+  border-bottom: 1px solid #dadce0;
+}
+.status__expand {
+  width: 70px;
+}
+.status__info {
+  font-size: 16px;
+  padding-right: 4px;
+}
+.status__relative-time {
+  color: #5e5e5e;
+}
+.status__display-name {
+  color: #5f6368;
+}
+.status__display-name strong {
+  color: #000000;
+}
+.status__avatar {
+  left: 12px;
+  top: 12px;
+}
+.status__content {
+  font-size: 16px;
+  padding-top: 4px;
+  color: #000000;
+}
+.status__content a {
+  color: #4285f4;
+}
+.status__content a.unhandled-link {
+  color: #4285f4;
+}
+.status__content .status__content__spoiler-link {
+  background: transparent;
+}
+.status__content .status__content__spoiler-link:hover {
+  background: rgba(66, 133, 244, 0.2);
+}
+.status__content .status__content__spoiler-link:focus {
+  background: rgba(66, 133, 244, 0.3);
+}
+.status__content__spoiler-link {
+  border: 0;
+  color: #4285f4;
+}
+.status__content__read-more-button {
+  font-size: 14px;
+  color: #4285f4;
+  border-radius: 2px;
+  padding: 4px 6px;
+}
+.status__content__read-more-button:hover {
+  background: rgba(66, 133, 244, 0.2);
+  text-decoration: none;
+}
+.status__content__read-more-button:focus {
+  background: rgba(66, 133, 244, 0.3);
+}
+.status__action-bar__counter__label {
+  font-size: 14px;
+  color: #5e5e5e;
+}
+.status.status-direct:not(.read) {
+  background: transparent;
+  border-bottom-color: #dadce0;
+}
+
+.status-card {
+  color: #757575;
+  border-color: #dadce0;
+  outline: none;
+}
+.status-card__image {
+  background: transparent;
+}
+.status-card__image > .fa {
+  font-size: 26px;
+}
+.status-card__title {
+  color: #000000;
+  margin-bottom: 6px;
+}
+.status-card__description {
+  color: #5f6368;
+}
+.status-card.compact {
+  border-color: #dadce0;
+  outline: none;
+}
+.status-card.compact .status-card__content {
+  padding: 12px;
+}
+.status-card.compact .status-card__image {
+  flex: 0 0 64px;
+}
+.status-card.compact:hover {
+  background-color: transparent !important;
+}
+.status-card:hover {
+  background-color: #ffffff;
+}
+
+.status.light .display-name span {
+  color: #5e5e5e;
+}
+
+.detailed-status {
+  background: #ffffff;
+  padding: 16px;
+}
+.detailed-status__display-name {
+  color: #5f6368;
+}
+.detailed-status__display-name strong {
+  color: #000000;
+}
+.detailed-status__meta {
+  margin-top: 16px;
+  color: #5e5e5e;
+}
+.detailed-status__action-bar {
+  background: #ffffff;
+  border-top: none;
+  border-bottom: 1px solid #dadce0;
+  padding: 12px 0;
+}
+.detailed-status__button .icon-button {
+  font-size: 20px !important;
+}
+
+/*# sourceMappingURL=build.css.map */

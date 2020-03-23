@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import 'config';
+@import 'mixins';
+
+
+.fa.fa-users.column-link,
+.fa.fa-globe.column-link,
+.fa.fa-address-book.column-link,
+.fa.fa-bullhorn.column-link,
+.fa.fa-envelope.column-link,
+.fa.fa-bookmark.column-link,
+.fa.fa-star.column-link,
+.fa.fa-list-ul.column-link {
+    &__icon.fa-fw { color: $icon-color }
+}
+
+
+.fa { vertical-align: sub }  //マテリアルアイコンを文字の高さにそろえる
+
+.fa.fa-times,
+.fa.fa-eraser { vertical-align: middle }  //↑の例外
+
+.fa.fa-lock { text-transform: none }
+
+.fa-fw { width: 16px }
+
+.fa.fa-chevron-left.column-back-button__icon.fa-fw {
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.icon-with-badge__badge {
+    background: $badge-color;
+    border: none;
+    padding: 2px 6px;
+    border-radius: 12px;
+}

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import 'config';
+@import 'mixins';
+
+
+.confirmation-modal {
+    background: $card-background-color;
+    color: $ui-text-color;
+    border-radius: $dialog-radius;
+    width: 280px;
+
+    &__container {
+        text-align: left;
+        padding: 24px;
+    }
+
+    &__action-bar {
+        justify-content: flex-end;
+        background: $card-background-color;
+        padding: 8px;
+    }
+}
+
+.actions-modal {
+    background: $card-background-color;
+    border-radius: $card-radius;
+
+    ul li:not(:empty) a {
+        color: $ui-text-color;
+        font-size: 16px;
+    }
+
+    .dropdown-menu__separator { border-bottom-color: $border-color }
+}
+
+.report-modal {
+    background: $card-background-color;
+    color: $ui-text-color;
+    border-radius: $card-radius;
+
+    &__target {
+        padding: 24px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    &__container {
+        border-top: none;
+    }
+}
+
+.embed-modal .embed-modal__container {
+    padding: 0 24px 24px 24px;
+
+    .hint {
+        margin-bottom: 16px;
+        color: $secondary-text-color;
+    }
+}

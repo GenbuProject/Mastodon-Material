@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@import 'config';
+@import 'mixins';
+
+
+.media-gallery { border-radius: $card-radius }
+
+.media-modal__close {
+    align-content: center;
+
+    &.icon-button {
+        background: transparent;
+        color: $media-icon-color;
+        text-align: left;
+
+        &:hover { color: $media-icon-hover-color }
+    }
+}
+
+.icon-button.overlayed {
+    border-radius: 50%;
+    background: $media-icon-background-color;
+    color: $media-icon-color;
+
+    &:hover {
+        background: $media-icon-background-color;
+        color: $media-icon-hover-color;
+    }
+}
