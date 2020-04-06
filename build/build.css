@@ -1590,10 +1590,18 @@ html {
 .media-modal__close.icon-button {
   background: transparent;
   color: rgba(255, 255, 255, 0.6);
-  text-align: left;
+  text-align: center !important;
+  font-size: 24px !important;
+  width: 48px !important;
+  height: 48px !important;
+  border: 12px;
 }
 .media-modal__close.icon-button:hover {
+  background: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.8);
+}
+.media-modal__close.icon-button .fa-fw {
+  width: 24px;
 }
 
 .icon-button.overlayed {

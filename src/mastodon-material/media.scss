@@ -11,9 +11,18 @@
     &.icon-button {
         background: transparent;
         color: $media-icon-color;
-        text-align: left;
+        text-align: center !important;
+        font-size: 24px !important;
+        width: 48px !important;
+        height: 48px !important;
+        border: 12px;
 
-        &:hover { color: $media-icon-hover-color }
+        &:hover {
+            background: $media-icon-background-hover-color;
+            color: $media-icon-hover-color;
+        }
+
+        .fa-fw { width: 24px }
     }
 }
 

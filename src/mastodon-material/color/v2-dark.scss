@@ -57,6 +57,7 @@ $top-bar-icon-active-color: $primary-color;
 $media-icon-color: transparentize(#ffffff, 0.4);
 $media-icon-hover-color: transparentize(#ffffff, 0.2);
 $media-icon-background-color: transparentize(#000000, 0.5);
+$media-icon-background-hover-color: transparentize(#ffffff, 0.8);
 $control-border-color: $icon-color;
 
 // Button color
@@ -75,7 +76,7 @@ $text-button-focus-color: transparentize($text-button-color, 0.7);
 $floating-action-button-color: #1e1e1e;
 $floating-action-button-hover-color: lighten($floating-action-button-color, 6%);
 $floating-action-button-active-color: lighten($floating-action-button-color, 10%);
-$floating-action-button-icon-color: $secondary-color;
+$floating-action-button-icon-color: #ffffff;
 
 // Toggle color
 $toggle-thumb-color: #ffffff;
