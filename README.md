@@ -111,3 +111,6 @@ You can use our theme on any server by the browser extension, [Stylish](https://
 This theme and the Stylish/Stylus theme can be used under [AGPL-3.0](LICENSE). [Material Icons font](https://google.github.io/material-design-icons/#icon-font-for-the-web) is available under [Apache license version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html). (This repository does not include Material Icons font.)
 
 ## Screenshot
+
+<img src="docs/res/timeline/v1-light.png" alt="material-v1-light" width=50%>
+<img src="docs/res/timeline/v2-dark.png" alt="material-v2-dark" width=50%>
