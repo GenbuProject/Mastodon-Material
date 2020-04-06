@@ -161,7 +161,7 @@
 .column-back-button {
     @include shadow-4dp;
     background: $top-bar-color;
-    color: $icon-color;
+    color: $top-bar-icon-color;
     padding: 16px;
 }
 
