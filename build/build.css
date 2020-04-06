@@ -118,7 +118,7 @@
 }
 .account__header__bio .account__header__fields dt {
   color: #000000;
-  background: #f0f0f0;
+  background: #e6e6e6;
 }
 .account__header__bio .account__header__fields dd {
   color: #000000;
@@ -505,7 +505,7 @@ html {
 .column-back-button {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   background: #2196f3;
-  color: #757575;
+  color: #ffffff;
   padding: 16px;
 }
 
@@ -539,7 +539,7 @@ html {
 .conversation {
   border-bottom: 1px solid #dadce0;
   padding: 12px;
-  background: #f0f0f0;
+  background: #e6e6e6;
 }
 .conversation--unread {
   background: #ffffff;
@@ -713,7 +713,7 @@ html {
 
 .notification.notification-favourite.focusable,
 .notification.notification-follow.focusable {
-  background: #f0f0f0;
+  background: #e6e6e6;
 }
 
 .relationship-tag {
@@ -1748,6 +1748,9 @@ html {
 .actions-modal ul li:not(:empty) a {
   color: #202124;
   font-size: 16px;
+}
+.actions-modal ul li:not(:empty) a:hover {
+  background: #f0f0f0;
 }
 .actions-modal .dropdown-menu__separator {
   border-bottom-color: #dadce0;
