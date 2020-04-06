@@ -30,7 +30,9 @@ $menu-background-active-hover-color: lighten($menu-background-color, 16%);
 $card-background-color: #1e1e1e;
 $card-background-inactive-color: lighten($card-background-color, 6%);
 $list-background-color: #1e1e1e;
-$list-background-inactive-color: lighten($list-background-color, 6%);
+$list-background-hover-color: lighten($list-background-color, 6%);
+$list-background-active-color: lighten($list-background-color, 10%);
+$list-background-inactive-color: lighten($list-background-color, 10%);
 $verified-background-color: darken($verified-color, 20%);
 
 // Chip color
