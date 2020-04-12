@@ -234,6 +234,10 @@
     }
 }
 
+.no-reduce-motion .spoiler-input {
+    transition-duration: .2s, .2s;
+}
+
 .poll__input {
     border: 2px solid $control-border-color;
     width: 20px;
