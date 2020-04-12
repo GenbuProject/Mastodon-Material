@@ -87,3 +87,9 @@
 
     &:focus { background: $text-button-focus-color }
 }
+
+.spoiler-button__overlay__label {
+    background: $media-icon-background-color;
+    border-radius: $button-radius;
+    color: $media-icon-color;
+}

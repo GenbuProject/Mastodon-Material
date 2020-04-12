@@ -22,6 +22,8 @@
         color: $top-bar-text-color;
     }
 
+    &>.column-header__back-button { color: $top-bar-icon-color }
+
     &.active {
         .column-header__icon {
             color: $secondary-color;

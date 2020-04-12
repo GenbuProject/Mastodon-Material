@@ -149,7 +149,7 @@
 
     &__item a {
         font-size: 14px;
-        padding: 9px 16px;
+        padding: 8px 16px;
         background: $menu-background-color;
         color: $menu-text-color;
 
@@ -166,11 +166,33 @@
 }
 
 .compose-form {
-    .autosuggest-textarea__textarea {
-        background: $card-background-color;
-        color: $ui-text-color;
+    .autosuggest-textarea {
+        &__textarea {
+            background: $card-background-color;
+            color: $ui-text-color;
+    
+            &::placeholder { color: $tips-text-color }
+        }
 
-        &::placeholder { color: $tips-text-color }
+        &__suggestions {
+            @include shadow-1dp;
+            background: $menu-background-color;
+            color: $ui-text-color;
+            border-radius: $card-radius;
+            font-size: 16px;
+            padding: 8px 0;
+
+            &__item {
+                padding: 8px;
+                border-radius: 0;
+
+                &:hover { background: $menu-background-hover-color }
+
+                &.selected,
+                &:focus,
+                &:active { background: $menu-background-active-color }
+            }
+        }
     }
 
     .spoiler-input__input {
