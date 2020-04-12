@@ -46,7 +46,9 @@
     &.fa-eye,
     &.fa-eye-slash,
     &.fa-pencil,
-    &.fa-trash {
+    &.fa-trash,
+    &.fa-play,
+    &.fa-external-link {
         font-family: "Material Icons";
     }
 }
@@ -87,6 +89,8 @@
     &.fa-eye-slash:before { content : "visibility_off" }
     &.fa-pencil:before { content: "create" }
     &.fa-trash:before { content: "delete" }
+    &.fa-play:before { content: "play_arrow" }
+    &.fa-external-link:before { content: "open_in_new" }
 }
 
 .status__action-bar-button.icon-button,

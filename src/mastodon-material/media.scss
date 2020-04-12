@@ -25,14 +25,3 @@
         .fa-fw { width: 24px }
     }
 }
-
-.icon-button.overlayed {
-    border-radius: 50%;
-    background: $media-icon-background-color;
-    color: $media-icon-color;
-
-    &:hover {
-        background: $media-icon-background-color;
-        color: $media-icon-hover-color;
-    }
-}

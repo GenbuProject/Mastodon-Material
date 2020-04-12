@@ -99,6 +99,21 @@
 
     &__description { color: $secondary-text-color }
 
+    &__actions {
+        &>div {
+            background: $media-icon-background-color;
+            border-radius: $button-radius;
+        }
+
+        button,
+        a {
+            color: $media-icon-color;
+            font-size: 20px;
+        }
+
+        a { bottom: auto }
+    }
+
     &.compact {
         border-color: $border-color;
         outline: none;
