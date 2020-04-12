@@ -13,11 +13,15 @@
         width: 40px;
         height: 40px;
 
-        &-overlay-base {
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
-            background-size: 44px;
+        &-overlay {
+            &-base {
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                background-size: 44px;
+            }
+
+            &-overlay { border-radius: $avater-radius }
         }
     }
 

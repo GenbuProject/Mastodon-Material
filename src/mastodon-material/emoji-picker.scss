@@ -63,7 +63,7 @@
             background: $search-bar-color;
             color: $ui-text-color;
             border: 0;
-            border-radius: $bar-radius;
+            border-radius: $search-bar-radius;
 
             &:focus {
                 @include shadow-2dp;

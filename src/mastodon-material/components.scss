@@ -363,3 +363,9 @@
 
     &__content { color: $primary-text-color }
 }
+
+.attachment-list {
+    &__list a { color: $secondary-text-color }
+
+    &.compact .fa { color: $icon-color }
+}
