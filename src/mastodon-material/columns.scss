@@ -332,12 +332,12 @@
 
 .notification {
     &__filter-bar {
-        background: $top-bar-color;
+        background: $tab-background-color;
         border-bottom: 1px solid $border-color;
         z-index: 1;
     
         button {
-            background: $top-bar-color;
+            background: $tab-background-color;
             color: $top-bar-icon-color;
             font-size: 16px;
 
