@@ -45,3 +45,51 @@
         &--active { background-color: $media-page-indicator-active-color }
     }
 }
+
+.video-player {
+    &__controls {
+        background: linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,.2) 60%,transparent);
+        padding: 0 8px;
+    }
+
+    &__seek {
+        &:before {
+            background: rgba(255,255,255,.2);
+            border-radius: 0;
+        }
+
+        &__buffer {
+            background: rgba(255,255,255,.4);
+            border-radius: 0;
+        }
+
+        &__progress {
+            background: $primary-color;
+            border-radius: 0;
+        }
+
+        &__handle {
+            transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+            background-color: $primary-color;
+            box-shadow: none;
+        }
+    }
+
+    &__volume {
+        &:before {
+            background: rgba(255,255,255,.4);
+            border-radius: 0;
+        }
+
+        &__current {
+            background: $primary-color;
+            border-radius: 0;
+        }
+
+        &__handle {
+            transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+            background-color: $primary-color;
+            box-shadow: none;
+        }
+    }
+}

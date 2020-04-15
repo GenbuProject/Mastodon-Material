@@ -73,6 +73,8 @@
         }
     }
 
+    &__prepend { color: $secondary-text-color }
+
     &.status-direct:not(.read) {
         background: transparent;
         border-bottom-color: $border-color;

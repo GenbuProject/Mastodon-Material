@@ -51,7 +51,13 @@
     &.fa-play,
     &.fa-external-link,
     &.fa-retweet,
-    &.fa-link {
+    &.fa-link,
+    &.fa-pause,
+    &.fa-volume-up,
+    &.fa-volume-off,
+    &.fa-expand,
+    &.fa-download,
+    &.fa-arrows-alt {
         font-family: "Material Icons";
     }
 }
@@ -97,6 +103,12 @@
     &.fa-external-link:before { content: "open_in_new" }
     &.fa-retweet:before { content: "repeat" }
     &.fa-link:before { content: "link" }
+    &.fa-pause:before { content: "pause" }
+    &.fa-volume-up:before { content: "volume_up" }
+    &.fa-volume-off:before { content: "volume_off" }
+    &.fa-expand:before { content: "web_asset" }
+    &.fa-download:before { content: "file_download" }
+    &.fa-arrows-alt:before { content: "fullscreen" }
 }
 
 .status__action-bar-button.icon-button,
