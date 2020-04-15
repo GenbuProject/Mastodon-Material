@@ -26,14 +26,22 @@
     }
 }
 
-.media-modal__nav {
-    background: $media-icon-background-color;
-    color: $media-icon-color;
-    height: 48px;
-    width: 48px;
-    margin: auto 16px;
-    padding: 8px;
-    border-radius: 50%;
+.media-modal {
+    &__nav {
+        background: $media-icon-background-color;
+        color: $media-icon-color;
+        height: 48px;
+        width: 48px;
+        margin: auto 16px;
+        padding: 8px;
+        border-radius: 50%;
+    
+        .fa { width: 32px }
+    }
 
-    .fa { width: 32px }
+    &__button {
+        background-color: $media-page-indicator-color;
+
+        &--active { background-color: $media-page-indicator-active-color }
+    }
 }

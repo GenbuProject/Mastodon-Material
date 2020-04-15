@@ -60,7 +60,7 @@ $top-bar-icon-active-color: $icon-hover-color;
 $media-icon-color: transparentize(#ffffff, 0.4);
 $media-icon-hover-color: transparentize(#ffffff, 0.2);
 $media-icon-background-color: transparentize(#000000, 0.5);
-$media-icon-background-hover-color: transparentize(#ffffff, 0.8);
+$media-icon-background-hover-color: transparentize(#000000, 0.8);
 $control-border-color: $icon-color;
 
 // Button color
@@ -106,3 +106,7 @@ $tab-indicator-color: #d9e1e8;
 $tab-indicator-background-hover-color: transparentize($tab-indicator-color, 0.7);
 $tab-indicator-background-focus-color: transparentize($tab-indicator-color, 0.6);
 $tab-background-color: $top-bar-color;
+
+// Media indicator color
+$media-page-indicator-color: #9e9e9e;
+$media-page-indicator-active-color: #e6e6e6;
