@@ -103,9 +103,15 @@ $search-bar-focus-color: $background-color;
 
 // Tab color
 $tab-indicator-color: $top-bar-icon-color;
-$tab-indicator-background-hover-color: transparentize($tab-indicator-color, 0.8);
-$tab-indicator-background-focus-color: transparentize($tab-indicator-color, 0.7);
+$tab-indicator-active-color: $top-bar-icon-color;
 $tab-background-color: $top-bar-color;
+$tab-indicator-background-hover-color: transparentize($tab-indicator-active-color, 0.9);
+$tab-indicator-background-focus-color: transparentize($tab-indicator-active-color, 0.8);
+$text-tab-indicator-color: $secondary-text-color;
+$text-tab-indicator-active-color: $top-bar-color;
+$text-tab-background-color: #ffffff;
+$text-tab-indicator-background-hover-color: transparentize(#000000, 0.9);
+$text-tab-indicator-background-focus-color: transparentize(#000000, 0.8);
 
 // Media indicator color
 $media-page-indicator-color: #9e9e9e;

@@ -101,10 +101,16 @@ $search-bar-color: #d9e1e8;
 $search-bar-focus-color: $background-color;
 
 // Tab color
-$tab-indicator-color: $primary-color;
-$tab-indicator-background-hover-color: lighten($tab-indicator-color, 36%);
-$tab-indicator-background-focus-color: lighten($tab-indicator-color, 30%);
-$tab-background-color: $top-bar-color;
+$tab-indicator-color: #282c37;
+$tab-indicator-active-color: $top-bar-icon-color;
+$tab-background-color: #e6ebf0;
+$tab-indicator-background-hover-color: transparentize($tab-indicator-active-color, 0.9);
+$tab-indicator-background-focus-color: transparentize($tab-indicator-active-color, 0.8);
+$text-tab-indicator-color: $tab-indicator-color;
+$text-tab-indicator-active-color: $tab-indicator-active-color;
+$text-tab-background-color: $tab-background-color;
+$text-tab-indicator-background-hover-color: transparentize($text-tab-indicator-active-color, 0.9);
+$text-tab-indicator-background-focus-color: transparentize($text-tab-indicator-active-color, 0.8);
 
 // Media indicator color
 $media-page-indicator-color: #9e9e9e;

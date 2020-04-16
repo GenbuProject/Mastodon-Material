@@ -57,7 +57,9 @@
     &.fa-volume-off,
     &.fa-expand,
     &.fa-download,
-    &.fa-arrows-alt {
+    &.fa-arrows-alt,
+    &.fa-compress,
+    &.fa-user-times {
         font-family: "Material Icons";
     }
 }
@@ -109,6 +111,8 @@
     &.fa-expand:before { content: "web_asset" }
     &.fa-download:before { content: "file_download" }
     &.fa-arrows-alt:before { content: "fullscreen" }
+    &.fa-compress:before { content: "fullscreen_exit" }
+    &.fa-user-times:before { content: "delete" }
 }
 
 .status__action-bar-button.icon-button,

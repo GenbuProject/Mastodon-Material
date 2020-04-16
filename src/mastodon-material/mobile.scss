@@ -12,8 +12,8 @@
         border-bottom: 4px solid transparent;
 
         &.active {
-            border-bottom: 4px solid $tab-indicator-color;
-            color: $tab-indicator-color;
+            border-bottom: 4px solid $tab-indicator-active-color;
+            color: $tab-indicator-active-color;
         }
 
         .fa { font-size: 20px }

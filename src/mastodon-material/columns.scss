@@ -373,14 +373,14 @@
     
         button {
             background: $tab-background-color;
-            color: $top-bar-icon-color;
+            color: $tab-indicator-color;
             font-size: 16px;
 
             span { font-size: 14px }
     
             &.active {
-                color: $tab-indicator-color;
-                border-bottom: 4px solid $tab-indicator-color;
+                color: $tab-indicator-active-color;
+                border-bottom: 4px solid $tab-indicator-active-color;
     
                 &:before,
                 &:after { border: none }
