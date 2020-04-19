@@ -131,8 +131,16 @@
     &:hover { background-color: $card-background-color }
 }
 
+// Detailed status in mobile
 .status.light {
-    .display-name span { color: $info-text-color }
+    .status {
+        &__display-name { color: $primary-text-color }
+        &__relative-time { color: $info-text-color }
+        &__content { color: $primary-text-color }
+    }
+
+    .display-name { color: $secondary-text-color }
+    .display-name strong { color: $primary-text-color }
 }
 
 .detailed-status {

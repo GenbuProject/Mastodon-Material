@@ -33,6 +33,18 @@
     }
 
     .dropdown-menu__separator { border-bottom-color: $border-color }
+
+    .status {
+        background: $card-background-color;
+        border-bottom-color: $border-color;
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        &__avatar {
+            left: 12px;
+            top: 12px;
+        }
+    }
 }
 
 .report-modal {

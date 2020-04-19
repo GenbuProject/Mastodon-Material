@@ -64,14 +64,29 @@
 
     &__setting-btn {
         color: $icon-button-color;
+        padding: 8px 0;
 
         &:hover {
             color: $icon-button-hover-color;
-            background: $icon-background-hover-color;
+            text-decoration: none;
         }
+
+        .fa { font-size: 20px }
+
+        span { vertical-align: middle }
     }
 
-    &__setting-arrows { font-size: 16px }
+    &__setting-arrows {
+        font-size: 16px;
+        border-bottom: 8px;
+
+        .column-header__setting-btn {
+            padding: 8px;
+            border-radius: 50%;
+
+            &:last-child { padding-right: 8px }
+        }
+    }
 
     &__wrapper {
         @include shadow-4dp;
@@ -88,6 +103,7 @@
 
     &__collapsible {
         color: $ui-text-color;
+        background: $card-background-color;
         border-top: 1px solid $border-color;
 
         &-inner {
@@ -407,6 +423,7 @@
     .icon-button.disabled { color: $disabled-icon-color }
 }
 
+// read notification
 .notification.notification-favourite.focusable,
 .notification.notification-follow.focusable { background: $list-background-inactive-color }
 
@@ -420,8 +437,6 @@
 }
 
 .react-swipeable-view-container { height: auto }
-
-.tabs-bar__wrapper { background: transparent }
 
 .attachment-list__list a { color: $secondary-text-color }
 
