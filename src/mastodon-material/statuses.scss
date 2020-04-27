@@ -119,6 +119,7 @@
     &.compact {
         border-color: $border-color;
         outline: none;
+        background: transparent;
         
         .status-card {
             &__content { padding: 12px }

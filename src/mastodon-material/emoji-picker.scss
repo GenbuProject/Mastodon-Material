@@ -82,7 +82,7 @@
         background: $menu-background-color;
     }
 
-    &-emoji:hover:before {
+    &-emoji:hover::before {
         background-color: $icon-background-hover-color;
     }
 

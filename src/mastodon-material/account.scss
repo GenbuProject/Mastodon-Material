@@ -124,7 +124,7 @@
                 color: $text-tab-indicator-active-color;
                 border-bottom: 4px solid $text-tab-indicator-active-color;
 
-                &:before,
+                &::before,
                 &:after { border: none }
 
                 &:focus { background: $text-tab-indicator-background-focus-color }

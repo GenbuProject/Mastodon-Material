@@ -12,7 +12,7 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
 
 ## 動作環境
 
-- [Mastodon](https://github.com/tootsuite/mastodon) v3.0以上
+- [Mastodon](https://github.com/tootsuite/mastodon) v3.1以上
 
 - [Sass](https://sass-lang.com) 1.25.x
 

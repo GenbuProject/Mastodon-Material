@@ -30,32 +30,10 @@
 
 
 // Favorite icon settings
-// If you exclude 'material-icons.scss', please comment out this section.
-.fa {
-    &.fa-star:before { content: "star" }  // Star
-    //&.fa-star:before { content: "favorite" }  // Heart
-    //&.fa-star:before { content: "plus_one" }  // +1
-}
+$favorite-icon: "star"; $favorite-icon-border: "star_border";  // Star
+//$favorite-icon: "favorite"; $favorite-icon-border: "favorite_border";  // Heart
+//$favorite-icon: "plus_one"; $favorite-icon-border: "plus_one";  // +1
 
-.star-icon.active,
-.star-icon.icon-button.active.active,
-.notification__favourite-icon-wrapper .star-icon,
-.status__action-bar-button.star-icon.icon-button.active {
-    color: #ffd600;  // Star
-    //color: #ff4081;  // Heart
-    //color: #db4437;  // +1
-}
-
-.status__action-bar-button.star-icon.icon-button,
-.star-icon.icon-button {
-    .fa.fa-star:before { content: "star_border" }  // Star
-    //.fa.fa-star:before { content: "favorite_border" }  // Heart
-    //.fa.fa-star:before { content: "plus_one" }  // +1
-
-    &.active,
-    &.active.activate {
-        .fa.fa-star:before { content: "star" }  // Star
-        //.fa.fa-star:before { content: "favorite" }  // Heart
-        //.fa.fa-star:before { content: "plus_one" }  // +1
-    }
-}
+$favorite-icon-color: #ffd600;  // Star
+//$favorite-icon-color: #ff4081;  // Heart
+//$favorite-icon-color: #db4437;  // +1

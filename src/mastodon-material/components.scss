@@ -260,20 +260,38 @@
     transition-duration: .2s, .2s;
 }
 
-.poll__input {
-    border: 2px solid $control-border-color;
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
-}
 
-.poll__text input[type=text] {
-    color: $ui-text-color;
-    background: $background-color;
-    border: 1px solid $border-color;
-    padding: 8px 12px;
+.poll {
+    &__input {
+        border: 2px solid $control-border-color;
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+    }
 
-    &:focus { border-color: $border-active-color }
+    &__text input[type=text] {
+        color: $ui-text-color;
+        background: $background-color;
+        border: 1px solid $border-color;
+        padding: 8px 12px;
+    
+        &:focus { border-color: $border-active-color }
+    }
+
+    &__chart {
+        border-radius: 0;
+        background: $poll-bar-color;
+    
+        &.leading { background: $poll-bar-leading-color }
+    }
+
+    &__footer {
+        padding-top: 8px;
+        padding-bottom: 0;
+        color: $ui-text-color;
+    }
+
+    &__link { color: $ui-text-color }
 }
 
 .privacy-dropdown {

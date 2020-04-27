@@ -12,7 +12,7 @@ Mastodon Material is the native theme for Mastodon, which based on [Material Des
 
 ## Requirement
 
-- [Mastodon](https://github.com/tootsuite/mastodon) v3.0 or above
+- [Mastodon](https://github.com/tootsuite/mastodon) v3.1 or above
 - [Sass](https://sass-lang.com) 1.25.x
 
 ## Installation
