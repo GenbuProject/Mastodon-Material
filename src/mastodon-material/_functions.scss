@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@use "sass:string";
+
+
+@function to-string($value) {
+    @return inspect($value);
+}
+
+// convert hex color code to svg styled color code
+@function svg-color ($color) {
+    @return '%23' + string.slice(to-string($color), 2, 7);
+}
