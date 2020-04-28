@@ -29,7 +29,10 @@
         color: $ui-text-color;
         font-size: 16px;
 
-        &:hover { background: $card-background-hover-color }
+        &:hover {
+            background: $card-background-hover-color;
+            color: $ui-text-color;
+        }
     }
 
     .dropdown-menu__separator { border-bottom-color: $border-color }
