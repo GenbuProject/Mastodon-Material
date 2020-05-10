@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import 'config';
+@import 'config_base';
+@import '../config', '../icon_config';
+@import '../color/custom', '../layout/custom';
 @import 'functions';
 
 
@@ -138,6 +140,12 @@
         .fa.fa-star::before { content: $favorite-icon }
     }
 }
+
+// favorite icon color
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active { color: $favorite-icon-color }
 
 // boost icon
 .no-reduce-motion button.icon-button i.fa-retweet {

@@ -3,10 +3,6 @@
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -141,10 +137,6 @@
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -178,10 +170,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -284,10 +272,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -776,10 +760,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1144,10 +1124,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1157,10 +1133,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1230,10 +1202,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1314,10 +1282,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1368,26 +1332,19 @@ html {
   border-radius: 12px;
 }
 
-.star-icon.active,
-.star-icon.icon-button.active.active,
-.notification__favourite-icon-wrapper .star-icon,
-.status__action-bar-button.star-icon.icon-button.active {
-  color: #ffd600;
-}
-
 .button,
 .compose-form .compose-form__publish-button-wrapper {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
 }*/
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+}
 .fa.fa-bars, .fa.fa-navicon, .fa.fa-reorder, .fa.fa-globe, .fa.fa-cog, .fa.fa-cogs, .fa.fa-gears, .fa.fa-sign-out, .fa.fa-search, .fa.fa-times, .fa.fa-times-circle, .fa.fa-close, .fa.fa-remove, .fa.fa-chevron-down, .fa.fa-ellipsis-v, .fa.fa-paperclip, .fa.fa-tasks, .fa.fa-plus, .fa.fa-unlock, .fa.fa-lock, .fa.fa-envelope, .fa.fa-home, .fa.fa-bullhorn, .fa.fa-sliders, .fa.fa-chevron-left, .fa.fa-chevron-right, .fa.fa-reply, .fa.fa-reply-all, .fa.fa-share-alt, .fa.fa-star, .fa.fa-bookmark, .fa.fa-ellipsis-h, .fa.fa-bell, .fa.fa-eraser, .fa.fa-users, .fa.fa-file-text, .fa.fa-user-plus, .fa.fa-address-book, .fa.fa-address-book-o, .fa.fa-list, .fa.fa-list-ul, .fa.fa-eye, .fa.fa-eye-slash, .fa.fa-pencil, .fa.fa-trash, .fa.fa-play, .fa.fa-external-link, .fa.fa-retweet, .fa.fa-link, .fa.fa-pause, .fa.fa-volume-up, .fa.fa-volume-off, .fa.fa-expand, .fa.fa-download, .fa.fa-arrows-alt, .fa.fa-compress, .fa.fa-user-times, .fa.fa-check, .fa.fa-quote-right {
   font-family: "Material Icons";
 }
@@ -1565,6 +1522,13 @@ html {
   content: "star";
 }
 
+.star-icon.active,
+.star-icon.icon-button.active.active,
+.notification__favourite-icon-wrapper .star-icon,
+.status__action-bar-button.star-icon.icon-button.active {
+  color: #ffd600;
+}
+
 .no-reduce-motion button.icon-button i.fa-retweet {
   height: 18px;
   width: 18px;
@@ -1577,10 +1541,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1674,10 +1634,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1739,10 +1695,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;
@@ -1816,10 +1768,6 @@ html {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-@font-face {
-  font-family: "Material Icons";
-  src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
-}
 /*.search__input:hover {
     @include shadow-2dp;
     background: $search-bar-focus-color;

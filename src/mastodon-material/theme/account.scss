@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import 'config';
+@import 'config_base';
+@import '../config';
+@import '../color/custom', '../layout/custom';
 @import 'mixins';
 
 .account {
