@@ -61,7 +61,8 @@
     &.fa-arrows-alt,
     &.fa-compress,
     &.fa-user-times,
-    &.fa-check {
+    &.fa-check,
+    &.fa-quote-right {
         font-family: "Material Icons";
     }
 }
@@ -117,6 +118,7 @@
     &.fa-compress::before { content: "fullscreen_exit" }
     &.fa-user-times::before { content: "delete" }
     &.fa-check::before { content: "check" }
+    &.fa-quote-right::before { content: "format_quote" }
 }
 
 // bookmark icon

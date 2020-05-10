@@ -73,7 +73,11 @@
         }
     }
 
-    &__prepend { color: $secondary-text-color }
+    &__prepend {
+        color: $secondary-text-color;
+
+        .status__display-name strong { color: $secondary-text-color }
+    }
 
     &.status-direct:not(.read) {
         background: transparent;
@@ -169,4 +173,10 @@
     &__button {
         .icon-button { font-size: 20px !important }
     }
+}
+
+// search user trends
+.display-name {
+    &__html { color: $primary-text-color !important }
+    &__account { color: $secondary-text-color }
 }

@@ -41,8 +41,11 @@
 }
 
 .columns-area--mobile {
-    
     .column { margin: 0 !important }
+    .search__input { padding: 16px 46px }
 
-    .search__input { padding: 16px 38px }
+    .search__icon .fa {
+        top: 16px;
+        left: 16px;
+    }
 }

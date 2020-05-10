@@ -318,27 +318,38 @@
     }
 }
 
-.trends__item {
-    padding: 16px;
-    border-bottom: none;
+.trends {
+    &__header {
+        color: $section-text-color;
+        background: transparent;
+        border-bottom: 1px solid $border-color;
+        padding: 16px;
 
-    &__name {
-        color: $secondary-text-color;
-        font-size: 12px;
-
-        a { color: $primary-text-color }
+        .fa { margin-right: 8px }
     }
 
-    &__current {
-        padding-right: 16px;
-        margin-left: 4px;
-        color: $secondary-text-color;
-    }
-
-    &__sparkline path {
-        stroke: $primary-color;
-        fill: $primary-color;
-        fill-opacity: 0.5;
+    &__item {
+        padding: 16px;
+        border-bottom: none;
+    
+        &__name {
+            color: $secondary-text-color;
+            font-size: 12px;
+    
+            a { color: $primary-text-color }
+        }
+    
+        &__current {
+            padding-right: 16px;
+            margin-left: 4px;
+            color: $secondary-text-color;
+        }
+    
+        &__sparkline path {
+            stroke: $primary-color;
+            fill: $primary-color;
+            fill-opacity: 0.5;
+        }
     }
 }
 
