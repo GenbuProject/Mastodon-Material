@@ -39,9 +39,11 @@
 
     &__inner {
         background: $card-background-color;
-        position: inherit;
 
-        &.darker { background: $card-background-color }
+        &.darker {
+            background: $card-background-color;
+            position: inherit;
+        }
 
         &__mastodon { background: $card-background-color }
     }

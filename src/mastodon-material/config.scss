@@ -37,3 +37,13 @@ $favorite-icon: "star"; $favorite-icon-border: "star_border";  // Star
 $favorite-icon-color: #ffd600;  // Star
 //$favorite-icon-color: #ff4081;  // Heart
 //$favorite-icon-color: #db4437;  // +1
+
+
+// Status font size in timeline
+$status-font-size: 15px;  // mastodon default
+//$status-font-size: 16px;  // compatible with material design
+
+
+// Name font size in timeline status
+$name-font-size: 15px;  // mastodon default
+//$name-font-size: 16px;  // compatible with material design

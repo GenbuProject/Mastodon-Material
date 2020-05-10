@@ -10,7 +10,7 @@
     &__expand { width: 70px }
 
     &__info {
-        font-size: 16px;
+        font-size: $name-font-size;
         padding-right: 4px;
     }
 
@@ -28,7 +28,7 @@
     }
 
     &__content {
-        font-size: 16px;
+        font-size: $status-font-size;
         padding-top: 4px;
         color: $primary-text-color;
 
