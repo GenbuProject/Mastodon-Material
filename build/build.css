@@ -597,6 +597,15 @@ html {
   border-bottom: none;
 }
 
+.trends__header {
+  color: #4285f4;
+  background: transparent;
+  border-bottom: 1px solid #dadce0;
+  padding: 16px;
+}
+.trends__header .fa {
+  margin-right: 8px;
+}
 .trends__item {
   padding: 16px;
   border-bottom: none;
@@ -730,10 +739,6 @@ html {
   opacity: 1;
 }
 
-.react-swipeable-view-container {
-  height: auto;
-}
-
 .attachment-list__list a {
   color: #5f6368;
 }
@@ -742,6 +747,30 @@ html {
   background: transparent !important;
 }
 
+@media screen and (min-width: 415px) {
+  .tabs-bar {
+    margin-bottom: 0;
+  }
+  .tabs-bar__wrapper {
+    padding-top: 0;
+  }
+
+  .columns-area__panels__main {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    padding: 0;
+    margin: 12px 12px 0;
+  }
+}
+@media screen and (min-width: 631px) {
+  .tabs-bar__link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom-color: #2196f3;
+  }
+  .tabs-bar__link:active, .tabs-bar__link:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom-color: #2196f3;
+  }
+}
 .button,
 .compose-form .compose-form__publish-button-wrapper {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -791,6 +820,7 @@ html {
 }
 .drawer__inner.darker {
   background: #ffffff;
+  position: inherit;
 }
 .drawer__inner__mastodon {
   background: #ffffff;
@@ -827,7 +857,7 @@ html {
   opacity: 1;
 }
 .search__icon .fa-times-circle.active {
-  right: 10px;
+  right: 16px;
   left: unset;
   transform: none;
 }
@@ -1225,7 +1255,7 @@ html {
 .emoji-mart {
   width: 388px !important;
   font-size: 14px;
-  color: #202124;
+  color: #4285f4;
 }
 .emoji-mart-bar {
   border: 0 solid #dadce0;
@@ -1358,7 +1388,7 @@ html {
     @include shadow-2dp;
     background: $search-bar-focus-color;
 }*/
-.fa.fa-bars, .fa.fa-navicon, .fa.fa-reorder, .fa.fa-globe, .fa.fa-cog, .fa.fa-cogs, .fa.fa-gears, .fa.fa-sign-out, .fa.fa-search, .fa.fa-times, .fa.fa-times-circle, .fa.fa-close, .fa.fa-remove, .fa.fa-chevron-down, .fa.fa-ellipsis-v, .fa.fa-paperclip, .fa.fa-tasks, .fa.fa-plus, .fa.fa-unlock, .fa.fa-lock, .fa.fa-envelope, .fa.fa-home, .fa.fa-bullhorn, .fa.fa-sliders, .fa.fa-chevron-left, .fa.fa-chevron-right, .fa.fa-reply, .fa.fa-reply-all, .fa.fa-share-alt, .fa.fa-star, .fa.fa-bookmark, .fa.fa-ellipsis-h, .fa.fa-bell, .fa.fa-eraser, .fa.fa-users, .fa.fa-file-text, .fa.fa-user-plus, .fa.fa-address-book, .fa.fa-address-book-o, .fa.fa-list, .fa.fa-list-ul, .fa.fa-eye, .fa.fa-eye-slash, .fa.fa-pencil, .fa.fa-trash, .fa.fa-play, .fa.fa-external-link, .fa.fa-retweet, .fa.fa-link, .fa.fa-pause, .fa.fa-volume-up, .fa.fa-volume-off, .fa.fa-expand, .fa.fa-download, .fa.fa-arrows-alt, .fa.fa-compress, .fa.fa-user-times, .fa.fa-check {
+.fa.fa-bars, .fa.fa-navicon, .fa.fa-reorder, .fa.fa-globe, .fa.fa-cog, .fa.fa-cogs, .fa.fa-gears, .fa.fa-sign-out, .fa.fa-search, .fa.fa-times, .fa.fa-times-circle, .fa.fa-close, .fa.fa-remove, .fa.fa-chevron-down, .fa.fa-ellipsis-v, .fa.fa-paperclip, .fa.fa-tasks, .fa.fa-plus, .fa.fa-unlock, .fa.fa-lock, .fa.fa-envelope, .fa.fa-home, .fa.fa-bullhorn, .fa.fa-sliders, .fa.fa-chevron-left, .fa.fa-chevron-right, .fa.fa-reply, .fa.fa-reply-all, .fa.fa-share-alt, .fa.fa-star, .fa.fa-bookmark, .fa.fa-ellipsis-h, .fa.fa-bell, .fa.fa-eraser, .fa.fa-users, .fa.fa-file-text, .fa.fa-user-plus, .fa.fa-address-book, .fa.fa-address-book-o, .fa.fa-list, .fa.fa-list-ul, .fa.fa-eye, .fa.fa-eye-slash, .fa.fa-pencil, .fa.fa-trash, .fa.fa-play, .fa.fa-external-link, .fa.fa-retweet, .fa.fa-link, .fa.fa-pause, .fa.fa-volume-up, .fa.fa-volume-off, .fa.fa-expand, .fa.fa-download, .fa.fa-arrows-alt, .fa.fa-compress, .fa.fa-user-times, .fa.fa-check, .fa.fa-quote-right {
   font-family: "Material Icons";
 }
 
@@ -1512,6 +1542,9 @@ html {
 .fa.fa-check::before {
   content: "check";
 }
+.fa.fa-quote-right::before {
+  content: "format_quote";
+}
 
 .status__action-bar-button.icon-button .fa.fa-bookmark::before,
 .bookmark-icon.icon-button .fa.fa-bookmark::before {
@@ -1664,6 +1697,10 @@ html {
 .tabs-bar__link .fa {
   font-size: 20px;
 }
+.tabs-bar__link span {
+  margin-left: 8px;
+  vertical-align: text-bottom;
+}
 .tabs-bar__wrapper {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   background: transparent;
@@ -1690,7 +1727,11 @@ html {
   margin: 0 !important;
 }
 .columns-area--mobile .search__input {
-  padding: 16px 38px;
+  padding: 16px 46px;
+}
+.columns-area--mobile .search__icon .fa {
+  top: 16px;
+  left: 16px;
 }
 
 .button,
@@ -1791,7 +1832,7 @@ html {
   width: 70px;
 }
 .status__info {
-  font-size: 16px;
+  font-size: 15px;
   padding-right: 4px;
 }
 .status__relative-time {
@@ -1808,7 +1849,7 @@ html {
   top: 12px;
 }
 .status__content {
-  font-size: 16px;
+  font-size: 15px;
   padding-top: 4px;
   color: #000000;
 }
@@ -1849,6 +1890,9 @@ html {
   color: #5e5e5e;
 }
 .status__prepend {
+  color: #5f6368;
+}
+.status__prepend .status__display-name strong {
   color: #5f6368;
 }
 .status.status-direct:not(.read) {
@@ -1942,6 +1986,13 @@ html {
 }
 .detailed-status__button .icon-button {
   font-size: 20px !important;
+}
+
+.display-name__html {
+  color: #000000 !important;
+}
+.display-name__account {
+  color: #5f6368;
 }
 
 /*# sourceMappingURL=build.css.map */
