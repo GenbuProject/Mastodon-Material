@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import 'config_base';
+@import '../theme/config_base';
 @import '../config';
 @import '../color/custom', '../layout/custom';
-@import 'mixins';
+@import '../theme/mixins';
 
 
 .column {

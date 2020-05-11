@@ -48,10 +48,16 @@
 
 タイムライン上の投稿をカード化します。(デフォルトはリスト型) リスト型と比べ、一度に表示される情報量が減少します。
 
-`@import 'mastodon-material/cards';`をアンコメントしてください。
+`@import 'plugins/cards';`をアンコメントしてください。
+
+### 一覧性を向上させる
+
+このテーマのデフォルト設定では、マテリアルデザインガイドラインに完全準拠しているため、Mastodonデフォルトのテーマと比較して情報密度が下がり一覧性が下がっています。ガイドライン非準拠ですが「密モード(denseプラグイン)」を適用することによって、一覧性を向上させることができます。
+
+`@import 'plugins/dense';`をアンコメントしてください。
 
 ### (参考)マテリアルデザインアイコンフォントを利用しない
 
 このテーマでは、マテリアルデザインアイコンの表示にGoogle製[Material Iconsフォント](https://google.github.io/material-design-icons/#icon-font-for-the-web)を採用しています。ライセンス上の問題がある場合などに、このテーマの他のUIに影響を及ぼすことなくデフォルトのアイコンフォントである[Font Awesome](https://fontawesome.com/)を利用できます。
 
-`@import 'theme/material-icons';`の行をコメントアウトします。
+`@import 'theme/material-icons';`をコメントアウトします。

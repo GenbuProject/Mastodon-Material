@@ -3,19 +3,9 @@
 
 @import '../application';
 
-@import 'theme/account';
-@import 'theme/basics';
-@import 'theme/button';
-@import 'theme/columns';
-@import 'theme/components';
-@import 'theme/config_base';
-@import 'theme/control';
-@import 'theme/emoji-picker';
-@import 'theme/icons';
+@import 'theme/theme';
 @import 'theme/material-icons';
-@import 'theme/media';
-@import 'theme/mobile';
-@import 'theme/modal';
-@import 'theme/statuses';
 
+// Plugins
 //@import 'plugins/cards';
+//@import 'plugins/dense';
