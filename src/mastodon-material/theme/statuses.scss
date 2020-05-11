@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import 'config_base';
-@import '../config';
-@import '../color/custom', '../layout/custom';
+@import 'base_config';
+@import '../custom_config';
+@import '../custom_color', '../custom_layout';
 @import 'mixins';
 
 
