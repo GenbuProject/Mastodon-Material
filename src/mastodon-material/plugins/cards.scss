@@ -9,11 +9,16 @@
     box-shadow: none !important;
     margin: 2px 0 !important;
     padding: 8px !important;
+
+    > .scrollable { background: $background-color }
 }
 
 .status {
-    border-bottom: 0 !important;
+    border-bottom: 0;
     border-radius: $card-radius;
+    background: $card-background-color;
+
+    &__prepend { padding: 8px 8px 2px 0 }
 }
 
 .account { border-bottom: 0 !important }
@@ -22,6 +27,8 @@
 .notification.notification {
     @include shadow-1dp;
     margin: 8px 2px;
+    border-radius: $card-radius;
+    background: $card-background-color;
 }
 
 .notification .status__wrapper.status__wrapper { box-shadow: none !important }

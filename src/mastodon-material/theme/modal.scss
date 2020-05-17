@@ -66,6 +66,12 @@
     &__container {
         border-top: none;
     }
+
+    &__comment {
+        border-right: none;
+
+        .setting-text-label { color: $ui-text-color }
+    }
 }
 
 .embed-modal .embed-modal__container {

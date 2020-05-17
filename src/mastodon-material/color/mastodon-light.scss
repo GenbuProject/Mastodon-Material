@@ -56,6 +56,7 @@ $disabled-icon-color: lighten($icon-color, 16%);
 $top-bar-icon-color: $icon-color;
 $top-bar-icon-hover-color: $icon-hover-color;
 $top-bar-icon-active-color: $icon-hover-color;
+$top-bar-unread-icon-color: $secondary-color;
 $media-icon-color: transparentize(#ffffff, 0.4);
 $media-icon-hover-color: transparentize(#ffffff, 0.2);
 $media-icon-background-color: transparentize(#000000, 0.5);

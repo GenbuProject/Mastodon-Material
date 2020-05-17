@@ -77,6 +77,7 @@
 
     &__prepend {
         color: $secondary-text-color;
+        margin-left: 64px;
 
         .status__display-name strong { color: $secondary-text-color }
     }

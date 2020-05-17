@@ -301,7 +301,7 @@ html {
   color: #ffffff;
 }
 .column-header.active .column-header__icon {
-  color: #db4437;
+  color: #093d94;
   text-shadow: none;
 }
 .column-header__icon {
@@ -631,6 +631,13 @@ html {
 .announcements__item__unread {
   background: #4285f4;
 }
+.announcements__pagination {
+  color: #202124;
+}
+
+.react-swipeable-view-container {
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, height 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s !important;
+}
 
 .reactions-bar .emoji-button {
   color: #757575;
@@ -702,16 +709,8 @@ html {
   color: inherit;
 }
 
-.notification-favourite .status.status-direct {
-  background: transparent;
-}
 .notification-favourite .status.status-direct .icon-button.disabled {
   color: #9e9e9e;
-}
-
-.notification.notification-favourite.focusable,
-.notification.notification-follow.focusable {
-  background: #e6e6e6;
 }
 
 .relationship-tag {
@@ -727,8 +726,8 @@ html {
   color: #5f6368;
 }
 
-.focusable {
-  background: transparent !important;
+.focusable:focus {
+  background: #ffffff;
 }
 
 @media screen and (min-width: 415px) {
@@ -1550,6 +1549,12 @@ html {
 .report-modal__container {
   border-top: none;
 }
+.report-modal__comment {
+  border-right: none;
+}
+.report-modal__comment .setting-text-label {
+  color: #202124;
+}
 
 .embed-modal .embed-modal__container {
   padding: 0 24px 24px 24px;
@@ -1635,6 +1640,7 @@ html {
 }
 .status__prepend {
   color: #5f6368;
+  margin-left: 64px;
 }
 .status__prepend .status__display-name strong {
   color: #5f6368;
@@ -1748,6 +1754,19 @@ html {
     @include shadow-2dp;
     background: $search-bar-focus-color;
 }*/
+.link-button {
+  color: #4285f4;
+}
+
+.button,
+.compose-form .compose-form__publish-button-wrapper {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+/*.search__input:hover {
+    @include shadow-2dp;
+    background: $search-bar-focus-color;
+}*/
 @font-face {
   font-family: "Material Icons";
   src: local("Material Icons"), url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
@@ -1811,7 +1830,7 @@ html {
   content: "arrow_forward";
 }
 .fa.fa-reply::before {
-  content: "reply";
+  content: "comment";
 }
 .fa.fa-reply-all::before {
   content: "reply_all";
@@ -1820,7 +1839,7 @@ html {
   content: "share";
 }
 .fa.fa-star::before {
-  content: "star";
+  content: "plus_one";
 }
 .fa.fa-bookmark::before {
   content: "bookmark";
@@ -1921,19 +1940,19 @@ html {
 
 .status__action-bar-button.star-icon.icon-button .fa.fa-star::before,
 .star-icon.icon-button .fa.fa-star::before {
-  content: "star_border";
+  content: "plus_one";
 }
 .status__action-bar-button.star-icon.icon-button.active .fa.fa-star::before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star::before,
 .star-icon.icon-button.active .fa.fa-star::before,
 .star-icon.icon-button.active.activate .fa.fa-star::before {
-  content: "star";
+  content: "plus_one";
 }
 
 .star-icon.active,
 .star-icon.icon-button.active.active,
 .notification__favourite-icon-wrapper .star-icon,
 .status__action-bar-button.star-icon.icon-button.active {
-  color: #ffd600;
+  color: #ffffff;
 }
 
 .no-reduce-motion button.icon-button i.fa-retweet {

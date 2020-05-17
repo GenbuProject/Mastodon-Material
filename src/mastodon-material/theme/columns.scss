@@ -28,7 +28,7 @@
 
     &.active {
         .column-header__icon {
-            color: $secondary-color;
+            color: $top-bar-unread-icon-color;
             text-shadow: none;
         }
     }
@@ -374,7 +374,11 @@
 
         &__unread { background: $badge-color }
     }
+
+    &__pagination { color: $ui-text-color }
 }
+
+.react-swipeable-view-container { transition: transform .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, height 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s !important }
 
 .reactions-bar {
     .emoji-button {
@@ -449,14 +453,8 @@
 }
 
 .notification-favourite .status.status-direct {
-    background: transparent;
-
     .icon-button.disabled { color: $disabled-icon-color }
 }
-
-// read notification
-.notification.notification-favourite.focusable,
-.notification.notification-follow.focusable { background: $list-background-inactive-color }
 
 .relationship-tag {
     color: $ui-text-color;
@@ -469,7 +467,9 @@
 
 .attachment-list__list a { color: $secondary-text-color }
 
-.focusable { background: transparent !important }
+.focusable {
+    &:focus { background: $card-background-color }
+}
 
 // single column mode
 @media screen and (min-width: 415px) {
