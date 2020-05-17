@@ -1830,7 +1830,7 @@ html {
   content: "arrow_forward";
 }
 .fa.fa-reply::before {
-  content: "comment";
+  content: "reply";
 }
 .fa.fa-reply-all::before {
   content: "reply_all";
@@ -1839,7 +1839,7 @@ html {
   content: "share";
 }
 .fa.fa-star::before {
-  content: "plus_one";
+  content: "star";
 }
 .fa.fa-bookmark::before {
   content: "bookmark";
@@ -1940,19 +1940,19 @@ html {
 
 .status__action-bar-button.star-icon.icon-button .fa.fa-star::before,
 .star-icon.icon-button .fa.fa-star::before {
-  content: "plus_one";
+  content: "star_border";
 }
 .status__action-bar-button.star-icon.icon-button.active .fa.fa-star::before, .status__action-bar-button.star-icon.icon-button.active.activate .fa.fa-star::before,
 .star-icon.icon-button.active .fa.fa-star::before,
 .star-icon.icon-button.active.activate .fa.fa-star::before {
-  content: "plus_one";
+  content: "star";
 }
 
 .star-icon.active,
 .star-icon.icon-button.active.active,
 .notification__favourite-icon-wrapper .star-icon,
 .status__action-bar-button.star-icon.icon-button.active {
-  color: #ffffff;
+  color: #ffd600;
 }
 
 .no-reduce-motion button.icon-button i.fa-retweet {
