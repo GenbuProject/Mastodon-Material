@@ -88,7 +88,7 @@
     &.fa-sliders::before { content: "tune" }
     &.fa-chevron-left::before { content: "arrow_back" }
     &.fa-chevron-right::before { content: "arrow_forward" }
-    &.fa-reply::before { content: "reply" }
+    &.fa-reply::before { content: $reply-icon }
     &.fa-reply-all::before { content: "reply_all" }
     &.fa-share-alt::before { content: "share" }
     &.fa-star::before { content: $favorite-icon }
