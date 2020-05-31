@@ -368,7 +368,8 @@
 }
 
 .reply-indicator {
-    @include shadow-1dp;
+    box-shadow: none;
+    border: 1px solid $border-color;
     border-radius: $card-radius;
     background: $card-background-color;
     padding: 16px;
@@ -391,4 +392,35 @@
     &__list a { color: $secondary-text-color }
 
     &.compact .fa { color: $icon-color }
+}
+
+.block-modal {
+    background: $card-background-color;
+    color: $ui-text-color;
+    border-radius: $card-radius;
+
+    &__container { padding: 24px }
+
+    &__action-bar {
+        background: $card-background-color;
+        padding: 8px;
+        justify-content: flex-end;
+    }
+
+    &__cancel-button {
+        box-shadow: none !important;
+        color: $text-button-color;
+        background: transparent;
+
+        &:hover {
+            color: $text-button-color;
+            background-color: $text-button-hover-color;
+        }
+
+        &:focus,
+        &:active {
+            color: $text-button-color;
+            background-color: $text-button-focus-color;
+        }
+    }
 }

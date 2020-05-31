@@ -21,6 +21,24 @@
         background: $card-background-color;
         padding: 8px;
     }
+
+    &__secondary-button {
+        box-shadow: none !important;
+        color: $text-button-color;
+        background: transparent;
+        margin: 0 8px;
+
+        &:hover {
+            color: $text-button-color;
+            background: $text-button-hover-color;
+        }
+        
+        &:focus,
+        &:active {
+            color: $text-button-color;
+            background-color: $text-button-focus-color;
+        }
+    }
 }
 
 .actions-modal {
