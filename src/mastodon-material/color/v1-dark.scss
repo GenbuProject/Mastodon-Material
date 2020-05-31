@@ -38,12 +38,15 @@ $list-background-inactive-color: lighten($list-background-color, 10%);
 $verified-background-color: darken($verified-color, 20%);
 
 // Chip color
-$contained-chip-color: tranparentize(#2e2e2e, 0.3);
-$contained-chip-hover-color: lighten($contained-chip-color, 6%);
+$contained-chip-color: #2e2e2e;
+$contained-chip-hover-color: lighten(tranparentize(#2e2e2e, 0.3), 6%);
 $contained-chip-selected-color: lighten($contained-chip-color, 12%);
 $outlined-chip-color: #1e1e1e;
 $outlined-chip-hover-color: lighten($outlined-chip-color, 6%);
 $outlined-chip-selected-color: lighten($outlined-chip-color, 12%);
+
+// Relationship tag color
+$relationship-tag-color: transparentize(#2e2e2e, 0.2);
 
 // Badge color
 $badge-color: $primary-color;

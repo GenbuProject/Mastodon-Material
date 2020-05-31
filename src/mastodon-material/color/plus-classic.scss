@@ -45,6 +45,9 @@ $outlined-chip-color: #ffffff;
 $outlined-chip-hover-color: darken($outlined-chip-color, 6%);
 $outlined-chip-selected-color: darken($outlined-chip-color, 12%);
 
+// Relationship tag color
+$relationship-tag-color: transparentize(#e0e0e0, 0.2);
+
 // Badge color
 $badge-color: $primary-color;
 //$badge-color: $secondary-color;
