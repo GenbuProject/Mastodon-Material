@@ -38,7 +38,7 @@ $list-background-inactive-color: darken($list-background-color, 10%);
 $verified-background-color: lighten($verified-color, 20%);
 
 // Chip color
-$contained-chip-color: #e0e0e0;
+$contained-chip-color: transparentize(#e0e0e0, 0.3);
 $contained-chip-hover-color: darken($contained-chip-color, 6%);
 $contained-chip-selected-color: darken($contained-chip-color, 12%);
 $outlined-chip-color: #ffffff;
