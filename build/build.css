@@ -129,7 +129,7 @@
   padding: 4px 8px;
   border-radius: 17px;
   color: #202124;
-  background-color: #e0e0e0;
+  background-color: rgba(224, 224, 224, 0.8);
 }
 
 .button,
@@ -650,12 +650,12 @@ html {
   color: #4285f4;
 }
 .reactions-bar__item {
-  background: #e0e0e0;
+  background: rgba(224, 224, 224, 0.8);
   border-radius: 17px;
   margin: 2px 4px;
 }
 .reactions-bar__item.active {
-  background-color: #c1c1c1;
+  background-color: rgba(193, 193, 193, 0.8);
 }
 .reactions-bar__item.active .reactions-bar__item__count {
   color: #202124;
@@ -671,7 +671,7 @@ html {
   color: #5f6368;
 }
 .reactions-bar__item:hover {
-  background: #d1d1d1;
+  background: rgba(209, 209, 209, 0.8);
 }
 
 .notification__filter-bar {
@@ -715,7 +715,7 @@ html {
 
 .relationship-tag {
   color: #202124;
-  background-color: #e0e0e0;
+  background-color: rgba(224, 224, 224, 0.8);
   font-size: 12px;
   border-radius: 17px;
   padding: 4px 8px;
@@ -1092,7 +1092,8 @@ html {
 }
 
 .reply-indicator {
-  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: none;
+  border: 1px solid #dadce0;
   border-radius: 2px;
   background: #ffffff;
   padding: 16px;
@@ -1116,6 +1117,40 @@ html {
 }
 .attachment-list.compact .fa {
   color: #757575;
+}
+
+.block-modal {
+  background: #ffffff;
+  color: #202124;
+  border-radius: 2px;
+}
+.block-modal__container {
+  padding: 24px;
+}
+.block-modal__action-bar {
+  background: #ffffff;
+  padding: 8px;
+  justify-content: flex-end;
+}
+.block-modal__cancel-button {
+  box-shadow: none !important;
+  color: #4285f4;
+  background: transparent;
+}
+.block-modal__cancel-button:hover {
+  color: #4285f4;
+  background-color: rgba(66, 133, 244, 0.2);
+}
+.block-modal__cancel-button:focus, .block-modal__cancel-button:active {
+  color: #4285f4;
+  background-color: rgba(66, 133, 244, 0.3);
+}
+
+.load-more {
+  color: #202124;
+}
+.load-more:hover {
+  background: transparent;
 }
 
 .button,
@@ -1508,6 +1543,20 @@ html {
   justify-content: flex-end;
   background: #ffffff;
   padding: 8px;
+}
+.confirmation-modal__secondary-button {
+  box-shadow: none !important;
+  color: #4285f4;
+  background: transparent;
+  margin: 0 8px;
+}
+.confirmation-modal__secondary-button:hover {
+  color: #4285f4;
+  background: rgba(66, 133, 244, 0.2);
+}
+.confirmation-modal__secondary-button:focus, .confirmation-modal__secondary-button:active {
+  color: #4285f4;
+  background-color: rgba(66, 133, 244, 0.3);
 }
 
 .actions-modal {
