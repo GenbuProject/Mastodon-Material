@@ -424,3 +424,9 @@
         }
     }
 }
+
+.load-more {
+    color: $ui-text-color;
+
+    &:hover { background: transparent }
+}
