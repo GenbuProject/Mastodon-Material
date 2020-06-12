@@ -198,15 +198,10 @@
 
 .setting-text {
     color: $primary-text-color;
-    background: $search-bar-color;
+    background: $text-field-background-color;
     border-radius: $bar-radius;
 
     &::placeholder { color: $tips-text-color }
-
-    &:focus {
-        @include shadow-1dp;
-        background: $search-bar-focus-color;
-    }
 }
 
 .empty-column-indicator {
