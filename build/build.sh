@@ -1,1 +1,1 @@
-sass ../src/mastodon-material.scss build.css
+sass ../src/mastodon-material/loader.scss build.css
