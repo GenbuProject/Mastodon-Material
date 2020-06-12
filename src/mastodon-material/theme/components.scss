@@ -431,3 +431,7 @@
 
     &:hover { background: transparent }
 }
+
+.autosuggest-hashtag {
+    &__name { color: $menu-text-color }
+}
