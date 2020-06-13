@@ -231,7 +231,7 @@
         &__poll-wrapper {
             border-top: 1px solid $border-color;
 
-            ul { padding: 12px }
+            ul { padding: 16px 12px 16px 0 }
 
             select {
                 color: $ui-text-color;
@@ -273,15 +273,29 @@
         width: 20px;
         height: 20px;
         flex: 0 0 20px;
+        margin: 8px;
+
+        &.checkbox { border-radius: 2px }
+
+        &:focus,
+        &:hover { border: 2px solid $control-border-color }
     }
 
     &__text input[type=text] {
         color: $ui-text-color;
-        background: $background-color;
+        background: $text-field-background-color;
         border: 1px solid $border-color;
         padding: 8px 12px;
     
         &:focus { border-color: $border-active-color }
+    }
+
+    &__option input[type=text] {
+        color: $primary-text-color;
+        background: $text-field-background-color;
+        border: none;
+        border-radius: 2px;
+        padding: 8px 16px;
     }
 
     &__chart {
