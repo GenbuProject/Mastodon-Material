@@ -435,3 +435,43 @@
 .autosuggest-hashtag {
     &__name { color: $menu-text-color }
 }
+
+.filter-form {
+    background: $background-color;
+    color: $ui-text-color;
+
+    &__column { padding: 8px 16px }
+}
+
+.directory {
+    &__card {
+        @include shadow-1dp;
+        margin: 8px 4px;
+        border-radius: $card-radius;
+
+        &__img { border-radius: $card-radius $card-radius 0 0 }
+
+        &__bar {
+            background: $card-background-color;
+            padding: 8px 16px;
+
+            .display-name {
+                margin-left: 16px;
+
+                span { color: $secondary-text-color }
+            }
+        }
+
+        &__extra {
+            background: $card-background-color;
+            border-radius: 0 0 $card-radius $card-radius;
+
+            .account__header__content {
+                padding: 8px 16px;
+                border-bottom: 1px solid $border-color;
+            }
+
+            .accounts-table__count { padding: 16px 0 }
+        }
+    }
+}

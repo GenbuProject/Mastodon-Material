@@ -112,6 +112,8 @@
                 }
             }
         }
+
+        &__content { color: $secondary-text-color }
     }
 
     &__section-headline {
@@ -142,4 +144,10 @@
     border-radius: 17px;
     color: $ui-text-color;
     background-color: $contained-chip-color;
+}
+
+.accounts-table__count {
+    color: $ui-text-color;
+
+    small { color: $secondary-text-color }
 }
