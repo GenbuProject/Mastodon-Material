@@ -475,3 +475,46 @@
         }
     }
 }
+
+.mute-modal {
+    background: $card-background-color;
+    color: $ui-text-color;
+    border-radius: $card-radius;
+
+    &__container { padding: 24px }
+
+    &__explanation { margin-top: 16px }
+
+    &__action-bar {
+        background: $card-background-color;
+        padding: 8px;
+        justify-content: flex-end;
+    }
+
+    &__cancel-button {
+        box-shadow: none !important;
+        background: transparent;
+        margin: 0 8px;
+
+        &:hover {
+            color: $text-button-color;
+            background-color: $text-button-hover-color;
+        }
+
+        &:focus,
+        &:active {
+            color: $text-button-color;
+            background-color: $text-button-focus-color;
+        }
+    }
+
+    .setting-toggle {
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        &__label {
+            color: $ui-text-color;
+            margin: 0 0 0 12px;
+        }
+    }
+}

@@ -370,7 +370,18 @@
         &__unread { background: $badge-color }
     }
 
-    &__pagination { color: $ui-text-color }
+    &__pagination {
+        color: $ui-text-color;
+        padding: 8px 16px;
+        bottom: 8px;
+
+        .icon-button {
+            font-size: 20px !important;
+            width: 20px !important;
+            height: 20px !important;
+            margin: 0 8px;
+        }
+    }
 }
 
 .react-swipeable-view-container { transition: transform .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, height 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s !important }
