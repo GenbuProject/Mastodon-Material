@@ -104,7 +104,17 @@ Mastodon Material is the native theme for Mastodon, which based on [Material Des
 
 ## Stylish/Stylus theme
 
-You can use our theme on any server by the browser extension, [Stylish](https://userstyles.org/) or [Stylus](https://add0n.com/stylus.html).
+You can use our theme on any server by the browser extension, [Stylus](https://add0n.com/stylus.html) or [Stylish](https://userstyles.org/).
+
+- **Build by yourself**
+  1. Install [Sass](https://sass-lang.com) on your computer. Require version is refered in [Requirement](#Requirement).
+  2. Clone or download this repository on your computer.
+  3. If you want to customize, please read [Customization Guide](docs/customization_guide.md).
+  4. Run [build.bat (Windows)](build/build.bat) or [build.sh (macOS/Linux)](build/build.sh). Results will be output in [build.css](build/build.css).
+  5. Make a new theme on Stylus or Stylish and copy the code of [build.css](build/build.css) and paste on it. Add your favorite server domain on it and save/enable it.
+. **Get it from [Userstyles.org](https://userstyles.org/)**
+  
+  Work in progress...
 
 ## License
 

@@ -117,7 +117,18 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
 
 ## Stylish/Stylus版テーマ
 
-任意のサーバーでもこのテーマを利用できるよう、ブラウザ拡張機能の[Stylish](https://userstyles.org/)や[Stylus](https://add0n.com/stylus.html)向けのテーマを公開しています。
+任意のサーバーでもこのテーマを利用できるよう、ブラウザ拡張機能の[Stylus](https://add0n.com/stylus.html)や[Stylish](https://userstyles.org/)向けのテーマを公開しています。
+
+- **自分でビルドしたテーマを利用する**
+  
+  1. [Sass](https://sass-lang.com)を導入します。バージョンは[動作環境](#動作環境)を参照してください。
+  2. このリポジトリをクローンまたはダウンロードしてください。
+  3. カスタマイズする場合、[カスタマイズガイド](docs/customization_guide_ja.md)を参照してください。
+  4. [build.bat (Windows)](build/build.bat)または[build.sh (macOS/Linux)](build/build.sh)を実行してください。結果が[build.css](build/build.css)に出力されます。
+  5. StylusまたはStylishでテーマを新規作成し、[build.css](build/build.css)の内容をコピペします。利用しているサーバーのドメインを追加して、テーマを保存/有効化してください。
+. **[Userstyles.org](https://userstyles.org/)から追加する**
+  
+  準備中です
 
 ## ライセンス
 
