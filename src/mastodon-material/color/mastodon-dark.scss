@@ -82,7 +82,7 @@ $outlined-button-active-color: lighten($primary-color, 30%);
 $text-button-color: $primary-color;
 $text-button-hover-color: transparentize($text-button-color, 0.7);
 $text-button-focus-color: transparentize($text-button-color, 0.6);
-$floating-action-button-color: $secondary-color;
+$floating-action-button-color: $primary-color;
 $floating-action-button-hover-color: lighten($floating-action-button-color, 6%);
 $floating-action-button-active-color: lighten($floating-action-button-color, 10%);
 $floating-action-button-icon-color: #ffffff;

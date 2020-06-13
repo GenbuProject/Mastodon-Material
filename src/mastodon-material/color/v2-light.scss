@@ -85,7 +85,7 @@ $text-button-focus-color: transparentize($text-button-color, 0.7);
 $floating-action-button-color: #ffffff;
 $floating-action-button-hover-color: darken($floating-action-button-color, 6%);
 $floating-action-button-active-color: darken($floating-action-button-color, 10%);
-$floating-action-button-icon-color: $secondary-color;
+$floating-action-button-icon-color: $primary-color;
 
 // Toggle color
 $toggle-thumb-color: #ffffff;
