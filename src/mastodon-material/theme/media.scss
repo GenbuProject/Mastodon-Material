@@ -5,7 +5,11 @@
 @import 'mixins';
 
 
-.media-gallery { border-radius: $card-radius }
+.media-gallery {
+    border-radius: 0;
+
+    &__item { border-radius: 0 }
+}
 
 .media-modal__close {
     align-content: center;
