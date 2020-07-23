@@ -210,10 +210,11 @@
 
     .compose-form {
         &__warning {
-            @include shadow-1dp;
             color: $secondary-text-color;
             background: $card-background-color;
             padding: 16px;
+            border: 1px solid $border-color;
+            border-radius: $card-radius;
 
             a { color: $link-text-color }
         }
