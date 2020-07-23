@@ -35,25 +35,19 @@
         }
     }
 
-    &-anchors {
-        color: $icon-button-color;
-        padding: 0;
-    }
-
     &-anchor {
+        color: $icon-tab-indicator-color;
         padding: 10px 4px;
 
         &-selected {
-            color: $icon-button-active-color;
+            color: $icon-tab-indicator-active-color;
+
+            &:hover { color: $icon-tab-indicator-active-color !important }
         }
 
-        &-bar {
-            background-color: $tab-indicator-active-color;
-        }
+        &-bar { background-color: $icon-tab-indicator-active-color }
 
-        &:hover {
-            color: $icon-button-hover-color;
-        }
+        &:hover { color: $icon-tab-indicator-hover-color }
     }
 
     &-search {
