@@ -180,6 +180,6 @@
 
 // search user trends
 .display-name {
-    &__html { color: $primary-text-color !important }
+    &__html { color: $primary-text-color }
     &__account { color: $secondary-text-color }
 }

@@ -1,5 +1,7 @@
 # Mastodon Material
 
+<img src="docs/res/top.png" alt="mastodon-material" width="80%">
+
 ## 言語 | Language
 
 [English (英語)](README.md)
@@ -126,7 +128,8 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
   3. カスタマイズする場合、[カスタマイズガイド](docs/customization_guide_ja.md)を参照してください。
   4. [build.bat (Windows)](build/build.bat)または[build.sh (macOS/Linux)](build/build.sh)を実行してください。結果が[build.css](build/build.css)に出力されます。
   5. StylusまたはStylishでテーマを新規作成し、[build.css](build/build.css)の内容をコピペします。利用しているサーバーのドメインを追加して、テーマを保存/有効化してください。
-. **[Userstyles.org](https://userstyles.org/)から追加する**
+
+- **[Userstyles.org](https://userstyles.org/)から追加する**
   
   準備中です
 
@@ -134,7 +137,15 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
 
 このテーマ及びStylish/Stylus版テーマは[AGPL-3.0](LICENSE)に基づいて公開されています。また、Google製[Material Iconsフォント](https://google.github.io/material-design-icons/#icon-font-for-the-web)については、[Apache license version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)で提供されています。(このリポジトリにMaterial Iconsフォントファイルは含まれていません)
 
+[ヘッダー画像](docs/src/top.png)は[Noto Sans](https://www.google.com/get/noto/#sans-lgc)と[mastodon.privacyfilter.user.styl](https://github.com/eai04191/userscript-graveyard#mastodonprivacyfilteruserstyl)を使用して作りました。
+
 ## スクリーンショット
 
+<details>
 <img src="docs/res/timeline/v1-light.png" alt="material-v1-light" width=50%>
+<img src="docs/res/timeline/v1-dark.png" alt="material-v1-dark" width=50%>
+<img src="docs/res/timeline/v2-light.png" alt="material-v2-light" width=50%>
 <img src="docs/res/timeline/v2-dark.png" alt="material-v2-dark" width=50%>
+<img src="docs/res/timeline/mastodon-light.png" alt="mastodon-material-light" width=50%>
+<img src="docs/res/timeline/mastodon-dark.png" alt="mastodon-material-dark" width=50%>
+</details>
