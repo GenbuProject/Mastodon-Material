@@ -6,9 +6,9 @@
 
 
 .media-gallery {
-    border-radius: 0;
+    border-radius: $media-radius;
 
-    &__item { border-radius: 0 }
+    &__item { border-radius: $media-radius }
 }
 
 .media-modal__close {

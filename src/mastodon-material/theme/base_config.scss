@@ -18,10 +18,7 @@
 
 // Search bar hover settings
 // You can enable/disable search bar floating.
-/*.search__input:hover {
-    @include shadow-2dp;
-    background: $search-bar-focus-color;
-}*/
+$search-bar-hover: false;
 
 
 // Status font size in timeline

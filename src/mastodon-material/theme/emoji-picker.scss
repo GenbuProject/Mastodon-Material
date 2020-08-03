@@ -36,16 +36,12 @@
     }
 
     &-anchor {
-        color: $icon-tab-indicator-color;
+        color: $text-tab-indicator-color;
         padding: 10px 4px;
 
-        &-selected {
-            color: $icon-tab-indicator-active-color;
-
-            &:hover { color: $icon-tab-indicator-active-color !important }
-        }
-
         &-bar { background-color: $icon-tab-indicator-active-color }
+
+        &-selected { color: $icon-tab-indicator-hover-color }
 
         &:hover { color: $icon-tab-indicator-hover-color }
     }

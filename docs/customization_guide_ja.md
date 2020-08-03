@@ -18,7 +18,7 @@
 
 ### 検索バーをホバー時に浮き上がらせる
 
-検索バーをホバー(マウスオーバー)時に浮き上がらせ、背景色をフォーカス時と同じ色にします。[`base_config.scss`](../src/mastodon-material/theme/base_config.scss)の`// Search bar hover settings`セクションを[`custom_config.scss`](../src/mastodon-material/custom_config.scss)にコピペして、アンコメント(有効化)してください。
+検索バーをホバー(マウスオーバー)時に浮き上がらせ、背景色をフォーカス時と同じ色にします。[`custom_config.scss`](../src/mastodon-material/custom_config.scss)に`$search-bar-hover: true;`と追記してください。
 
 ## アイコン設定
 

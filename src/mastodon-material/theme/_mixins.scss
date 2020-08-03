@@ -23,3 +23,10 @@ $shadow-color-3: rgba(0,0,0,.12);
 @mixin shadow-16dp { box-shadow: 0 8px 10px -5px $shadow-color-1, 0 16px 24px 2px $shadow-color-2, 0 6px 30px 5px $shadow-color-3 }
 
 @mixin non-overflow-shadow-4dp { box-shadow: 0 2px 4px -1px $shadow-color-1, 0 4px 5px -1px $shadow-color-2}
+
+@mixin search-bar-hover {
+    @if $search-bar-hover {
+        @include shadow-2dp;
+        background: $search-bar-focus-color;
+    } @else {}
+}

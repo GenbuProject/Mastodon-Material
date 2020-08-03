@@ -64,6 +64,8 @@
             color: $search-bar-text-color;
         }
 
+        &:hover { @include search-bar-hover }
+
         &::placeholder { color: $tips-text-color }
     }
 

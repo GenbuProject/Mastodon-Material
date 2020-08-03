@@ -18,7 +18,7 @@ There are two types of profiles, color scheme and layout profile. You can config
 
 ### Float search bar when cursor hovers
 
-Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Copy `// Search bar hover settings` section in [`base_config.scss`](../src/mastodon-material/theme/base_config.scss) and paste it into [`custom_config.scss`](../src/mastodon-material/custom_config.scss). Then, uncomment the whole section to enable it.
+Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Add an item, `$search-bar-hover: true;` to [`custom_config.scss`](../src/mastodon-material/custom_config.scss).
 
 ## Icon settings
 
