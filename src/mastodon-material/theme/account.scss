@@ -29,7 +29,7 @@
 
     &__header {
         &__bar {
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 8px;
             border-bottom: 1px solid $border-color;
 
@@ -89,7 +89,7 @@
 
                     .verified {
                         border: none;
-                        background: $verified-background-color;
+                        background: $verified-bg-color;
 
                         a,
                         &__mark { color: $primary-text-color }
@@ -105,7 +105,7 @@
 
                     dt {
                         color: $primary-text-color;
-                        background: $list-background-inactive-color;
+                        background: $list-bg-inactive-color;
                     }
 
                     dd { color: $primary-text-color }
@@ -117,7 +117,7 @@
     }
 
     &__section-headline {
-        background: $text-tab-background-color;
+        background: $text-tab-bg-color;
         border-bottom: 1px solid $border-color;
 
         a {
@@ -131,10 +131,10 @@
                 &::before,
                 &:after { border: none }
 
-                &:focus { background: $text-tab-indicator-background-focus-color }
+                &:focus { background: $text-tab-indicator-bg-focus-color }
             }
 
-            &:hover { background: $text-tab-indicator-background-hover-color }
+            &:hover { background: $text-tab-indicator-bg-hover-color }
         }
     }
 }

@@ -81,14 +81,14 @@
 @media screen and (min-width: 631px) {
     .tabs-bar__link {
         &:hover {
-            background: $tab-indicator-background-hover-color;
-            border-bottom-color: $tab-background-color;
+            background: $tab-indicator-bg-hover-color;
+            border-bottom-color: $tab-bg-color;
         }
 
         &:active,
         &:focus {
-            background: $tab-indicator-background-focus-color;
-            border-bottom-color: $tab-background-color;
+            background: $tab-indicator-bg-focus-color;
+            border-bottom-color: $tab-bg-color;
         }
     }
 }

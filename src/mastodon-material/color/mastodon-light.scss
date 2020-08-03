@@ -22,20 +22,19 @@ $search-bar-text-color: $primary-text-color;
 $contained-button-text-color: #ffffff;
 
 // Background-color
-$background-color: #eff3f5;
-$menu-background-color: $background-color;
-$menu-background-hover-color: darken($background-color, 6%);
-$menu-background-active-color: darken($background-color, 10%);
-$menu-background-active-hover-color: darken($background-color, 16%);
-$card-background-color: #ffffff;
-$card-background-hover-color: darken($card-background-color, 6%);
-$card-background-inactive-color: darken($card-background-color, 10%);
-$list-background-color: #ffffff;
-$list-background-hover-color: darken($list-background-color, 6%);
-$list-background-active-color: darken($list-background-color, 10%);
-$list-background-inactive-color: darken($list-background-color, 10%);
-$text-field-background-color: $card-background-color;
-$verified-background-color: lighten($verified-color, 20%);
+$bg-color: #eff3f5;
+$menu-bg-color: $bg-color;
+$menu-bg-hover-color: darken($bg-color, 6%);
+$menu-bg-active-color: darken($bg-color, 10%);
+$menu-bg-active-hover-color: darken($bg-color, 16%);
+$card-bg-color: #ffffff;
+$card-bg-hover-color: darken($card-bg-color, 6%);
+$list-bg-color: #ffffff;
+$list-bg-hover-color: darken($list-bg-color, 6%);
+$list-bg-active-color: darken($list-bg-color, 10%);
+$list-bg-inactive-color: darken($list-bg-color, 10%);
+$text-field-bg-color: $card-bg-color;
+$verified-bg-color: lighten($verified-color, 20%);
 
 // Chip color
 $contained-chip-color: #e0e0e0;
@@ -55,8 +54,8 @@ $badge-color: $primary-color;
 // Icon color
 $icon-color: #282c37;
 $icon-hover-color: darken($icon-color, 30%);
-$icon-background-hover-color: darken($background-color, 4%);
-$icon-background-active-color: darken($background-color, 8%);
+$icon-background-hover-color: darken($bg-color, 4%);
+$icon-background-active-color: darken($bg-color, 8%);
 $disabled-icon-color: lighten($icon-color, 16%);
 $top-bar-icon-color: $icon-color;
 $top-bar-icon-hover-color: $icon-hover-color;
@@ -104,19 +103,19 @@ $scroll-bar-thumb-active-color: darken($scroll-bar-thumb-color, 18%);
 // App bar color
 $top-bar-color: #ffffff;
 $search-bar-color: #d9e1e8;
-$search-bar-focus-color: $background-color;
+$search-bar-focus-color: $bg-color;
 
 // Tab color
 $tab-indicator-color: #282c37;
 $tab-indicator-active-color: $top-bar-icon-color;
-$tab-background-color: #e6ebf0;
-$tab-indicator-background-hover-color: transparentize($tab-indicator-active-color, 0.9);
-$tab-indicator-background-focus-color: transparentize($tab-indicator-active-color, 0.8);
+$tab-bg-color: #e6ebf0;
+$tab-indicator-bg-hover-color: transparentize($tab-indicator-active-color, 0.9);
+$tab-indicator-bg-focus-color: transparentize($tab-indicator-active-color, 0.8);
 $text-tab-indicator-color: $tab-indicator-color;
 $text-tab-indicator-active-color: $tab-indicator-active-color;
-$text-tab-background-color: $tab-background-color;
-$text-tab-indicator-background-hover-color: transparentize($text-tab-indicator-active-color, 0.9);
-$text-tab-indicator-background-focus-color: transparentize($text-tab-indicator-active-color, 0.8);
+$text-tab-bg-color: $tab-bg-color;
+$text-tab-indicator-bg-hover-color: transparentize($text-tab-indicator-active-color, 0.9);
+$text-tab-indicator-bg-focus-color: transparentize($text-tab-indicator-active-color, 0.8);
 $icon-tab-indicator-active-color: $primary-color;
 $icon-tab-indicator-hover-color: $icon-hover-color;
 

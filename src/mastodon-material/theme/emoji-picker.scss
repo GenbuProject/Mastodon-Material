@@ -7,13 +7,13 @@
 .emoji-picker-dropdown {
     &__menu {
         @include shadow-8dp;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         border-radius: $menu-radius;
     }
 
     &__modifiers__menu {
         @include shadow-8dp;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         border-radius: $menu-radius;
 
         button {
@@ -31,7 +31,7 @@
         border: 0 solid $border-color;
 
         &:first-child {
-            background: $menu-background-color;
+            background: $menu-bg-color;
         }
     }
 
@@ -47,7 +47,7 @@
     }
 
     &-search {
-        background: $menu-background-color;
+        background: $menu-bg-color;
 
         input {
             outline: none;
@@ -66,12 +66,12 @@
 
     &-scroll {
         padding: 0 8px 8px;
-        background: $menu-background-color;
+        background: $menu-bg-color;
     }
 
     &-category-label span {
         padding: 4px 6px;
-        background: $menu-background-color;
+        background: $menu-bg-color;
     }
 
     &-emoji:hover::before {

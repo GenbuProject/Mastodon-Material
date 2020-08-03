@@ -136,7 +136,7 @@
         &:hover { background-color: transparent !important }
     }
 
-    &:hover { background-color: $card-background-color }
+    &:hover { background-color: $card-bg-color }
 }
 
 // Detailed status in mobile
@@ -152,7 +152,7 @@
 }
 
 .detailed-status {
-    background: $card-background-color;
+    background: $card-bg-color;
     padding: 16px;
 
     &__display-name {
@@ -167,7 +167,7 @@
     }
 
     &__action-bar {
-        background: $card-background-color;
+        background: $card-bg-color;
         border-top: none;
         border-bottom: 1px solid $border-color;
         padding: 12px 0;

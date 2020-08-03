@@ -40,14 +40,14 @@
     }
 
     &__inner {
-        background: $card-background-color;
+        background: $card-bg-color;
 
         &.darker {
-            background: $card-background-color;
+            background: $card-bg-color;
             position: inherit;
         }
 
-        &__mastodon { background: $card-background-color }
+        &__mastodon { background: $card-bg-color }
     }
 }
 
@@ -114,7 +114,7 @@
 .search-results {
     &__header {
         color: $secondary-text-color;
-        background-color: $card-background-color;
+        background-color: $card-bg-color;
         padding: 16px;
 
         .fa { margin-right: 8px }
@@ -122,7 +122,7 @@
 
     &__section {
         h5 {
-            background: $card-background-color;
+            background: $card-bg-color;
             border-bottom: 1px solid $border-color;
             padding: 16px;
             color: $section-text-color;
@@ -148,7 +148,7 @@
 
 .dropdown-menu {
     @include shadow-8dp;
-    background: $menu-background-color;
+    background: $menu-bg-color;
     padding: 8px 0;
     border-radius: $menu-radius;
 
@@ -157,11 +157,11 @@
     &__item a {
         font-size: 14px;
         padding: 8px 16px;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         color: $menu-text-color;
 
         &:hover, &:active {
-            background: $menu-background-hover-color;
+            background: $menu-bg-hover-color;
             color: $menu-text-color;
         }
     }
@@ -175,7 +175,7 @@
 .compose-form {
     .autosuggest-textarea {
         &__textarea {
-            background: $text-field-background-color;
+            background: $text-field-bg-color;
             color: $ui-text-color;
             border-radius: $card-radius;
     
@@ -184,7 +184,7 @@
 
         &__suggestions {
             @include shadow-1dp;
-            background: $menu-background-color;
+            background: $menu-bg-color;
             color: $ui-text-color;
             border-radius: $card-radius;
             font-size: 16px;
@@ -194,18 +194,18 @@
                 padding: 8px;
                 border-radius: 0;
 
-                &:hover { background: $menu-background-hover-color }
+                &:hover { background: $menu-bg-hover-color }
 
                 &.selected,
                 &:focus,
-                &:active { background: $menu-background-active-color }
+                &:active { background: $menu-bg-active-color }
             }
         }
     }
 
     .spoiler-input__input {
         color: $ui-text-color;
-        background: $card-background-color;
+        background: $card-bg-color;
 
         &::placeholder { color: $tips-text-color }
     }
@@ -213,7 +213,7 @@
     .compose-form {
         &__warning {
             color: $secondary-text-color;
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 16px;
             border: 1px solid $border-color;
             border-radius: $card-radius;
@@ -222,12 +222,12 @@
         }
 
         &__modifiers {
-            background: $card-background-color;
+            background: $card-bg-color;
             color: $tips-text-color;
         }
 
         &__buttons-wrapper {
-            background: $card-background-color;
+            background: $card-bg-color;
             color: $tips-text-color;
         }
 
@@ -238,7 +238,7 @@
 
             select {
                 color: $ui-text-color;
-                background-color: $background-color;
+                background-color: $bg-color;
                 border: 0;
 
                 &:focus { border-color: $border-active-color }
@@ -286,7 +286,7 @@
 
     &__text input[type=text] {
         color: $ui-text-color;
-        background: $text-field-background-color;
+        background: $text-field-bg-color;
         border: 1px solid $border-color;
         padding: 8px 12px;
     
@@ -295,7 +295,7 @@
 
     &__option input[type=text] {
         color: $primary-text-color;
-        background: $text-field-background-color;
+        background: $text-field-bg-color;
         border: none;
         border-radius: 2px;
         padding: 8px 16px;
@@ -328,7 +328,7 @@
 
     &__dropdown {
         @include shadow-8dp;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         border-radius: $dialog-radius;
     }
 
@@ -348,7 +348,7 @@
         }
 
         &.active {
-            background: $menu-background-active-color;
+            background: $menu-bg-active-color;
             color: $icon-hover-color;
 
             .privacy-dropdown__option__content {
@@ -358,7 +358,7 @@
             }
 
             &:hover {
-                background: $menu-background-active-color;
+                background: $menu-bg-active-color;
                 
                 .privacy-dropdown__option__content {
                     color: $secondary-text-color;
@@ -369,7 +369,7 @@
         }
 
         &:hover {
-            background: $menu-background-hover-color;
+            background: $menu-bg-hover-color;
             color: $icon-hover-color;
 
             .privacy-dropdown__option__content {
@@ -389,7 +389,7 @@
     box-shadow: none;
     border: 1px solid $border-color;
     border-radius: $card-radius;
-    background: $card-background-color;
+    background: $card-bg-color;
     padding: 16px;
 
     &__header { margin-bottom: 4px }
@@ -413,14 +413,14 @@
 }
 
 .block-modal {
-    background: $card-background-color;
+    background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
 
     &__container { padding: 24px }
 
     &__action-bar {
-        background: $card-background-color;
+        background: $card-bg-color;
         padding: 8px;
         justify-content: flex-end;
     }
@@ -454,7 +454,7 @@
 }
 
 .filter-form {
-    background: $background-color;
+    background: $bg-color;
     color: $ui-text-color;
 
     &__column { padding: 8px 16px }
@@ -469,7 +469,7 @@
         &__img { border-radius: $card-radius $card-radius 0 0 }
 
         &__bar {
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 8px 16px;
 
             .display-name {
@@ -480,7 +480,7 @@
         }
 
         &__extra {
-            background: $card-background-color;
+            background: $card-bg-color;
             border-radius: 0 0 $card-radius $card-radius;
 
             .account__header__content {
@@ -494,7 +494,7 @@
 }
 
 .mute-modal {
-    background: $card-background-color;
+    background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
 
@@ -503,7 +503,7 @@
     &__explanation { margin-top: 16px }
 
     &__action-bar {
-        background: $card-background-color;
+        background: $card-bg-color;
         padding: 8px;
         justify-content: flex-end;
     }

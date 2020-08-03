@@ -10,7 +10,7 @@
     margin: 10px 8px;
     border-radius: $card-radius;
 
-    &>.scrollable { background: $list-background-color }
+    &>.scrollable { background: $list-bg-color }
 
     &:last-child { box-shadow: none }
 }
@@ -105,11 +105,11 @@
 
     &__collapsible {
         color: $ui-text-color;
-        background: $card-background-color;
+        background: $card-bg-color;
         border-top: 1px solid $border-color;
 
         &-inner {
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 16px;
         }
 
@@ -129,21 +129,21 @@
 
 .column-subheading {
     color: $section-text-color;
-    background: $background-color;
+    background: $bg-color;
     padding: 12px 16px;
     border-top: 1px solid $border-color;
 }
 
 .column-link {
     color: $ui-text-color;
-    background: $background-color;
+    background: $bg-color;
     padding: 16px;
     border-radius: $nav-drawer-item-radius;
 
-    &:hover { background: $list-background-hover-color }
+    &:hover { background: $list-bg-hover-color }
 
     &:active,
-    &:focus { background: $list-background-active-color }
+    &:focus { background: $list-bg-active-color }
 
     &__icon {
         margin-right: 32px;
@@ -153,9 +153,9 @@
     &--transparent {
         &.active {
             color: $ui-text-color;
-            background: $menu-background-active-color;
+            background: $menu-bg-active-color;
 
-            &:hover { background: $menu-background-active-hover-color }
+            &:hover { background: $menu-bg-active-hover-color }
     
             .fa { color: $icon-color }
         }
@@ -191,14 +191,14 @@
 
 .column-inline-form {
     padding: 16px 0 16px 16px;
-    background: $card-background-color;
+    background: $card-bg-color;
 
     .icon-button { margin: 0 16px }
 }
 
 .setting-text {
     color: $primary-text-color;
-    background: $text-field-background-color;
+    background: $text-field-bg-color;
     border-radius: $bar-radius;
 
     &::placeholder { color: $tips-text-color }
@@ -206,17 +206,17 @@
 
 .empty-column-indicator {
     color: $secondary-text-color;
-    background: $card-background-color;
+    background: $card-bg-color;
     font-size: 16px;
 }
 
 .conversation {
     border-bottom: 1px solid $border-color;
     padding: 12px;
-    background: $list-background-inactive-color;
+    background: $list-bg-inactive-color;
 
     &--unread {
-        background: $list-background-color;
+        background: $list-bg-color;
 
         .conversation__content__relative-time { color: $info-text-color }
     }
@@ -275,15 +275,15 @@
     color: $icon-color;
     padding: 16px;
 
-    &:hover { background: $menu-background-hover-color }
+    &:hover { background: $menu-bg-hover-color }
 }
 
 .getting-started {
-    background: $background-color;
+    background: $bg-color;
     color: $ui-text-color;
 
     &__wrapper {
-        background: $background-color;
+        background: $bg-color;
         height: auto !important;
         border-bottom: 1px solid $border-color;
     }
@@ -303,7 +303,7 @@
     }
 
     &__trends {
-        background: $background-color;
+        background: $bg-color;
         margin-bottom: 0;
 
         h4 {
@@ -358,7 +358,7 @@
 }
 
 .announcements {
-    background: $card-background-color;
+    background: $card-bg-color;
     padding: 0;
 
     &__container { color: $primary-text-color }
@@ -424,12 +424,12 @@
 
 .notification {
     &__filter-bar {
-        background: $tab-background-color;
+        background: $tab-bg-color;
         border-bottom: 1px solid $border-color;
         z-index: 1;
     
         button {
-            background: $tab-background-color;
+            background: $tab-bg-color;
             color: $tab-indicator-color;
             font-size: 16px;
 
@@ -442,10 +442,10 @@
                 &::before,
                 &:after { border: none }
 
-                &:focus { background: $tab-indicator-background-focus-color }
+                &:focus { background: $tab-indicator-bg-focus-color }
             }
 
-            &:hover { background: $tab-indicator-background-hover-color }
+            &:hover { background: $tab-indicator-bg-hover-color }
         }
     }
 
