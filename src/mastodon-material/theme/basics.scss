@@ -21,6 +21,4 @@ body { background: $bg-color }
 }
 
 // Firefox scroll bar
-html {
-    scrollbar-color: $scroll-bar-thumb-color transparent;
-}
+html { scrollbar-color: $scroll-bar-thumb-color transparent }

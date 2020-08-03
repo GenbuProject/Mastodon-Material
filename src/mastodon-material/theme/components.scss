@@ -11,6 +11,7 @@
         background: $top-bar-color;
         border-radius: $nav-bar-radius;
         justify-content: space-around;
+        opacity: $bar-transparency;
     
         a { transition: none }
     
@@ -41,6 +42,7 @@
 
     &__inner {
         background: $card-bg-color;
+        opacity: $column-transparency;
 
         &.darker {
             background: $card-bg-color;
@@ -57,6 +59,7 @@
         color: $tips-text-color;
         border-radius: $search-bar-radius;
         padding: 12px 12px 12px 40px;
+        opacity: $bar-transparency;
 
         &:focus {
             @include shadow-2dp;

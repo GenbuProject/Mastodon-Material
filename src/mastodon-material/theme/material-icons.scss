@@ -67,7 +67,8 @@
     &.fa-compress,
     &.fa-user-times,
     &.fa-check,
-    &.fa-quote-right {
+    &.fa-quote-right,
+    &.fa-upload {
         font-family: "Material Icons";
     }
 }
@@ -124,6 +125,7 @@
     &.fa-user-times::before { content: "delete" }
     &.fa-check::before { content: "check" }
     &.fa-quote-right::before { content: "format_quote" }
+    &.fa-upload::before { content: "file_upload" }
 }
 
 // bookmark icon

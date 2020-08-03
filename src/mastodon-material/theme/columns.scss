@@ -10,7 +10,10 @@
     margin: 10px 8px;
     border-radius: $card-radius;
 
-    &>.scrollable { background: $list-bg-color }
+    &>.scrollable {
+        background: $list-bg-color;
+        opacity: $column-transparency;
+    }
 
     &:last-child { box-shadow: none }
 }
@@ -93,6 +96,7 @@
     &__wrapper {
         @include shadow-4dp;
         border-radius: $bar-radius;
+        opacity: $bar-transparency;
 
         .announcements { border-top: 1px solid $border-color }
 
@@ -196,6 +200,11 @@
     .icon-button { margin: 0 16px }
 }
 
+.columns-area {
+    background-image: url($bg-image);
+    background-size: contain;
+}
+
 .setting-text {
     color: $primary-text-color;
     background: $text-field-bg-color;
@@ -281,6 +290,7 @@
 .getting-started {
     background: $bg-color;
     color: $ui-text-color;
+    opacity: $column-transparency;
 
     &__wrapper {
         background: $bg-color;
@@ -305,6 +315,7 @@
     &__trends {
         background: $bg-color;
         margin-bottom: 0;
+        opacity: $column-transparency;
 
         h4 {
             color: $section-text-color;
@@ -427,6 +438,7 @@
         background: $tab-bg-color;
         border-bottom: 1px solid $border-color;
         z-index: 1;
+        opacity: $bar-transparency;
     
         button {
             background: $tab-bg-color;
