@@ -3,7 +3,10 @@
 @import '../custom_config', '../icon_config';
 @import '../custom_color', '../custom_layout';
 @import 'functions';
+@import 'mixins';
 
+
+@include icon-font-source;
 
 .fa {
     &.fa-bars,

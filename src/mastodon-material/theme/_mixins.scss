@@ -30,3 +30,32 @@ $shadow-color-3: rgba(0,0,0,.12);
         background: $search-bar-focus-color;
     } @else {}
 }
+
+@mixin icon-font-source {
+    @if $icon-font-source == github {
+        @font-face {
+            font-family: "Material Icons";
+            src:
+                local("Material Icons"),
+                url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+        }
+    }
+
+    @if $icon-font-source == google {
+        @font-face {
+            font-family: "Material Icons";
+            src:
+                local("Material Icons"),
+                url("https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2");
+        }
+    }
+
+    @if $icon-font-source == self {
+        @font-face {
+            font-family: "Material Icons";
+            src:
+                local("Material Icons"),
+                url(".../fonts/MaterialIcons-Regular.woff2");
+        }
+    }
+}

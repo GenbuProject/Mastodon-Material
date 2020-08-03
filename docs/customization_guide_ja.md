@@ -34,11 +34,11 @@
 
 - **Google Fontsのフォントを利用したい**
   
-  `// Google Fonts`の行をアンコメントし、`// GitHub`の行をコメントアウトします。
+  `$icon-font-source`の値を`google`に設定します。
 
 - **自分のサーバーでホスティングしたい**
   
-  1.と同様に`// Self-hosting`の行をアンコメントし、`// GitHub`の行をコメントアウトします。[フォントの公式レポジトリ](https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2)からダウンロードしてきた`MaterialIcons-Regular.woff2`ファイルを`/mastodon/app/javascript/fonts`に配置します。
+  `$icon-font-source`の値を`self`に設定します。[フォントの公式レポジトリ](https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2)からダウンロードしてきた`MaterialIcons-Regular.woff2`ファイルを`/mastodon/app/javascript/fonts`に配置します。
 
 ## プラグイン
 

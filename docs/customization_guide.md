@@ -18,7 +18,7 @@ There are two types of profiles, color scheme and layout profile. You can config
 
 ### Float search bar when cursor hovers
 
-Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Add an item, `$search-bar-hover: true;` to [`custom_config.scss`](../src/mastodon-material/custom_config.scss).
+Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Add `$search-bar-hover: true;` to [`custom_config.scss`](../src/mastodon-material/custom_config.scss).
 
 ## Icon settings
 
@@ -34,11 +34,11 @@ Default setting loads the icon font on GitHub [official repository](https://gith
 
 - **Use the font on Google Fonts**
   
-  Uncomment `// Google Fonts` line and comment out `// GitHub` line.
+  Set `$icon-font-source` value as `google`.
 
 - **Host the font on your server**
   
-  Uncomment `// Self-hosting` line and comment out `// GitHub` line. Then, download font file from [official font repository](https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2) and put `MaterialIcons-Regular.woff2` file into `/mastodon/app/javascript/fonts`.
+  Set `$icon-font-source` value as `self`. Then, download font file from [official font repository](https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2) and put `MaterialIcons-Regular.woff2` file into `/mastodon/app/javascript/fonts`.
 
 ## Plugins
 
