@@ -153,11 +153,16 @@
 .status__action-bar-button.star-icon.icon-button.active { color: $favorite-icon-color }
 
 // boost icon
-.no-reduce-motion button.icon-button i.fa-retweet {
+button.icon-button i.fa-retweet {
     height: 18px;
     width: 18px;
     transition: none;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="36" width="18"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="#{svg-color($icon-color)}" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="#{svg-color($icon-button-active-color)}" stroke-width="0"/></svg>');
+}
+
+button.icon-button.disabled i.fa-retweet,
+button.icon-button.disabled i.fa-retweet:hover {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#{svg-color($disabled-icon-color)}" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"/></svg>');
 }
 
 // dropdown icon
