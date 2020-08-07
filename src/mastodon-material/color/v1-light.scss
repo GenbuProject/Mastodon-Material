@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 
+$color-scheme: light;
+
 // Base color
 $primary-color: #4285f4;
 $secondary-color: #db4437;
@@ -124,13 +126,13 @@ $icon-tab-indicator-hover-color: $icon-hover-color;
 $media-page-indicator-color: #9e9e9e;
 $media-page-indicator-active-color: #e6e6e6;
 
-// Poll chart color
-$poll-bar-leading-color: $primary-color;
-$poll-bar-color: lighten($poll-bar-leading-color, 30%);
+// Progress indicator color
+$progress-indicator-color: $primary-color;
+$progress-indicator-track-color: lighten($progress-indicator-color, 30%);
 
 // Contents color in read status
 $read-primary-text-color: transparentize($primary-text-color, 0.3);
 $read-secondary-text-color: transparentize($secondary-text-color, 0.3);
 $read-ui-text-color: transparentize($ui-text-color, 0.3);
-$read-poll-bar-leading-color: transparentize($poll-bar-leading-color, 0.3);
-$read-poll-bar-color: transparentize($poll-bar-color, 0.3);
+$read-poll-bar-leading-color: transparentize($progress-indicator-color, 0.3);
+$read-poll-bar-color: transparentize($progress-indicator-track-color, 0.3);
