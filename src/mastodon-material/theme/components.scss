@@ -257,12 +257,8 @@
                 &:active { background-color: $outlined-button-active-color }
 
                 &:focus { background-color: $outlined-button-color }
-
-
             }
         }
-
-        &__utilBtns { padding-top: 0 }
 
         &__publish .compose-form__publish-button-wrapper { box-shadow: none }
     }
@@ -306,9 +302,9 @@
 
     &__chart {
         border-radius: 0;
-        background: $poll-bar-color;
+        background: $progress-indicator-track-color;
     
-        &.leading { background: $poll-bar-leading-color }
+        &.leading { background: $progress-indicator-color }
     }
 
     &__footer {
@@ -513,6 +509,7 @@
 
     &__cancel-button {
         box-shadow: none !important;
+        color: $text-button-color;
         background: transparent;
         margin: 0 8px;
 
@@ -536,5 +533,20 @@
             color: $ui-text-color;
             margin: 0 0 0 12px;
         }
+    }
+}
+
+.upload-progress {
+    color: $ui-text-color;
+    
+    &__backdrop {
+        border-radius: 0;
+        background: $progress-indicator-track-color;
+        margin-top: 6px;
+    }
+
+    &__tracker {
+        border-radius: 0;
+        background: $progress-indicator-color;
     }
 }
