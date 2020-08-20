@@ -86,6 +86,8 @@
         background: transparent;
         border-bottom-color: $border-color;
     }
+
+    &__visibility-icon { color: $icon-color }
 }
 
 .status-card {
