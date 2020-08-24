@@ -38,7 +38,11 @@
 
 - **自分のサーバーでホスティングしたい**
   
-  `$icon-font-source`の値を`self`に設定します。[フォントの公式レポジトリ](https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2)からダウンロードしてきた`MaterialIcons-Regular.woff2`ファイルを`/mastodon/app/javascript/fonts`に配置します。
+  `$icon-font-source`の値を`self`に設定します。[フォントの公式レポジトリ](https://github.com/google/material-design-icons/tree/master/font)からダウンロードしてきたフォントファイルを`/mastodon/app/javascript/fonts`に配置します。
+
+### アイコンフォントのスタイルを変更したい
+
+アイコンフォントにはFilled, Outlined, Rounded, Two-Tone, Sharpの5種類のスタイルがあります。実際のスタイルは[Icons - Material Design](https://material.io/resources/icons/)から確認できます。`// Material Icon style settings`セクションを編集します。デフォルトはFilledです。
 
 ## プラグイン
 

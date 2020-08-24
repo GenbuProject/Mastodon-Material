@@ -26,11 +26,11 @@ Edit [`mastodon-material/icon_config.scss`](../src/mastodon-material/icon_config
 
 ### Change favorite icon
 
-Edit `// Favorite icon settings` section to change it. Default icon is ★ (star).
+Edit `// Favorite icon settings` section to change it. The default icon is ★ (star).
 
-### Change icon font's host
+### Change icon fonts host
 
-Default setting loads the icon font on GitHub [official repository](https://github.com/google/material-design-icons). Edit `// Material Design Icon settings` section to change it.
+The default setting loads the icon fonts on GitHub [official repository](https://github.com/google/material-design-icons). Edit `// Material Design Icon settings` section to change it.
 
 - **Use the font on Google Fonts**
   
@@ -38,7 +38,11 @@ Default setting loads the icon font on GitHub [official repository](https://gith
 
 - **Host the font on your server**
   
-  Set `$icon-font-source` value as `self`. Then, download font file from [official font repository](https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2) and put `MaterialIcons-Regular.woff2` file into `/mastodon/app/javascript/fonts`.
+  Set `$icon-font-source` value as `self`. Then, download font file from [official font repository](https://github.com/google/material-design-icons/tree/master/font) and put `MaterialIcons-Regular.woff2` file into `/mastodon/app/javascript/fonts`.
+
+### Change icon fonts style
+
+The icon fonts have 5 styles, Filled, Outlined, Rounded, Two-Tone and Sharp. You can check how they look in [Icons - Material Design](https://material.io/resources/icons/). Edit `// Material Icon style settings` section to change it. The default style is Filled.
 
 ## Plugins
 

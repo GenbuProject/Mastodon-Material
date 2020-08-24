@@ -31,31 +31,118 @@ $shadow-color-3: rgba(0,0,0,.12);
     } @else {}
 }
 
-@mixin icon-font-source {
+@mixin icon-font {
     @if $icon-font-source == github {
-        @font-face {
-            font-family: "Material Icons";
-            src:
-                local("Material Icons"),
-                url("https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2");
+        @if $icon-font-style == filled {
+            @font-face {
+                font-family: "Material Icons";
+                src: local("Material Icons"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/raw/master/font/MaterialIcons-Regular.ttf") format('truetype');
+            }
+        }
+        @if $icon-font-style == outlined {
+            @font-face {
+                font-family: "Material Icons Outlined";
+                src: local("Material Icons Outlined"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsOutlined-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == round {
+            @font-face {
+                font-family: "Material Icons Round";
+                src: local("Material Icons Round"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsRound-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == sharp {
+            @font-face {
+                font-family: "Material Icons Sharp";
+                src: local("Material Icons Sharp"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsSharp-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == two-tone {
+            @font-face {
+                font-family: "Material Icons Two Tone";
+                src: local("Material Icons Two Tone"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsTwoTone-Regular.otf") format('opentype');
+            }
         }
     }
 
     @if $icon-font-source == google {
-        @font-face {
-            font-family: "Material Icons";
-            src:
-                local("Material Icons"),
-                url("https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2");
+        @if $icon-font-style == filled {
+            @font-face {
+                font-family: "Material Icons";
+                src: local("Material Icons"),
+                     url("https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == outlined {
+            @font-face {
+                font-family: "Material Icons Outlined";
+                src: local("Material Icons Outlined"),
+                     url("https://fonts.gstatic.com/s/materialiconsoutlined/v25/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == round {
+            @font-face {
+                font-family: "Material Icons Round";
+                src: local("Material Icons Round"),
+                     url("https://fonts.gstatic.com/s/materialiconsround/v24/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == sharp {
+            @font-face {
+                font-family: "Material Icons Sharp";
+                src: local("Material Icons Sharp"),
+                     url("https://fonts.gstatic.com/s/materialiconssharp/v25/oPWQ_lt5nv4pWNJpghLP75WiFR4kLh3kvmvR.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == two-tone {
+            @font-face {
+                font-family: "Material Icons Two Tone";
+                src: local("Material Icons Two Tone"),
+                     url("https://fonts.gstatic.com/s/materialiconstwotone/v23/hESh6WRmNCxEqUmNyh3JDeGxjVVyMg4tHGctNCu0.woff2") format('woff2');
+            }
         }
     }
 
     @if $icon-font-source == self {
-        @font-face {
-            font-family: "Material Icons";
-            src:
-                local("Material Icons"),
-                url(".../fonts/MaterialIcons-Regular.woff2");
+        @if $icon-font-style == filled {
+            @font-face {
+                font-family: "Material Icons";
+                src: local("Material Icons"),
+                     url(".../fonts/MaterialIcons-Regular.ttf") format('truetype');
+            }
+        }
+        @if $icon-font-style == outlined {
+            @font-face {
+                font-family: "Material Icons Outlined";
+                src: local("Material Icons Outlined"),
+                     url(".../fonts/MaterialIconsOutlined-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == round {
+            @font-face {
+                font-family: "Material Icons Round";
+                src: local("Material Icons"),
+                     url(".../fonts/MaterialIconsRound-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == sharp {
+            @font-face {
+                font-family: "Material Icons Sharp";
+                src: local("Material Icons Sharp"),
+                     url(".../fonts/MaterialIconsSharp-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == two-tone {
+            @font-face {
+                font-family: "Material Icons Two Tone";
+                src: local("Material Icons Two Tone"),
+                     url(".../fonts/MaterialIconsTwoTone-Regular.otf") format('opentype');
+            }
         }
     }
 }
