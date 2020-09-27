@@ -43,7 +43,9 @@ $avater-radius: 50%;  // Rounded cropping
 //$avater-radius: 2px  // Material v1 square
 
 
+// Chip settings
+$outlined-chip: false;  // Material v1 styled contained chip
+
+
 // Button shadow
-// If you want to use material v2 styled non-shadow button, please comment out this section.
-.button,
-.compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
+$button-shadow: true;  // Material v1 styled colored button with shadow

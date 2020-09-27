@@ -16,25 +16,7 @@
     &__icon.fa-fw { color: $icon-color }
 }
 
-
-.fa { vertical-align: sub }  // adjust material icon font baseline to other font
-
-.fa.fa-times,
-.fa.fa-eraser,
-.fa.fa-plus { vertical-align: middle }  // adjustment exception
-
-.fa.fa-check { vertical-align: initial }
-
 .fa.fa-lock { text-transform: none }
-
-.fa-fw { width: 16px }
-
-// icon in tab settings
-.fa.fa-chevron-left.column-back-button__icon.fa-fw,
-.text-btn.column-header__setting-btn .fa.fa-eraser {
-    font-size: 20px;
-    margin-right: 16px;
-}
 
 .icon-with-badge__badge {
     background: $badge-color;

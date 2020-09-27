@@ -21,14 +21,52 @@ $shadow-color-3: rgba(0,0,0,.12);
 @mixin shadow-14dp { box-shadow: 0 7px 9px -4px $shadow-color-1, 0 14px 21px 2px $shadow-color-2, 0 5px 26px 4px $shadow-color-3 }
 @mixin shadow-15dp { box-shadow: 0 8px 9px -5px $shadow-color-1, 0 15px 22px 2px $shadow-color-2, 0 6px 28px 5px $shadow-color-3 }
 @mixin shadow-16dp { box-shadow: 0 8px 10px -5px $shadow-color-1, 0 16px 24px 2px $shadow-color-2, 0 6px 30px 5px $shadow-color-3 }
+@mixin shadow-17dp { box-shadow: 0 8px 11px -5px $shadow-color-1, 0 17px 26px 2px $shadow-color-2, 0 6px 32px 5px $shadow-color-3 }
+@mixin shadow-18dp { box-shadow: 0 9px 11px -5px $shadow-color-1, 0 18px 28px 2px $shadow-color-2, 0 7px 34px 6px $shadow-color-3 }
+@mixin shadow-19dp { box-shadow: 0 9px 12px -6px $shadow-color-1, 0 19px 29px 2px $shadow-color-2, 0 7px 36px 6px $shadow-color-3 }
+@mixin shadow-20dp { box-shadow: 0 10px 13px -6px $shadow-color-1, 0 20px 31px 3px $shadow-color-2, 0 8px 38px 7px $shadow-color-3 }
+@mixin shadow-21dp { box-shadow: 0 10px 13px -6px $shadow-color-1, 0 21px 33px 3px $shadow-color-2, 0 8px 40px 7px $shadow-color-3 }
+@mixin shadow-22dp { box-shadow: 0 10px 14px -6px $shadow-color-1, 0 22px 35px 3px $shadow-color-2, 0 8px 42px 7px $shadow-color-3 }
+@mixin shadow-23dp { box-shadow: 0 11px 14px -7px $shadow-color-1, 0 23px 36px 3px $shadow-color-2, 0 9px 44px 8px $shadow-color-3 }
+@mixin shadow-24dp { box-shadow: 0 11px 15px -7px $shadow-color-1, 0 24px 38px 3px $shadow-color-2, 0 9px 46px 8px $shadow-color-3 }
 
 @mixin non-overflow-shadow-4dp { box-shadow: 0 2px 4px -1px $shadow-color-1, 0 4px 5px -1px $shadow-color-2}
+
+@mixin material-transition { transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1) }
 
 @mixin search-bar-hover {
     @if $search-bar-hover {
         @include shadow-2dp;
         background: $search-bar-focus-color;
-    } @else {}
+    }
+}
+
+@mixin outlined-chip {
+    @if $outlined-chip {
+        .reactions-bar__item {
+            background: $outlined-chip-color !important;
+            border: 1px solid $border-color !important;
+        
+            &.active { background-color: $outlined-chip-selected-color !important }
+        
+            &:hover { background: $outlined-chip-hover-color !important }
+        }
+    }
+}
+
+@mixin button-shadow {
+    @if $button-shadow {
+        .button,
+        .compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
+    }
+}
+
+@mixin icon-font-style {
+    @if $icon-font-style == filled { font-family: "Material Icons" }
+    @if $icon-font-style == outlined { font-family: "Material Icons Outlined" }
+    @if $icon-font-style == round { font-family: "Material Icons Round" }
+    @if $icon-font-style == sharp { font-family: "Material Icons Sharp" }
+    @if $icon-font-style == two-tone { font-family: "Material Icons Two Tone" }
 }
 
 @mixin icon-font {

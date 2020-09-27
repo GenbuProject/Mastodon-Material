@@ -94,6 +94,7 @@
     color: $icon-color;
     border-color: $border-color;
     outline: none;
+    margin-top: 16px;
 
     &__image {
         background: transparent;
@@ -112,7 +113,7 @@
 
     &__actions {
         &>div {
-            background: $media-icon-background-color;
+            background: $media-icon-bg-color;
             border-radius: $button-radius;
         }
 
@@ -138,6 +139,18 @@
         &:hover { background-color: transparent !important }
     }
 
+    &.horizontal {
+        border-radius: 0;
+        
+        .status-card {
+            &__image-preview { border-radius: 0 }
+
+            &__image-image { border-radius: 0 }
+        }
+    }
+}
+
+a.status-card {
     &:hover { background-color: $card-bg-color }
 }
 

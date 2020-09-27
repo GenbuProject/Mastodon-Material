@@ -24,7 +24,7 @@
         border: 12px;
 
         &:hover {
-            background: $media-icon-background-hover-color;
+            background: $media-icon-bg-hover-color;
             color: $media-icon-hover-color;
         }
 
@@ -34,7 +34,7 @@
 
 .media-modal {
     &__nav {
-        background: $media-icon-background-color;
+        background: $media-icon-bg-color;
         color: $media-icon-color;
         height: 48px;
         width: 48px;
@@ -49,6 +49,12 @@
         background-color: $media-page-indicator-color;
 
         &--active { background-color: $media-page-indicator-active-color }
+    }
+
+    &__meta {
+        bottom: 24px;
+
+        a { color: $media-icon-color }
     }
 }
 
@@ -75,7 +81,7 @@
         }
 
         &__handle {
-            transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+            @include material-transition;
             background-color: $primary-color;
             box-shadow: none;
         }
@@ -93,7 +99,7 @@
         }
 
         &__handle {
-            transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+            @include material-transition;
             background-color: $primary-color;
             box-shadow: none;
         }

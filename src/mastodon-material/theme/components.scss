@@ -4,6 +4,7 @@
 @import '../custom_color', '../custom_layout';
 @import 'mixins';
 
+.modal-root { transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1) }
 
 .drawer {
     &__header {
@@ -16,7 +17,7 @@
         a { transition: none }
     
         a:hover {
-            background: $icon-background-hover-color;
+            background: $icon-bg-hover-color;
             border-radius: 50%;
         }
     }
@@ -142,6 +143,12 @@
     strong {
         color: $ui-text-color;
     }
+
+    .navigation-bar__actions .compose__action-bar .icon-button {
+        width: 36px !important;
+        height: 36px !important;
+        padding: 8px;
+    }
 }
 
 .navigation-panel hr {
@@ -206,11 +213,17 @@
         }
     }
 
-    .spoiler-input__input {
-        color: $ui-text-color;
-        background: $card-bg-color;
+    .spoiler-input {
+        &.spoiler-input--visible { margin-bottom: 8px }
 
-        &::placeholder { color: $tips-text-color }
+        &__input {
+            color: $ui-text-color;
+            background: $card-bg-color;
+            border-bottom: 1px solid $border-color;
+            border-radius: 0;
+    
+            &::placeholder { color: $tips-text-color }
+        }
     }
 
     .compose-form {
@@ -227,11 +240,40 @@
         &__modifiers {
             background: $card-bg-color;
             color: $tips-text-color;
+
+            .compose-form {
+                &__upload-thumbnail { border-radius: 0 }
+
+                &__upload__actions {
+                    @include material-transition;
+
+                    .icon-button {
+                        color: $media-icon-color;
+                        font-size: 16px;
+
+                        &:hover { background-color: transparent }
+                    }
+                }
+            }
         }
 
         &__buttons-wrapper {
             background: $card-bg-color;
             color: $tips-text-color;
+            padding: 8px;
+
+            .icon-button {
+                width: 20px !important;
+                height: 20px !important;
+                padding: 8px;
+            }
+
+            .text-icon-button {
+                width: 20px !important;
+                height: 20px !important;
+                padding: 8px;
+                line-height: 20px !important;
+            }
         }
 
         &__poll-wrapper {
@@ -258,15 +300,15 @@
 
                 &:focus { background-color: $outlined-button-color }
             }
+
+            .poll__footer { border-top: none }
         }
 
         &__publish .compose-form__publish-button-wrapper { box-shadow: none }
     }
 }
 
-.no-reduce-motion .spoiler-input {
-    transition-duration: .2s, .2s;
-}
+.no-reduce-motion .spoiler-input { transition-duration: .2s, .2s }
 
 
 .poll {
@@ -318,7 +360,7 @@
 
 .privacy-dropdown {
     &.active .privacy-dropdown__value.active {
-        background: $icon-background-hover-color;
+        background: $icon-bg-hover-color;
         border-radius: 50%;
         box-shadow: none;
 
@@ -412,6 +454,7 @@
 }
 
 .block-modal {
+    @include shadow-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
@@ -474,6 +517,11 @@
             .display-name {
                 margin-left: 16px;
 
+                strong {
+                    font-size: 16px;
+                    color: $primary-text-color;
+                }
+
                 span { color: $secondary-text-color }
             }
         }
@@ -493,6 +541,7 @@
 }
 
 .mute-modal {
+    @include shadow-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;

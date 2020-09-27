@@ -4,6 +4,8 @@
 @import '../custom_color', '../custom_layout';
 @import 'mixins';
 
+@include button-shadow;
+
 .icon-button {
     color: $icon-button-color;
     border-radius: 50%;
@@ -21,37 +23,54 @@
 
         &:hover {
             color: $icon-button-hover-color;
-            background-color: $icon-background-hover-color;
+            background-color: $icon-bg-hover-color;
         }
     }
 
     &.overlayed {
         border-radius: 50%;
-        background: $media-icon-background-color;
+        background: $media-icon-bg-color;
         color: $media-icon-color;
     
         &:hover {
-            background: $media-icon-background-color;
+            background: $media-icon-bg-color;
             color: $media-icon-hover-color;
         }
     }
 
     &:hover {
         color: $icon-button-hover-color;
-        background-color: $icon-background-hover-color;
+        background-color: $icon-bg-hover-color;
     }
 
-    &:active,
-    &:focus { background-color: transparent }
+    &:focus { transition: none }
+}
+
+// Checkbox with label
+label.icon-button {
+    &.active {
+        color: $ui-text-color;
+        background-color: transparent;
+    }
+
+    &:hover {
+        @include material-transition;
+        background-color: transparent;
+    }
 }
 
 .text-icon-button {
     color: $icon-button-color;
     border-radius: 50%;
-    font-size: 12px;
+    font-size: 14px;
+
+    &.active {
+        background-color: $icon-bg-hover-color;
+        color: $icon-button-active-color;
+    }
 
     &:hover {
-        background-color: $icon-background-hover-color;
+        background-color: $icon-bg-hover-color;
         color: $icon-button-hover-color;
     }
 }
@@ -91,7 +110,7 @@
 }
 
 .spoiler-button__overlay__label {
-    background: $media-icon-background-color;
+    background: $media-icon-bg-color;
     border-radius: $button-radius;
     color: $media-icon-color;
 }

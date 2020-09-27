@@ -56,8 +56,8 @@ $badge-color: $primary-color;
 // Icon color
 $icon-color: #282c37;
 $icon-hover-color: darken($icon-color, 30%);
-$icon-background-hover-color: darken($bg-color, 4%);
-$icon-background-active-color: darken($bg-color, 8%);
+$icon-bg-hover-color: darken($bg-color, 4%);
+$icon-bg-active-color: darken($bg-color, 8%);
 $disabled-icon-color: lighten($icon-color, 16%);
 $top-bar-icon-color: $icon-color;
 $top-bar-icon-hover-color: $icon-hover-color;
@@ -65,8 +65,8 @@ $top-bar-icon-active-color: $icon-hover-color;
 $top-bar-unread-icon-color: $secondary-color;
 $media-icon-color: transparentize(#ffffff, 0.4);
 $media-icon-hover-color: transparentize(#ffffff, 0.2);
-$media-icon-background-color: transparentize(#000000, 0.5);
-$media-icon-background-hover-color: transparentize(#000000, 0.8);
+$media-icon-bg-color: transparentize(#000000, 0.5);
+$media-icon-bg-hover-color: transparentize(#000000, 0.8);
 $control-border-color: $icon-color;
 
 // Button color

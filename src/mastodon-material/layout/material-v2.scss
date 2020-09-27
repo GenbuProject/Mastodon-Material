@@ -50,18 +50,10 @@ $avater-radius: 50%;  // Rounded cropping
 
 
 // Chip settings
-// If you want to use contained-chip, please comment out below.
-.reactions-bar__item {
-    background: $outlined-chip-color !important;
-    border: 1px solid $border-color !important;
-
-    &.active { background-color: $outlined-chip-selected-color !important }
-
-    &:hover { background: $outlined-chip-hover-color !important }
-}
+$outlined-chip: true;  // Material v2 styled outlined chip
+//$outlined-chip: false;  // Material v1 styled contained chip
 
 
 // Button shadow
-// If you want to use material v2 styled non-shadow button, please comment out this section.
-.button,
-.compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
+$button-shadow: false;  // Material v2 styled colored button without shadow
+//$button-shadow: true;  // Material v1 styled colored button with shadow

@@ -48,22 +48,23 @@
         background: $top-bar-color;
         color: $top-bar-icon-color;
         margin: 8px 10px;
-        padding: 10px 12px;
+        padding: 10px;
         border-radius: 50%;
+        font-size: 20px;
 
         &.active {
             color: $top-bar-icon-active-color;
-            background: $icon-background-active-color;
+            background: $icon-bg-active-color;
 
             &:hover {
                 color: $top-bar-icon-hover-color;
-                background: $icon-background-hover-color;
+                background: $icon-bg-hover-color;
             }
         }
 
         &:hover {
             color: $top-bar-icon-hover-color;
-            background: $icon-background-hover-color;
+            background: $icon-bg-hover-color;
         }
     }
 
@@ -123,9 +124,9 @@
     &__back-button {
         background: $top-bar-color;
         color: $top-bar-icon-color;
-        padding: 8px;
-        margin: auto 0;
-        border-radius: 50%;
+        margin: 8px 10px;
+        padding: 10px;
+        font-size: 20px;
 
         span { display: none }
     }
@@ -396,6 +397,8 @@
 }
 
 .react-swipeable-view-container { transition: transform .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, height 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s !important }
+
+@include outlined-chip;
 
 .reactions-bar {
     .emoji-button {

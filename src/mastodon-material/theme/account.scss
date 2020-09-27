@@ -7,8 +7,8 @@
 .account {
     border-bottom: 1px solid $border-color;
 
-    .account__display-name { color: $primary-text-color }
-    .account__display-name strong { color: $secondary-text-color }
+    .account__display-name,
+    .account__display-name strong { color: $primary-text-color }
 
     &__avatar {
         border-radius: $avater-radius;
@@ -31,7 +31,7 @@
         &__bar {
             background: $card-bg-color;
             padding: 8px;
-            border-bottom: 1px solid $border-color;
+            border-bottom: none;
 
             .avatar .account__avatar { border: none }
         }
@@ -113,6 +113,26 @@
             }
         }
 
+        &__account-note {
+            padding: 8px 16px;
+            border-bottom: 1px solid $border-color;
+
+            label {
+                color: $ui-text-color;
+                margin-bottom: 8px;
+            }
+
+            textarea {
+                color: $primary-text-color;
+                padding: 8px 16px;
+                border-radius: 0;
+
+                &:focus { background: transparent }
+
+                &::placeholder { color: $tips-text-color }
+            }
+        }
+
         &__content { color: $secondary-text-color }
     }
 
@@ -150,4 +170,8 @@
     color: $ui-text-color;
 
     small { color: $secondary-text-color }
+}
+
+.account-gallery {
+    &__item { border-radius: 0 }
 }

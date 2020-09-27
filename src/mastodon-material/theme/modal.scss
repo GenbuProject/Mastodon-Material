@@ -6,6 +6,7 @@
 
 
 .confirmation-modal {
+    @include shadow-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $dialog-radius;
@@ -71,6 +72,7 @@
 }
 
 .report-modal {
+    @include shadow-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;

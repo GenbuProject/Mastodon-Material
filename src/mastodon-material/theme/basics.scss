@@ -6,6 +6,8 @@
 
 body { background: $bg-color }
 
+.focusable:focus { background: transparent }
+
 // Chrome & Safari scroll bar
 ::-webkit-scrollbar-thumb {
     background: $scroll-bar-thumb-color;

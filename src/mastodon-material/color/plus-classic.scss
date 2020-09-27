@@ -57,16 +57,16 @@ $badge-color: $primary-color;
 // Icon color
 $icon-color: #757575;
 $icon-hover-color: darken($icon-color, 30%);
-$icon-background-hover-color: transparentize(#000000, 0.9);
-$icon-background-active-color: transparentize(#000000, 0.8);
+$icon-bg-hover-color: transparentize(#000000, 0.9);
+$icon-bg-active-color: transparentize(#000000, 0.8);
 $disabled-icon-color: lighten($icon-color, 16%);
 $top-bar-icon-color: #ffffff;
 $top-bar-icon-hover-color: darken($top-bar-icon-color, 10%);
 $top-bar-icon-active-color: darken($top-bar-icon-color, 18%);
 $media-icon-color: transparentize(#ffffff, 0.4);
 $media-icon-hover-color: transparentize(#ffffff, 0.2);
-$media-icon-background-color: transparentize(#000000, 0.5);
-$media-icon-background-hover-color: transparentize(#000000, 0.8);
+$media-icon-bg-color: transparentize(#000000, 0.5);
+$media-icon-bg-hover-color: transparentize(#000000, 0.8);
 $control-border-color: $icon-color;
 
 // Button color
