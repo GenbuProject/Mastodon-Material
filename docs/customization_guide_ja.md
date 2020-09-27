@@ -30,11 +30,11 @@
 
 ### アイコンフォントのホストを変更したい
 
-デフォルトではGitHub上の[公式リポジトリ](https://github.com/google/material-design-icons)にあるフォントを利用する設定になっています。`// Material Design Icon settings`セクションを編集します。
+デフォルトではGoogle Fontsを利用する設定になっています。`// Material Design Icon settings`セクションを編集します。
 
-- **Google Fontsのフォントを利用したい**
+- **GitHub公式リポジトリのフォントを利用したい(非推奨)**
   
-  `$icon-font-source`の値を`google`に設定します。
+  `$icon-font-source`の値を`github`に設定します。
 
 - **自分のサーバーでホスティングしたい**
   

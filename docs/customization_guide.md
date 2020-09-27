@@ -30,11 +30,11 @@ Edit `// Favorite icon settings` section to change it. The default icon is �
 
 ### Change icon fonts host
 
-The default setting loads the icon fonts on GitHub [official repository](https://github.com/google/material-design-icons). Edit `// Material Design Icon settings` section to change it.
+The default setting loads the icon fonts on Google Fonts. Edit `// Material Design Icon settings` section to change it.
 
-- **Use the font on Google Fonts**
+- **Use the font on GitHub (Unrecommended)**
   
-  Set `$icon-font-source` value as `google`.
+  Set `$icon-font-source` value as `github`.
 
 - **Host the font on your server**
   
