@@ -39,11 +39,12 @@
     }
 
     &:hover {
+        @include material-transition;
         color: $icon-button-hover-color;
         background-color: $icon-bg-hover-color;
     }
 
-    &:focus { transition: none }
+    &:focus { background-color: transparent }
 }
 
 // Checkbox with label
