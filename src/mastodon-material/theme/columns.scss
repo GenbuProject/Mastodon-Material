@@ -202,7 +202,7 @@
 }
 
 .columns-area {
-    background-image: url($bg-image);
+    @include bg-image;
     background-size: contain;
 }
 

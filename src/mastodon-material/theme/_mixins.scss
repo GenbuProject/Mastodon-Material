@@ -61,6 +61,13 @@ $shadow-color-3: rgba(0,0,0,.12);
     }
 }
 
+// check background-image value
+@mixin bg-image {
+    @if $bg-image == none {        
+    } @else { background-image: url($bg-image) }
+}
+
+
 @mixin icon-font-style {
     @if $icon-font-style == filled { font-family: "Material Icons" }
     @if $icon-font-style == outlined { font-family: "Material Icons Outlined" }

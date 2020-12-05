@@ -217,11 +217,12 @@ html {
   color: rgba(255, 255, 255, 0.8);
 }
 .icon-button:hover {
+  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
   color: #292929;
   background-color: rgba(0, 0, 0, 0.1);
 }
 .icon-button:focus {
-  transition: none;
+  background-color: transparent;
 }
 
 label.icon-button.active {
@@ -483,7 +484,6 @@ label.icon-button:hover {
 }
 
 .columns-area {
-  background-image: url(none);
   background-size: contain;
 }
 
