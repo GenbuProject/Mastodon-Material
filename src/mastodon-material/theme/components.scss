@@ -291,14 +291,12 @@
 
             .button.button-secondary {
                 box-shadow: none;
-                color: $outlined-button-color;
-                border-color: $outlined-button-color;
+                color: $text-button-color;
 
-                &:hover { background-color: $outlined-button-hover-color }
+                &:hover { background-color: $text-button-hover-color }
 
-                &:active { background-color: $outlined-button-active-color }
-
-                &:focus { background-color: $outlined-button-color }
+                &:active,
+                &:focus { background-color: $text-button-focus-color }
             }
 
             .poll__footer { border-top: none }
@@ -312,17 +310,31 @@
 
 
 .poll {
+    .button { margin-right: 8px }
+
+    li { margin-bottom: 0 }
+
     &__input {
-        border: 2px solid $control-border-color;
+        border: none;
         width: 20px;
         height: 20px;
         flex: 0 0 20px;
-        margin: 8px;
+        padding: 18px;
+        margin: 0 2px;
+        background: radial-gradient(circle, transparent, transparent 7px, $control-border-color 8px, $control-border-color 9px, transparent 10px, transparent);
 
-        &.checkbox { border-radius: 2px }
+        &:hover,
+        &.active:hover { background-color: $control-border-hover-color }
 
-        &:focus,
-        &:hover { border: 2px solid $control-border-color }
+        &.active { background: radial-gradient(circle, $control-border-active-color, $control-border-active-color 4px, transparent 5px, transparent 7px, $control-border-active-color 8px, $control-border-active-color 9px, transparent 10px, transparent) }
+
+        &.checkbox {
+            border-radius: 2px;
+            border: 2px solid $control-border-color;
+            padding: 8px;
+            margin: 8px 10px;
+            background: none;
+        }
     }
 
     &__text input[type=text] {
@@ -334,12 +346,18 @@
         &:focus { border-color: $border-active-color }
     }
 
-    &__option input[type=text] {
-        color: $primary-text-color;
-        background: $text-field-bg-color;
-        border: none;
-        border-radius: 2px;
-        padding: 8px 16px;
+    &__option {
+        padding: 8px 0;
+
+        input[type=text] {
+            color: $primary-text-color;
+            background: $text-field-bg-color;
+            border: none;
+            border-radius: 2px;
+            padding: 8px 16px;
+        }
+
+        &__text { margin: 9px 0 9px 4px }
     }
 
     &__chart {

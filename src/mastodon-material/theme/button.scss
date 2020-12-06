@@ -76,38 +76,53 @@ label.icon-button {
     }
 }
 
-.button,
-.button:active,
-.button:focus {
+.button {
     background-color: $contained-button-color;
     border-radius: $button-radius;
-}
 
-.button:hover {
-    @include shadow-2dp;
-    background-color: $contained-button-hover-color;
-}
+    &:active,
+    &:focus {
+        background-color: $contained-button-color;
+        border-radius: $button-radius;
+    }
 
-.button.logo-button {
-    background: $contained-button-color;
-    margin: 2px;
+    &:hover {
+        @include shadow-2dp;
+        background-color: $contained-button-hover-color;
+    }
 
-    &:hover { background: $contained-button-hover-color }
+    &.logo-button {
+        background: $contained-button-color;
+        margin: 2px;
+    
+        &:hover { background: $contained-button-hover-color }
+    
+        .button--destructive:hover { background: $contained-button-hover-color }
+    }
 
-    .button--destructive:hover { background: $contained-button-hover-color }
-}
+    &.button--block { margin: 8px 0 }
 
-.button.button--block { margin: 8px 0 }
+    &.button-secondary {
+        color: $text-button-color;
+        border: none;
+        box-shadow: none;
+    
+        &:hover {
+            color: $text-button-color;
+            background-color: $text-button-hover-color;
+        }
+    }
 
-.button.confirmation-modal__cancel-button {
-    box-shadow: none;
-    background-color: transparent;
-    margin: 0 8px;
-    color: $text-button-color;
-
-    &:hover { background: $text-button-hover-color }
-
-    &:focus { background: $text-button-focus-color }
+    &.confirmation-modal__cancel-button {
+        box-shadow: none;
+        background-color: transparent;
+        margin: 0 8px;
+        color: $text-button-color;
+    
+        &:hover { background: $text-button-hover-color }
+    
+        &:focus { background: $text-button-focus-color }
+    }
 }
 
 .spoiler-button__overlay__label {

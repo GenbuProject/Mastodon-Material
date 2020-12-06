@@ -67,7 +67,11 @@ $media-icon-color: transparentize(#ffffff, 0.4);
 $media-icon-hover-color: transparentize(#ffffff, 0.2);
 $media-icon-bg-color: transparentize(#000000, 0.5);
 $media-icon-bg-hover-color: transparentize(#000000, 0.8);
+
+// Control color
 $control-border-color: $icon-color;
+$control-border-active-color: $primary-color;
+$control-border-hover-color: transparentize($control-border-active-color, 0.8);
 
 // Button color
 $icon-button-color: $icon-color;
