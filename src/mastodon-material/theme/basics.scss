@@ -4,7 +4,9 @@
 @import '../custom_color', '../custom_layout';
 
 
-body { background: $background-color }
+body { background: $bg-color }
+
+.focusable:focus { background: transparent }
 
 // Chrome & Safari scroll bar
 ::-webkit-scrollbar-thumb {
@@ -21,6 +23,4 @@ body { background: $background-color }
 }
 
 // Firefox scroll bar
-html {
-    scrollbar-color: $scroll-bar-thumb-color transparent;
-}
+html { scrollbar-color: $scroll-bar-thumb-color transparent }

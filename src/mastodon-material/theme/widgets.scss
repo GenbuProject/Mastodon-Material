@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import 'base_config';
+@import '../custom_config';
+@import '../custom_color', '../custom_layout';
+@import 'mixins';
+
+
+.hero-widget {
+    @include shadow-2dp;
+    margin-bottom: 16px;
+
+    &__img {
+        border-radius: $card-radius $card-radius 0 0;
+        background: $card-bg-color;
+
+        img { border-radius: $card-radius $card-radius 0 0 }
+    }
+
+    &__text {
+        background: $card-bg-color;
+        padding: 16px;
+        color: $primary-text-color;
+        border-radius: 0 0 $card-radius $card-radius;
+    }
+}
+
+.endorsements-widget {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.trends-widget h4 { color: $section-text-color }

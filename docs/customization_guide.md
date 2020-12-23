@@ -18,7 +18,17 @@ There are two types of profiles, color scheme and layout profile. You can config
 
 ### Float search bar when cursor hovers
 
-Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Copy `// Search bar hover settings` section in [`base_config.scss`](../src/mastodon-material/theme/base_config.scss) and paste it into [`custom_config.scss`](../src/mastodon-material/custom_config.scss). Then, uncomment the whole section to enable it.
+<img src="res/search-bar-hover.gif" alt="search-bar hover">
+Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Add `$search-bar-hover: true;` to [`custom_config.scss`](../src/mastodon-material/custom_config.scss).
+
+### Change font size
+You can change font size of statuses body and display name. Set `$status-font-size` value to change font size of statuses contents and `$name-font-size` value to change of display name.
+
+### Set background image
+You can set a background image by `$bg-image` value. You should use relative path or URL and bracket it.
+
+### Change transparency
+You can change transparency of some elements. Change top bar and column transparency by setting `$bar-transparency` and `$column-transparency` value. Set a value between 0 and 1. 1 is opacity and 0 is transparent.
 
 ## Icon settings
 
@@ -26,19 +36,23 @@ Edit [`mastodon-material/icon_config.scss`](../src/mastodon-material/icon_config
 
 ### Change favorite icon
 
-Edit `// Favorite icon settings` section to change it. Default icon is ★ (star).
+Edit `// Favorite icon settings` section to change it. The default icon is ★ (star).
 
-### Change icon font's host
+### Change icon fonts host
 
-Default setting loads the icon font on GitHub [official repository](https://github.com/google/material-design-icons). Edit `// Material Design Icon settings` section to change it.
+The default setting loads the icon fonts on Google Fonts. Edit `// Material Design Icon settings` section to change it.
 
-- **Use the font on Google Fonts**
+- **Use the font on GitHub (Unrecommended)**
   
-  Uncomment `// Google Fonts` line and comment out `// GitHub` line.
+  Set `$icon-font-source` value as `github`.
 
 - **Host the font on your server**
   
-  Uncomment `// Self-hosting` line and comment out `// GitHub` line. Then, download font file from [official font repository](https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/MaterialIcons-Regular.woff2) and put `MaterialIcons-Regular.woff2` file into `/mastodon/app/javascript/fonts`.
+  Set `$icon-font-source` value as `self`. Then, download font file from [official font repository](https://github.com/google/material-design-icons/tree/master/font) and put `MaterialIcons-Regular.woff2` file into `/mastodon/app/javascript/fonts`.
+
+### Change icon fonts style
+
+The icon fonts have 5 styles, Filled, Outlined, Rounded, Two-Tone and Sharp. You can check how they look in [Icons - Material Design](https://material.io/resources/icons/). Edit `// Material Icon style settings` section to change it. The default style is Filled.
 
 ## Plugins
 

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import 'base_config';
+@import '../custom_config';
+@import '../custom_color', '../custom_layout';
+@import 'mixins';
+
+
+.public-layout {
+    .header {
+        @include shadow-4dp;
+        background: $top-bar-color;
+        border-radius: $nav-bar-radius;
+        margin: 16px 0;
+
+        .brand:hover { background: $tab-indicator-bg-hover-color }
+
+        .nav-link,
+        .nav-link.optional {
+            color: $top-bar-text-color;
+
+            &:hover {
+                background: $tab-indicator-bg-hover-color;
+                text-decoration: none;
+            }
+        }
+
+        .nav-button {
+            background: transparent;
+            margin: 0;
+            border-radius: 0;
+
+            &:hover { background: $tab-indicator-bg-hover-color }
+        }
+
+        .detailed-status__meta { margin-top: 16px }
+    }
+
+    .detailed-status { padding: 16px }
+
+    .footer {
+        padding-top: 16px;
+        padding-bottom: 64px;
+        color: $ui-text-color;
+
+        h4 { color: $ui-text-color }
+
+        ul a { color: $secondary-text-color }
+
+        .grid .column-2 h4 a { color: $ui-text-color }
+
+        .brand {
+            svg { fill: $icon-color }
+
+            &:hover svg { fill: $icon-hover-color }
+        }
+    }
+}

@@ -4,6 +4,7 @@
 @import '../custom_color', '../custom_layout';
 @import 'mixins';
 
+.modal-root { transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1) }
 
 .drawer {
     &__header {
@@ -11,11 +12,12 @@
         background: $top-bar-color;
         border-radius: $nav-bar-radius;
         justify-content: space-around;
+        opacity: $bar-transparency;
     
         a { transition: none }
     
         a:hover {
-            background: $icon-background-hover-color;
+            background: $icon-bg-hover-color;
             border-radius: 50%;
         }
     }
@@ -40,14 +42,15 @@
     }
 
     &__inner {
-        background: $card-background-color;
+        background: $card-bg-color;
+        opacity: $column-transparency;
 
         &.darker {
-            background: $card-background-color;
+            background: $card-bg-color;
             position: inherit;
         }
 
-        &__mastodon { background: $card-background-color }
+        &__mastodon { background: $card-bg-color }
     }
 }
 
@@ -57,12 +60,15 @@
         color: $tips-text-color;
         border-radius: $search-bar-radius;
         padding: 12px 12px 12px 40px;
+        opacity: $bar-transparency;
 
         &:focus {
             @include shadow-2dp;
             background: $search-bar-focus-color;
             color: $search-bar-text-color;
         }
+
+        &:hover { @include search-bar-hover }
 
         &::placeholder { color: $tips-text-color }
     }
@@ -112,15 +118,15 @@
 .search-results {
     &__header {
         color: $secondary-text-color;
-        background-color: $card-background-color;
+        background-color: $card-bg-color;
         padding: 16px;
 
-        .fa { margin-right: 8px }
+        .fa { margin-right: 16px }
     }
 
     &__section {
         h5 {
-            background: $card-background-color;
+            background: $card-bg-color;
             border-bottom: 1px solid $border-color;
             padding: 16px;
             color: $section-text-color;
@@ -137,6 +143,17 @@
     strong {
         color: $ui-text-color;
     }
+
+    .navigation-bar__actions .compose__action-bar .icon-button {
+        width: 36px !important;
+        height: 36px !important;
+        padding: 8px;
+
+        &.active {
+            color: $icon-hover-color;
+            background: $icon-bg-active-color;
+        }
+    }
 }
 
 .navigation-panel hr {
@@ -144,9 +161,11 @@
     margin: 8px 0;
 }
 
+.flex-spacer { margin: 8px 0 }
+
 .dropdown-menu {
     @include shadow-8dp;
-    background: $menu-background-color;
+    background: $menu-bg-color;
     padding: 8px 0;
     border-radius: $menu-radius;
 
@@ -155,11 +174,11 @@
     &__item a {
         font-size: 14px;
         padding: 8px 16px;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         color: $menu-text-color;
 
         &:hover, &:active {
-            background: $menu-background-hover-color;
+            background: $menu-bg-hover-color;
             color: $menu-text-color;
         }
     }
@@ -173,7 +192,7 @@
 .compose-form {
     .autosuggest-textarea {
         &__textarea {
-            background: $text-field-background-color;
+            background: $text-field-bg-color;
             color: $ui-text-color;
             border-radius: $card-radius;
     
@@ -182,7 +201,7 @@
 
         &__suggestions {
             @include shadow-1dp;
-            background: $menu-background-color;
+            background: $menu-bg-color;
             color: $ui-text-color;
             border-radius: $card-radius;
             font-size: 16px;
@@ -192,40 +211,76 @@
                 padding: 8px;
                 border-radius: 0;
 
-                &:hover { background: $menu-background-hover-color }
+                &:hover { background: $menu-bg-hover-color }
 
                 &.selected,
                 &:focus,
-                &:active { background: $menu-background-active-color }
+                &:active { background: $menu-bg-active-color }
             }
         }
     }
 
-    .spoiler-input__input {
-        color: $ui-text-color;
-        background: $card-background-color;
+    .spoiler-input {
+        &.spoiler-input--visible { margin-bottom: 8px }
 
-        &::placeholder { color: $tips-text-color }
+        &__input {
+            color: $ui-text-color;
+            background: $card-bg-color;
+            border-bottom: 1px solid $border-color;
+            border-radius: 0;
+    
+            &::placeholder { color: $tips-text-color }
+        }
     }
 
     .compose-form {
         &__warning {
-            @include shadow-1dp;
             color: $secondary-text-color;
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 16px;
+            border: 1px solid $border-color;
+            border-radius: $card-radius;
+            box-shadow: none;
 
             a { color: $link-text-color }
         }
 
         &__modifiers {
-            background: $card-background-color;
+            background: $card-bg-color;
             color: $tips-text-color;
+
+            .compose-form {
+                &__upload-thumbnail { border-radius: 0 }
+
+                &__upload__actions {
+                    @include material-transition;
+
+                    .icon-button {
+                        color: $media-icon-color;
+                        font-size: 16px;
+
+                        &:hover { background-color: transparent }
+                    }
+                }
+            }
         }
 
         &__buttons-wrapper {
-            background: $card-background-color;
+            background: $card-bg-color;
             color: $tips-text-color;
+            padding: 8px;
+
+            .icon-button {
+                @include icon-button;
+                padding: 8px;
+            }
+
+            .text-icon-button {
+                width: 20px !important;
+                height: 20px !important;
+                padding: 8px;
+                line-height: 20px !important;
+            }
         }
 
         &__poll-wrapper {
@@ -235,7 +290,7 @@
 
             select {
                 color: $ui-text-color;
-                background-color: $background-color;
+                background-color: $bg-color;
                 border: 0;
 
                 &:focus { border-color: $border-active-color }
@@ -243,66 +298,79 @@
 
             .button.button-secondary {
                 box-shadow: none;
-                color: $outlined-button-color;
-                border-color: $outlined-button-color;
+                color: $text-button-color;
 
-                &:hover { background-color: $outlined-button-hover-color }
+                &:hover { background-color: $text-button-hover-color }
 
-                &:active { background-color: $outlined-button-active-color }
-
-                &:focus { background-color: $outlined-button-color }
-
-
+                &:active,
+                &:focus { background-color: $text-button-focus-color }
             }
-        }
 
-        &__utilBtns { padding-top: 0 }
+            .poll__footer { border-top: none }
+        }
 
         &__publish .compose-form__publish-button-wrapper { box-shadow: none }
     }
 }
 
-.no-reduce-motion .spoiler-input {
-    transition-duration: .2s, .2s;
-}
+.no-reduce-motion .spoiler-input { transition-duration: .2s, .2s }
 
 
 .poll {
+    .button { margin-right: 8px }
+
+    li { margin-bottom: 0 }
+
     &__input {
-        border: 2px solid $control-border-color;
+        border: none;
         width: 20px;
         height: 20px;
         flex: 0 0 20px;
-        margin: 8px;
+        padding: 18px;
+        margin: 0 2px;
+        background: radial-gradient(circle, transparent, transparent 7px, $control-border-color 8px, $control-border-color 9px, transparent 10px, transparent);
+        
+        &:hover { background: radial-gradient(circle, $control-border-hover-color, $control-border-hover-color 7px, $control-border-color 8px, $control-border-color 9px, $control-border-hover-color 10px, $control-border-hover-color)}
 
-        &.checkbox { border-radius: 2px }
+        &.active { background: radial-gradient(circle, $control-border-active-color, $control-border-active-color 4px, transparent 5px, transparent 7px, $control-border-active-color 8px, $control-border-active-color 9px, transparent 10px, transparent) }
 
-        &:focus,
-        &:hover { border: 2px solid $control-border-color }
+        &.active:hover { background: radial-gradient(circle, $control-border-hover-color, $control-border-hover-color 7px, $control-border-color 8px, $control-border-color 9px, $control-border-hover-color 10px, $control-border-hover-color) }
+
+        &.checkbox {
+            border-radius: 2px;
+            border: 2px solid $control-border-color;
+            padding: 8px;
+            margin: 8px 10px;
+            background: none;
+        }
     }
 
     &__text input[type=text] {
         color: $ui-text-color;
-        background: $text-field-background-color;
+        background: $text-field-bg-color;
         border: 1px solid $border-color;
         padding: 8px 12px;
     
         &:focus { border-color: $border-active-color }
     }
 
-    &__option input[type=text] {
-        color: $primary-text-color;
-        background: $text-field-background-color;
-        border: none;
-        border-radius: 2px;
-        padding: 8px 16px;
+    &__option {
+        padding: 16px 0 8px;
+
+        input[type=text] {
+            color: $primary-text-color;
+            background: $text-field-bg-color;
+            border: none;
+            border-radius: 2px;
+            padding: 8px 16px;
+        }
     }
 
     &__chart {
         border-radius: 0;
-        background: $poll-bar-color;
+        background: $progress-indicator-track-color;
     
-        &.leading { background: $poll-bar-leading-color }
+        &.leading { background: $progress-indicator-color }
     }
 
     &__footer {
@@ -316,7 +384,7 @@
 
 .privacy-dropdown {
     &.active .privacy-dropdown__value.active {
-        background: $icon-background-hover-color;
+        background: $icon-bg-hover-color;
         border-radius: 50%;
         box-shadow: none;
 
@@ -325,7 +393,7 @@
 
     &__dropdown {
         @include shadow-8dp;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         border-radius: $dialog-radius;
     }
 
@@ -345,7 +413,7 @@
         }
 
         &.active {
-            background: $menu-background-active-color;
+            background: $menu-bg-active-color;
             color: $icon-hover-color;
 
             .privacy-dropdown__option__content {
@@ -355,7 +423,7 @@
             }
 
             &:hover {
-                background: $menu-background-active-color;
+                background: $menu-bg-active-color;
                 
                 .privacy-dropdown__option__content {
                     color: $secondary-text-color;
@@ -366,7 +434,7 @@
         }
 
         &:hover {
-            background: $menu-background-hover-color;
+            background: $menu-bg-hover-color;
             color: $icon-hover-color;
 
             .privacy-dropdown__option__content {
@@ -386,7 +454,7 @@
     box-shadow: none;
     border: 1px solid $border-color;
     border-radius: $card-radius;
-    background: $card-background-color;
+    background: $card-bg-color;
     padding: 16px;
 
     &__header { margin-bottom: 4px }
@@ -400,7 +468,11 @@
         &-avatar { margin-right: 8px }
     }
 
-    &__content { color: $primary-text-color }
+    &__content {
+        color: $primary-text-color;
+
+        p { margin-bottom: 16px }
+    }
 }
 
 .attachment-list {
@@ -410,14 +482,15 @@
 }
 
 .block-modal {
-    background: $card-background-color;
+    @include shadow-24dp;
+    background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
 
     &__container { padding: 24px }
 
     &__action-bar {
-        background: $card-background-color;
+        background: $card-bg-color;
         padding: 8px;
         justify-content: flex-end;
     }
@@ -451,7 +524,7 @@
 }
 
 .filter-form {
-    background: $background-color;
+    background: $bg-color;
     color: $ui-text-color;
 
     &__column { padding: 8px 16px }
@@ -466,18 +539,23 @@
         &__img { border-radius: $card-radius $card-radius 0 0 }
 
         &__bar {
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 8px 16px;
 
             .display-name {
                 margin-left: 16px;
+
+                strong {
+                    font-size: 16px;
+                    color: $primary-text-color;
+                }
 
                 span { color: $secondary-text-color }
             }
         }
 
         &__extra {
-            background: $card-background-color;
+            background: $card-bg-color;
             border-radius: 0 0 $card-radius $card-radius;
 
             .account__header__content {
@@ -491,7 +569,8 @@
 }
 
 .mute-modal {
-    background: $card-background-color;
+    @include shadow-24dp;
+    background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
 
@@ -500,13 +579,14 @@
     &__explanation { margin-top: 16px }
 
     &__action-bar {
-        background: $card-background-color;
+        background: $card-bg-color;
         padding: 8px;
         justify-content: flex-end;
     }
 
     &__cancel-button {
         box-shadow: none !important;
+        color: $text-button-color;
         background: transparent;
         margin: 0 8px;
 
@@ -530,5 +610,20 @@
             color: $ui-text-color;
             margin: 0 0 0 12px;
         }
+    }
+}
+
+.upload-progress {
+    color: $ui-text-color;
+    
+    &__backdrop {
+        border-radius: 0;
+        background: $progress-indicator-track-color;
+        margin-top: 6px;
+    }
+
+    &__tracker {
+        border-radius: 0;
+        background: $progress-indicator-color;
     }
 }

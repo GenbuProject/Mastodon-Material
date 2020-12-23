@@ -10,7 +10,10 @@
     margin: 10px 8px;
     border-radius: $card-radius;
 
-    &>.scrollable { background: $list-background-color }
+    &>.scrollable {
+        background: $list-bg-color;
+        opacity: $column-transparency;
+    }
 
     &:last-child { box-shadow: none }
 }
@@ -18,9 +21,10 @@
 .column-header {
     background: $top-bar-color;
     border-radius: $bar-radius;
+    height: 56px;
 
     > button {
-        padding: 16px 0 16px 16px;
+        padding: 16px;
         color: $top-bar-text-color;
     }
 
@@ -42,25 +46,27 @@
     &__buttons { height: 56px }
 
     &__button {
+        @include icon-button;
         background: $top-bar-color;
         color: $top-bar-icon-color;
-        margin: 8px 10px;
-        padding: 10px 12px;
+        padding: 8px;
+        margin: 10px;
         border-radius: 50%;
+        box-sizing: content-box;
 
         &.active {
             color: $top-bar-icon-active-color;
-            background: $icon-background-active-color;
+            background: $icon-bg-active-color;
 
             &:hover {
                 color: $top-bar-icon-hover-color;
-                background: $icon-background-hover-color;
+                background: $icon-bg-hover-color;
             }
         }
 
         &:hover {
             color: $top-bar-icon-hover-color;
-            background: $icon-background-hover-color;
+            background: $icon-bg-hover-color;
         }
     }
 
@@ -93,6 +99,7 @@
     &__wrapper {
         @include shadow-4dp;
         border-radius: $bar-radius;
+        opacity: $bar-transparency;
 
         .announcements { border-top: 1px solid $border-color }
 
@@ -105,11 +112,11 @@
 
     &__collapsible {
         color: $ui-text-color;
-        background: $card-background-color;
+        background: $card-bg-color;
         border-top: 1px solid $border-color;
 
         &-inner {
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 16px;
         }
 
@@ -119,9 +126,9 @@
     &__back-button {
         background: $top-bar-color;
         color: $top-bar-icon-color;
-        padding: 8px;
-        margin: auto 0;
-        border-radius: 50%;
+        margin: 8px 10px;
+        padding: 10px;
+        font-size: 20px;
 
         span { display: none }
     }
@@ -129,21 +136,22 @@
 
 .column-subheading {
     color: $section-text-color;
-    background: $background-color;
+    background: $bg-color;
     padding: 12px 16px;
+    margin-top: 8px;
     border-top: 1px solid $border-color;
 }
 
 .column-link {
     color: $ui-text-color;
-    background: $background-color;
+    background: $bg-color;
     padding: 16px;
     border-radius: $nav-drawer-item-radius;
 
-    &:hover { background: $list-background-hover-color }
+    &:hover { background: $list-bg-hover-color }
 
     &:active,
-    &:focus { background: $list-background-active-color }
+    &:focus { background: $list-bg-active-color }
 
     &__icon {
         margin-right: 32px;
@@ -153,9 +161,9 @@
     &--transparent {
         &.active {
             color: $ui-text-color;
-            background: $menu-background-active-color;
+            background: $menu-bg-active-color;
 
-            &:hover { background: $menu-background-active-hover-color }
+            &:hover { background: $menu-bg-active-hover-color }
     
             .fa { color: $icon-color }
         }
@@ -187,18 +195,25 @@
     padding: 16px;
 
     span { visibility: hidden }  // hide "back" string
+
+    &--slim-button { top: -54px }
 }
 
 .column-inline-form {
     padding: 16px 0 16px 16px;
-    background: $card-background-color;
+    background: $card-bg-color;
 
     .icon-button { margin: 0 16px }
 }
 
+.columns-area {
+    @include bg-image;
+    background-size: contain;
+}
+
 .setting-text {
     color: $primary-text-color;
-    background: $text-field-background-color;
+    background: $text-field-bg-color;
     border-radius: $bar-radius;
 
     &::placeholder { color: $tips-text-color }
@@ -206,17 +221,17 @@
 
 .empty-column-indicator {
     color: $secondary-text-color;
-    background: $card-background-color;
+    background: $card-bg-color;
     font-size: 16px;
 }
 
 .conversation {
     border-bottom: 1px solid $border-color;
     padding: 12px;
-    background: $list-background-inactive-color;
+    background: $list-bg-inactive-color;
 
     &--unread {
-        background: $list-background-color;
+        background: $list-bg-color;
 
         .conversation__content__relative-time { color: $info-text-color }
     }
@@ -275,16 +290,18 @@
     color: $icon-color;
     padding: 16px;
 
-    &:hover { background: $menu-background-hover-color }
+    &:hover { background: $menu-bg-hover-color }
 }
 
 .getting-started {
-    background: $background-color;
+    background: $bg-color;
     color: $ui-text-color;
+    opacity: $column-transparency;
 
     &__wrapper {
-        background: $background-color;
+        background: $bg-color;
         height: auto !important;
+        padding-bottom: 8px;
         border-bottom: 1px solid $border-color;
     }
 
@@ -303,12 +320,14 @@
     }
 
     &__trends {
-        background: $background-color;
+        background: $bg-color;
         margin-bottom: 0;
+        opacity: $column-transparency;
 
         h4 {
             color: $section-text-color;
             padding: 12px 16px;
+            margin-top: 8px;
             border-top: 1px solid $border-color;
             border-bottom: none;
         }
@@ -358,7 +377,7 @@
 }
 
 .announcements {
-    background: $card-background-color;
+    background: $card-bg-color;
     padding: 0;
 
     &__container { color: $primary-text-color }
@@ -372,21 +391,29 @@
 
     &__pagination {
         color: $ui-text-color;
-        padding: 8px 16px;
-        bottom: 8px;
+        padding: 16px;
+        bottom: 0;
 
         .icon-button {
-            font-size: 20px !important;
-            width: 20px !important;
-            height: 20px !important;
-            margin: 0 8px;
+            @include icon-button;
+            padding: 8px;
+            margin: 0 4px;
+            line-height: normal !important;
+            box-sizing: content-box;
         }
+
+        span { vertical-align: super }
     }
 }
 
 .react-swipeable-view-container { transition: transform .3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, height 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s !important }
 
+@include outlined-chip;
+
 .reactions-bar {
+    margin-top: 16px;
+    width: calc(100% - 72px);
+
     .emoji-button {
         color: $icon-button-color;
         font-size: 20px;
@@ -403,7 +430,10 @@
 
         &.active {
             background-color: $contained-chip-selected-color;
-            .reactions-bar__item__count { color: $ui-text-color }
+
+            .reactions-bar__item__count { color: $chip-selected-text-color }
+
+            &:hover { background-color: $contained-chip-selected-color }
         }
 
         &__emoji {
@@ -414,7 +444,7 @@
 
         &__count {
             font-size: 16px;
-            margin: 0 8px;
+            margin: 0 12px 0 8px;
             color: $secondary-text-color;
         }
 
@@ -424,12 +454,13 @@
 
 .notification {
     &__filter-bar {
-        background: $tab-background-color;
+        background: $tab-bg-color;
         border-bottom: 1px solid $border-color;
         z-index: 1;
+        opacity: $bar-transparency;
     
         button {
-            background: $tab-background-color;
+            background: $tab-bg-color;
             color: $tab-indicator-color;
             font-size: 16px;
 
@@ -442,10 +473,10 @@
                 &::before,
                 &:after { border: none }
 
-                &:focus { background: $tab-indicator-background-focus-color }
+                &:focus { background: $tab-indicator-bg-focus-color }
             }
 
-            &:hover { background: $tab-indicator-background-hover-color }
+            &:hover { background: $tab-indicator-bg-hover-color }
         }
     }
 

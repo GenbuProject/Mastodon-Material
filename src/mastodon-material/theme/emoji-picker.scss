@@ -7,13 +7,13 @@
 .emoji-picker-dropdown {
     &__menu {
         @include shadow-8dp;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         border-radius: $menu-radius;
     }
 
     &__modifiers__menu {
         @include shadow-8dp;
-        background: $menu-background-color;
+        background: $menu-bg-color;
         border-radius: $menu-radius;
 
         button {
@@ -31,33 +31,23 @@
         border: 0 solid $border-color;
 
         &:first-child {
-            background: $menu-background-color;
+            background: $menu-bg-color;
         }
-    }
-
-    &-anchors {
-        color: $icon-button-color;
-        padding: 0;
     }
 
     &-anchor {
+        color: $text-tab-indicator-color;
         padding: 10px 4px;
 
-        &-selected {
-            color: $icon-button-active-color;
-        }
+        &-bar { background-color: $icon-tab-indicator-active-color }
 
-        &-bar {
-            background-color: $tab-indicator-active-color;
-        }
+        &-selected { color: $icon-tab-indicator-hover-color }
 
-        &:hover {
-            color: $icon-button-hover-color;
-        }
+        &:hover { color: $icon-tab-indicator-hover-color }
     }
 
     &-search {
-        background: $menu-background-color;
+        background: $menu-bg-color;
 
         input {
             outline: none;
@@ -76,16 +66,16 @@
 
     &-scroll {
         padding: 0 8px 8px;
-        background: $menu-background-color;
+        background: $menu-bg-color;
     }
 
-    &-category-label span {
-        padding: 4px 6px;
-        background: $menu-background-color;
-    }
+    &-category {
+        &-label span {
+            padding: 4px 6px;
+            background: $menu-bg-color;
+        }
 
-    &-emoji:hover::before {
-        background-color: $icon-background-hover-color;
+        .emoji-mart-emoji:hover::before { background-color: $icon-bg-hover-color }
     }
 
     &-no-results { color: $secondary-text-color }

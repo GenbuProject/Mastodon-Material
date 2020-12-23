@@ -21,5 +21,179 @@ $shadow-color-3: rgba(0,0,0,.12);
 @mixin shadow-14dp { box-shadow: 0 7px 9px -4px $shadow-color-1, 0 14px 21px 2px $shadow-color-2, 0 5px 26px 4px $shadow-color-3 }
 @mixin shadow-15dp { box-shadow: 0 8px 9px -5px $shadow-color-1, 0 15px 22px 2px $shadow-color-2, 0 6px 28px 5px $shadow-color-3 }
 @mixin shadow-16dp { box-shadow: 0 8px 10px -5px $shadow-color-1, 0 16px 24px 2px $shadow-color-2, 0 6px 30px 5px $shadow-color-3 }
+@mixin shadow-17dp { box-shadow: 0 8px 11px -5px $shadow-color-1, 0 17px 26px 2px $shadow-color-2, 0 6px 32px 5px $shadow-color-3 }
+@mixin shadow-18dp { box-shadow: 0 9px 11px -5px $shadow-color-1, 0 18px 28px 2px $shadow-color-2, 0 7px 34px 6px $shadow-color-3 }
+@mixin shadow-19dp { box-shadow: 0 9px 12px -6px $shadow-color-1, 0 19px 29px 2px $shadow-color-2, 0 7px 36px 6px $shadow-color-3 }
+@mixin shadow-20dp { box-shadow: 0 10px 13px -6px $shadow-color-1, 0 20px 31px 3px $shadow-color-2, 0 8px 38px 7px $shadow-color-3 }
+@mixin shadow-21dp { box-shadow: 0 10px 13px -6px $shadow-color-1, 0 21px 33px 3px $shadow-color-2, 0 8px 40px 7px $shadow-color-3 }
+@mixin shadow-22dp { box-shadow: 0 10px 14px -6px $shadow-color-1, 0 22px 35px 3px $shadow-color-2, 0 8px 42px 7px $shadow-color-3 }
+@mixin shadow-23dp { box-shadow: 0 11px 14px -7px $shadow-color-1, 0 23px 36px 3px $shadow-color-2, 0 9px 44px 8px $shadow-color-3 }
+@mixin shadow-24dp { box-shadow: 0 11px 15px -7px $shadow-color-1, 0 24px 38px 3px $shadow-color-2, 0 9px 46px 8px $shadow-color-3 }
 
 @mixin non-overflow-shadow-4dp { box-shadow: 0 2px 4px -1px $shadow-color-1, 0 4px 5px -1px $shadow-color-2}
+
+@mixin material-transition { transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1) }
+
+@mixin search-bar-hover {
+    @if $search-bar-hover {
+        @include shadow-2dp;
+        background: $search-bar-focus-color;
+    }
+}
+
+@mixin outlined-chip {
+    @if $outlined-chip {
+        .reactions-bar__item {
+            background: $outlined-chip-color !important;
+            border: 1px solid $outlined-chip-selected-border-color !important;
+        
+            &.active { background-color: $outlined-chip-selected-color !important }
+        
+            &:hover { background: $outlined-chip-hover-color !important }
+        }
+    }
+}
+
+@mixin button-shadow {
+    @if $button-shadow {
+        .button,
+        .compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
+    }
+}
+
+@mixin icon-button {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 20px !important;
+}
+
+// check background-image value
+@mixin bg-image {
+    @if $bg-image == none {        
+    } @else { background-image: url($bg-image) }
+}
+
+
+@mixin icon-font-style {
+    @if $icon-font-style == filled { font-family: "Material Icons" }
+    @if $icon-font-style == outlined { font-family: "Material Icons Outlined" }
+    @if $icon-font-style == round { font-family: "Material Icons Round" }
+    @if $icon-font-style == sharp { font-family: "Material Icons Sharp" }
+    @if $icon-font-style == two-tone { font-family: "Material Icons Two Tone" }
+}
+
+@mixin icon-font {
+    @if $icon-font-source == github {
+        @if $icon-font-style == filled {
+            @font-face {
+                font-family: "Material Icons";
+                src: local("Material Icons"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/raw/master/font/MaterialIcons-Regular.ttf") format('truetype');
+            }
+        }
+        @if $icon-font-style == outlined {
+            @font-face {
+                font-family: "Material Icons Outlined";
+                src: local("Material Icons Outlined"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsOutlined-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == round {
+            @font-face {
+                font-family: "Material Icons Round";
+                src: local("Material Icons Round"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsRound-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == sharp {
+            @font-face {
+                font-family: "Material Icons Sharp";
+                src: local("Material Icons Sharp"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsSharp-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == two-tone {
+            @font-face {
+                font-family: "Material Icons Two Tone";
+                src: local("Material Icons Two Tone"),
+                     url("https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIconsTwoTone-Regular.otf") format('opentype');
+            }
+        }
+    }
+
+    @if $icon-font-source == google {
+        @if $icon-font-style == filled {
+            @font-face {
+                font-family: "Material Icons";
+                src: local("Material Icons"),
+                     url("https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == outlined {
+            @font-face {
+                font-family: "Material Icons Outlined";
+                src: local("Material Icons Outlined"),
+                     url("https://fonts.gstatic.com/s/materialiconsoutlined/v25/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == round {
+            @font-face {
+                font-family: "Material Icons Round";
+                src: local("Material Icons Round"),
+                     url("https://fonts.gstatic.com/s/materialiconsround/v24/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == sharp {
+            @font-face {
+                font-family: "Material Icons Sharp";
+                src: local("Material Icons Sharp"),
+                     url("https://fonts.gstatic.com/s/materialiconssharp/v25/oPWQ_lt5nv4pWNJpghLP75WiFR4kLh3kvmvR.woff2") format('woff2');
+            }
+        }
+        @if $icon-font-style == two-tone {
+            @font-face {
+                font-family: "Material Icons Two Tone";
+                src: local("Material Icons Two Tone"),
+                     url("https://fonts.gstatic.com/s/materialiconstwotone/v23/hESh6WRmNCxEqUmNyh3JDeGxjVVyMg4tHGctNCu0.woff2") format('woff2');
+            }
+        }
+    }
+
+    @if $icon-font-source == self {
+        @if $icon-font-style == filled {
+            @font-face {
+                font-family: "Material Icons";
+                src: local("Material Icons"),
+                     url("../fonts/MaterialIcons-Regular.ttf") format('truetype');
+            }
+        }
+        @if $icon-font-style == outlined {
+            @font-face {
+                font-family: "Material Icons Outlined";
+                src: local("Material Icons Outlined"),
+                     url("../fonts/MaterialIconsOutlined-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == round {
+            @font-face {
+                font-family: "Material Icons Round";
+                src: local("Material Icons"),
+                     url("../fonts/MaterialIconsRound-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == sharp {
+            @font-face {
+                font-family: "Material Icons Sharp";
+                src: local("Material Icons Sharp"),
+                     url("../fonts/MaterialIconsSharp-Regular.otf") format('opentype');
+            }
+        }
+        @if $icon-font-style == two-tone {
+            @font-face {
+                font-family: "Material Icons Two Tone";
+                src: local("Material Icons Two Tone"),
+                     url("../fonts/MaterialIconsTwoTone-Regular.otf") format('opentype');
+            }
+        }
+    }
+}

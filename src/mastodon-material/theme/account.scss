@@ -6,9 +6,10 @@
 
 .account {
     border-bottom: 1px solid $border-color;
+    padding: 16px;
 
-    .account__display-name { color: $primary-text-color }
-    .account__display-name strong { color: $secondary-text-color }
+    .account__display-name,
+    .account__display-name strong { color: $primary-text-color }
 
     &__avatar {
         border-radius: $avater-radius;
@@ -27,11 +28,16 @@
         }
     }
 
+    &__avatar-wrapper {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+
     &__header {
         &__bar {
-            background: $card-background-color;
+            background: $card-bg-color;
             padding: 8px;
-            border-bottom: 1px solid $border-color;
+            border-bottom: none;
 
             .avatar .account__avatar { border: none }
         }
@@ -51,9 +57,11 @@
 
             &__buttons {
                 .icon-button {
+                    @include icon-button;
                     border: none;
                     border-radius: 50%;
-                    padding: 0;
+                    padding: 8px;
+                    margin-left: 8px;
                 }
             }
         }
@@ -89,7 +97,7 @@
 
                     .verified {
                         border: none;
-                        background: $verified-background-color;
+                        background: $verified-bg-color;
 
                         a,
                         &__mark { color: $primary-text-color }
@@ -105,7 +113,7 @@
 
                     dt {
                         color: $primary-text-color;
-                        background: $list-background-inactive-color;
+                        background: $list-bg-inactive-color;
                     }
 
                     dd { color: $primary-text-color }
@@ -113,11 +121,31 @@
             }
         }
 
+        &__account-note {
+            padding: 8px 16px;
+            border-bottom: 1px solid $border-color;
+
+            label {
+                color: $ui-text-color;
+                margin-bottom: 8px;
+            }
+
+            textarea {
+                color: $primary-text-color;
+                padding: 8px 16px;
+                border-radius: 0;
+
+                &:focus { background: transparent }
+
+                &::placeholder { color: $tips-text-color }
+            }
+        }
+
         &__content { color: $secondary-text-color }
     }
 
     &__section-headline {
-        background: $text-tab-background-color;
+        background: $text-tab-bg-color;
         border-bottom: 1px solid $border-color;
 
         a {
@@ -131,10 +159,21 @@
                 &::before,
                 &:after { border: none }
 
-                &:focus { background: $text-tab-indicator-background-focus-color }
+                &:focus { background: $text-tab-indicator-bg-focus-color }
             }
 
-            &:hover { background: $text-tab-indicator-background-hover-color }
+            &:hover { background: $text-tab-indicator-bg-hover-color }
+        }
+    }
+
+    &__relationship {
+        padding: 0;
+        height: auto;
+
+        .icon-button {
+            @include icon-button;
+            padding: 8px;
+            box-sizing: content-box;
         }
     }
 }
@@ -150,4 +189,8 @@
     color: $ui-text-color;
 
     small { color: $secondary-text-color }
+}
+
+.account-gallery {
+    &__item { border-radius: 0 }
 }

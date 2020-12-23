@@ -6,10 +6,10 @@
 
 
 .confirmation-modal {
-    background: $card-background-color;
+    @include shadow-24dp;
+    background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $dialog-radius;
-    width: 300px;
 
     &__container {
         text-align: left;
@@ -18,7 +18,7 @@
 
     &__action-bar {
         justify-content: flex-end;
-        background: $card-background-color;
+        background: $card-bg-color;
         padding: 8px;
     }
 
@@ -42,7 +42,7 @@
 }
 
 .actions-modal {
-    background: $card-background-color;
+    background: $card-bg-color;
     border-radius: $card-radius;
 
     ul li:not(:empty) a {
@@ -50,7 +50,7 @@
         font-size: 16px;
 
         &:hover {
-            background: $card-background-hover-color;
+            background: $card-bg-hover-color;
             color: $ui-text-color;
         }
     }
@@ -58,7 +58,7 @@
     .dropdown-menu__separator { border-bottom-color: $border-color }
 
     .status {
-        background: $card-background-color;
+        background: $card-bg-color;
         border-bottom-color: $border-color;
         padding-top: 12px;
         padding-bottom: 12px;
@@ -71,7 +71,8 @@
 }
 
 .report-modal {
-    background: $card-background-color;
+    @include shadow-24dp;
+    background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
 
