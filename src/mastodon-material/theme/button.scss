@@ -21,16 +21,23 @@
     &.inverted {
         color: $icon-button-color;
 
+        &.active { color: $icon-button-active-color }
+
         &:hover {
             color: $icon-button-hover-color;
             background-color: $icon-bg-hover-color;
         }
+
+        &:focus { background-color: transparent }
     }
 
     &.overlayed {
+        @include icon-button;
         border-radius: 50%;
         background: $media-icon-bg-color;
         color: $media-icon-color;
+        padding: 4px;
+        line-height: 20px !important;
     
         &:hover {
             background: $media-icon-bg-color;

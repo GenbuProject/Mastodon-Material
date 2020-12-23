@@ -39,6 +39,10 @@
     background: $floating-action-button-color;
     color: $floating-action-button-icon-color;
     font-size: 24px;
+    width: $fab-size;
+    height: $fab-size;
+    bottom: 16px;
+    right: 16px;
 
     &:hover { background: $floating-action-button-hover-color }
 
@@ -60,6 +64,11 @@
     }
 }
 
+// small size screen
+@media screen and (max-width: 415px) {
+    .public-layout { padding-top: 64px }
+}
+
 // middle size screen
 @media screen and (min-width: 415px) {
     .tabs-bar {
@@ -72,17 +81,22 @@
         }
     }
 
-    .columns-area__panels__main {
-        @include shadow-1dp;
-        padding: 0;
+    .columns-area__panels {
+        &__main {
+            @include shadow-1dp;
+            padding: 0;
+        }
+
+        &__pane { padding: 0 16px }
     }
 }
 
+//single column mode
 @media screen and (min-width: 631px) {
     .tabs-bar__link {
         &:hover {
             background: $tab-indicator-bg-hover-color;
-            border-bottom-color: $tab-bg-color;
+            border-bottom-color: transparent;
         }
 
         &:active,
@@ -90,5 +104,7 @@
             background: $tab-indicator-bg-focus-color;
             border-bottom-color: $tab-bg-color;
         }
+
+        &.active { border-bottom-color: $tab-indicator-active-color }
     }
 }

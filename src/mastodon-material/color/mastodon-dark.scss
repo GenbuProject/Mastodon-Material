@@ -41,11 +41,13 @@ $verified-bg-color: darken($verified-color, 20%);
 
 // Chip color
 $contained-chip-color: #42485a;
+$chip-selected-text-color: $primary-color;
 $contained-chip-hover-color: lighten($contained-chip-color, 6%);
-$contained-chip-selected-color: lighten($contained-chip-color, 12%);
+$contained-chip-selected-color: transparentize($chip-selected-text-color, 0.7);
 $outlined-chip-color: #393f4f;
 $outlined-chip-hover-color: lighten($outlined-chip-color, 6%);
-$outlined-chip-selected-color: lighten($outlined-chip-color, 12%);
+$outlined-chip-selected-color: transparentize($chip-selected-text-color, 0.8);
+$outlined-chip-selected-border-color: transparentize($chip-selected-text-color, 0.7);
 
 // Relationship tag color
 $relationship-tag-color: transparentize(#42485a, 0.2);

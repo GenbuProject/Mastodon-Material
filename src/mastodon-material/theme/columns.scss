@@ -21,9 +21,10 @@
 .column-header {
     background: $top-bar-color;
     border-radius: $bar-radius;
+    height: 56px;
 
     > button {
-        padding: 16px 0 16px 16px;
+        padding: 16px;
         color: $top-bar-text-color;
     }
 
@@ -45,12 +46,13 @@
     &__buttons { height: 56px }
 
     &__button {
+        @include icon-button;
         background: $top-bar-color;
         color: $top-bar-icon-color;
-        margin: 8px 10px;
-        padding: 10px;
+        padding: 8px;
+        margin: 10px;
         border-radius: 50%;
-        font-size: 20px;
+        box-sizing: content-box;
 
         &.active {
             color: $top-bar-icon-active-color;
@@ -136,6 +138,7 @@
     color: $section-text-color;
     background: $bg-color;
     padding: 12px 16px;
+    margin-top: 8px;
     border-top: 1px solid $border-color;
 }
 
@@ -192,6 +195,8 @@
     padding: 16px;
 
     span { visibility: hidden }  // hide "back" string
+
+    &--slim-button { top: -54px }
 }
 
 .column-inline-form {
@@ -296,6 +301,7 @@
     &__wrapper {
         background: $bg-color;
         height: auto !important;
+        padding-bottom: 8px;
         border-bottom: 1px solid $border-color;
     }
 
@@ -321,6 +327,7 @@
         h4 {
             color: $section-text-color;
             padding: 12px 16px;
+            margin-top: 8px;
             border-top: 1px solid $border-color;
             border-bottom: none;
         }
@@ -384,15 +391,18 @@
 
     &__pagination {
         color: $ui-text-color;
-        padding: 8px 16px;
-        bottom: 8px;
+        padding: 16px;
+        bottom: 0;
 
         .icon-button {
-            font-size: 20px !important;
-            width: 20px !important;
-            height: 20px !important;
-            margin: 0 8px;
+            @include icon-button;
+            padding: 8px;
+            margin: 0 4px;
+            line-height: normal !important;
+            box-sizing: content-box;
         }
+
+        span { vertical-align: super }
     }
 }
 
@@ -401,6 +411,9 @@
 @include outlined-chip;
 
 .reactions-bar {
+    margin-top: 16px;
+    width: calc(100% - 72px);
+
     .emoji-button {
         color: $icon-button-color;
         font-size: 20px;
@@ -417,7 +430,10 @@
 
         &.active {
             background-color: $contained-chip-selected-color;
-            .reactions-bar__item__count { color: $ui-text-color }
+
+            .reactions-bar__item__count { color: $chip-selected-text-color }
+
+            &:hover { background-color: $contained-chip-selected-color }
         }
 
         &__emoji {
@@ -428,7 +444,7 @@
 
         &__count {
             font-size: 16px;
-            margin: 0 8px;
+            margin: 0 12px 0 8px;
             color: $secondary-text-color;
         }
 

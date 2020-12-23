@@ -6,7 +6,7 @@
 
 
 .status {
-    padding: 12px 12px 12px 70px;
+    padding: 12px 12px 4px 70px;
     border-bottom: 1px solid $border-color;
 
     &__expand { width: 70px }
@@ -40,6 +40,8 @@
             &.unhandled-link { color: $link-text-color }
         }
 
+        p { margin-bottom: 16px }
+
         .status__content__spoiler-link {
             background: transparent;
 
@@ -69,9 +71,47 @@
     }
 
     &__action-bar {
-        &__counter__label {
-            font-size: 14px;
-            color: $info-text-color;
+        margin-top: 4px;
+
+        &__counter {
+            margin-right: 6px;
+
+            &__label {
+                font-size: 14px;
+                color: $info-text-color;
+            }
+        }
+    }
+
+    &__action-bar-button {
+        margin-right: 6px;
+
+        &.icon-button {
+            @include icon-button;
+            padding: 8px;
+            box-sizing: content-box;
+        }
+    }
+
+    &__action-bar-dropdown {
+        width: 36px !important;
+        height: 36px !important;
+        box-sizing: content-box;
+
+        .icon-button {
+            @include icon-button;
+            padding: 8px;
+            box-sizing: content-box;
+
+            &.active {
+                color: $icon-hover-color;
+                background: $icon-bg-active-color;
+            }
+
+            &:hover {
+                color:$icon-hover-color;
+                background: $icon-bg-hover-color;
+            }
         }
     }
 
@@ -154,6 +194,9 @@ a.status-card {
     &:hover { background-color: $card-bg-color }
 }
 
+.embed .status,
+.public-layout .status { padding: 16px 16px 16px 80px }
+
 // Detailed status in mobile
 .status.light {
     .status {
@@ -170,6 +213,8 @@ a.status-card {
     background: $card-bg-color;
     padding: 16px;
 
+    &.detailed-status--flex.detailed-status-public { border-radius: $card-radius }
+
     &__display-name {
         color: $secondary-text-color;
 
@@ -185,11 +230,28 @@ a.status-card {
         background: $card-bg-color;
         border-top: none;
         border-bottom: 1px solid $border-color;
-        padding: 12px 0;
+        padding: 8px 0;
+    }
+
+    &__action-bar-dropdown {
+        .icon-button {
+            @include icon-button;
+            padding: 8px;
+            box-sizing: content-box;
+
+            &.active {
+                color: $icon-hover-color;
+                background: $icon-bg-active-color;
+            }
+        }
     }
 
     &__button {
-        .icon-button { font-size: 20px !important }
+        .icon-button {
+            @include icon-button;
+            padding: 8px;
+            box-sizing: content-box;
+        }
     }
 }
 
@@ -198,3 +260,21 @@ a.status-card {
     &__html { color: $primary-text-color }
     &__account { color: $secondary-text-color }
 }
+
+.activity-stream {
+    @include shadow-1dp;
+    margin-bottom: 16px;
+    border-radius: $card-radius;
+
+    .entry {
+        background: $card-bg-color;
+
+        &:first-child {
+            .detailed-status,
+            .load-more,
+            .status { border-radius: $card-radius $card-radius 0 0 }
+        }
+    }
+}
+
+.entry.entry-center { border-bottom: 1px solid $border-color }

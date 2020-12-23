@@ -69,13 +69,13 @@
         background: $menu-bg-color;
     }
 
-    &-category-label span {
-        padding: 4px 6px;
-        background: $menu-bg-color;
-    }
+    &-category {
+        &-label span {
+            padding: 4px 6px;
+            background: $menu-bg-color;
+        }
 
-    &-emoji:hover::before {
-        background-color: $icon-bg-hover-color;
+        .emoji-mart-emoji:hover::before { background-color: $icon-bg-hover-color }
     }
 
     &-no-results { color: $secondary-text-color }

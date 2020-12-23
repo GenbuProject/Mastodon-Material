@@ -45,7 +45,7 @@ $shadow-color-3: rgba(0,0,0,.12);
     @if $outlined-chip {
         .reactions-bar__item {
             background: $outlined-chip-color !important;
-            border: 1px solid $border-color !important;
+            border: 1px solid $outlined-chip-selected-border-color !important;
         
             &.active { background-color: $outlined-chip-selected-color !important }
         
@@ -59,6 +59,12 @@ $shadow-color-3: rgba(0,0,0,.12);
         .button,
         .compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
     }
+}
+
+@mixin icon-button {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 20px !important;
 }
 
 // check background-image value
