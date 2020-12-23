@@ -18,7 +18,17 @@ There are two types of profiles, color scheme and layout profile. You can config
 
 ### Float search bar when cursor hovers
 
+<img src="res/search-bar-hover.gif" alt="search-bar hover">
 Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Add `$search-bar-hover: true;` to [`custom_config.scss`](../src/mastodon-material/custom_config.scss).
+
+### Change font size
+You can change font size of statuses body and display name. Set `$status-font-size` value to change font size of statuses contents and `$name-font-size` value to change of display name.
+
+### Set background image
+You can set a background image by `$bg-image` value. You should use relative path or URL and bracket it.
+
+### Change transparency
+You can change transparency of some elements. Change top bar and column transparency by setting `$bar-transparency` and `$column-transparency` value. Set a value between 0 and 1. 1 is opacity and 0 is transparent.
 
 ## Icon settings
 

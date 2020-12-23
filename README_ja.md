@@ -1,6 +1,6 @@
 # Mastodon Material
 
-<img src="docs/res/top.png" alt="mastodon-material" width="80%">
+<img src="docs/res/top.png" alt="mastodon-material">
 
 ## 言語 | Language
 
@@ -148,7 +148,7 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
 
 テーマのカスタマイズについては、[カスタマイズガイド](docs/customization_guide_ja.md)をご覧ください。
 
-## Stylish/Stylus版テーマ
+## Stylus/Stylishテーマ
 
 任意のサーバーでもこのテーマを利用できるよう、ブラウザ拡張機能の[Stylus](https://add0n.com/stylus.html)や[Stylish](https://userstyles.org/)向けのテーマを公開しています。
 
@@ -169,14 +169,3 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
 このテーマ及びStylish/Stylus版テーマは[AGPL-3.0](LICENSE)に基づいて公開されています。また、Google製[Material Iconsフォント](https://google.github.io/material-design-icons/#icon-font-for-the-web)については、[Apache license version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)で提供されています。(このリポジトリにMaterial Iconsフォントファイルは含まれていません)
 
 [ヘッダー画像](docs/src/top.png)は[Noto Sans](https://www.google.com/get/noto/#sans-lgc)と[mastodon.privacyfilter.user.styl](https://github.com/eai04191/userscript-graveyard#mastodonprivacyfilteruserstyl)を使用して作りました。
-
-## スクリーンショット
-
-<details>
-<img src="docs/res/timeline/v1-light.png" alt="material-v1-light" width=50%>
-<img src="docs/res/timeline/v1-dark.png" alt="material-v1-dark" width=50%>
-<img src="docs/res/timeline/v2-light.png" alt="material-v2-light" width=50%>
-<img src="docs/res/timeline/v2-dark.png" alt="material-v2-dark" width=50%>
-<img src="docs/res/timeline/mastodon-light.png" alt="mastodon-material-light" width=50%>
-<img src="docs/res/timeline/mastodon-dark.png" alt="mastodon-material-dark" width=50%>
-</details>

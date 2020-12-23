@@ -1,6 +1,6 @@
 # Mastodon Material
 
-<img src="docs/res/top.png" alt="mastodon-material" width="80%">
+<img src="docs/res/top.png" alt="mastodon-material">
 
 ## Language | 言語
 
@@ -17,7 +17,7 @@ Mastodon Material is the native theme for Mastodon, which based on [Material Des
 - [Mastodon](https://github.com/tootsuite/mastodon) v3.1 or above
 - [Sass](https://sass-lang.com) 1.25.x
 
-## Installation
+## How to install
 
 1. Copy these files of this repository into `app/javascript/styles` of Mastodon source directory.
    
@@ -137,7 +137,7 @@ Mastodon Material is the native theme for Mastodon, which based on [Material Des
 
 [Customization Guide](docs/customization_guide.md)
 
-## Stylish/Stylus theme
+## Stylus/Stylish theme
 
 You can use our theme on any server by the browser extension, [Stylus](https://add0n.com/stylus.html) or [Stylish](https://userstyles.org/).
 
@@ -158,14 +158,3 @@ You can use our theme on any server by the browser extension, [Stylus](https://a
 This theme and the Stylish/Stylus theme can be used under [AGPL-3.0](LICENSE). [Material Icons font](https://google.github.io/material-design-icons/#icon-font-for-the-web) is available under [Apache license version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html). (This repository does not include Material Icons font.)
 
 [The header image](docs/src/top.png) was made by using [Noto Sans](https://www.google.com/get/noto/#sans-lgc) and [mastodon.privacyfilter.user.styl](https://github.com/eai04191/userscript-graveyard#mastodonprivacyfilteruserstyl).
-
-## Screenshots
-
-<details>
-<img src="docs/res/timeline/v1-light.png" alt="material-v1-light" width=50%>
-<img src="docs/res/timeline/v1-dark.png" alt="material-v1-dark" width=50%>
-<img src="docs/res/timeline/v2-light.png" alt="material-v2-light" width=50%>
-<img src="docs/res/timeline/v2-dark.png" alt="material-v2-dark" width=50%>
-<img src="docs/res/timeline/mastodon-light.png" alt="mastodon-material-light" width=50%>
-<img src="docs/res/timeline/mastodon-dark.png" alt="mastodon-material-dark" width=50%>
-</details>

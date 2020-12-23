@@ -18,7 +18,17 @@
 
 ### 検索バーをホバー時に浮き上がらせる
 
+<img src="res/search-bar-hover.gif" alt="search-bar hover">
 検索バーをホバー(マウスオーバー)時に浮き上がらせ、背景色をフォーカス時と同じ色にします。[`custom_config.scss`](../src/mastodon-material/custom_config.scss)に`$search-bar-hover: true;`と追記してください。
+
+### 文字サイズの変更
+トゥート本文やユーザー名の文字サイズを変更できます。`$status-font-size`の値でトゥート本文の文字サイズを、`$name-font-size`の値で表示名の文字サイズを変更できます。
+
+### 背景画像の設定
+`$bg-image`の値で背景画像を設定できます。値は相対パスやURLを取ることができ、`""`で囲います。
+
+### 透明度の設定
+透明度を設定できます。`$bar-transparency`でトップバーの、`$column-transparency`でカラムの透明度を変更できます。0から1までの間の値で設定します。1で不透明、0で透明です。
 
 ## アイコン設定
 
