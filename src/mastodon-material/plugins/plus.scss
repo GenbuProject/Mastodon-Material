@@ -12,6 +12,10 @@
     .fa { vertical-align: bottom }
 }
 
+// exception
+.media-modal__overlay .picture-in-picture__footer .icon-button,
+.status__action-bar-button.icon-button--with-counter { background: transparent }
+
 // favorite icon
 .star-icon.active,
 .star-icon.icon-button.active.activate,
