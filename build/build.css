@@ -179,7 +179,8 @@
   border-radius: 0;
 }
 
-body {
+body,
+body.embed {
   background: #fafafa;
 }
 
@@ -251,6 +252,10 @@ html {
 .icon-button.overlayed:hover {
   background: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.8);
+}
+.icon-button__counter {
+  width: 16px;
+  margin-left: 8px;
 }
 .icon-button:hover {
   transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
@@ -551,6 +556,7 @@ label.icon-button:hover {
   color: #5f6368;
   background: #ffffff;
   font-size: 16px;
+  contain: initial;
 }
 
 .conversation {
@@ -824,6 +830,14 @@ label.icon-button:hover {
   color: #5f6368;
 }
 
+.notification.unread:before, .status__wrapper.unread:before {
+  border-left: none;
+}
+
+.notification.unread, .status__wrapper.unread {
+  background-color: rgba(66, 133, 244, 0.2);
+}
+
 .public-layout .header {
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   background: #2196f3;
@@ -879,6 +893,12 @@ label.icon-button:hover {
 
 .modal-root {
   transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+.modal-root__overlay {
+  background-color: rgba(0, 0, 0, 0.32) !important;
+}
+.modal-root__container {
+  background: linear-gradient(rgba(0, 0, 0, 0.48) 10%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.48) 90%);
 }
 
 .drawer__header {
@@ -1212,6 +1232,9 @@ label.icon-button:hover {
   border: none;
   border-radius: 2px;
   padding: 8px 16px;
+}
+.poll__option__text {
+  line-height: 34px;
 }
 .poll__chart {
   border-radius: 0;
@@ -1567,6 +1590,7 @@ label.icon-button:hover {
 .emoji-mart-search input:focus {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   background: #fafafa;
+  color: #000000;
 }
 .emoji-mart-scroll {
   padding: 0 8px 8px;
@@ -1612,25 +1636,6 @@ label.icon-button:hover {
   border-radius: 0;
 }
 
-.media-modal__close.icon-button {
-  background: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 24px !important;
-  width: 24px !important;
-  height: 24px !important;
-  padding: 8px;
-  box-sizing: content-box;
-  line-height: normal !important;
-}
-.media-modal__close.icon-button:hover {
-  background: rgba(0, 0, 0, 0.2);
-  color: rgba(255, 255, 255, 0.8);
-}
-.media-modal__close.icon-button .fa-fw {
-  width: 24px;
-  height: 24px;
-}
-
 .media-modal__nav {
   background: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.6);
@@ -1649,11 +1654,36 @@ label.icon-button:hover {
 .media-modal__button--active {
   background-color: #e6e6e6;
 }
+.media-modal__close.icon-button {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px !important;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 8px;
+  box-sizing: content-box;
+  line-height: normal !important;
+}
+.media-modal__close.icon-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+.media-modal__close.icon-button .fa-fw {
+  width: 24px;
+  height: 24px;
+}
 .media-modal__meta {
   bottom: 24px;
 }
 .media-modal__meta a {
   color: rgba(255, 255, 255, 0.6);
+}
+.media-modal__overlay .picture-in-picture__footer .icon-button {
+  color: rgba(255, 255, 255, 0.6);
+}
+.media-modal__overlay .picture-in-picture__footer .icon-button:active, .media-modal__overlay .picture-in-picture__footer .icon-button:focus, .media-modal__overlay .picture-in-picture__footer .icon-button:hover {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
 }
 
 .video-player__controls {
@@ -1953,7 +1983,7 @@ label.icon-button:hover {
   color: #5e5e5e;
 }
 .status__action-bar-button {
-  margin-right: 6px;
+  margin-right: 4px;
 }
 .status__action-bar-button.icon-button {
   width: 20px !important;
@@ -1961,6 +1991,13 @@ label.icon-button:hover {
   font-size: 20px !important;
   padding: 8px;
   box-sizing: content-box;
+}
+.status__action-bar-button.icon-button--with-counter {
+  margin-right: 4px;
+  width: auto !important;
+}
+.status__action-bar-button.icon-button--with-counter:hover {
+  background: transparent;
 }
 .status__action-bar-dropdown {
   width: 36px !important;
@@ -2118,6 +2155,10 @@ a.status-card:hover {
   padding: 8px;
   box-sizing: content-box;
 }
+.detailed-status .button.logo-button {
+  margin-bottom: 16px;
+  line-height: 36px;
+}
 
 .display-name__html {
   color: #000000;
@@ -2185,7 +2226,7 @@ a.status-card:hover {
   font-size: 20px;
 }
 
-.fa.fa-bars, .fa.fa-navicon, .fa.fa-reorder, .fa.fa-globe, .fa.fa-cog, .fa.fa-cogs, .fa.fa-gears, .fa.fa-sign-out, .fa.fa-search, .fa.fa-times, .fa.fa-times-circle, .fa.fa-close, .fa.fa-remove, .fa.fa-chevron-down, .fa.fa-ellipsis-v, .fa.fa-paperclip, .fa.fa-tasks, .fa.fa-plus, .fa.fa-unlock, .fa.fa-lock, .fa.fa-envelope, .fa.fa-home, .fa.fa-bullhorn, .fa.fa-sliders, .fa.fa-chevron-left, .fa.fa-chevron-right, .fa.fa-reply, .fa.fa-reply-all, .fa.fa-share-alt, .fa.fa-star, .fa.fa-bookmark, .fa.fa-ellipsis-h, .fa.fa-bell, .fa.fa-eraser, .fa.fa-users, .fa.fa-file-text, .fa.fa-user-plus, .fa.fa-address-book, .fa.fa-address-book-o, .fa.fa-list, .fa.fa-list-ul, .fa.fa-eye, .fa.fa-eye-slash, .fa.fa-pencil, .fa.fa-trash, .fa.fa-play, .fa.fa-external-link, .fa.fa-retweet, .fa.fa-link, .fa.fa-pause, .fa.fa-volume-up, .fa.fa-volume-off, .fa.fa-expand, .fa.fa-download, .fa.fa-arrows-alt, .fa.fa-compress, .fa.fa-user-times, .fa.fa-check, .fa.fa-quote-right, .fa.fa-upload, .fa.fa-comments, .fa.fa-angle-right {
+.fa.fa-bars, .fa.fa-navicon, .fa.fa-reorder, .fa.fa-globe, .fa.fa-cog, .fa.fa-cogs, .fa.fa-gears, .fa.fa-sign-out, .fa.fa-search, .fa.fa-times, .fa.fa-times-circle, .fa.fa-close, .fa.fa-remove, .fa.fa-chevron-down, .fa.fa-ellipsis-v, .fa.fa-paperclip, .fa.fa-tasks, .fa.fa-plus, .fa.fa-unlock, .fa.fa-lock, .fa.fa-envelope, .fa.fa-home, .fa.fa-bullhorn, .fa.fa-sliders, .fa.fa-chevron-left, .fa.fa-chevron-right, .fa.fa-reply, .fa.fa-reply-all, .fa.fa-share-alt, .fa.fa-star, .fa.fa-bookmark, .fa.fa-ellipsis-h, .fa.fa-bell, .fa.fa-bell-o, .fa.fa-eraser, .fa.fa-users, .fa.fa-file-text, .fa.fa-user-plus, .fa.fa-address-book, .fa.fa-address-book-o, .fa.fa-list, .fa.fa-list-ul, .fa.fa-eye, .fa.fa-eye-slash, .fa.fa-pencil, .fa.fa-trash, .fa.fa-play, .fa.fa-external-link, .fa.fa-retweet, .fa.fa-link, .fa.fa-pause, .fa.fa-volume-up, .fa.fa-volume-off, .fa.fa-expand, .fa.fa-download, .fa.fa-arrows-alt, .fa.fa-compress, .fa.fa-user-times, .fa.fa-check, .fa.fa-quote-right, .fa.fa-upload, .fa.fa-comments, .fa.fa-angle-right, .fa.fa-thumb-tack {
   font-family: "Material Icons";
   line-height: 1;
   letter-spacing: normal;
@@ -2271,6 +2312,9 @@ a.status-card:hover {
   content: "more_horiz";
 }
 .fa.fa-bell::before {
+  content: "notifications";
+}
+.fa.fa-bell-o::before {
   content: "notifications";
 }
 .fa.fa-eraser::before {
@@ -2360,6 +2404,9 @@ a.status-card:hover {
 .fa.fa-angle-right::before {
   content: "chevron_right";
 }
+.fa.fa-thumb-tack::before {
+  content: "push_pin";
+}
 
 .status__action-bar-button.icon-button .fa.fa-bookmark::before,
 .bookmark-icon.icon-button .fa.fa-bookmark::before {
@@ -2394,12 +2441,18 @@ button.icon-button i.fa-retweet {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="%23757575" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="%234285f4" stroke-width="0"/></svg>');
 }
 
-button.icon-button i.fa-retweet:hover {
+.media-modal__overlay .picture-in-picture__footer button.icon-button i.fa-retweet {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="rgba(255, 255, 255, 0.6)" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="%234285f4" stroke-width="0"/></svg>');
+}
+
+button.icon-button i.fa-retweet:hover,
+button.icon-button:hover i.fa-retweet {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="%23292929" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="%234285f4" stroke-width="0"/></svg>');
 }
 
 button.icon-button.disabled i.fa-retweet,
-button.icon-button.disabled i.fa-retweet:hover {
+button.icon-button.disabled i.fa-retweet:hover,
+button.icon-button.disabled:hover i.fa-retweet {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%239e9e9e" width="20px" height="20px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"/></svg>');
 }
 
@@ -2456,7 +2509,8 @@ button.icon-button.disabled i.fa-retweet:hover {
   vertical-align: text-bottom;
 }
 
-.status__visibility-icon .fa {
+.status__visibility-icon .fa,
+.account__header__tabs__name .fa {
   font-size: 16px;
   vertical-align: text-bottom;
 }

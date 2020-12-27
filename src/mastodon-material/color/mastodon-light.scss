@@ -37,6 +37,7 @@ $list-bg-active-color: darken($list-bg-color, 10%);
 $list-bg-inactive-color: darken($list-bg-color, 10%);
 $text-field-bg-color: $card-bg-color;
 $verified-bg-color: lighten($verified-color, 20%);
+$unread-bg-color: transparentize($primary-color, 0.8);
 
 // Chip color
 $contained-chip-color: #e0e0e0;

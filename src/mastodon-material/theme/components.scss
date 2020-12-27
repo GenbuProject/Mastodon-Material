@@ -4,7 +4,13 @@
 @import '../custom_color', '../custom_layout';
 @import 'mixins';
 
-.modal-root { transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1) }
+.modal-root {
+    transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+
+    &__overlay { background-color: rgba(0,0,0,.32) !important }
+
+    &__container { background: linear-gradient(rgba(0, 0, 0, 0.48) 10%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.48) 90%) }
+}
 
 .drawer {
     &__header {
@@ -364,6 +370,8 @@
             border-radius: 2px;
             padding: 8px 16px;
         }
+
+        &__text { line-height: 34px }
     }
 
     &__chart {

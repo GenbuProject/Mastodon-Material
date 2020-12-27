@@ -60,6 +60,7 @@
             &:focus {
                 @include shadow-2dp;
                 background: $search-bar-focus-color;
+                color: $search-bar-text-color;
             }
         }
     }
