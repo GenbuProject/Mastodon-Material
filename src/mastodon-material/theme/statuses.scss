@@ -84,12 +84,19 @@
     }
 
     &__action-bar-button {
-        margin-right: 6px;
+        margin-right: 4px;
 
         &.icon-button {
             @include icon-button;
             padding: 8px;
             box-sizing: content-box;
+
+            &--with-counter {
+                margin-right: 4px;
+                width: auto !important;
+
+                &:hover { background: transparent }
+            }
         }
     }
 
@@ -252,6 +259,11 @@ a.status-card {
             padding: 8px;
             box-sizing: content-box;
         }
+    }
+
+    .button.logo-button {
+        margin-bottom: 16px;
+        line-height: 36px;
     }
 }
 

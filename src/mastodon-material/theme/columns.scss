@@ -223,6 +223,7 @@
     color: $secondary-text-color;
     background: $card-bg-color;
     font-size: 16px;
+    contain: initial;  // padding fix
 }
 
 .conversation {
@@ -503,3 +504,8 @@
 }
 
 .attachment-list__list a { color: $secondary-text-color }
+
+// unread notification
+.notification.unread:before, .status__wrapper.unread:before { border-left: none }
+
+.notification.unread, .status__wrapper.unread { background-color: $unread-bg-color }
