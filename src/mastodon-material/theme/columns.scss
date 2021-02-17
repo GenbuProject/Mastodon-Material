@@ -1,9 +1,3 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
-
 .column {
     @include shadow-1dp;
     padding: 0;
@@ -379,7 +373,7 @@
 
 .announcements {
     background: $card-bg-color;
-    padding: 0;
+    padding: 0 8px;
 
     &__container { color: $primary-text-color }
 

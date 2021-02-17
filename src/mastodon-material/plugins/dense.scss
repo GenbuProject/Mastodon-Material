@@ -1,9 +1,3 @@
-@charset "UTF-8";
-@import '../theme/base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-
-
 .drawer {
     &__header { height: 48px }
 
@@ -35,7 +29,14 @@
 }
 
 .compose-form {
-    .compose-form__publish { padding-top: 8px }
+    .compose-form {
+        &__publish { padding-top: 8px }
+
+        &__buttons-wrapper {
+            .icon-button,
+            .text-icon-button { padding: 4px }
+        }
+    }
 }
 
 .status {

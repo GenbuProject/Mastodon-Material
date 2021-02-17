@@ -1,11 +1,3 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config', '../icon_config';
-@import '../custom_color', '../custom_layout';
-@import 'functions';
-@import 'mixins';
-
-
 @include icon-font;
 
 .fa-fw {
@@ -242,6 +234,9 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
 
 // read more icon
 .status__content__read-more-button .fa { vertical-align: bottom }
+
+// Attachment icon
+.attachment-list__list a .fa { vertical-align: middle }
 
 // status detail icon
 .detailed-status .fa {

@@ -1,7 +1,6 @@
 /*
-* Mastodon Material 0.2.0
-* Author: Rintan, Genbu Project
-* Copyright (C) 2020 Rintan, Genbu Project
+* Mastodon Material 0.3.0
+* Copyright (C) 2021 Rintan, Genbu Project
 */
 .account {
   border-bottom: 1px solid #dadce0;
@@ -701,7 +700,7 @@ label.icon-button:hover {
 
 .announcements {
   background: #ffffff;
-  padding: 0;
+  padding: 0 8px;
 }
 .announcements__container {
   color: #000000;
@@ -836,59 +835,6 @@ label.icon-button:hover {
 
 .notification.unread, .status__wrapper.unread {
   background-color: rgba(66, 133, 244, 0.2);
-}
-
-.public-layout .header {
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  background: #2196f3;
-  border-radius: 2px;
-  margin: 16px 0;
-}
-.public-layout .header .brand:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-.public-layout .header .nav-link,
-.public-layout .header .nav-link.optional {
-  color: #ffffff;
-}
-.public-layout .header .nav-link:hover,
-.public-layout .header .nav-link.optional:hover {
-  background: rgba(255, 255, 255, 0.1);
-  text-decoration: none;
-}
-.public-layout .header .nav-button {
-  background: transparent;
-  margin: 0;
-  border-radius: 0;
-}
-.public-layout .header .nav-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-.public-layout .header .detailed-status__meta {
-  margin-top: 16px;
-}
-.public-layout .detailed-status {
-  padding: 16px;
-}
-.public-layout .footer {
-  padding-top: 16px;
-  padding-bottom: 64px;
-  color: #202124;
-}
-.public-layout .footer h4 {
-  color: #202124;
-}
-.public-layout .footer ul a {
-  color: #5f6368;
-}
-.public-layout .footer .grid .column-2 h4 a {
-  color: #202124;
-}
-.public-layout .footer .brand svg {
-  fill: #757575;
-}
-.public-layout .footer .brand:hover svg {
-  fill: #292929;
 }
 
 .modal-root {
@@ -1068,7 +1014,7 @@ label.icon-button:hover {
 .compose-form .autosuggest-textarea__textarea {
   background: #ffffff;
   color: #202124;
-  border-radius: 2px;
+  padding: 8px 42px 8px 16px;
 }
 .compose-form .autosuggest-textarea__textarea::placeholder {
   color: #c0c0c0;
@@ -1092,13 +1038,19 @@ label.icon-button:hover {
   background: #e6e6e6;
 }
 .compose-form .spoiler-input.spoiler-input--visible {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 .compose-form .spoiler-input__input {
   color: #202124;
   background: #ffffff;
   border-bottom: 1px solid #dadce0;
   border-radius: 0;
+}
+.compose-form .spoiler-input__input:hover {
+  border-color: #878d9a;
+}
+.compose-form .spoiler-input__input:active, .compose-form .spoiler-input__input:focus {
+  border-bottom: 2px solid #4285f4;
 }
 .compose-form .spoiler-input__input::placeholder {
   color: #c0c0c0;
@@ -1478,6 +1430,63 @@ label.icon-button:hover {
   background: #4285f4;
 }
 
+.emoji-button {
+  padding: 8px;
+}
+
+.public-layout .header {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  background: #2196f3;
+  border-radius: 2px;
+  margin: 16px 0;
+}
+.public-layout .header .brand:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.public-layout .header .nav-link,
+.public-layout .header .nav-link.optional {
+  color: #ffffff;
+}
+.public-layout .header .nav-link:hover,
+.public-layout .header .nav-link.optional:hover {
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+.public-layout .header .nav-button {
+  background: transparent;
+  margin: 0;
+  border-radius: 0;
+}
+.public-layout .header .nav-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.public-layout .header .detailed-status__meta {
+  margin-top: 16px;
+}
+.public-layout .detailed-status {
+  padding: 16px;
+}
+.public-layout .footer {
+  padding-top: 16px;
+  padding-bottom: 64px;
+  color: #202124;
+}
+.public-layout .footer h4 {
+  color: #202124;
+}
+.public-layout .footer ul a {
+  color: #5f6368;
+}
+.public-layout .footer .grid .column-2 h4 a {
+  color: #202124;
+}
+.public-layout .footer .brand svg {
+  fill: #757575;
+}
+.public-layout .footer .brand:hover svg {
+  fill: #292929;
+}
+
 .react-toggle {
   width: 36px;
   height: 16px;
@@ -1758,6 +1767,7 @@ label.icon-button:hover {
 }
 
 .actions-modal {
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
   background: #ffffff;
   border-radius: 2px;
 }
@@ -2502,6 +2512,10 @@ button.icon-button.disabled:hover i.fa-retweet {
 
 .status__content__read-more-button .fa {
   vertical-align: bottom;
+}
+
+.attachment-list__list a .fa {
+  vertical-align: middle;
 }
 
 .detailed-status .fa {

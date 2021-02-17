@@ -1,6 +1,3 @@
-@charset "UTF-8";
-
-
 $shadow-color-1: rgba(0,0,0,.2);
 $shadow-color-2: rgba(0,0,0,.14);
 $shadow-color-3: rgba(0,0,0,.12);
@@ -58,6 +55,35 @@ $shadow-color-3: rgba(0,0,0,.12);
     @if $button-shadow {
         .button,
         .compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
+    }
+}
+
+@mixin text-area-border {
+    @if $text-area-border == underlined {
+        .compose-form .autosuggest-textarea__textarea {
+            border-radius: $card-radius $card-radius 0 0;
+            border-bottom: 1px solid $border-color;
+
+            &:hover { border-color: $border-hover-color }
+
+            &:active,
+            &:focus { border-bottom: 2px solid $border-active-color }
+        }
+    }
+
+    @if $text-area-border == outlined {
+        .compose-form .autosuggest-textarea__textarea {
+            border-radius: $card-radius;
+            border: 1px solid $border-color;
+
+            &:hover { border-color: $border-hover-color }
+
+            &:active,
+            &:focus {
+                border: 2px solid $border-active-color;
+                padding: 7px 41px 7px 15px;
+            }
+        }
     }
 }
 

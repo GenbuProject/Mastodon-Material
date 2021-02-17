@@ -1,8 +1,4 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
+@include text-area-border;
 
 .modal-root {
     transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
@@ -112,13 +108,9 @@
     margin-top: 0;
     color: $tips-text-color;
 
-    h4 {
-        color: $secondary-text-color;
-    }
+    h4 { color: $secondary-text-color }
 
-    em {
-        color: $search-bar-text-color;
-    }
+    em { color: $search-bar-text-color }
 }
 
 .search-results {
@@ -200,7 +192,7 @@
         &__textarea {
             background: $text-field-bg-color;
             color: $ui-text-color;
-            border-radius: $card-radius;
+            padding: 8px 42px 8px 16px;
     
             &::placeholder { color: $tips-text-color }
         }
@@ -227,13 +219,18 @@
     }
 
     .spoiler-input {
-        &.spoiler-input--visible { margin-bottom: 8px }
+        &.spoiler-input--visible { margin-bottom: 16px }
 
         &__input {
             color: $ui-text-color;
             background: $card-bg-color;
             border-bottom: 1px solid $border-color;
             border-radius: 0;
+
+            &:hover { border-color: $border-hover-color }
+
+            &:active,
+            &:focus { border-bottom: 2px solid $border-active-color }
     
             &::placeholder { color: $tips-text-color }
         }
@@ -299,7 +296,7 @@
                 background-color: $bg-color;
                 border: 0;
 
-                &:focus { border-color: $border-active-color }
+                &:focus { border-color: $border-hover-color }
             }
 
             .button.button-secondary {
@@ -357,7 +354,7 @@
         border: 1px solid $border-color;
         padding: 8px 12px;
     
-        &:focus { border-color: $border-active-color }
+        &:focus { border-color: $border-hover-color }
     }
 
     &__option {
@@ -454,9 +451,7 @@
     }
 }
 
-.character-counter {
-    color: $secondary-text-color;
-}
+.character-counter { color: $secondary-text-color }
 
 .reply-indicator {
     box-shadow: none;
@@ -635,3 +630,5 @@
         background: $progress-indicator-color;
     }
 }
+
+.emoji-button { padding: 8px }

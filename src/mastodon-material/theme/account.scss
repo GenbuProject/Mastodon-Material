@@ -1,9 +1,3 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
-
 .account {
     border-bottom: 1px solid $border-color;
     padding: 16px;
@@ -18,7 +12,7 @@
 
         &-overlay {
             &-base {
-                border-radius: 50%;
+                border-radius: $avater-radius;
                 width: 44px;
                 height: 44px;
                 background-size: 44px;

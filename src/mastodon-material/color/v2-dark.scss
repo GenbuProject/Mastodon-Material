@@ -103,7 +103,8 @@ $toggle-track-active-color: lighten($toggle-thumb-active-color, 18%);
 
 // Border color
 $border-color: #2e2e2e;
-$border-active-color: lighten($border-color, 30%);
+$border-hover-color: lighten($border-color, 30%);
+$border-active-color: $primary-color;
 
 // Scroll bar color
 $scroll-bar-thumb-color: lighten($bg-color, 20%);
