@@ -44,14 +44,19 @@ $nav-drawer-item-radius: 8px;  // corner rounded
 //$nav-drawer-item-radius: 32px 0 0 32px;  // left rounded
 
 
-// Avater cropping settings
-$avater-radius: 50%;  // Rounded cropping
-//$avater-radius: 8px  // Material v2 square
+// Avatar cropping settings
+$avatar-radius: 50%;  // Rounded cropping
+//$avatar-radius: 8px  // Material v2 square
 
 
 // Chip settings
-$outlined-chip: true;  // Material v2 styled outlined chip
-//$outlined-chip: false;  // Material v1 styled contained chip
+$chip-type: outlined;  // Material v2 styled outlined chip
+//$outlined-chip: contained;  // Material v1 styled contained chip
+
+
+// Button on statuses
+$button-on-status: text;  // Material v1 styled text button
+//$button-on-status: outlined;  // Material v2 styled outlined button
 
 
 // Button shadow
@@ -64,7 +69,12 @@ $fab-size: 56px;  // Regular
 //$fab-size: 40px;  // Mini
 
 
-// Text area border
-$text-area-border: false;
-//$text-area-border: underlined;
-//$text-area-border: outlined;
+// CW text area border
+$cw-area-border: none;
+//$cw-area-border: underlined;
+//$cw-area-border: outlined;
+
+// Compose text area border
+$compose-area-border: none;
+//$compose-area-border: underlined;
+//$compose-area-border: outlined;

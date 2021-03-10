@@ -1,6 +1,7 @@
 @include button-shadow;
 
 .icon-button {
+    @include material-transition;
     color: $icon-button-color;
     border-radius: 50%;
 
@@ -15,14 +16,18 @@
     &.inverted {
         color: $icon-button-color;
 
-        &.active { color: $icon-button-active-color }
+        &.active,
+        &:active { color: $icon-button-active-color }
+
+        &:focus {
+            color: $icon-button-active-color;
+            background-color: transparent;
+        }
 
         &:hover {
             color: $icon-button-hover-color;
             background-color: $icon-bg-hover-color;
         }
-
-        &:focus { background-color: transparent }
     }
 
     &.overlayed {
@@ -44,13 +49,13 @@
         margin-left: 8px;
     }
 
+    &:focus { background-color: transparent }
+
     &:hover {
         @include material-transition;
         color: $icon-button-hover-color;
         background-color: $icon-bg-hover-color;
     }
-
-    &:focus { background-color: transparent }
 }
 
 // Checkbox with label
@@ -108,16 +113,7 @@ label.icon-button {
 
     &.button--block { margin: 8px 0 }
 
-    &.button-secondary {
-        color: $text-button-color;
-        border: none;
-        box-shadow: none;
-    
-        &:hover {
-            color: $text-button-color;
-            background-color: $text-button-hover-color;
-        }
-    }
+    &.button-secondary { @include button-type($button-on-status) }
 
     &.confirmation-modal__cancel-button {
         box-shadow: none;

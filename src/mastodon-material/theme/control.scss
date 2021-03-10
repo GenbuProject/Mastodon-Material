@@ -42,11 +42,11 @@
     padding: 8px 0;
 
     &__input {
-        border: 2px solid $border-color;
+        border: 2px solid $control-border-color;
 
         &.checked {
-            border-color: $icon-button-active-color;
-            background: $icon-button-active-color;
+            border-color: $control-border-active-color;
+            background: $control-border-active-color;
             padding: 3px;
             background-clip: content-box;
         }
@@ -54,7 +54,7 @@
 }
 
 .compose-form__sensitive-button .checkbox {
-    border: 2px solid $border-color;
+    border: 2px solid $control-border-color;
     border-radius: 2px;
 
     &.active {

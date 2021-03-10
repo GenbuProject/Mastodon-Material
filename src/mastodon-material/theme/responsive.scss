@@ -45,6 +45,12 @@
 
 .columns-area--mobile {
     .column { margin: 0 !important }
+
+    .account__header {
+        &__account-note,
+        &__bio .account__header__content { padding: 8px 16px }
+    }
+
     .search__input { padding: 16px 46px }
 
     .search__icon {
@@ -86,6 +92,12 @@
 
 //single column mode
 @media screen and (min-width: 631px) {
+    .column:first-child,
+    .drawer:first-child { padding-left: 8px }
+
+    .column:last-child,
+    .drawer:last-child { padding-right: 8px }
+
     .tabs-bar__link {
         &:hover {
             background: $tab-indicator-bg-hover-color;

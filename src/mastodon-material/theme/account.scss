@@ -6,19 +6,19 @@
     .account__display-name strong { color: $primary-text-color }
 
     &__avatar {
-        border-radius: $avater-radius;
+        border-radius: $avatar-radius;
         width: 40px;
         height: 40px;
 
         &-overlay {
             &-base {
-                border-radius: $avater-radius;
+                border-radius: $avatar-radius;
                 width: 44px;
                 height: 44px;
                 background-size: 44px;
             }
 
-            &-overlay { border-radius: $avater-radius }
+            &-overlay { border-radius: $avatar-radius }
         }
     }
 
@@ -56,6 +56,7 @@
                     border-radius: 50%;
                     padding: 8px;
                     margin-left: 8px;
+                    margin-right: 0;
                 }
             }
         }
@@ -65,7 +66,7 @@
 
             &__links {
                 color: $secondary-text-color;
-                padding: 10px 0;
+                padding: 8px 0;
 
                 a {
                     color: $secondary-text-color;
@@ -136,6 +137,26 @@
         }
 
         &__content { color: $secondary-text-color }
+
+        &__fields {
+            border-color: $border-color;
+
+            dl { border-bottom: 1px solid $border-color }
+
+            dt {
+                color: $primary-text-color;
+                background: $list-bg-inactive-color;
+            }
+
+            dd { color: $primary-text-color }
+
+            .verified {
+                border: none;
+                background: $verified-color;
+
+                &__mark { color: $primary-text-color }
+            }
+        }
     }
 
     &__section-headline {
@@ -161,7 +182,7 @@
     }
 
     &__relationship {
-        padding: 0;
+        padding: 8px;
         height: auto;
 
         .icon-button {

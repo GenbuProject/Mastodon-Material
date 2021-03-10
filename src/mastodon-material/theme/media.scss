@@ -23,7 +23,8 @@
         &--active { background-color: $media-page-indicator-active-color }
     }
 
-    &__close {
+    &__close,
+    &__zoom-button {
         &.icon-button {
             background: transparent;
             color: $media-icon-color;
@@ -62,11 +63,19 @@
                 color: $media-icon-hover-color;
                 background-color: transparent;
             }
+
+            &.star-icon.active {
+                &:active,
+                &:focus,
+                &:hover { background: transparent }
+            }
         }
     }
 }
 
 .video-player {
+    border-radius: 0;
+
     &__controls {
         background: linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,.2) 60%,transparent);
         padding: 0 12px;

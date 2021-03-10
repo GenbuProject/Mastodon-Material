@@ -1,0 +1,17 @@
+.landing-page {
+    &__call-to-action {
+        @include shadow-2dp;
+        background: $card-bg-color;
+        border-radius: $card-radius;
+        padding: 24px 36px;
+
+        .row__information-board {
+            .information-board__section {
+                padding: 0 16px;
+                color: $primary-text-color;
+            }
+        }
+    }
+}
+
+.information-board__section span:last-child { color: $ui-text-color }

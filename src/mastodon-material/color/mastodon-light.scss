@@ -22,6 +22,8 @@ $menu-text-color: $ui-text-color;
 $top-bar-text-color: $ui-text-color;
 $search-bar-text-color: $primary-text-color;
 $contained-button-text-color: #ffffff;
+$primary-text-on-shadow-color: #ffffff;
+$text-field-color: $ui-text-color;
 
 // Background-color
 $bg-color: #eff3f5;
@@ -84,8 +86,8 @@ $icon-button-active-hover-color: lighten($icon-button-active-color, 10%);
 $contained-button-color: $primary-color;
 $contained-button-hover-color: lighten($contained-button-color, 10%);
 $outlined-button-color: $primary-color;
-$outlined-button-hover-color: lighten($primary-color, 36%);
-$outlined-button-active-color: lighten($primary-color, 30%);
+$outlined-button-hover-color: transparentize($primary-color, 0.8);
+$outlined-button-active-color: transparentize($primary-color, 0.7);
 $text-button-color: $primary-color;
 $text-button-hover-color: lighten($text-button-color, 36%);
 $text-button-focus-color: lighten($text-button-color, 30%);

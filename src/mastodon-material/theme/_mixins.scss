@@ -29,7 +29,7 @@ $shadow-color-3: rgba(0,0,0,.12);
 
 @mixin non-overflow-shadow-4dp { box-shadow: 0 2px 4px -1px $shadow-color-1, 0 4px 5px -1px $shadow-color-2}
 
-@mixin material-transition { transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1) }
+@mixin material-transition { transition: .25s cubic-bezier(0,0,0.2,1) }
 
 @mixin search-bar-hover {
     @if $search-bar-hover {
@@ -38,16 +38,54 @@ $shadow-color-3: rgba(0,0,0,.12);
     }
 }
 
-@mixin outlined-chip {
-    @if $outlined-chip {
-        .reactions-bar__item {
-            background: $outlined-chip-color !important;
-            border: 1px solid $outlined-chip-selected-border-color !important;
-        
-            &.active { background-color: $outlined-chip-selected-color !important }
-        
-            &:hover { background: $outlined-chip-hover-color !important }
-        }
+@mixin chip-type($chip-type) {
+    @if $chip-type == contained {
+        background: $contained-chip-color;
+
+        &.active { background-color: $contained-chip-selected-color }
+
+        &:hover { background-color: $contained-chip-selected-color }
+    }
+
+    @if $chip-type == outlined {
+        background: $outlined-chip-color;
+        border: 1px solid $outlined-chip-selected-border-color;
+    
+        &.active { background-color: $outlined-chip-selected-color }
+    
+        &:hover { background: $outlined-chip-hover-color }
+    }
+}
+
+@mixin button-type($button-type) {
+    @if $button-type == contained {
+        @if $button-shadow { @include shadow-1dp }
+        background: $contained-button-color;
+        color: $contained-button-text-color;
+
+        &:hover { background: $contained-button-hover-color }
+
+        &:focus { background: $contained-button-color }
+    }
+
+    @if $button-type == outlined {
+        box-shadow: none;
+        background: transparent;
+        color: $outlined-button-color;
+        border: 1px solid $outlined-button-color;
+
+        &:hover { background: $outlined-button-hover-color }
+
+        &:focus { background: $outlined-button-hover-color }
+    }
+
+    @if $button-type == text {
+        box-shadow: none;
+        background: transparent;
+
+        &:hover { background: $text-button-hover-color }
+
+        &:focus { background: $text-button-focus-color }
     }
 }
 
@@ -58,31 +96,27 @@ $shadow-color-3: rgba(0,0,0,.12);
     }
 }
 
-@mixin text-area-border {
+@mixin text-area-border($text-area-border) {
+    background: $text-field-bg-color;
+    color: $text-field-color;
+
+    &:hover { border-color: $border-hover-color }
+
     @if $text-area-border == underlined {
-        .compose-form .autosuggest-textarea__textarea {
-            border-radius: $card-radius $card-radius 0 0;
-            border-bottom: 1px solid $border-color;
+        border-radius: $card-radius $card-radius 0 0;
+        border-bottom: 1px solid $border-color;
 
-            &:hover { border-color: $border-hover-color }
-
-            &:active,
-            &:focus { border-bottom: 2px solid $border-active-color }
-        }
+        &:active,
+        &:focus { border-bottom: 2px solid $border-active-color }
     }
 
     @if $text-area-border == outlined {
-        .compose-form .autosuggest-textarea__textarea {
-            border-radius: $card-radius;
-            border: 1px solid $border-color;
+        border-radius: $card-radius;
+        border: 1px solid $border-color;
 
-            &:hover { border-color: $border-hover-color }
-
-            &:active,
-            &:focus {
-                border: 2px solid $border-active-color;
-                padding: 7px 41px 7px 15px;
-            }
+        &:active,
+        &:focus {
+            border: 2px solid $border-active-color;
         }
     }
 }

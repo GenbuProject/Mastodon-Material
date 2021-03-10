@@ -35,16 +35,11 @@
 
         p { margin-bottom: 16px }
 
-        .status__content__spoiler-link {
-            background: transparent;
-
-            &:hover { background: $text-button-hover-color }
-
-            &:focus { background: $text-button-focus-color }
-        }
+        .status__content__spoiler-link { @include button-type($button-on-status) }
 
         &__spoiler-link {
             border: 0;
+            margin: 0 4px;
             color: $text-button-color;
         }
 
@@ -254,10 +249,7 @@ a.status-card {
         }
     }
 
-    .button.logo-button {
-        margin-bottom: 16px;
-        line-height: 36px;
-    }
+    .button.logo-button { margin-bottom: 16px }
 }
 
 // search user trends

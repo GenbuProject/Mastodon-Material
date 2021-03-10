@@ -1,11 +1,9 @@
-@include text-area-border;
-
 .modal-root {
     transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
 
     &__overlay { background-color: rgba(0,0,0,.32) !important }
 
-    &__container { background: linear-gradient(rgba(0, 0, 0, 0.48) 10%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.48) 90%) }
+    &__container { background: linear-gradient(rgba(0, 0, 0, 0.48) 5%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.48) 95%) }
 }
 
 .drawer {
@@ -53,6 +51,10 @@
         }
 
         &__mastodon { background: $card-bg-color }
+
+        &:hover,
+        &:active,
+        &:focus { opacity: 1.0 }
     }
 }
 
@@ -190,9 +192,12 @@
 .compose-form {
     .autosuggest-textarea {
         &__textarea {
-            background: $text-field-bg-color;
-            color: $ui-text-color;
+            @include text-area-border($compose-area-border);
             padding: 8px 42px 8px 16px;
+
+            @if $compose-area-border == outlined {
+                &:focus { padding: 7px 41px 7px 15px }
+            }
     
             &::placeholder { color: $tips-text-color }
         }
@@ -222,16 +227,13 @@
         &.spoiler-input--visible { margin-bottom: 16px }
 
         &__input {
-            color: $ui-text-color;
-            background: $card-bg-color;
-            border-bottom: 1px solid $border-color;
-            border-radius: 0;
+            @include text-area-border($cw-area-border);
+            padding: 8px 16px;
 
-            &:hover { border-color: $border-hover-color }
+            @if $cw-area-border == outlined {
+                &:focus { padding: 7px 15px }
+            }
 
-            &:active,
-            &:focus { border-bottom: 2px solid $border-active-color }
-    
             &::placeholder { color: $tips-text-color }
         }
     }
@@ -276,18 +278,22 @@
             .icon-button {
                 @include icon-button;
                 padding: 8px;
+                margin: 0 2px;
             }
 
             .text-icon-button {
                 width: 20px !important;
                 height: 20px !important;
                 padding: 8px;
+                margin: 0 2px;
                 line-height: 20px !important;
             }
         }
 
         &__poll-wrapper {
-            border-top: 1px solid $border-color;
+            @if $compose-area-border == none {
+                border-top: 1px solid $border-color;
+            } @else { border-top: none }
 
             ul { padding: 16px 12px 16px 0 }
 
@@ -299,15 +305,7 @@
                 &:focus { border-color: $border-hover-color }
             }
 
-            .button.button-secondary {
-                box-shadow: none;
-                color: $text-button-color;
-
-                &:hover { background-color: $text-button-hover-color }
-
-                &:active,
-                &:focus { background-color: $text-button-focus-color }
-            }
+            .button.button-secondary { @include button-type($button-on-status) }
 
             .poll__footer { border-top: none }
         }
@@ -320,6 +318,8 @@
 
 
 .poll {
+    margin-top: 8px;
+
     .button { margin-right: 8px }
 
     li { margin-bottom: 0 }
@@ -337,7 +337,7 @@
 
         &.active { background: radial-gradient(circle, $control-border-active-color, $control-border-active-color 4px, transparent 5px, transparent 7px, $control-border-active-color 8px, $control-border-active-color 9px, transparent 10px, transparent) }
 
-        &.active:hover { background: radial-gradient(circle, $control-border-hover-color, $control-border-hover-color 7px, $control-border-color 8px, $control-border-color 9px, $control-border-hover-color 10px, $control-border-hover-color) }
+        &.active:hover { background: radial-gradient(circle, $control-border-active-color, $control-border-active-color 4px, $control-border-hover-color 5px, $control-border-hover-color 7px, $control-border-active-color 8px, $control-border-active-color 9px, $control-border-hover-color 10px, $control-border-hover-color) }
 
         &.checkbox {
             border-radius: 2px;
@@ -358,8 +358,6 @@
     }
 
     &__option {
-        padding: 16px 0 8px;
-
         input[type=text] {
             color: $primary-text-color;
             background: $text-field-bg-color;
@@ -367,8 +365,6 @@
             border-radius: 2px;
             padding: 8px 16px;
         }
-
-        &__text { line-height: 34px }
     }
 
     &__chart {
@@ -536,14 +532,16 @@
 .directory {
     &__card {
         @include shadow-1dp;
-        margin: 8px 4px;
         border-radius: $card-radius;
+        margin-bottom: 16px;
 
         &__img { border-radius: $card-radius $card-radius 0 0 }
 
         &__bar {
             background: $card-bg-color;
             padding: 8px 16px;
+
+            &__relationship { width: auto }
 
             .display-name {
                 margin-left: 16px;
@@ -568,6 +566,11 @@
 
             .accounts-table__count { padding: 16px 0 }
         }
+    }
+
+    &__list {
+        @include material-transition;
+        margin: 16px 0;
     }
 }
 

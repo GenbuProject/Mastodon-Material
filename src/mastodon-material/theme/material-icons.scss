@@ -70,7 +70,9 @@
     &.fa-upload,
     &.fa-comments,
     &.fa-angle-right,
-    &.fa-thumb-tack {
+    &.fa-thumb-tack,
+    &.fa-hashtag,
+    &.fa-expand {
         @include icon-font-style;
         line-height: 1;
         letter-spacing: normal;
@@ -141,6 +143,8 @@
     &.fa-comments::before { content: "forum" }
     &.fa-angle-right::before { content: "chevron_right" }
     &.fa-thumb-tack::before { content: "push_pin" }
+    &.fa-hashtag::before { content: "tag" }
+    &.fa-expand::before { content: "open_in_full" }
 }
 
 // bookmark icon
@@ -165,7 +169,8 @@
 .star-icon.active,
 .star-icon.icon-button.active.active,
 .notification__favourite-icon-wrapper .star-icon,
-.status__action-bar-button.star-icon.icon-button.active { color: $favorite-icon-color }
+.status__action-bar-button.star-icon.icon-button.active,
+.media-modal__overlay .picture-in-picture__footer .icon-button.star-icon.active { color: $favorite-icon-color }
 
 // boost icon
 button.icon-button i.fa-retweet {
@@ -212,11 +217,14 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
 .fa.fa-star.column-header__icon.fa-fw { vertical-align: text-bottom }
 
 // top bar icons in single column mode
-.tabs-bar__link {
-    .fa.fa-home.fa-fw,
-    .fa.fa-bell.fa-fw,
-    .fa.fa-users.fa-fw,
-    .fa.fa-globe.fa-fw { vertical-align: text-bottom }
+.tabs-bar__link .fa {
+    &.fa-home,
+    &.fa-bell,
+    &.fa-users,
+    &.fa-globe,
+    &.fa-search {
+        &.fa-fw { vertical-align: text-bottom }
+    }
 }
 
 // getting-started and side bar icons
@@ -237,6 +245,12 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
 
 // Attachment icon
 .attachment-list__list a .fa { vertical-align: middle }
+
+// verified icon
+.verified__mark { vertical-align: middle }
+
+// tag icon
+.directory__tag h4 .fa { vertical-align: bottom }
 
 // status detail icon
 .detailed-status .fa {

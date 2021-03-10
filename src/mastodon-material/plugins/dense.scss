@@ -14,11 +14,15 @@
     &__buttons { height: 48px }
 
     &__button { margin: 6px }
+
+    &__back-button { margin: 6px }
 }
 
 .column-subheading { padding: 8px 16px }
 
 .column-link { padding: 12px 16px }
+
+.tabs-bar__link { padding: 12px 16px 8px 16px }
 
 .notification__filter-bar button { padding: 12px 0 }
 
