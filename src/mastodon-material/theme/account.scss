@@ -152,7 +152,7 @@
 
             .verified {
                 border: none;
-                background: $verified-color;
+                background: $verified-bg-color;
 
                 &__mark { color: $primary-text-color }
             }
@@ -183,7 +183,6 @@
 
     &__relationship {
         padding: 8px;
-        height: auto;
 
         .icon-button {
             @include icon-button;
@@ -193,19 +192,76 @@
     }
 }
 
-.account-role {
+.account-role,
+.simple_form .recommended {
     padding: 4px 8px;
     border-radius: 17px;
     color: $ui-text-color;
     background-color: $contained-chip-color;
 }
 
-.accounts-table__count {
-    color: $ui-text-color;
-
-    small { color: $secondary-text-color }
-}
-
 .account-gallery {
     &__item { border-radius: 0 }
+}
+
+.card {
+    &>a {
+        @include shadow-1dp;
+        
+        &:active .card__bar,
+        &:focus .card__bar,
+        &:hover .card__bar { background: $card-bg-color }
+    }
+
+    &__img {
+        background: $card-bg-color;
+        border-radius: $card-radius $card-radius 0 0;
+
+        img { border-radius: $card-radius $card-radius 0 0 }
+    }
+
+    &__bar {
+        padding: 16px;
+        background: $card-bg-color;
+        border-radius: 0 0 $card-radius $card-radius;
+
+        .avatar {
+            padding-top: 0;
+
+            img {
+                border-radius: $avatar-radius;
+                background: $card-bg-color;
+            }
+        }
+
+        .display-name {
+            margin-left: 16px;
+
+            strong { color: $primary-text-color }
+
+            span { color: $secondary-text-color }
+        }
+    }
+}
+
+.pagination {
+    padding: 28px;
+
+    .gap,
+    .newer,
+    .older,
+    .page,
+    a {
+        color: $ui-text-color;
+        padding: 8px;
+    }
+
+    .current {
+        background: $contained-chip-color;
+        color: $ui-text-color;
+        margin: 0 8px;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+    }
 }

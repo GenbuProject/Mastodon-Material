@@ -16,6 +16,7 @@
             color: $top-bar-text-color;
 
             &:hover {
+                color: $top-bar-text-color;
                 background: $tab-indicator-bg-hover-color;
                 text-decoration: none;
             }
@@ -66,6 +67,8 @@
             background: $card-bg-color;
 
             &::after { box-shadow: none }
+
+            img { border-radius: $card-radius $card-radius 0 0 }
         }
 
         &__bar {

@@ -1,9 +1,7 @@
 .modal-root {
     transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
 
-    &__overlay { background-color: rgba(0,0,0,.32) !important }
-
-    &__container { background: linear-gradient(rgba(0, 0, 0, 0.48) 5%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.48) 95%) }
+    &__overlay { background-color: rgba(0,0,0,.7) !important }
 }
 
 .drawer {
@@ -299,8 +297,10 @@
 
             select {
                 color: $ui-text-color;
-                background-color: $bg-color;
+                background-color: $dropdown-field-bg-color;
                 border: 0;
+
+                option { background: $list-bg-color }
 
                 &:focus { border-color: $border-hover-color }
             }
@@ -322,7 +322,7 @@
 
     .button { margin-right: 8px }
 
-    li { margin-bottom: 0 }
+    li { margin-bottom: 8px }
 
     &__input {
         border: none;
@@ -635,3 +635,54 @@
 }
 
 .emoji-button { padding: 8px }
+
+.focusable:focus .detailed-status,
+.focusable:focus .detailed-status__action-bar { background: transparent }
+
+.no-reduce-motion .loading-indicator {
+    display: inline-block;
+    position: relative;
+    color: transparent;
+    width: 80px;
+    height: 80px;
+
+    &__figure {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        top: 10%;
+        left: 10%;
+        margin: 8px;
+        border: 4px solid transparent;
+        border-radius: 50%;
+        animation: loading-indicator 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $loading-indicator-color transparent transparent transparent;
+
+        &:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+    }
+}
+@keyframes loading-indicator {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.loading-bar {
+    background-color: $loading-indicator-color;
+    height: 4px;
+}

@@ -37,8 +37,12 @@ $card-bg-hover-color: darken($card-bg-color, 6%);
 $list-bg-color: $bg-color;
 $list-bg-hover-color: darken($list-bg-color, 6%);
 $list-bg-active-color: darken($list-bg-color, 10%);
+$list-bg-active-hover-color: darken($list-bg-color, 16%);
 $list-bg-inactive-color: darken($list-bg-color, 10%);
 $text-field-bg-color: $card-bg-color;
+$dropdown-field-bg-color: darken($bg-color, 6%);
+$dropdown-field-bg-hover-color: darken($dropdown-field-bg-color, 6%);
+$dropdown-field-bg-active-color: darken($dropdown-field-bg-color, 10%);
 $verified-bg-color: lighten($verified-color, 20%);
 $unread-bg-color: transparentize($primary-color, 0.8);
 
@@ -92,6 +96,7 @@ $outlined-button-active-color: transparentize($outlined-button-color, 0.7);
 $text-button-color: $primary-color;
 $text-button-hover-color: transparentize($text-button-color, 0.8);
 $text-button-focus-color: transparentize($text-button-color, 0.7);
+$disabled-button-color: #cccccc;
 $floating-action-button-color: #ffffff;
 $floating-action-button-hover-color: darken($floating-action-button-color, 6%);
 $floating-action-button-active-color: darken($floating-action-button-color, 10%);
@@ -139,6 +144,7 @@ $media-page-indicator-active-color: #e6e6e6;
 // Progress indicator color
 $progress-indicator-color: $primary-color;
 $progress-indicator-track-color: lighten($progress-indicator-color, 30%);
+$loading-indicator-color: $primary-color;
 
 // Contents color in read status
 $read-primary-text-color: transparentize($primary-text-color, 0.3);

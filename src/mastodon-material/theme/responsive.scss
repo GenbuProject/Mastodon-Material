@@ -113,3 +113,18 @@
         &.active { border-bottom-color: $tab-indicator-active-color }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .admin-wrapper {
+        .sidebar {
+            ul {
+                background: $card-bg-color;
+                
+                a,
+                ul a { border-bottom: none }
+            }
+        }
+
+        .sidebar-wrapper { @include shadow-4dp }
+    }
+}

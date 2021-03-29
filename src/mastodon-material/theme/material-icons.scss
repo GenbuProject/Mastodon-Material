@@ -7,21 +7,13 @@
 }
 
 .fa {
-    &.fa-bars,
-    &.fa-navicon,
-    &.fa-reorder,
+    &.fa-bars, &.fa-navicon, &.fa-reorder,
     &.fa-globe,
-    &.fa-cog,
-    &.fa-cogs,
-    &.fa-gears,
+    &.fa-cog, &.fa-cogs, &.fa-gears,
     &.fa-sign-out,
     &.fa-search,
-    &.fa-times,
-    &.fa-times-circle,
-    &.fa-close,
-    &.fa-remove,
-    &.fa-chevron-down,
-    &.fa-ellipsis-v,
+    &.fa-times, &.fa-times-circle, &.fa-close, &.fa-remove,
+    &.fa-chevron-down, &.fa-ellipsis-v,
     &.fa-paperclip,
     &.fa-tasks,
     &.fa-plus,
@@ -33,6 +25,7 @@
     &.fa-sliders,
     &.fa-chevron-left,
     &.fa-chevron-right,
+    &.fa-arrow-right,
     &.fa-reply,
     &.fa-reply-all,
     &.fa-share-alt,
@@ -45,10 +38,8 @@
     &.fa-users,
     &.fa-file-text,
     &.fa-user-plus,
-    &.fa-address-book,
-    &.fa-address-book-o,
-    &.fa-list,
-    &.fa-list-ul,
+    &.fa-address-book, &.fa-address-book-o,
+    &.fa-list, &.fa-list-ul,
     &.fa-eye,
     &.fa-eye-slash,
     &.fa-pencil,
@@ -72,7 +63,14 @@
     &.fa-angle-right,
     &.fa-thumb-tack,
     &.fa-hashtag,
-    &.fa-expand {
+    &.fa-expand,
+    &.fa-refresh,
+    &.fa-user,
+    &.fa-desktop,
+    &.fa-exchange,
+    &.fa-cloud-upload,
+    &.fa-cloud-download,
+    &.fa-mobile-phone, &.fa-mobile {
         @include icon-font-style;
         line-height: 1;
         letter-spacing: normal;
@@ -105,6 +103,7 @@
     &.fa-sliders::before { content: "tune" }
     &.fa-chevron-left::before { content: "arrow_back" }
     &.fa-chevron-right::before { content: "arrow_forward" }
+    &.fa-arrow-right::before { content: "arrow_forward" }
     &.fa-reply::before { content: $reply-icon }
     &.fa-reply-all::before { content: "reply_all" }
     &.fa-share-alt::before { content: "share" }
@@ -117,10 +116,8 @@
     &.fa-users::before { content: "people" }
     &.fa-file-text::before { content: "web" }
     &.fa-user-plus::before { content: "person_add" }
-    &.fa-address-book::before { content: "explore" }
-    &.fa-address-book-o::before { content: "explore" }
-    &.fa-list::before { content: "list" }
-    &.fa-list-ul::before { content: "list" }
+    &.fa-address-book::before, &.fa-address-book-o::before { content: "explore" }
+    &.fa-list::before, &.fa-list-ul::before { content: "list" }
     &.fa-eye::before { content: "visibility" }
     &.fa-eye-slash::before { content : "visibility_off" }
     &.fa-pencil::before { content: "create" }
@@ -145,6 +142,13 @@
     &.fa-thumb-tack::before { content: "push_pin" }
     &.fa-hashtag::before { content: "tag" }
     &.fa-expand::before { content: "open_in_full" }
+    &.fa-refresh::before { content: "refresh" }
+    &.fa-user::before { content: "person" }
+    &.fa-desktop::before { content: "web_asset" }
+    &.fa-exchange::before { content: "sync_alt" }
+    &.fa-cloud-upload::before { content: "cloud_upload" }
+    &.fa-cloud-download::before { content: "cloud_download" }
+    &.fa-mobile-phone::before, &.fa-mobile::before { content: "smartphone" }
 }
 
 // bookmark icon
@@ -194,7 +198,10 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
 }
 
 // dropdown icon
-.compose-form__poll-wrapper select { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#{svg-color($icon-color)}" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 8px center/auto 16px}
+.compose-form__poll-wrapper select,
+.simple_form select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#{svg-color($icon-color)}" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>');
+}
 
 // icon in tab settings
 .text-btn.column-header__setting-btn {
@@ -258,9 +265,23 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
     vertical-align: text-bottom;
 }
 
+// Icons in lists or tables
+tbody tr td span .fa {
+    color: $icon-color;
+    vertical-align: bottom;
+}
+a.table-action-link i.fa,
+button.table-action-link i.fa {
+    font-size: 16px;
+    vertical-align: bottom;
+}
+
 // status scope
 .status__visibility-icon .fa,
 .account__header__tabs__name .fa {
     font-size: 16px;
     vertical-align: text-bottom;
 }
+
+// sidebar icon in settings
+.admin-wrapper .sidebar ul a i.fa { vertical-align: text-bottom }

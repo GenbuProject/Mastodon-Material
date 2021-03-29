@@ -90,16 +90,36 @@
     a { color: $link-text-color }
 
     li, p { color: $ui-text-color }
+
+    strong { color: $primary-text-color }
+
+    table {
+        border-radius: 4px;
+        border: 1px solid $border-color;
+
+        thead tr,
+        tbody tr {
+            color: $ui-text-color;
+            border-bottom: 1px solid $border-color;
+        } 
+    }
 }
 
 .table-of-contents {
     background: $bg-color;
     border-radius: 0;
 
-    li a {
-        padding: 16px;
-        color: $ui-text-color;
-        border-bottom: 1px solid $border-color;
+    li {
+        ul {
+            padding-left: 16px;
+            border-bottom: 1px solid $border-color;
+        }
+
+        a {
+            padding: 16px;
+            color: $ui-text-color;
+            border-bottom: 1px solid $border-color;
+        }
     }
 }
 
@@ -120,4 +140,17 @@
 .page-header {
     @include shadow-4dp;
     border-radius: $card-radius;
+}
+
+.accounts-table {
+    tbody td { padding: 16px 8px }
+
+    .fa.active,
+    .fa.active.passive { color: $icon-color }
+
+    &__count {
+        color: $ui-text-color;
+    
+        small { color: $secondary-text-color }
+    }
 }

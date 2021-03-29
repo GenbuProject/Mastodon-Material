@@ -58,6 +58,9 @@ $shadow-color-3: rgba(0,0,0,.12);
 }
 
 @mixin button-type($button-type) {
+    border-radius: $button-radius;
+    display: inline-block;
+    
     @if $button-type == contained {
         @if $button-shadow { @include shadow-1dp }
         background: $contained-button-color;
@@ -91,7 +94,10 @@ $shadow-color-3: rgba(0,0,0,.12);
 
 @mixin button-shadow {
     @if $button-shadow {
+        button.btn,
         .button,
+        .block-button,
+        .input-copy button,
         .compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
     }
 }
@@ -104,6 +110,7 @@ $shadow-color-3: rgba(0,0,0,.12);
 
     @if $text-area-border == underlined {
         border-radius: $card-radius $card-radius 0 0;
+        border: 0;
         border-bottom: 1px solid $border-color;
 
         &:active,

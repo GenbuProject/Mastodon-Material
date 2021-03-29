@@ -44,17 +44,11 @@
         }
 
         &__read-more-button {
-            font-size: 14px;
-            color: $text-button-color;
-            border-radius: $button-radius;
+            @include button-type($button-on-status);
             padding: 4px 6px;
+            margin: 4px;
 
-            &:hover {
-                background: $text-button-hover-color;
-                text-decoration: none;
-            }
-
-            &:focus { background: $text-button-focus-color }
+            &:hover { text-decoration: none }
         }
     }
 
@@ -274,4 +268,4 @@ a.status-card {
     }
 }
 
-.entry.entry-center { border-bottom: 1px solid $border-color }
+.entry.h-cite.p-comment.entry-successor { border-top: 1px solid $border-color }
