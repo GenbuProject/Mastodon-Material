@@ -127,4 +127,14 @@
 
         .sidebar-wrapper { @include shadow-4dp }
     }
+
+    .public-layout .public-account-header {
+        &__bar { background: $card-bg-color }
+
+        &__tabs__name h1 {
+            color: $primary-text-color;
+
+            small { color: $secondary-text-color }
+        }
+    }
 }

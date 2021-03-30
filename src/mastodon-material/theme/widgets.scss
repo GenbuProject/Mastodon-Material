@@ -14,6 +14,8 @@
         padding: 16px;
         color: $primary-text-color;
         border-radius: 0 0 $card-radius $card-radius;
+
+        a { color: $link-text-color }
     }
 }
 
@@ -153,4 +155,9 @@
     
         small { color: $secondary-text-color }
     }
+}
+
+.statuses-grid .detailed-status {
+    @include shadow-1dp;
+    border-radius: $card-radius;
 }

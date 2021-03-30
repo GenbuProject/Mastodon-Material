@@ -8,7 +8,9 @@
         .brand {
             svg { fill: $top-bar-text-color }
 
-            &:hover { background: $tab-indicator-bg-hover-color }
+            &:hover,
+            &:focus,
+            &:active { background: $tab-indicator-bg-hover-color }
         }
 
         .nav-link,
@@ -123,6 +125,21 @@
             }
         }
 
+        &__extra {
+            .public-account-bio .account__header__fields { border-top: 1px solid $border-color }
+
+            &__links {
+                color: $ui-text-color;
+
+                a {
+                    color: $ui-text-color;
+                    padding: 16px;
+
+                    strong { color: $primary-text-color }
+                }
+            }
+        }
+
         &--no-bar .public-account-header {
             &__image,
             &__image img { border-radius: $card-radius }
@@ -160,5 +177,9 @@
 
     .grid { grid-gap: 16px }
 }
+
+.brand__tagline { color: $ui-text-color }
+
+.logo-container h1 svg { fill: $ui-text-color }
 
 .grid-4 { grid-gap: 16px }

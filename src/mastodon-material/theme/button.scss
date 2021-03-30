@@ -49,6 +49,9 @@
         margin-left: 8px;
     }
 
+    &:active,
+    &:focus { color: $icon-button-active-color }
+
     &:focus { background-color: transparent }
 
     &:hover {
@@ -137,8 +140,8 @@ label.icon-button {
 }
 
 .simple_form {
-    .block-button, .block-button:last-child
-    .button, .button:last-child
+    .block-button, .block-button:last-child,
+    .button, .button:last-child,
     button, button:last-child {
         display: inline-block;
         border-radius: $button-radius;
@@ -149,7 +152,11 @@ label.icon-button {
         padding: 10px 16px;
         margin-left: auto;
         font-size: 14px;
+        line-height: 15px;
 
         &:hover { background: $contained-button-hover-color }
+
+        &:disabled,
+        &:disabled:hover { background-color: $disabled-button-color }
     }
 }

@@ -1,6 +1,7 @@
 body,
 body.embed,
-body.admin { background: $bg-color }
+body.admin,
+body.lighter { background: $bg-color }
 
 .focusable:focus { background: transparent }
 

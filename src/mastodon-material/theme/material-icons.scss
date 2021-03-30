@@ -70,7 +70,8 @@
     &.fa-exchange,
     &.fa-cloud-upload,
     &.fa-cloud-download,
-    &.fa-mobile-phone, &.fa-mobile {
+    &.fa-mobile-phone, &.fa-mobile,
+    &.fa-tablet {
         @include icon-font-style;
         line-height: 1;
         letter-spacing: normal;
@@ -149,6 +150,7 @@
     &.fa-cloud-upload::before { content: "cloud_upload" }
     &.fa-cloud-download::before { content: "cloud_download" }
     &.fa-mobile-phone::before, &.fa-mobile::before { content: "smartphone" }
+    &.fa-tablet::before { content: "tablet" }
 }
 
 // bookmark icon

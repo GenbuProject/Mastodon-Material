@@ -4,6 +4,8 @@
     &__overlay { background-color: rgba(0,0,0,.7) !important }
 }
 
+.modal-layout { background-color: $bg-color }
+
 .drawer {
     &__header {
         @include shadow-4dp;
@@ -616,6 +618,18 @@
             color: $ui-text-color;
             margin: 0 0 0 12px;
         }
+    }
+}
+
+.domain {
+    padding: 16px;
+    border-bottom: 1px solid $border-color;
+
+    .domain__domain-name { color: $primary-text-color }
+
+    &__buttons .icon-button {
+        @include icon-button;
+        padding: 8px;
     }
 }
 

@@ -36,13 +36,22 @@
         }
     }
 
-    .label_input__wrapper {
-        border-radius: $card-radius;
+    .label_input {
+        &__wrapper {
+            border-radius: $card-radius;
+    
+            &:hover { background: $dropdown-field-bg-hover-color }
+    
+            &:active,
+            &:focus { background: $dropdown-field-bg-active-color }
+        }
 
-        &:hover { background: $dropdown-field-bg-hover-color }
+        &__append {
+            padding: 16px;
+            color: $ui-text-color;
 
-        &:active,
-        &:focus { background: $dropdown-field-bg-active-color }
+            &::after { background-image: none }
+        }
     }
 
     .card { margin-bottom: 16px }
@@ -59,6 +68,8 @@
         }
     }
 
+    .actions { padding: 16px }
+
     .check_boxes .checkbox label {
         color: $primary-text-color;
         padding-top: 8px;
@@ -68,6 +79,8 @@
         padding: 16px;
         margin-bottom: 0;
         color: $ui-text-color;
+
+        &.subtle-hint { margin-top: 16px }
     }
 
     select {
@@ -105,6 +118,14 @@
 
         &::placeholder { color: $tips-text-color }
     }
+
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=text] {
+        &:focus:invalid:not(:placeholder-shown),
+        &:required:invalid:not(:placeholder-shown) { border-color: $error-color }
+    }
 }
 
 .flash-message {
@@ -122,6 +143,14 @@
     }
 
     &.translation-prompt { color: $ui-text-color }
+}
+
+.form-footer a { color: $ui-text-color }
+
+.follow-prompt,
+.oauth-prompt {
+    margin-bottom: 32px;
+    color: $ui-text-color;
 }
 
 .input-copy {
