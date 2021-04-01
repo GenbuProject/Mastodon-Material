@@ -1,9 +1,3 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
-
 .account {
     border-bottom: 1px solid $border-color;
     padding: 16px;
@@ -12,19 +6,19 @@
     .account__display-name strong { color: $primary-text-color }
 
     &__avatar {
-        border-radius: $avater-radius;
+        border-radius: $avatar-radius;
         width: 40px;
         height: 40px;
 
         &-overlay {
             &-base {
-                border-radius: 50%;
+                border-radius: $avatar-radius;
                 width: 44px;
                 height: 44px;
                 background-size: 44px;
             }
 
-            &-overlay { border-radius: $avater-radius }
+            &-overlay { border-radius: $avatar-radius }
         }
     }
 
@@ -62,6 +56,7 @@
                     border-radius: 50%;
                     padding: 8px;
                     margin-left: 8px;
+                    margin-right: 0;
                 }
             }
         }
@@ -71,7 +66,7 @@
 
             &__links {
                 color: $secondary-text-color;
-                padding: 10px 0;
+                padding: 8px 0;
 
                 a {
                     color: $secondary-text-color;
@@ -142,6 +137,26 @@
         }
 
         &__content { color: $secondary-text-color }
+
+        &__fields {
+            border-color: $border-color;
+
+            dl { border-bottom: 1px solid $border-color }
+
+            dt {
+                color: $primary-text-color;
+                background: $list-bg-inactive-color;
+            }
+
+            dd { color: $primary-text-color }
+
+            .verified {
+                border: none;
+                background: $verified-bg-color;
+
+                &__mark { color: $primary-text-color }
+            }
+        }
     }
 
     &__section-headline {
@@ -167,8 +182,7 @@
     }
 
     &__relationship {
-        padding: 0;
-        height: auto;
+        padding: 8px;
 
         .icon-button {
             @include icon-button;
@@ -178,19 +192,76 @@
     }
 }
 
-.account-role {
+.account-role,
+.simple_form .recommended {
     padding: 4px 8px;
     border-radius: 17px;
     color: $ui-text-color;
     background-color: $contained-chip-color;
 }
 
-.accounts-table__count {
-    color: $ui-text-color;
-
-    small { color: $secondary-text-color }
-}
-
 .account-gallery {
     &__item { border-radius: 0 }
+}
+
+.card {
+    &>a {
+        @include shadow-1dp;
+        
+        &:active .card__bar,
+        &:focus .card__bar,
+        &:hover .card__bar { background: $card-bg-color }
+    }
+
+    &__img {
+        background: $card-bg-color;
+        border-radius: $card-radius $card-radius 0 0;
+
+        img { border-radius: $card-radius $card-radius 0 0 }
+    }
+
+    &__bar {
+        padding: 16px;
+        background: $card-bg-color;
+        border-radius: 0 0 $card-radius $card-radius;
+
+        .avatar {
+            padding-top: 0;
+
+            img {
+                border-radius: $avatar-radius;
+                background: $card-bg-color;
+            }
+        }
+
+        .display-name {
+            margin-left: 16px;
+
+            strong { color: $primary-text-color }
+
+            span { color: $secondary-text-color }
+        }
+    }
+}
+
+.pagination {
+    padding: 28px;
+
+    .gap,
+    .newer,
+    .older,
+    .page,
+    a {
+        color: $ui-text-color;
+        padding: 8px;
+    }
+
+    .current {
+        background: $contained-chip-color;
+        color: $ui-text-color;
+        margin: 0 8px;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+    }
 }

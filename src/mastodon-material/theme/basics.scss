@@ -1,11 +1,7 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-
-
 body,
-body.embed { background: $bg-color }
+body.embed,
+body.admin,
+body.lighter { background: $bg-color }
 
 .focusable:focus { background: transparent }
 

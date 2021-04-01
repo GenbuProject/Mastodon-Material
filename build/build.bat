@@ -1,2 +1,2 @@
-sass ../src/mastodon-material/loader.scss build.css
+sass ../src/mastodon-material/profiles/default/loader.scss build.css
 pause

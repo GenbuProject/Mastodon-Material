@@ -1,10 +1,3 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
-
-
 .status {
     padding: 12px 12px 4px 70px;
     border-bottom: 1px solid $border-color;
@@ -42,31 +35,26 @@
 
         p { margin-bottom: 16px }
 
-        .status__content__spoiler-link {
-            background: transparent;
+        .status__content__spoiler-link { @include button-type($button-on-status) }
 
-            &:hover { background: $text-button-hover-color }
-
-            &:focus { background: $text-button-focus-color }
-        }
-
+        // show more button
         &__spoiler-link {
             border: 0;
+            font-size: 15px;
+            height: 36px;
+            padding: 0 16px;
+            margin: 4px;
             color: $text-button-color;
         }
 
+        // show thread button
         &__read-more-button {
-            font-size: 14px;
-            color: $text-button-color;
-            border-radius: $button-radius;
-            padding: 4px 6px;
+            @include button-type($button-on-status);
+            height: 36px;
+            padding: 0 16px;
+            margin: 4px;
 
-            &:hover {
-                background: $text-button-hover-color;
-                text-decoration: none;
-            }
-
-            &:focus { background: $text-button-focus-color }
+            &:hover { text-decoration: none }
         }
     }
 
@@ -261,10 +249,7 @@ a.status-card {
         }
     }
 
-    .button.logo-button {
-        margin-bottom: 16px;
-        line-height: 36px;
-    }
+    .button.logo-button { margin-bottom: 16px }
 }
 
 // search user trends
@@ -289,4 +274,4 @@ a.status-card {
     }
 }
 
-.entry.entry-center { border-bottom: 1px solid $border-color }
+.entry.h-cite.p-comment.entry-successor { border-top: 1px solid $border-color }

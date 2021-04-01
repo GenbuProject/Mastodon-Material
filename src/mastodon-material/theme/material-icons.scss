@@ -1,11 +1,3 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config', '../icon_config';
-@import '../custom_color', '../custom_layout';
-@import 'functions';
-@import 'mixins';
-
-
 @include icon-font;
 
 .fa-fw {
@@ -15,21 +7,13 @@
 }
 
 .fa {
-    &.fa-bars,
-    &.fa-navicon,
-    &.fa-reorder,
+    &.fa-bars, &.fa-navicon, &.fa-reorder,
     &.fa-globe,
-    &.fa-cog,
-    &.fa-cogs,
-    &.fa-gears,
+    &.fa-cog, &.fa-cogs, &.fa-gears,
     &.fa-sign-out,
     &.fa-search,
-    &.fa-times,
-    &.fa-times-circle,
-    &.fa-close,
-    &.fa-remove,
-    &.fa-chevron-down,
-    &.fa-ellipsis-v,
+    &.fa-times, &.fa-times-circle, &.fa-close, &.fa-remove,
+    &.fa-chevron-down, &.fa-ellipsis-v,
     &.fa-paperclip,
     &.fa-tasks,
     &.fa-plus,
@@ -41,6 +25,7 @@
     &.fa-sliders,
     &.fa-chevron-left,
     &.fa-chevron-right,
+    &.fa-arrow-right,
     &.fa-reply,
     &.fa-reply-all,
     &.fa-share-alt,
@@ -53,10 +38,8 @@
     &.fa-users,
     &.fa-file-text,
     &.fa-user-plus,
-    &.fa-address-book,
-    &.fa-address-book-o,
-    &.fa-list,
-    &.fa-list-ul,
+    &.fa-address-book, &.fa-address-book-o,
+    &.fa-list, &.fa-list-ul,
     &.fa-eye,
     &.fa-eye-slash,
     &.fa-pencil,
@@ -78,7 +61,17 @@
     &.fa-upload,
     &.fa-comments,
     &.fa-angle-right,
-    &.fa-thumb-tack {
+    &.fa-thumb-tack,
+    &.fa-hashtag,
+    &.fa-expand,
+    &.fa-refresh,
+    &.fa-user,
+    &.fa-desktop,
+    &.fa-exchange,
+    &.fa-cloud-upload,
+    &.fa-cloud-download,
+    &.fa-mobile-phone, &.fa-mobile,
+    &.fa-tablet {
         @include icon-font-style;
         line-height: 1;
         letter-spacing: normal;
@@ -111,6 +104,7 @@
     &.fa-sliders::before { content: "tune" }
     &.fa-chevron-left::before { content: "arrow_back" }
     &.fa-chevron-right::before { content: "arrow_forward" }
+    &.fa-arrow-right::before { content: "arrow_forward" }
     &.fa-reply::before { content: $reply-icon }
     &.fa-reply-all::before { content: "reply_all" }
     &.fa-share-alt::before { content: "share" }
@@ -123,10 +117,8 @@
     &.fa-users::before { content: "people" }
     &.fa-file-text::before { content: "web" }
     &.fa-user-plus::before { content: "person_add" }
-    &.fa-address-book::before { content: "explore" }
-    &.fa-address-book-o::before { content: "explore" }
-    &.fa-list::before { content: "list" }
-    &.fa-list-ul::before { content: "list" }
+    &.fa-address-book::before, &.fa-address-book-o::before { content: "explore" }
+    &.fa-list::before, &.fa-list-ul::before { content: "list" }
     &.fa-eye::before { content: "visibility" }
     &.fa-eye-slash::before { content : "visibility_off" }
     &.fa-pencil::before { content: "create" }
@@ -149,6 +141,16 @@
     &.fa-comments::before { content: "forum" }
     &.fa-angle-right::before { content: "chevron_right" }
     &.fa-thumb-tack::before { content: "push_pin" }
+    &.fa-hashtag::before { content: "tag" }
+    &.fa-expand::before { content: "open_in_full" }
+    &.fa-refresh::before { content: "refresh" }
+    &.fa-user::before { content: "person" }
+    &.fa-desktop::before { content: "web_asset" }
+    &.fa-exchange::before { content: "sync_alt" }
+    &.fa-cloud-upload::before { content: "cloud_upload" }
+    &.fa-cloud-download::before { content: "cloud_download" }
+    &.fa-mobile-phone::before, &.fa-mobile::before { content: "smartphone" }
+    &.fa-tablet::before { content: "tablet" }
 }
 
 // bookmark icon
@@ -173,21 +175,22 @@
 .star-icon.active,
 .star-icon.icon-button.active.active,
 .notification__favourite-icon-wrapper .star-icon,
-.status__action-bar-button.star-icon.icon-button.active { color: $favorite-icon-color }
+.status__action-bar-button.star-icon.icon-button.active,
+.media-modal__overlay .picture-in-picture__footer .icon-button.star-icon.active { color: $favorite-icon-color }
 
 // boost icon
 button.icon-button i.fa-retweet {
     height: 20px;
     width: 20px;
     transition: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="#{svg-color($icon-color)}" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="#{svg-color($icon-button-active-color)}" stroke-width="0"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="#{svg-color($icon-button-color)}" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="#{svg-color($boost-icon-color)}" stroke-width="0"/></svg>');
 }
 
-.media-modal__overlay .picture-in-picture__footer button.icon-button i.fa-retweet /* in media view */ { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="#{$media-icon-color}" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="#{svg-color($icon-button-active-color)}" stroke-width="0"/></svg>') }
+.media-modal__overlay .picture-in-picture__footer button.icon-button i.fa-retweet /* in media view */ { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="#{$media-icon-color}" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="#{svg-color($boost-icon-color)}" stroke-width="0"/></svg>') }
 
 button.icon-button i.fa-retweet:hover,
 button.icon-button:hover i.fa-retweet /* v3.3.0 or above */ {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="#{svg-color($icon-hover-color)}" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="#{svg-color($icon-button-active-color)}" stroke-width="0"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" id="svg4" version="1.1" viewBox="0 0 24 48" height="40px" width="20px"><path d="M 7,7 H 17 V 10 l 4,-4 -4,-4 v 3 H 5 V 11 h 2 z M 17,17 H 7 V 14 L 3,18 7,22 V 19 H 19 v -6 h -2 z" fill="#{svg-color($icon-button-hover-color)}" stroke-width="0"/><path d="m 7,31 h 10 v 3 l 4,-4 -4,-4 v 3 H 5 v 6 H 7 Z M 17,41 H 7 v -3 l -4,4 4,4 v -3 h 12 v -6 h -2 z" fill="#{svg-color($boost-icon-color)}" stroke-width="0"/></svg>');
 }
 
 button.icon-button.disabled i.fa-retweet,
@@ -197,7 +200,10 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
 }
 
 // dropdown icon
-.compose-form__poll-wrapper select { background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#{svg-color($icon-color)}" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 8px center/auto 16px}
+.compose-form__poll-wrapper select,
+.simple_form select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#{svg-color($icon-color)}" width="24px" height="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 10l5 5 5-5z"/></svg>');
+}
 
 // icon in tab settings
 .text-btn.column-header__setting-btn {
@@ -220,11 +226,14 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
 .fa.fa-star.column-header__icon.fa-fw { vertical-align: text-bottom }
 
 // top bar icons in single column mode
-.tabs-bar__link {
-    .fa.fa-home.fa-fw,
-    .fa.fa-bell.fa-fw,
-    .fa.fa-users.fa-fw,
-    .fa.fa-globe.fa-fw { vertical-align: text-bottom }
+.tabs-bar__link .fa {
+    &.fa-home,
+    &.fa-bell,
+    &.fa-users,
+    &.fa-globe,
+    &.fa-search {
+        &.fa-fw { vertical-align: text-bottom }
+    }
 }
 
 // getting-started and side bar icons
@@ -243,10 +252,30 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
 // read more icon
 .status__content__read-more-button .fa { vertical-align: bottom }
 
+// Attachment icon
+.attachment-list__list a .fa { vertical-align: middle }
+
+// verified icon
+.verified__mark { vertical-align: middle }
+
+// tag icon
+.directory__tag h4 .fa { vertical-align: bottom }
+
 // status detail icon
 .detailed-status .fa {
     font-size: 16px;
     vertical-align: text-bottom;
+}
+
+// Icons in lists or tables
+tbody tr td span .fa {
+    color: $icon-color;
+    vertical-align: bottom;
+}
+a.table-action-link i.fa,
+button.table-action-link i.fa {
+    font-size: 16px;
+    vertical-align: bottom;
 }
 
 // status scope
@@ -255,3 +284,6 @@ button.icon-button.disabled:hover i.fa-retweet  /* v3.3.0 or above */ {
     font-size: 16px;
     vertical-align: text-bottom;
 }
+
+// sidebar icon in settings
+.admin-wrapper .sidebar ul a i.fa { vertical-align: text-bottom }

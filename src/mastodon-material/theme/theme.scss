@@ -1,10 +1,6 @@
 /*
-* Mastodon Material 0.2.1
-* Author: Rintan, Genbu Project
-* Copyright (C) 2020 Rintan, Genbu Project
+* Mastodon Material 0.3.0
+* Copyright (C) 2021 Rintan, Genbu Project
 */
 
-@charset "UTF-8";
-
-
-@import 'account', 'basics', 'button', 'columns', 'containers', 'components', 'base_config', 'control', 'emoji-picker', 'icons', 'media', 'modal', 'responsive', 'statuses', 'variables', 'widgets';
+@import 'about', 'account', 'admin', 'basics', 'button', 'columns', 'components', 'containers', 'control', 'emoji-picker', 'icons', 'forms', 'media', 'modal', 'responsive', 'statuses', 'tables', 'variables', 'widgets';

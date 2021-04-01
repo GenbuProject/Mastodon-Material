@@ -1,14 +1,23 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
-
 .emoji-picker-dropdown {
     &__menu {
         @include shadow-8dp;
         background: $menu-bg-color;
         border-radius: $menu-radius;
+        margin-top: 0;
+
+        // bubble
+        // unable to fit the position
+        /*&::before {
+            @include shadow-8dp;
+            content: "";
+            position: absolute;
+            background: $menu-bg-color;
+            top: -6px;
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }*/
     }
 
     &__modifiers__menu {
@@ -30,9 +39,7 @@
     &-bar {
         border: 0 solid $border-color;
 
-        &:first-child {
-            background: $menu-bg-color;
-        }
+        &:first-child { background: $menu-bg-color }
     }
 
     &-anchor {

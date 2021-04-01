@@ -1,16 +1,10 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
-
 .modal-root {
     transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
 
-    &__overlay { background-color: rgba(0,0,0,.32) !important }
-
-    &__container { background: linear-gradient(rgba(0, 0, 0, 0.48) 10%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.48) 90%) }
+    &__overlay { background-color: rgba(0,0,0,.7) !important }
 }
+
+.modal-layout { background-color: $bg-color }
 
 .drawer {
     &__header {
@@ -57,6 +51,10 @@
         }
 
         &__mastodon { background: $card-bg-color }
+
+        &:hover,
+        &:active,
+        &:focus { opacity: 1.0 }
     }
 }
 
@@ -112,13 +110,9 @@
     margin-top: 0;
     color: $tips-text-color;
 
-    h4 {
-        color: $secondary-text-color;
-    }
+    h4 { color: $secondary-text-color }
 
-    em {
-        color: $search-bar-text-color;
-    }
+    em { color: $search-bar-text-color }
 }
 
 .search-results {
@@ -198,9 +192,12 @@
 .compose-form {
     .autosuggest-textarea {
         &__textarea {
-            background: $text-field-bg-color;
-            color: $ui-text-color;
-            border-radius: $card-radius;
+            @include text-area-border($compose-area-border);
+            padding: 8px 42px 8px 16px;
+
+            @if $compose-area-border == outlined {
+                &:focus { padding: 7px 41px 7px 15px }
+            }
     
             &::placeholder { color: $tips-text-color }
         }
@@ -227,14 +224,16 @@
     }
 
     .spoiler-input {
-        &.spoiler-input--visible { margin-bottom: 8px }
+        &.spoiler-input--visible { margin-bottom: 16px }
 
         &__input {
-            color: $ui-text-color;
-            background: $card-bg-color;
-            border-bottom: 1px solid $border-color;
-            border-radius: 0;
-    
+            @include text-area-border($cw-area-border);
+            padding: 8px 16px;
+
+            @if $cw-area-border == outlined {
+                &:focus { padding: 7px 15px }
+            }
+
             &::placeholder { color: $tips-text-color }
         }
     }
@@ -279,38 +278,36 @@
             .icon-button {
                 @include icon-button;
                 padding: 8px;
+                margin: 0 2px;
             }
 
             .text-icon-button {
                 width: 20px !important;
                 height: 20px !important;
                 padding: 8px;
+                margin: 0 2px;
                 line-height: 20px !important;
             }
         }
 
         &__poll-wrapper {
-            border-top: 1px solid $border-color;
+            @if $compose-area-border == none {
+                border-top: 1px solid $border-color;
+            } @else { border-top: none }
 
             ul { padding: 16px 12px 16px 0 }
 
             select {
                 color: $ui-text-color;
-                background-color: $bg-color;
+                background-color: $dropdown-field-bg-color;
                 border: 0;
 
-                &:focus { border-color: $border-active-color }
+                option { background: $list-bg-color }
+
+                &:focus { border-color: $border-hover-color }
             }
 
-            .button.button-secondary {
-                box-shadow: none;
-                color: $text-button-color;
-
-                &:hover { background-color: $text-button-hover-color }
-
-                &:active,
-                &:focus { background-color: $text-button-focus-color }
-            }
+            .button.button-secondary { @include button-type($button-on-status) }
 
             .poll__footer { border-top: none }
         }
@@ -323,9 +320,11 @@
 
 
 .poll {
+    margin-top: 8px;
+
     .button { margin-right: 8px }
 
-    li { margin-bottom: 0 }
+    li { margin-bottom: 8px }
 
     &__input {
         border: none;
@@ -340,7 +339,7 @@
 
         &.active { background: radial-gradient(circle, $control-border-active-color, $control-border-active-color 4px, transparent 5px, transparent 7px, $control-border-active-color 8px, $control-border-active-color 9px, transparent 10px, transparent) }
 
-        &.active:hover { background: radial-gradient(circle, $control-border-hover-color, $control-border-hover-color 7px, $control-border-color 8px, $control-border-color 9px, $control-border-hover-color 10px, $control-border-hover-color) }
+        &.active:hover { background: radial-gradient(circle, $control-border-active-color, $control-border-active-color 4px, $control-border-hover-color 5px, $control-border-hover-color 7px, $control-border-active-color 8px, $control-border-active-color 9px, $control-border-hover-color 10px, $control-border-hover-color) }
 
         &.checkbox {
             border-radius: 2px;
@@ -348,6 +347,17 @@
             padding: 8px;
             margin: 8px 10px;
             background: none;
+
+            &.active {
+                height: 50%;
+                padding: 5px 0;
+                transform: rotate(-45deg);
+                border: 3px solid $control-border-active-color;
+                border-top-style: none;
+                border-right-style: none;
+
+                &:hover { background: none }
+            }
         }
     }
 
@@ -357,12 +367,12 @@
         border: 1px solid $border-color;
         padding: 8px 12px;
     
-        &:focus { border-color: $border-active-color }
+        &:focus { border-color: $border-hover-color }
     }
 
     &__option {
-        padding: 16px 0 8px;
-
+        padding: 4px;
+        
         input[type=text] {
             color: $primary-text-color;
             background: $text-field-bg-color;
@@ -371,7 +381,7 @@
             padding: 8px 16px;
         }
 
-        &__text { line-height: 34px }
+        &__text { line-height: 36px }
     }
 
     &__chart {
@@ -388,6 +398,8 @@
     }
 
     &__link { color: $ui-text-color }
+
+    &__number { line-height: 36px }
 }
 
 .privacy-dropdown {
@@ -454,9 +466,7 @@
     }
 }
 
-.character-counter {
-    color: $secondary-text-color;
-}
+.character-counter { color: $secondary-text-color }
 
 .reply-indicator {
     box-shadow: none;
@@ -541,14 +551,16 @@
 .directory {
     &__card {
         @include shadow-1dp;
-        margin: 8px 4px;
         border-radius: $card-radius;
+        margin-bottom: 16px;
 
         &__img { border-radius: $card-radius $card-radius 0 0 }
 
         &__bar {
             background: $card-bg-color;
             padding: 8px 16px;
+
+            &__relationship { width: auto }
 
             .display-name {
                 margin-left: 16px;
@@ -573,6 +585,11 @@
 
             .accounts-table__count { padding: 16px 0 }
         }
+    }
+
+    &__list {
+        @include material-transition;
+        margin: 16px 0;
     }
 }
 
@@ -621,6 +638,18 @@
     }
 }
 
+.domain {
+    padding: 16px;
+    border-bottom: 1px solid $border-color;
+
+    .domain__domain-name { color: $primary-text-color }
+
+    &__buttons .icon-button {
+        @include icon-button;
+        padding: 8px;
+    }
+}
+
 .upload-progress {
     color: $ui-text-color;
     
@@ -634,4 +663,57 @@
         border-radius: 0;
         background: $progress-indicator-color;
     }
+}
+
+.emoji-button { padding: 8px }
+
+.focusable:focus .detailed-status,
+.focusable:focus .detailed-status__action-bar { background: transparent }
+
+.no-reduce-motion .loading-indicator {
+    display: inline-block;
+    position: relative;
+    color: transparent;
+    width: 80px;
+    height: 80px;
+
+    &__figure {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        top: 10%;
+        left: 10%;
+        margin: 8px;
+        border: 4px solid transparent;
+        border-radius: 50%;
+        animation: loading-indicator 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $loading-indicator-color transparent transparent transparent;
+
+        &:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+    }
+}
+@keyframes loading-indicator {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.loading-bar {
+    background-color: $loading-indicator-color;
+    height: 4px;
 }

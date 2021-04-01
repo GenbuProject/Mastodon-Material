@@ -1,10 +1,3 @@
-@charset "UTF-8";
-@import 'base_config';
-@import '../custom_config';
-@import '../custom_color', '../custom_layout';
-@import 'mixins';
-
-
 .tabs-bar {
     background: $top-bar-color;
 
@@ -52,6 +45,12 @@
 
 .columns-area--mobile {
     .column { margin: 0 !important }
+
+    .account__header {
+        &__account-note,
+        &__bio .account__header__content { padding: 8px 16px }
+    }
+
     .search__input { padding: 16px 46px }
 
     .search__icon {
@@ -93,6 +92,12 @@
 
 //single column mode
 @media screen and (min-width: 631px) {
+    .column:first-child,
+    .drawer:first-child { padding-left: 8px }
+
+    .column:last-child,
+    .drawer:last-child { padding-right: 8px }
+
     .tabs-bar__link {
         &:hover {
             background: $tab-indicator-bg-hover-color;
@@ -106,5 +111,30 @@
         }
 
         &.active { border-bottom-color: $tab-indicator-active-color }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .admin-wrapper {
+        .sidebar {
+            ul {
+                background: $card-bg-color;
+                
+                a,
+                ul a { border-bottom: none }
+            }
+        }
+
+        .sidebar-wrapper { @include shadow-4dp }
+    }
+
+    .public-layout .public-account-header {
+        &__bar { background: $card-bg-color }
+
+        &__tabs__name h1 {
+            color: $primary-text-color;
+
+            small { color: $secondary-text-color }
+        }
     }
 }
