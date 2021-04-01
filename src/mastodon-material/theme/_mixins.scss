@@ -60,6 +60,7 @@ $shadow-color-3: rgba(0,0,0,.12);
 @mixin button-type($button-type) {
     border-radius: $button-radius;
     display: inline-block;
+    font-weight: 500;
     
     @if $button-type == contained {
         @if $button-shadow { @include shadow-1dp }

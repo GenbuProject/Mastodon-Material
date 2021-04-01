@@ -49,7 +49,7 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
     mastodon-material: Mastodon Material # この一行を追記
    ```
 
-4. GitHubのWebfontを使用する設定(初期設定)やGoogle FontsのWebfontを利用する設定にしている場合は、*CSP(Content Security Policy)* に例外を追加する必要があります。Mastodonの`config/initializers/content_security_policy.rb`を以下のように変更してください。
+4. Google Fonts(初期設定)やGitHubのWebfontを利用する設定にしている場合は、*CSP(Content Security Policy)* に例外を追加する必要があります。Mastodonの`config/initializers/content_security_policy.rb`を以下のように変更してください。
    
    変更前 …
    
@@ -159,10 +159,6 @@ Mastodon Materialは、[Material Design](https://material.io)準拠のMastodon�
   3. カスタマイズする場合、[カスタマイズガイド](docs/customization_guide_ja.md)を参照してください。
   4. [build.bat (Windows)](build/build.bat)または[build.sh (macOS/Linux)](build/build.sh)を実行してください。結果が[build.css](build/build.css)に出力されます。
   5. StylusまたはStylishでテーマを新規作成し、[build.css](build/build.css)の内容をコピペします。利用しているサーバーのドメインを追加して、テーマを保存/有効化してください。
-
-- **[Userstyles.org](https://userstyles.org/)から追加する**
-  
-  準備中です
 
 ## ライセンス
 

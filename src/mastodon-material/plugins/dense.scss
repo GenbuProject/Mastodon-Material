@@ -55,7 +55,19 @@
         top: 10px;
     }
 
-    &__content { padding-top: 2px }
+    &__content {
+        padding-top: 2px;
+
+        &__spoiler-link {
+            height: auto;
+            padding: 4px 8px;
+        }
+
+        &__read-more-button {
+            height: auto;
+            padding: 4px 8px;
+        }
+    }
 
     &__action-bar-button {
         margin: 0 4px;
