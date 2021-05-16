@@ -88,7 +88,7 @@
 
                 &__fields {
                     border: 1px solid $border-color;
-                    border-radius: 4px;
+                    border-radius: $table-radius;
 
                     .verified {
                         border: none;
@@ -106,12 +106,20 @@
                         &:last-child { border-bottom: 0 }
                     }
 
+                    dd,
                     dt {
                         color: $primary-text-color;
-                        background: $list-bg-inactive-color;
+                        padding: 16px;
                     }
 
                     dd { color: $primary-text-color }
+
+                    dt { background: $list-bg-inactive-color }
+                }
+
+                &__joined {
+                    padding: 8px;
+                    color: $info-text-color;
                 }
             }
         }
@@ -264,4 +272,12 @@
         width: 16px;
         height: 16px;
     }
+}
+
+.nothing-here {
+    background: $card-bg-color;
+    color: $ui-text-color;
+    padding: 16px;
+
+    &--under-tabs { border-radius: 0 0 $card-radius $card-radius }
 }

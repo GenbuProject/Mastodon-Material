@@ -37,22 +37,20 @@
 
         .status__content__spoiler-link { @include button-type($button-on-status) }
 
-        // show more button
         &__spoiler-link {
             border: 0;
             font-size: 15px;
             height: 36px;
             padding: 0 16px;
-            margin: 4px;
+            margin: 8px;
             color: $text-button-color;
         }
 
-        // show thread button
         &__read-more-button {
             @include button-type($button-on-status);
             height: 36px;
             padding: 0 16px;
-            margin: 4px;
+            margin: 8px 0;
 
             &:hover { text-decoration: none }
         }
@@ -159,6 +157,11 @@
         }
 
         a { bottom: auto }
+    }
+
+    &__host {
+        margin-top: 6px;
+        color: $secondary-text-color;
     }
 
     &.compact {

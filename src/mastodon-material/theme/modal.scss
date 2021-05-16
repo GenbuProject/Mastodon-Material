@@ -43,7 +43,14 @@
         color: $ui-text-color;
         font-size: 16px;
 
-        &:hover {
+        &.active,
+        &.active button,
+        &:active,
+        &:active button,
+        &:focus,
+        &:focus button,
+        &:hover,
+        &:hover button {
             background: $card-bg-hover-color;
             color: $ui-text-color;
         }

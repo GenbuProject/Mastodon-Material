@@ -190,6 +190,8 @@
 }
 
 .compose-form {
+    padding: 16px;
+
     .autosuggest-textarea {
         &__textarea {
             @include text-area-border($compose-area-border);
@@ -316,6 +318,18 @@
     }
 }
 
+.compose-panel {
+    overflow: visible;
+    border-radius: $card-radius;
+
+    .compose-form {
+        @include shadow-1dp;
+        background: $card-bg-color;
+        padding-bottom: 16px;
+        margin-bottom: 0;
+    }
+}
+
 .no-reduce-motion .spoiler-input { transition-duration: .2s, .2s }
 
 
@@ -343,7 +357,7 @@
 
         &.checkbox {
             border-radius: 2px;
-            border: 2px solid $control-border-color;
+            border: 2px solid $control-border-active-color;
             padding: 8px;
             margin: 8px 10px;
             background: none;
@@ -352,7 +366,7 @@
                 height: 50%;
                 padding: 5px 0;
                 transform: rotate(-45deg);
-                border: 3px solid $control-border-active-color;
+                border: 2px solid $control-border-active-color;
                 border-top-style: none;
                 border-right-style: none;
 
@@ -372,7 +386,7 @@
 
     &__option {
         padding: 4px;
-        
+
         input[type=text] {
             color: $primary-text-color;
             background: $text-field-bg-color;
@@ -590,6 +604,7 @@
     &__list {
         @include material-transition;
         margin: 16px 0;
+        width: auto;
     }
 }
 

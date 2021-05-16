@@ -193,6 +193,7 @@
     background: $top-bar-color;
     color: $top-bar-icon-color;
     padding: 16px;
+    height: 48px;
 
     span { visibility: hidden }  // hide "back" string
 
@@ -214,6 +215,8 @@
 .columns-area {
     @include bg-image;
     background-size: contain;
+
+    &__panels__pane { overflow: visible }
 }
 
 .setting-text {
@@ -229,7 +232,12 @@
     background: $card-bg-color;
     font-size: 16px;
     contain: initial;  // padding fix
+
+    a { color: $link-text-color }
 }
+
+.error-column a,
+.follow_requests-unlocked_explanation a { color: $link-text-color }
 
 .conversation {
     border-bottom: 1px solid $border-color;
@@ -323,6 +331,8 @@
         a { color: $ui-text-color }
 
         p a { color: $link-text-color }
+
+        ul { margin-bottom: 16px }
     }
 
     &__trends {
@@ -416,6 +426,37 @@
         }
 
         span { vertical-align: super }
+    }
+}
+
+.announcements-list {
+    border: 1px solid $border-color;
+
+    &__item {
+        padding: 16px 0;
+        background: $list-bg-color;
+        border-radius: $table-radius;
+        border-bottom: 1px solid $border-color;
+
+        &__title {
+            padding: 0 16px;
+            color: $primary-text-color;
+            margin-bottom: 8px;
+
+            &:active,
+            &:focus,
+            &:hover { color: $primary-text-color }
+        }
+
+        &__meta {
+            padding: 0 16px;
+            color: $info-text-color;
+        }
+
+        &:hover { background: $list-bg-hover-color }
+
+        &:active,
+        &:focus { background: $list-bg-active-color }
     }
 }
 

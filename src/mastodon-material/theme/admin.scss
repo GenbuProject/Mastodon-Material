@@ -65,7 +65,6 @@
 
         h4 {
             color: $section-text-color;
-            border-top: 1px solid $border-color;
             border-bottom: none;
             padding: 12px 16px;
         }
@@ -82,6 +81,8 @@
         }
 
         .positive-hint { color: $verified-color }
+
+        .neutral-hint { color: $tips-text-color }
 
         .directory__tag h4 { color: $ui-text-color }
 
@@ -148,4 +149,112 @@ body {
     
         a { color: $link-text-color }
     }
+
+    .neutral-hint { color: $tips-text-color }
 }
+
+.report-card {
+    @include shadow-1dp;
+    background: $card-bg-color;
+    border-radius: $card-radius;
+    margin-bottom: 16px;
+
+    &__profile {
+        padding: 16px;
+
+        &__stats {
+            color: $info-text-color;
+
+            .red { color: $error-color }
+        }
+    }
+
+    &__summary__item {
+        border-top: 1px solid $border-color;
+
+        &:hover { background: $card-bg-color }
+
+        &__assigned,
+        &__reported-by { color: $ui-text-color }
+
+        &__content {
+            a {
+                padding: 16px;
+                color: $primary-text-color;
+            }
+
+            &__icon {
+                color: $icon-color;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+
+.log-entry {
+    padding: 16px 0;
+    background: $list-bg-color;
+    border-bottom: 1px solid $border-color;
+
+    &:first-child { border-radius: $table-radius $table-radius 0 0 }
+
+    &:last-child { border-radius: 0 0 $table-radius $table-radius }
+
+    &__header {
+        color: $ui-text-color;
+        padding: 0 16px;
+    }
+
+    &__avatar { margin-right: 16px }
+
+    &__timestamp { color: $info-text-color }
+
+    .target,
+    .username,
+    a { color: $primary-text-color }
+}
+
+.dashboard {
+    &__counters {
+        &__num,
+        &__text {
+            color: $secondary-text-color;
+            margin-bottom: 16px;
+        }
+
+        &__label { color: $ui-text-color }
+
+        &>div {
+            padding: 0 8px;
+            margin-bottom: 16px;
+
+            &>div,
+            &>a {
+                @include shadow-1dp;
+                padding: 16px;
+                background: $card-bg-color;
+                border-radius: $card-radius;
+
+                &:active,
+                &:focus,
+                &:hover { background: $card-bg-hover-color }
+            }
+        }
+    }
+
+    &__widgets {
+        &>div {
+            margin-bottom: 16px;
+
+            &>div { padding: 0 8px }
+        }
+
+        a:not(.name-tag) { color: $ui-text-color }
+    }
+}
+
+.inline-name-tag,
+.name-tag,
+a.inline-name-tag,
+a.name-tag { color: $ui-text-color }

@@ -61,6 +61,15 @@
 
         .fa-times-circle.active { left: unset }
     }
+
+    .directory {
+        &__list {
+            grid-gap: 16px;
+            margin: 16px;
+        }
+
+        &__card { margin-bottom: 16px }
+    }
 }
 
 // small size screen
@@ -91,13 +100,7 @@
 }
 
 //single column mode
-@media screen and (min-width: 631px) {
-    .column:first-child,
-    .drawer:first-child { padding-left: 8px }
-
-    .column:last-child,
-    .drawer:last-child { padding-right: 8px }
-
+@media screen and (min-width: 630px) {
     .tabs-bar__link {
         &:hover {
             background: $tab-indicator-bg-hover-color;
@@ -111,6 +114,15 @@
         }
 
         &.active { border-bottom-color: $tab-indicator-active-color }
+    }
+
+    .columns-area--mobile .status {
+        padding: 16px 16px 16px 80px;
+
+        &__prepend {
+            margin-left: 80px;
+            padding-top: 16px;
+        }
     }
 }
 
