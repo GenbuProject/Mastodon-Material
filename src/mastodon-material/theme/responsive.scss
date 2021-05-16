@@ -74,7 +74,11 @@
 
 // small size screen
 @media screen and (max-width: 415px) {
-    .public-layout { padding-top: 64px }
+    .public-layout {
+        padding-top: 64px;
+
+        .header { margin: 0 }
+    }
 }
 
 // middle size screen
@@ -143,10 +147,14 @@
     .public-layout .public-account-header {
         &__bar { background: $card-bg-color }
 
-        &__tabs__name h1 {
-            color: $primary-text-color;
+        &__tabs {
+            margin-left: 16px;
 
-            small { color: $secondary-text-color }
+            &__name h1 {
+                color: $primary-text-color;
+    
+                small { color: $secondary-text-color }
+            }
         }
     }
 }

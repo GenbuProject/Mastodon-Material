@@ -33,6 +33,7 @@ $menu-bg-active-color: darken($bg-color, 10%);
 $menu-bg-active-hover-color: darken($bg-color, 16%);
 $card-bg-color: #ffffff;
 $card-bg-hover-color: darken($card-bg-color, 6%);
+$succeeded-card-bg-color: lighten($verified-color, 36%);
 $list-bg-color: #ffffff;
 $list-bg-hover-color: darken($list-bg-color, 6%);
 $list-bg-active-color: darken($list-bg-color, 10%);

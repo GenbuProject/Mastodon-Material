@@ -147,6 +147,12 @@
     }
 
     &.translation-prompt { color: $ui-text-color }
+
+    &.notice {
+        border: none;
+        background: $succeeded-card-bg-color;
+        color: $verified-color;
+    }
 }
 
 .form-footer a { color: $ui-text-color }
