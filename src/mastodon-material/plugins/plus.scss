@@ -28,3 +28,14 @@
         &.fa-fw::before { vertical-align: middle }
     }
 }
+
+// Fedibird bottom bar in mobile
+.tabs-bar.bottom-bar {
+    background: #212121;
+
+    .tabs-bar__link {
+        color: transparentize(#ffffff, 0.5);
+
+        &.active { color: #ffffff }
+    }
+}
