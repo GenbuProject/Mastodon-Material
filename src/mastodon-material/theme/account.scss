@@ -168,24 +168,24 @@
     }
 
     &__section-headline {
-        background: $text-tab-bg-color;
+        background: $tab-bg-color;
         border-bottom: 1px solid $border-color;
 
         a {
             padding: 16px 0;
-            color: $text-tab-indicator-color;
+            color: $tab-item-color;
 
             &.active {
-                color: $text-tab-indicator-active-color;
-                border-bottom: 4px solid $text-tab-indicator-active-color;
+                color: $tab-item-active-color;
+                border-bottom: 4px solid $tab-item-active-color;
 
                 &::before,
                 &:after { border: none }
 
-                &:focus { background: $text-tab-indicator-bg-focus-color }
+                &:focus { background: $tab-bg-focus-color }
             }
 
-            &:hover { background: $text-tab-indicator-bg-hover-color }
+            &:hover { background: $tab-bg-hover-color }
         }
     }
 

@@ -119,23 +119,23 @@
     }
 
     a {
-        color: $text-tab-indicator-color;
+        color: $tab-item-color;
         border-bottom: 2px solid transparent;
         padding: 8px;
 
         &.selected {
-            color: $text-tab-indicator-active-color;
-            border-bottom: 2px solid $text-tab-indicator-active-color;
+            color: $tab-item-active-color;
+            border-bottom: 2px solid $tab-item-active-color;
 
             &:hover {
-                color: $text-tab-indicator-active-color;
-                border-bottom: 2px solid $text-tab-indicator-active-color;
+                color: $tab-item-active-color;
+                border-bottom: 2px solid $tab-item-active-color;
             }
         }
 
         &:hover {
-            color: $text-tab-indicator-color;
-            background: $text-tab-indicator-bg-hover-color;
+            color: $tab-item-color;
+            background: $tab-bg-hover-color;
             border-bottom: 2px solid transparent;
         }
     }

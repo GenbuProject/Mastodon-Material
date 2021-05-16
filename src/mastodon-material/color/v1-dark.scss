@@ -124,18 +124,11 @@ $search-bar-color: lighten($bg-color, 6%);
 $search-bar-focus-color: #ffffff;
 
 // Tab color
-$tab-indicator-color: $top-bar-icon-color;
-$tab-indicator-active-color: $top-bar-icon-color;
+$tab-item-color: transparentize(#ffffff, 0.5);
+$tab-item-active-color: $primary-color;
 $tab-bg-color: $top-bar-color;
-$tab-indicator-bg-hover-color: transparentize($tab-indicator-active-color, 0.9);
-$tab-indicator-bg-focus-color: transparentize($tab-indicator-active-color, 0.8);
-$text-tab-indicator-color: $secondary-text-color;
-$text-tab-indicator-active-color: $top-bar-color;
-$text-tab-bg-color: #424242;
-$text-tab-indicator-bg-hover-color: transparentize($text-tab-indicator-active-color, 0.9);
-$text-tab-indicator-bg-focus-color: transparentize($text-tab-indicator-active-color, 0.8);
-$icon-tab-indicator-active-color: $primary-color;
-$icon-tab-indicator-hover-color: $icon-hover-color;
+$tab-bg-hover-color: transparentize($tab-item-active-color, 0.9);
+$tab-bg-focus-color: transparentize($tab-item-active-color, 0.8);
 
 // Media indicator color
 $media-page-indicator-color: #9e9e9e;

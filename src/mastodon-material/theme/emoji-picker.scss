@@ -43,14 +43,14 @@
     }
 
     &-anchor {
-        color: $text-tab-indicator-color;
+        color: $tab-item-color;
         padding: 10px 4px;
 
-        &-bar { background-color: $icon-tab-indicator-active-color }
+        &-bar { background-color: $tab-item-active-color }
 
-        &-selected { color: $icon-tab-indicator-hover-color }
+        &-selected { color: $tab-item-color }
 
-        &:hover { color: $icon-tab-indicator-hover-color }
+        &:hover { color: $tab-item-color }
     }
 
     &-search {

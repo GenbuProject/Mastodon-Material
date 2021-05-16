@@ -1,4 +1,5 @@
 src/mastodon-material/plugins/astarte.scss
+src/mastodon-material/plugins/fedibird.scss
 src/mastodon-material/profiles/test
 build/test.bat
 build/test.sh
