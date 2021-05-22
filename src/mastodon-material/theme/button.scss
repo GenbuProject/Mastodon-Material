@@ -109,8 +109,9 @@ label.icon-button {
         background: $contained-button-color;
         margin: 2px;
     
-        &:hover { background: $contained-button-hover-color }
-    
+        &:active,
+        &:focus,
+        &:hover,
         .button--destructive:hover { background: $contained-button-hover-color }
     }
 

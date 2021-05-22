@@ -126,7 +126,7 @@ $search-bar-focus-color: $bg-color;
 
 // Tab color
 $tab-item-color: transparentize(#ffffff, 0.5);
-$tab-item-active-color: $primary-color;
+$tab-item-active-color: #ffffff;
 $tab-bg-color: $top-bar-color;
 $tab-bg-hover-color: transparentize($tab-item-active-color, 0.9);
 $tab-bg-focus-color: transparentize($tab-item-active-color, 0.8);

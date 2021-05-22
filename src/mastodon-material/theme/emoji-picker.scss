@@ -39,7 +39,7 @@
     &-bar {
         border: 0 solid $border-color;
 
-        &:first-child { background: $menu-bg-color }
+        &:first-child { background: $tab-bg-color }
     }
 
     &-anchor {

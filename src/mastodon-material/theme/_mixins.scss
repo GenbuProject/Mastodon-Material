@@ -38,6 +38,23 @@ $shadow-color-3: rgba(0,0,0,.12);
     }
 }
 
+@mixin separate-address-line {
+    @if $separate-address-line { display: block }
+}
+
+@mixin card-elevation($elevation) {
+    border-radius: $card-radius;
+    background: $card-bg-color;
+
+    @if $elevation {
+        @include shadow-1dp;
+        border: none;
+    } @else {
+        box-shadow: none;
+        border: 1px solid $border-color;
+    }
+}
+
 @mixin chip-type($chip-type) {
     @if $chip-type == contained {
         background: $contained-chip-color;
@@ -123,9 +140,7 @@ $shadow-color-3: rgba(0,0,0,.12);
         border: 1px solid $border-color;
 
         &:active,
-        &:focus {
-            border: 2px solid $border-active-color;
-        }
+        &:focus { border: 2px solid $border-active-color }
     }
 }
 

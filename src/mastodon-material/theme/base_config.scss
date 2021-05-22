@@ -21,6 +21,10 @@
 $search-bar-hover: false;
 
 
+// Separate an address from a name line
+$separate-address-line: false;
+
+
 // Status font size in timeline
 $status-font-size: 15px;  // mastodon default
 //$status-font-size: 16px;  // compatible with material design

@@ -152,7 +152,10 @@
     &:hover { background: $list-bg-hover-color }
 
     &:active,
-    &:focus { background: $list-bg-active-color }
+    &:focus {
+        color: $ui-text-color;
+        background: $list-bg-active-color;
+    }
 
     &__icon {
         margin-right: 32px;

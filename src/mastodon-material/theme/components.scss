@@ -394,8 +394,6 @@
             border-radius: 2px;
             padding: 8px 16px;
         }
-
-        &__text { line-height: 36px }
     }
 
     &__chart {
@@ -412,11 +410,10 @@
     }
 
     &__link { color: $ui-text-color }
-
-    &__number { line-height: 36px }
 }
 
 .privacy-dropdown {
+    &.active .privacy-dropdown__value,
     &.active .privacy-dropdown__value.active {
         background: $icon-bg-hover-color;
         border-radius: 50%;
@@ -483,10 +480,7 @@
 .character-counter { color: $secondary-text-color }
 
 .reply-indicator {
-    box-shadow: none;
-    border: 1px solid $border-color;
-    border-radius: $card-radius;
-    background: $card-bg-color;
+    @include card-elevation(false);
     padding: 16px;
 
     &__header { margin-bottom: 4px }
@@ -731,4 +725,19 @@
 .loading-bar {
     background-color: $loading-indicator-color;
     height: 4px;
+}
+
+.regeneration-indicator {
+    color: $ui-text-color;
+    background: $bg-color;
+    padding: 16px;
+
+    &__label {
+        margin-top: 32px;
+
+        strong {
+            margin-bottom: 16px;
+            color: $secondary-text-color;
+        }
+    }
 }

@@ -4,10 +4,10 @@
     &__link {
         padding: 16px 16px 12px 16px;
         color: $tab-item-color;
-        border-bottom: 4px solid transparent;
+        border-bottom: 2px solid transparent;
 
         &.active {
-            border-bottom: 4px solid $tab-item-active-color;
+            border-bottom: 2px solid $tab-item-active-color;
             color: $tab-item-active-color;
         }
 

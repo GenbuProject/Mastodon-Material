@@ -259,6 +259,7 @@ a.status-card {
 .display-name {
     &__html { color: $primary-text-color }
     &__account { color: $secondary-text-color }
+    strong { @include separate-address-line }
 }
 
 .activity-stream {

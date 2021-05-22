@@ -39,3 +39,18 @@
         &.active { color: #ffffff }
     }
 }
+
+// Itabashi quote
+.quote-status {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid $border-color;
+    padding: 16px 0;
+
+    .detailed-status__display-avatar,
+    .status__avatar { left: 0 !important }
+}
+
+@media screen and (min-width: 630px) {
+    .quote-indicator__content, .reply-indicator__content, .status__content { padding-top: 32px }
+}

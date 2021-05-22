@@ -6,6 +6,20 @@
     > .scrollable { background: $bg-color }
 }
 
+@media screen and (min-width: 415px) {
+    .column { padding: 0 !important }
+
+    .notification.notification,
+    .status {
+        border-radius: 0;
+
+        &__wrapper.status__wrapper {
+            margin: 8px 0;
+            border-radius: 0;
+        }
+    }
+}
+
 .status {
     border-bottom: 0;
     border-radius: $card-radius;
@@ -26,6 +40,4 @@
 
 .notification .status__wrapper.status__wrapper { box-shadow: none !important }
 
-.notification__filter-bar {
-    @include non-overflow-shadow-4dp;
-}
+.notification__filter-bar { @include non-overflow-shadow-4dp }
