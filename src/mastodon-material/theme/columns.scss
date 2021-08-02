@@ -510,14 +510,14 @@
             background: $tab-bg-color;
             color: $tab-item-color;
             font-size: 16px;
-            border-bottom: 2px solid transparent;
+            border-bottom: $tab-indicator-thickness solid transparent;
             padding: 12px 0 10px;
 
             span { font-size: 14px }
     
             &.active {
                 color: $tab-item-active-color;
-                border-bottom: 2px solid $tab-item-active-color;
+                border-bottom: $tab-indicator-thickness solid $tab-item-active-color;
     
                 &::before,
                 &:after { border: none }
@@ -538,6 +538,11 @@
     }
 
     &__display-name:hover { color: inherit }
+
+    &__relative_time {
+        color: $info-text-color;
+        padding-bottom: 0;
+    }
 }
 
 .notification-favourite .status.status-direct {

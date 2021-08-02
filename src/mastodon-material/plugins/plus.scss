@@ -1,3 +1,8 @@
+$plugin-name: Plus;
+$target-version: "1.0.0";
+$website: "";
+@include plugin-version-check($plugin-name, $target-version, $website);
+
 .status__action-bar-button {
     background: #eeeeee;
     width: 28px !important;
@@ -40,17 +45,27 @@
     }
 }
 
-// Itabashi quote
+// Quote
 .quote-status {
     border-radius: 0;
     border: none;
     border-top: 1px solid $border-color;
-    padding: 16px 0;
+    padding: 16px 16px 16px 48px;
+    margin-top: 16px;
 
     .detailed-status__display-avatar,
-    .status__avatar { left: 0 !important }
+    .status__avatar {
+        left: 0 !important;
+        top: 16px !important;
+    }
 }
 
-@media screen and (min-width: 630px) {
-    .quote-indicator__content, .reply-indicator__content, .status__content { padding-top: 32px }
+@if $dense {
+    .quote-status {
+        padding: 0;
+        margin-top: 16px;
+
+        .detailed-status__display-avatar,
+        .status__avatar { top: 8px !important }
+    }
 }

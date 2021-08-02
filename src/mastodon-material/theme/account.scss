@@ -7,16 +7,9 @@
 
     &__avatar {
         border-radius: $avatar-radius;
-        width: 40px;
-        height: 40px;
 
         &-overlay {
-            &-base {
-                border-radius: $avatar-radius;
-                width: 44px;
-                height: 44px;
-                background-size: 44px;
-            }
+            &-base { border-radius: $avatar-radius }
 
             &-overlay { border-radius: $avatar-radius }
         }
@@ -26,6 +19,8 @@
         margin-left: 0;
         margin-right: 16px;
     }
+
+    &__action-bar { width: 40px }
 
     &__header {
         &__bar {
@@ -174,10 +169,11 @@
         a {
             padding: 16px 0;
             color: $tab-item-color;
+            border-bottom: $tab-indicator-thickness solid transparent;
 
             &.active {
                 color: $tab-item-active-color;
-                border-bottom: 4px solid $tab-item-active-color;
+                border-bottom: $tab-indicator-thickness solid $tab-item-active-color;
 
                 &::before,
                 &:after { border: none }

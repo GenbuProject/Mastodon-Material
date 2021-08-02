@@ -61,15 +61,18 @@
     .status {
         background: $card-bg-color;
         border-bottom-color: $border-color;
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding: 12px 16px;
 
         &__avatar {
-            left: 12px;
+            width: 40px;
+            height: 40px;
+            left: 16px;
             top: 12px;
         }
     }
 }
+
+.boost-modai__status-header { padding-left: 56px }
 
 .report-modal {
     @include shadow-24dp;

@@ -48,3 +48,9 @@
 }
 
 .information-board__section span:last-child { color: $ui-text-color }
+
+.rules-list {
+    background: $card-bg-color;
+    border: 1px solid $border-color;
+    border-radius: $card-radius;
+}

@@ -38,10 +38,6 @@ $shadow-color-3: rgba(0,0,0,.12);
     }
 }
 
-@mixin separate-address-line {
-    @if $separate-address-line { display: block }
-}
-
 @mixin card-elevation($elevation) {
     border-radius: $card-radius;
     background: $card-bg-color;
@@ -278,5 +274,12 @@ $shadow-color-3: rgba(0,0,0,.12);
                      url("../fonts/MaterialIconsTwoTone-Regular.otf") format('opentype');
             }
         }
+    }
+}
+
+// plugin version checker
+@mixin plugin-version-check($plugin-name, $target-version, $website) {
+    @if $target-version != $version {
+        @debug "[Info] #{$plugin-name} is made for Mastodon Material #{$target-version}. Some css elements might be broken! Check plugin website: #{$website}";
     }
 }

@@ -11,7 +11,11 @@
         &:hover { color: $icon-button-active-hover-color }
     }
 
-    &.disabled { color: $disabled-icon-color }
+    &.disabled {
+        color: $disabled-icon-color;
+
+        &:hover { color: $disabled-icon-color }
+    }
 
     &.inverted {
         color: $icon-button-color;
