@@ -283,4 +283,4 @@ a.status-card {
     }
 }
 
-.entry.h-cite.p-comment.entry-successor { border-top: 1px solid $border-color }
+.entry.h-cite.p-comment.entry-successor:first-child { border-top: 1px solid $border-color }

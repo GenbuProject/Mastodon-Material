@@ -1,3 +1,4 @@
+src/mastodon-material/color/plus-classic.scss
 src/mastodon-material/plugins/astarte.scss
 src/mastodon-material/plugins/fedibird.scss
 src/mastodon-material/plugins/quote.scss
