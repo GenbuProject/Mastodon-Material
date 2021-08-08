@@ -105,6 +105,31 @@
     }
 }
 
+.admin-account-bio {
+    margin: 16px 0 0;
+
+    .account__header {
+        &__content {
+            padding: 16px;
+            color: $primary-text-color;
+        }
+
+        &__content,
+        &__fields {
+            @include shadow-1dp;
+            background: $list-bg-color;
+            border-radius: $table-radius;
+    
+            a { color: $link-text-color }
+        }
+    }
+
+    &>div {
+        padding: 0 8px;
+        margin-bottom: 16px;
+    }
+}
+
 .filters .filter-subset {
     padding: 0 16px;
     margin: 0 0 16px;
@@ -217,6 +242,8 @@ body {
 
 .dashboard {
     &__counters {
+        margin: 0 0 16px;
+
         &__num,
         &__text {
             color: $secondary-text-color;
@@ -241,6 +268,8 @@ body {
                 &:hover { background: $card-bg-hover-color }
             }
         }
+
+        &.admin-account-counters { margin-top: 16px }
     }
 
     &__widgets {

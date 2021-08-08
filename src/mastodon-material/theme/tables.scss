@@ -35,6 +35,11 @@
 
         &:hover { background: $list-bg-hover-color }
     }
+
+    &__form {
+        border: 1px solid $border-color;
+        background: $list-bg-color;
+    }
     
     .nothing-here { border: none }
 }

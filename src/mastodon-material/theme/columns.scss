@@ -434,12 +434,16 @@
 
 .announcements-list {
     border: 1px solid $border-color;
+    border-radius: $table-radius;
 
     &__item {
         padding: 16px 0;
         background: $list-bg-color;
-        border-radius: $table-radius;
         border-bottom: 1px solid $border-color;
+
+        &:first-child { border-radius: $table-radius $table-radius 0 0 }
+
+        &:last-child { border-radius: 0 0 $table-radius $table-radius }
 
         &__title {
             padding: 0 16px;

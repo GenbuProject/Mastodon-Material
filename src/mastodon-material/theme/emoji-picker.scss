@@ -45,10 +45,15 @@
     &-anchor {
         color: $tab-item-color;
         padding: 10px 4px;
+        border-radius: 0;
 
         &-bar { background-color: $tab-item-active-color }
 
-        &-selected { color: $tab-item-color }
+        &-selected {
+            color: $tab-item-active-color;
+
+            &:hover { color: $tab-item-active-color }
+        }
 
         &:hover { color: $tab-item-color }
     }
@@ -56,9 +61,15 @@
     &-search {
         background: $menu-bg-color;
 
+        &-icon {
+            right: auto;
+            left: 16px;
+            padding: 2px 6px;
+        }
+
         input {
             outline: none;
-            padding: 8px;
+            padding: 8px 8px 8px 33px;
             background: $search-bar-color;
             color: $ui-text-color;
             border: 0;

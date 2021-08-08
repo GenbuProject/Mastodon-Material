@@ -177,6 +177,12 @@ label.icon-button {
 
         &:hover { background: $contained-button-hover-color }
 
+        &:active,
+        &:focus { background: $contained-button-active-color }
+
+        &.negative:active,
+        &.negative:focus { background: $error-color }
+
         &:disabled,
         &:disabled:hover { background-color: $disabled-button-color }
     }

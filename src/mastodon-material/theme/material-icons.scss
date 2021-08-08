@@ -83,7 +83,8 @@
     &.fa-power-off,
     &.fa-copy, &.fa-files-o,
     &.fa-smile-o,
-    &.fa-database {
+    &.fa-database,
+    &.fa-floppy-o, &.fa-save {
         @include icon-font-style;
         line-height: 1;
         letter-spacing: normal;
@@ -175,6 +176,7 @@
     &.fa-copy::before, &.fa-files-o::before { content: "content_copy" }
     &.fa-smile-o::before { content: "emoji_emotions" }
     &.fa-database::before { content: "storage" }
+    &.fa-floppy-o::before, &.fa-save::before { content: "save" }
 }
 
 // bookmark icon
@@ -253,7 +255,9 @@ button.icon-button.reblogPrivate:hover i.fa-retweet {
 .fa.fa-bookmark.column-header__icon.fa-fw,
 .fa.fa-address-book-o.column-header__icon.fa-fw,
 .fa.fa-envelope.column-header__icon.fa-fw,
-.fa.fa-star.column-header__icon.fa-fw { vertical-align: text-bottom }
+.fa.fa-star.column-header__icon.fa-fw,
+.fa.fa-list.column-header__icon.fa-fw,
+.fa.fa-list-ul.column-header__icon.fa-fw { vertical-align: text-bottom }
 
 // top bar icons in single column mode
 .tabs-bar__link .fa {
@@ -302,11 +306,15 @@ tbody tr td span .fa {
     color: $icon-color;
     vertical-align: bottom;
 }
+
 a.table-action-link i.fa,
 button.table-action-link i.fa {
     font-size: 16px;
     vertical-align: bottom;
 }
+
+// you might like
+.trends__header .fa { vertical-align: bottom }
 
 // status scope
 .status__visibility-icon .fa,

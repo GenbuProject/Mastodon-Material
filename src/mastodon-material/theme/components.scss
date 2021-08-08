@@ -318,6 +318,7 @@
     }
 }
 
+// compose-panel in single column mode
 .compose-panel {
     overflow: visible;
     border-radius: $card-radius;
@@ -327,6 +328,7 @@
         background: $card-bg-color;
         padding-bottom: 16px;
         margin-bottom: 0;
+        border-radius: $card-radius;
     }
 }
 
