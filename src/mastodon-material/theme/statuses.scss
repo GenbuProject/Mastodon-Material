@@ -140,6 +140,8 @@
         &>.fa {
             font-size: 26px;
         }
+
+        &-image { border-radius: $card-radius 0 0 $card-radius }
     }
 
     &__title {

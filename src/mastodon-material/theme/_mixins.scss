@@ -277,9 +277,8 @@ $shadow-color-3: rgba(0,0,0,.12);
     }
 }
 
-// version checker
-@mixin version-check($name, $target-version, $website) {
+@mixin version-check($name, $plugin-version, $target-version, $website) {
     @if $target-version != $version {
-        @debug "[Info] #{$name} is made for Mastodon Material #{$target-version}. Some css elements might be broken! Please check plugin website: #{$website}";
+        @debug "[Info] #{$name} #{$plugin-version} is made for Mastodon Material #{$target-version}. Some css elements might be broken! Please check the following website: #{$website}";
     }
 }
