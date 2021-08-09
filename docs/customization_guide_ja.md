@@ -71,7 +71,8 @@
 アイコンフォントにはFilled, Outlined, Rounded, Two-Tone, Sharpの5種類のスタイルがあります。実際のスタイルは[Icons - Material Design](https://material.io/resources/icons/)から確認できます。`// Material Icon style settings`セクションを編集します。デフォルトはFilledです。
 
 ## プラグイン
-`mastodon-material/profiles/{プロファイル名}/loader.scss`で必要なものをアンコメントしてください。
+`mastodon-material/profiles/{プロファイル名}/loader.scss`で必要なものをアンコメントしてください。  
+その他のリソースは[こちらのリポジトリ](https://github.com/GenbuProject/Mastodon-Material-Gallery)を参照してください。
 
 ### タイムラインの投稿をカード化する
 タイムライン上の投稿をカード化します。(デフォルトはリスト型) リスト型と比べ、一覧性が低下します。

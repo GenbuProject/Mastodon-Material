@@ -95,7 +95,10 @@
         padding-right: 40px;
         height: 40px;
 
-        option { background-color: $menu-bg-color }
+        option {
+            color: $menu-text-color;
+            background-color: $menu-bg-color;
+        }
 
         &:hover { background-color: $dropdown-field-bg-hover-color }
 

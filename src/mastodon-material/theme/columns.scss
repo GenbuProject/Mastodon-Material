@@ -277,11 +277,11 @@
 .muted {
     .status {
         &__content {
-            color: $read-primary-text-color !important;
+            color: $read-primary-text-color;
     
-            p { color: $read-primary-text-color !important }
+            p { color: $read-primary-text-color }
     
-            a { color: $read-secondary-text-color !important }
+            a { color: $read-secondary-text-color }
         }
 
         &__display-name strong { color: $read-primary-text-color }

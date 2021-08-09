@@ -72,7 +72,8 @@ The default setting loads the icon fonts on Google Fonts.
 The icon fonts have 5 styles, Filled, Outlined, Rounded, Two-Tone and Sharp. You can check how they look in [Icons - Material Design](https://material.io/resources/icons/). Edit `// Material Icon style settings` section to change it. The default style is Filled.
 
 ## Plugins
-Uncomment what you want to enable in `mastodon-material/profiles/{profile_name}/loader.scss`.
+Uncomment what you want to enable in `mastodon-material/profiles/{profile_name}/loader.scss`.  
+Check other resources in [this page](https://github.com/GenbuProject/Mastodon-Material-Gallery).
 
 ### Display statuses on timeline in a card style
 Change a default list style statuses in timeline into a card one. If you enable it, the less information are displayed in a card style than in a list one in a same density.

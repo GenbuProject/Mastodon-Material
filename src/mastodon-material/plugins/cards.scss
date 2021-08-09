@@ -16,6 +16,8 @@
             border-radius: 0;
         }
     }
+
+    .columns-area__panels__main { box-shadow: none }
 }
 
 .status {
@@ -36,6 +38,8 @@
     background: $card-bg-color;
 }
 
-.notification .status__wrapper.status__wrapper { box-shadow: none !important }
+.notification {
+    .status__wrapper.status__wrapper { box-shadow: none !important }
 
-.notification__filter-bar { @include non-overflow-shadow-4dp }
+    &__filter-bar { @include non-overflow-shadow-4dp }
+}
