@@ -79,10 +79,26 @@
 
 `@import 'plugins/cards';`をアンコメントしてください。
 
+<details>
+<summary>スクリーンショットの表示/非表示</summary>
+
+![cards](res/cards.png)
+</details>
+
 ### 一覧性を向上させる
 このテーマのデフォルト設定では、マテリアルデザインガイドラインに完全準拠しているため、Mastodonデフォルトのテーマと比較して情報密度が低くなっています。ガイドライン非準拠ですが「密モード(denseプラグイン)」を適用することによって、一覧性を向上させることができます。
 
 `@import 'plugins/dense';`をアンコメントしてください。
+
+<details>
+<summary>スクリーンショットの表示/非表示</summary>
+
+Before
+![before](res/mastodon-light.png)
+
+After
+![after](res/dense.png)
+</details>
 
 ## (参考)マテリアルデザインアイコンフォントを利用しない
 このテーマでは、マテリアルデザインアイコンの表示にGoogle製[Material Iconsフォント](https://google.github.io/material-design-icons/#icon-font-for-the-web)を採用しています。ライセンス上の問題がある場合などに、このテーマの他のUIに影響を及ぼすことなくデフォルトのアイコンフォントである[Font Awesome](https://fontawesome.com/)を利用できます。

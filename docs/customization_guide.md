@@ -80,10 +80,26 @@ Change a default list style statuses in timeline into a card one. If you enable 
 
 Uncomment `@import 'plugins/cards';` to enable it.
 
+<details>
+<summary>show/hide screenshots</summary>
+
+![cards](res/cards.png)
+</details>
+
 ### Improve the browseability
 This theme based on Material Design Guideline strictly, the less information are displayed by the default settings than the mastodon default ones in a same density. This plugin (dense plugin) can make the information displayed more by ignoring the guideline.
 
 Uncomment `@import 'plugins/dense';` to enable it.
+
+<details>
+<summary>show/hide screenshots</summary>
+
+Before
+![before](res/mastodon-light.png)
+
+After
+![after](res/dense.png)
+</details>
 
 ## (etc) Disable the material design icon font
 This theme use [Material Icons Font](https://google.github.io/material-design-icons/#icon-font-for-the-web) by Google to display Material Design icon. If you have some problem about license, you can use [Font Awesome](https://fontawesome.com/), default icon font without any bad effect on other UI in this theme.
