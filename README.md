@@ -1,6 +1,6 @@
 # Mastodon Material
 
-<img src="docs/res/top.png" alt="mastodon-material">
+![Mastodon Material](docs/res/top.png)
 
 ## Language | 言語
 
@@ -10,7 +10,31 @@
 
 Mastodon Material is the native theme for Mastodon, which based on [Material Design](https://material.io). Development policy is [here (Japanese)](docs/development_policy_ja.md).
 
-> Note: This theme is now beta version. Many features may not be implemented or not work properly. 
+## Screenshots
+<details>
+<summary>show/hide</summary>
+
+v1-light + material-v1
+![v1-light](docs/res/v1-light.png)
+
+v1-dark + material-v1
+![v1-dark](docs/res/v1-dark.png)
+
+black + material-v1
+![black](docs/res/black.png)
+
+v2-light + material-v2
+![v2-light](docs/res/v2-light.png)
+
+v2-dark + material-v2
+![v2-dark](docs/res/v2-dark.png)
+
+mastodon-light + material-v1
+![mastodon-light](docs/res/mastodon-light.png)
+
+mastodon-dark + material-v1
+![mastodon-dark](docs/res/mastodon-dark.png)
+</details>
 
 ## Requirement
 

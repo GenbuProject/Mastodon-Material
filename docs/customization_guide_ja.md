@@ -71,17 +71,34 @@
 アイコンフォントにはFilled, Outlined, Rounded, Two-Tone, Sharpの5種類のスタイルがあります。実際のスタイルは[Icons - Material Design](https://material.io/resources/icons/)から確認できます。`// Material Icon style settings`セクションを編集します。デフォルトはFilledです。
 
 ## プラグイン
-`mastodon-material/profiles/{プロファイル名}/loader.scss`で必要なものをアンコメントしてください。
+`mastodon-material/profiles/{プロファイル名}/loader.scss`で必要なものをアンコメントしてください。  
+その他のリソースは[こちらのリポジトリ](https://github.com/GenbuProject/Mastodon-Material-Gallery)を参照してください。
 
 ### タイムラインの投稿をカード化する
 タイムライン上の投稿をカード化します。(デフォルトはリスト型) リスト型と比べ、一覧性が低下します。
 
 `@import 'plugins/cards';`をアンコメントしてください。
 
+<details>
+<summary>スクリーンショットの表示/非表示</summary>
+
+![cards](res/cards.png)
+</details>
+
 ### 一覧性を向上させる
 このテーマのデフォルト設定では、マテリアルデザインガイドラインに完全準拠しているため、Mastodonデフォルトのテーマと比較して情報密度が低くなっています。ガイドライン非準拠ですが「密モード(denseプラグイン)」を適用することによって、一覧性を向上させることができます。
 
 `@import 'plugins/dense';`をアンコメントしてください。
+
+<details>
+<summary>スクリーンショットの表示/非表示</summary>
+
+Before
+![before](res/mastodon-light.png)
+
+After
+![after](res/dense.png)
+</details>
 
 ## (参考)マテリアルデザインアイコンフォントを利用しない
 このテーマでは、マテリアルデザインアイコンの表示にGoogle製[Material Iconsフォント](https://google.github.io/material-design-icons/#icon-font-for-the-web)を採用しています。ライセンス上の問題がある場合などに、このテーマの他のUIに影響を及ぼすことなくデフォルトのアイコンフォントである[Font Awesome](https://fontawesome.com/)を利用できます。
