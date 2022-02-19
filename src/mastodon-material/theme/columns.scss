@@ -15,7 +15,6 @@
 .column-header {
     background: $top-bar-color;
     border-radius: $bar-radius;
-    height: 56px;
 
     > button {
         padding: 16px;
@@ -480,22 +479,23 @@
         &:active { color: $icon-button-active-color }
     }
 
+    // reactions chip
     &__item {
         @include chip-type($chip-type);
-        border-radius: 17px;
+        border-radius: $chip-radius;
         margin: 2px 4px;
 
         &.active .reactions-bar__item__count { color: $chip-selected-text-color }
 
         &__emoji {
-            width: 24px;
-            height: 24px;
-            margin: 4px 0 4px 2px;
+            width: $chip-radius;
+            height: $chip-radius;
+            margin: 4px 0;
         }
 
         &__count {
-            font-size: 16px;
-            margin: 0 12px 0 8px;
+            font-size: 14px;
+            margin: 0 8px;
             color: $secondary-text-color;
         }
 

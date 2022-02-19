@@ -65,6 +65,15 @@ $tab-indicator-thickness: 4px;
 $chip-type: outlined;  // Material v2 styled outlined chip
 //$outlined-chip: contained;  // Material v1 styled contained chip
 
+//$chip-size: 16px;  // Chip height: 24px, Icon size: 16px
+//$chip-size: 20px;  // Chip height: 28px, Icon size: 20px
+$chip-size: 24px;  // Chip hight: 32px, Icon size: 24px
+
+//$chip-radius: 0;  // Rectangle
+//$chip-radius: 4px;  // Rounded corner
+//$chip-radius: 8px;  // Rounded corner (Material v3)
+$chip-radius: 17px;  // Oval
+
 
 // Button on statuses
 $button-on-status: text;  // Material v1 styled text button
