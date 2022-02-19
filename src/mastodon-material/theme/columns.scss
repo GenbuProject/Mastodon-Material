@@ -488,8 +488,8 @@
         &.active .reactions-bar__item__count { color: $chip-selected-text-color }
 
         &__emoji {
-            width: $chip-radius;
-            height: $chip-radius;
+            width: $chip-size;
+            height: $chip-size;
             margin: 4px 0;
         }
 

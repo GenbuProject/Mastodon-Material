@@ -3,11 +3,13 @@
 
 
 // Navigation bar radius
+//$nav-bar-radius: 0;
 $nav-bar-radius: 8px;
 //$nav-bar-radius: 28px;  // full radius
 
 
 // Search bar radius
+//$search-bar-radius: 0;
 $search-bar-radius: 8px;
 //$search-bar-radius: 21px;  // full rounded
 
@@ -18,32 +20,39 @@ $bar-radius: 0;
 
 
 // Button radius settings
+//$button-radius: 0;
 $button-radius: 8px;
 
 
 // Card radius settings
+//$card-radius: 0;
 $card-radius: 8px;
 
 
 // Dialog radius settings
+//$dialog-radius: 0;
 $dialog-radius: 8px;
 
 
 // Menu radius settings
+//$menu-radius: 0;
 $menu-radius: 8px;
 
 
 // Table radius settings
-$table-radius: 8px;
+//$table-radius: 0;
 //$table-radius: 2px;
+$table-radius: 8px;
 
 
 // Media radius settings
 $media-radius: 0;
 //$media-radius: 2px;
+//$media-radius: 8px;
 
 
 // Navigation drawer item settings
+//$nav-drawer-item-radius: 0;  // rectangle
 $nav-drawer-item-radius: 8px;  // corner rounded
 //$nav-drawer-item-radius: 32px;  // full rounded
 //$nav-drawer-item-radius: 32px 0 0 32px;  // left rounded
@@ -51,12 +60,14 @@ $nav-drawer-item-radius: 8px;  // corner rounded
 
 // Avatar cropping settings
 $avatar-radius: 50%;  // Rounded cropping
-//$avatar-radius: $card-radius  // Fit to card radius
-//$avatar-radius: 2px  // Material v1 square
-//$avatar-radius: 8px  // Material v2 square
+//$avatar-radius: $card-radius;  // Fit to card radius
+//$avatar-radius: 0;  // without cropping
+//$avatar-radius: 2px;  // Material v1 square
+//$avatar-radius: 8px;  // Material v2 square
 
 
 // Tab indicator thickness
+//$tab-indicator-thickness: 0;
 //$tab-indicator-thickness: 2px;
 $tab-indicator-thickness: 4px;
 
@@ -65,9 +76,9 @@ $tab-indicator-thickness: 4px;
 $chip-type: outlined;  // Material v2 styled outlined chip
 //$outlined-chip: contained;  // Material v1 styled contained chip
 
-//$chip-size: 16px;  // Chip height: 24px, Icon size: 16px
+//$chip-size: 16px;  // Chip height: 24px, Icon size: 16px (Mastodon default)
 //$chip-size: 20px;  // Chip height: 28px, Icon size: 20px
-$chip-size: 24px;  // Chip hight: 32px, Icon size: 24px
+$chip-size: 24px;  // Chip height: 32px, Icon size: 24px
 
 //$chip-radius: 0;  // Rectangle
 //$chip-radius: 4px;  // Rounded corner

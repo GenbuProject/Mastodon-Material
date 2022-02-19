@@ -5,7 +5,9 @@
 @import 'color', 'layout';
 
 @import '../../theme/functions', '../../theme/mixins';
+
+@import '../../theme/material-shadow';
+@import '../../theme/material-icons';
+
 @import '../../theme/theme';
 @import 'plugins';
-
-@import '../../theme/material-icons';
