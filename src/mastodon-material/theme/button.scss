@@ -187,3 +187,5 @@ label.icon-button {
         &:disabled:hover { background-color: $disabled-button-color }
     }
 }
+
+.layout-multiple-columns .button.button--with-bell { padding: 0 16px }

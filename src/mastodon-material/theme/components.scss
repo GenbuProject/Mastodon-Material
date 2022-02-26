@@ -156,9 +156,17 @@
     }
 }
 
-.navigation-panel hr {
-    border-top: 1px solid $border-color;
-    margin: 8px 0;
+.navigation-panel {
+    hr {
+        border-top: 1px solid $border-color;
+        margin: 8px 0;
+    }
+
+    &>a {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 }
 
 .flex-spacer { margin: 8px 0 }
@@ -386,6 +394,16 @@
         &:focus { border-color: $border-hover-color }
     }
 
+    &__number {
+        width: 48px;
+        flex: 0 0 48px;
+    }
+
+    &__number,
+    &__option__text { padding: 8px 0 }
+
+    &__voted { padding: 8px }
+
     &__option {
         padding: 4px;
 
@@ -396,8 +414,6 @@
             border-radius: 2px;
             padding: 8px 16px;
         }
-
-        &__text { padding: 8px 0 }
     }
 
     &__chart {
@@ -442,40 +458,40 @@
         }
 
         &__content {
-            color: $secondary-text-color;
+            color: $info-text-color;
 
-            strong { color: $ui-text-color }
+            strong { color: $menu-text-color }
         }
 
         &.active {
             background: $menu-bg-active-color;
-            color: $icon-hover-color;
+            color: $icon-color;
 
             .privacy-dropdown__option__content {
-                color: $secondary-text-color;
+                color: $info-text-color;
 
-                strong { color: $ui-text-color }
+                strong { color: $menu-text-color }
             }
 
             &:hover {
                 background: $menu-bg-active-color;
                 
                 .privacy-dropdown__option__content {
-                    color: $secondary-text-color;
+                    color: $info-text-color;
 
-                    strong { color: $ui-text-color }
+                    strong { color: $menu-text-color }
                 }
             }
         }
 
         &:hover {
             background: $menu-bg-hover-color;
-            color: $icon-hover-color;
+            color: $icon-color;
 
             .privacy-dropdown__option__content {
-                color: $secondary-text-color;
+                color: $info-text-color;
 
-                strong { color: $ui-text-color }
+                strong { color: $menu-text-color }
             }
         }
     }

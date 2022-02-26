@@ -96,12 +96,21 @@
                     dl {
                         border-bottom: 1px solid $border-color;
 
-                        &:first-child,
-                        &:first-child .verified { border-radius: $table-radius $table-radius 0 0 }
+                        &:first-child dd,
+                        &:first-child dd .verified { border-radius: 0 $table-radius 0 0 }
 
-                        &:last-child,
-                        &:last-child .verified {
-                            border-radius: 0 0 $table-radius $table-radius;
+                        &:last-child dd,
+                        &:last-child dd .verified {
+                            border-radius: 0 0 $table-radius 0;
+                            border-bottom: 0;
+                        }
+                        
+                        &:first-child dt,
+                        &:first-child dt .verified { border-radius: $table-radius 0 0 0 }
+
+                        &:last-child dt,
+                        &:last-child dt .verified {
+                            border-radius: 0 0 0 $table-radius;
                             border-bottom: 0;
                         }
                     }
