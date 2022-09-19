@@ -1,3 +1,8 @@
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'base_config' as *;
+@use 'base_icon_config' as *;
+
 @include icon-font;
 
 .fa-fw {

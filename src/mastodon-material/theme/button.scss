@@ -1,3 +1,7 @@
+@use 'mixins' as *;
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
 @include button-shadow;
 
 .icon-button {
@@ -35,12 +39,14 @@
     }
 
     &.overlayed {
-        @include icon-button;
+        width: 32px !important;
+        height: 32px !important;
+        box-sizing: border-box;
         border-radius: 50%;
         background: $media-icon-bg-color;
         color: $media-icon-color;
         padding: 4px;
-        line-height: 20px !important;
+        line-height: 12px !important;
     
         &:hover {
             background: $media-icon-bg-color;

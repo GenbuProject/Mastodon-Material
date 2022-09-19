@@ -1,20 +1,32 @@
+@use 'mixins' as *;
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
 .column {
     @include shadow-1dp;
     padding: 0;
     margin: 10px 8px;
     border-radius: $card-radius;
+    overflow: visible;
 
     &>.scrollable {
         background: $list-bg-color;
         opacity: $column-transparency;
+        border-radius: 0 0 $card-radius $card-radius;
     }
 
-    &:last-child { box-shadow: none }
+    &:last-child {
+        box-shadow: none;
+        &:has(.scrollable) { @include shadow-1dp }
+    }
 }
 
 .column-header {
+    @include shadow-4dp;
     background: $top-bar-color;
-    border-radius: $bar-radius;
+    border-radius: $card-radius $card-radius 0 0;
+
+    &:last-child { border-radius: $nav-bar-radius }
 
     > button {
         padding: 16px;
@@ -45,7 +57,12 @@
         padding: 8px;
         margin: 10px;
         border-radius: 50%;
-        box-sizing: content-box;
+
+        .fa {
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+        }
 
         &.active {
             color: $top-bar-icon-active-color;
@@ -91,11 +108,10 @@
     }
 
     &__wrapper {
-        @include shadow-4dp;
-        border-radius: $bar-radius;
+        border-radius: $card-radius;
         opacity: $bar-transparency;
 
-        .announcements { border-top: 1px solid $border-color }
+        .announcements { border-bottom: 1px solid $border-color }
 
         &.active {
             @include shadow-4dp;
@@ -108,11 +124,11 @@
         transition: .25s cubic-bezier(0.0,0.0,0.2,1), .25s cubic-bezier(1,0.2,0,0);
         color: $ui-text-color;
         background: $card-bg-color;
-        border-top: 1px solid $border-color;
 
         &-inner {
             background: $card-bg-color;
             padding: 16px;
+            border-bottom: 1px solid $border-color;
         }
 
         &.collapsed {
@@ -122,6 +138,7 @@
     }
 
     &__back-button {
+        @include icon-button;
         background: $top-bar-color;
         color: $top-bar-icon-color;
         margin: 10px;
@@ -145,7 +162,7 @@
 .column-link {
     color: $ui-text-color;
     background: $bg-color;
-    padding: 16px;
+    padding: 14px;
     border-radius: $nav-drawer-item-radius;
 
     &:hover { background: $list-bg-hover-color }
@@ -224,7 +241,7 @@
 .setting-text {
     color: $primary-text-color;
     background: $text-field-bg-color;
-    border-radius: $bar-radius;
+    border-radius: $nav-bar-radius;
 
     &::placeholder { color: $tips-text-color }
 }
@@ -507,7 +524,6 @@
     &__filter-bar {
         background: $tab-bg-color;
         border-bottom: 1px solid $border-color;
-        z-index: 1;
         opacity: $bar-transparency;
     
         button {

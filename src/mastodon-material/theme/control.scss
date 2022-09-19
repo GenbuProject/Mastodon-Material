@@ -1,3 +1,6 @@
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
 .react-toggle {
     width: 36px;
     height: 16px;

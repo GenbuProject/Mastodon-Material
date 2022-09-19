@@ -1,3 +1,6 @@
+@use 'material-shadow' as *;
+@use 'base_config' as *;
+
 .emoji-picker-dropdown {
     &__menu {
         @include shadow-8dp;

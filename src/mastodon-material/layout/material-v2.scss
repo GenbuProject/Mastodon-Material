@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import '../theme/mixins';
 
 
 // Navigation bar radius
@@ -12,11 +11,6 @@ $nav-bar-radius: 8px;
 //$search-bar-radius: 0;
 $search-bar-radius: 8px;
 //$search-bar-radius: 21px;  // full rounded
-
-
-// Bar radius settings
-$bar-radius: 0;
-//$bar-radius: 8px;
 
 
 // Button radius settings
@@ -54,8 +48,7 @@ $media-radius: 0;
 // Navigation drawer item settings
 //$nav-drawer-item-radius: 0;  // rectangle
 $nav-drawer-item-radius: 8px;  // corner rounded
-//$nav-drawer-item-radius: 32px;  // full rounded
-//$nav-drawer-item-radius: 32px 0 0 32px;  // left rounded
+//$nav-drawer-item-radius: 24px;  // full rounded
 
 
 // Avatar cropping settings

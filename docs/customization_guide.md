@@ -12,7 +12,7 @@ Plugins, settings and any other customizations are stored as profiles. It can be
 ## Create new profiles
 1. Duplicate [`default`](../src/mastodon-material/profiles/default) folder and change its name. The new folder name is called {profile_name} in this document.
 2. Duplicate [`mastodon-material.scss`](../src/mastodon-material.scss) and change its name to `{profile_name}.scss`. Confirm `{profile_name}.scss` is located in `app/javascript/styles`, Mastodon source directory as you installed this theme.
-3. Open `{profile_name}.scss` and change `@import 'mastodon-material/profiles/default/loader';` into `@import 'mastodon-material/profiles/{profile_name}/loader';`.
+3. Open `{profile_name}.scss` and change `@use 'mastodon-material/profiles/default/loader';` into `@use 'mastodon-material/profiles/{profile_name}/loader';`.
 4. Also refer [README.md](../README.md#How-to-install) to continue. Configure the new profile like below by editing `config/themes.yml`.
   ```yml
   default: styles/application.scss
@@ -39,7 +39,7 @@ Plugins, settings and any other customizations are stored as profiles. It can be
 Please make reference to [`mastodon-material/theme/base_config.scss`](../src/mastodon-material/theme/base_config.scss) and write your change in `mastodon-material/profiles/{profile_name}/config.scss`. **DO NOT** edit [`base_config.scss`](../src/mastodon-material/theme/base_config.scss).
 
 ### Color and layout presets
-There are two types of profiles, color presets and layout presets. Default color preset is `v1-light` and layout preset is `material-v1`. You can configure them by using `@import`.
+There are two types of profiles, color presets and layout presets. Default color preset is `v1-light` and layout preset is `material-v1`. You can configure them by using `@use`.
 
 ### Float search bar when cursor hovers
 <img src="res/search-bar-hover.gif" alt="search-bar hover">
@@ -78,7 +78,7 @@ Check other resources in [this page](https://github.com/GenbuProject/Mastodon-Ma
 ### Display statuses on timeline in a card style
 Change a default list style statuses in timeline into a card one. If you enable it, the less information are displayed in a card style than in a list one in a same density.
 
-Uncomment `@import 'plugins/cards';` to enable it.
+Uncomment `@use 'plugins/cards';` to enable it.
 
 <details>
 <summary>show/hide screenshots</summary>
@@ -89,7 +89,7 @@ Uncomment `@import 'plugins/cards';` to enable it.
 ### Improve the browseability
 This theme based on Material Design Guideline strictly, the less information are displayed by the default settings than the mastodon default ones in a same density. This plugin (dense plugin) can make the information displayed more by ignoring the guideline.
 
-Uncomment `@import 'plugins/dense';` to enable it.
+Uncomment `@use 'plugins/dense';` to enable it.
 
 <details>
 <summary>show/hide screenshots</summary>
@@ -104,4 +104,4 @@ After
 ## (etc) Disable the material design icon font
 This theme use [Material Icons Font](https://google.github.io/material-design-icons/#icon-font-for-the-web) by Google to display Material Design icon. If you have some problem about license, you can use [Font Awesome](https://fontawesome.com/), default icon font without any bad effect on other UI in this theme.
 
-Open `mastodon-material/profiles/{profile_name}/loader.scss` and comment out `@import 'theme/material-icons';` to disable it.
+Open `mastodon-material/profiles/{profile_name}/loader.scss` and comment out `@use 'theme/material-icons';` to disable it.

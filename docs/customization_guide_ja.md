@@ -12,7 +12,7 @@
 ### プロファイルの新規作成
 1. [`default`](../src/mastodon-material/profiles/default)フォルダを複製し、フォルダ名を変更します。この文書では変更後のフォルダ名を`{プロファイル名}`と表記します。
 2. [`mastodon-material.scss`](../src/mastodon-material.scss)を複製し、ファイル名を`{プロファイル名}`に変更します。テーマのインストール時と同様、`{プロファイル名}.scss`がMastodonの`app/javascript/styles`に配置されていることを確認します。
-3. `{プロファイル名}.scss`を開き、`@import 'mastodon-material/profiles/default/loader';`の行を`@import 'mastodon-material/profiles/{プロファイル名}/loader';`に変更します。
+3. `{プロファイル名}.scss`を開き、`@use 'mastodon-material/profiles/default/loader';`の行を`@use 'mastodon-material/profiles/{プロファイル名}/loader';`に変更します。
 4. これ以降は[README_ja.md](../README_ja.md#導入手順)も参照しながら作業してください。Mastodonの`config/themes.yml`に、以下を参考に追記します。
   ```yml
   default: styles/application.scss
@@ -39,7 +39,7 @@
 `mastodon-material/profiles/{プロファイル名}/config.scss`に記述します。ベースファイルである[`mastodon-material/theme/base_config.scss`](../src/mastodon-material/theme/base_config.scss)を参考にしてください。ただし、[`base_config.scss`](../src/mastodon-material/theme/base_config.scss)は**編集しないでください**。
 
 ### 配色とレイアウトのプリセット
-配色を変更するカラープリセットと、レイアウトなどを変更するレイアウトプリセットの2種類があります。デフォルトのカラープリセットは`v1-light`、レイアウトプリセットは`material-v1`が適用されます。`@import`を使用して変更します。
+配色を変更するカラープリセットと、レイアウトなどを変更するレイアウトプリセットの2種類があります。デフォルトのカラープリセットは`v1-light`、レイアウトプリセットは`material-v1`が適用されます。`@use`を使用して変更します。
 
 ### 検索バーをホバー時に浮き上がらせる
 <img src="res/search-bar-hover.gif" alt="search-bar hover">
@@ -77,7 +77,7 @@
 ### タイムラインの投稿をカード化する
 タイムライン上の投稿をカード化します。(デフォルトはリスト型) リスト型と比べ、一覧性が低下します。
 
-`@import 'plugins/cards';`をアンコメントしてください。
+`@use 'plugins/cards';`をアンコメントしてください。
 
 <details>
 <summary>スクリーンショットの表示/非表示</summary>
@@ -88,7 +88,7 @@
 ### 一覧性を向上させる
 このテーマのデフォルト設定では、マテリアルデザインガイドラインに完全準拠しているため、Mastodonデフォルトのテーマと比較して情報密度が低くなっています。ガイドライン非準拠ですが「密モード(denseプラグイン)」を適用することによって、一覧性を向上させることができます。
 
-`@import 'plugins/dense';`をアンコメントしてください。
+`@use 'plugins/dense';`をアンコメントしてください。
 
 <details>
 <summary>スクリーンショットの表示/非表示</summary>
@@ -103,4 +103,4 @@ After
 ## (参考)マテリアルデザインアイコンフォントを利用しない
 このテーマでは、マテリアルデザインアイコンの表示にGoogle製[Material Iconsフォント](https://google.github.io/material-design-icons/#icon-font-for-the-web)を採用しています。ライセンス上の問題がある場合などに、このテーマの他のUIに影響を及ぼすことなくデフォルトのアイコンフォントである[Font Awesome](https://fontawesome.com/)を利用できます。
 
-`mastodon-material/profiles/{プロファイル名}/loader.scss`を開き、`@import 'theme/material-icons';`をコメントアウトしてください。
+`mastodon-material/profiles/{プロファイル名}/loader.scss`を開き、`@use 'theme/material-icons';`をコメントアウトしてください。

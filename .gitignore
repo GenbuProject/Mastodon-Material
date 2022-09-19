@@ -8,3 +8,5 @@ build/test.bat
 build/test.sh
 build/build.css
 build/build.css.map
+build/test.css
+build/test.css.map

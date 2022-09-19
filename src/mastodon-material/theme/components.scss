@@ -1,3 +1,7 @@
+@use 'mixins' as *;
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
 .modal-root {
     transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
 
@@ -105,7 +109,7 @@
 .search-popout {
     @include shadow-2dp;
     background: $search-bar-focus-color;
-    border-radius: 0px $bar-radius;
+    border-radius: 0px $nav-bar-radius;
     border-top: 1px solid $border-color;
     margin-top: 0;
     color: $tips-text-color;
@@ -285,19 +289,14 @@
             color: $tips-text-color;
             padding: 8px;
 
-            .icon-button {
+            .icon-button,
+            .text-icon-button {
                 @include icon-button;
                 padding: 8px;
                 margin: 0 2px;
             }
 
-            .text-icon-button {
-                width: 20px !important;
-                height: 20px !important;
-                padding: 8px;
-                margin: 0 2px;
-                line-height: 20px !important;
-            }
+            .text-icon-button { line-height: 22px !important }
         }
 
         &__poll-wrapper {
@@ -440,6 +439,11 @@
         box-shadow: none;
 
         .icon-button { color: $icon-button-active-color }
+    }
+
+    &__value-icon.icon-button.inverted {
+        @include icon-button;
+        padding: 8px;
     }
 
     &__dropdown {

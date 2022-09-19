@@ -1,18 +1,38 @@
-.confirmation-modal {
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
+.actions-modal,
+.block-modal,
+.boost-modal,
+.confirmation-modal,
+.mute-modal,
+.report-modal {
     @include shadow-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $dialog-radius;
+}
 
-    &__container {
-        text-align: left;
-        padding: 24px;
-    }
-
+.block-modal,
+.boost-modal,
+.confirmation-modal,
+.mute-modal {
     &__action-bar {
         justify-content: flex-end;
         background: $card-bg-color;
         padding: 8px;
+
+        &>div {
+            color: $ui-text-color;
+            padding-right: 8px;
+        }
+    }
+}
+
+.confirmation-modal {
+    &__container {
+        text-align: left;
+        padding: 24px;
     }
 
     &__secondary-button {
@@ -35,10 +55,6 @@
 }
 
 .actions-modal {
-    @include shadow-24dp;
-    background: $card-bg-color;
-    border-radius: $card-radius;
-
     ul li:not(:empty) a {
         color: $ui-text-color;
         font-size: 16px;
@@ -64,14 +80,11 @@
     }
 }
 
-.boost-modai__status-header { padding-left: 56px }
+.boost-modal {
+    &__container { padding: 8px }
+}
 
 .report-modal {
-    @include shadow-24dp;
-    background: $card-bg-color;
-    color: $ui-text-color;
-    border-radius: $card-radius;
-
     &__target {
         padding: 24px;
         text-align: left;

@@ -1,3 +1,7 @@
+@use 'mixins' as *;
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
 .account {
     border-bottom: 1px solid $border-color;
     padding: 16px;
@@ -205,7 +209,6 @@
         .icon-button {
             @include icon-button;
             padding: 8px;
-            box-sizing: content-box;
         }
     }
 }

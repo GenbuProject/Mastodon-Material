@@ -77,6 +77,11 @@ $media-icon-color: transparentize(#ffffff, 0.4);
 $media-icon-hover-color: transparentize(#ffffff, 0.2);
 $media-icon-bg-color: transparentize(#000000, 0.5);
 $media-icon-bg-hover-color: transparentize(#000000, 0.8);
+$boosted-icon-color: $primary-color;
+$favorite-icon-color: #ffd600;  // Star
+//$favorite-icon-color: #ff4081;  // Heart
+//$favorite-icon-color: #db4437;  // +1
+//$favorite-icon-color: #ffffff;  // inverted +1 (for plus plugin)
 
 // Control color
 $control-border-color: $icon-color;

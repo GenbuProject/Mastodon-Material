@@ -1,3 +1,6 @@
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
 .admin-wrapper {
     .sidebar-wrapper__inner { background: $bg-color }
 

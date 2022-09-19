@@ -1,3 +1,7 @@
+@use '../theme/base_config' as *;
+@use '../theme/base_icon_config' as *;
+@use 'material-shadow' as *;
+
 @mixin material-transition { transition: .25s cubic-bezier(0,0,0.2,1) }
 
 @mixin search-bar-hover {
@@ -110,9 +114,9 @@
 }
 
 @mixin icon-button {
-    width: 20px !important;
-    height: 20px !important;
-    font-size: 20px !important;
+    width: 36px !important;
+    height: 36px !important;
+    box-sizing: border-box;
 }
 
 // check background-image value

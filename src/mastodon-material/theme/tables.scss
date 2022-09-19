@@ -1,3 +1,5 @@
+@use 'base_config' as *;
+
 .batch-table {
     border: 1px solid $border-color;
     border-radius: $table-radius;

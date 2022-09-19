@@ -1,3 +1,6 @@
+@use 'base_config' as *;
+@use 'material-shadow' as *;
+
 .landing-page {
     &__call-to-action {
         @include shadow-2dp;

@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-@import '../../theme/base_config', '../../theme/base_icon_config';
-@import 'config', 'icon_config';
-@import 'color', 'layout';
+@use '../../theme/base_config', '../../theme/base_icon_config';
+@use 'config', 'icon_config';
+@use 'color', 'layout';
 
-@import '../../theme/functions', '../../theme/mixins';
+@use '../../theme/functions', '../../theme/mixins';
 
-@import '../../theme/material-shadow';
-@import '../../theme/material-icons';
+@use '../../theme/material-shadow';
+@use '../../theme/material-icons';
 
-@import '../../theme/theme';
-@import 'plugins';
+@use '../../theme/theme';
+@use 'plugins';
