@@ -1,3 +1,5 @@
+@use '../theme/config' as *;
+
 .column {
     box-shadow: none !important;
     margin: 2px 0 !important;
@@ -36,10 +38,4 @@
     margin: 8px 2px;
     border-radius: $card-radius;
     background: $card-bg-color;
-}
-
-.notification {
-    .status__wrapper.status__wrapper { box-shadow: none !important }
-
-    &__filter-bar { @include non-overflow-shadow-4dp }
 }

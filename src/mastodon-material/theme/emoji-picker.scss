@@ -1,5 +1,5 @@
-@use 'material-shadow' as *;
-@use 'base_config' as *;
+@use 'shadow' as *;
+@use '../config' as *;
 
 .emoji-picker-dropdown {
     &__menu {

@@ -1,154 +1,154 @@
-@charset "UTF-8";
-
-
-$color-scheme: dark;
+$color-scheme: dark !default;
 
 // Base color
-$primary-color: #4285f4;
-$secondary-color: #db4437;
-$error-color: #B00020;
-$verified-color: #4caf50;
+$primary-color: #4285f4 !default;
+$secondary-color: #db4437 !default;
+$caution-color: #bf5900 !default;
+$error-color: #B00020 !default;
+$positive-color: #4caf50 !default;
 
 // Text color
-$primary-text-color: #ffffff;
-$secondary-text-color: #9aa0a6;
-$ui-text-color: #e8eaed;
-$inverted-text-color: #000000;
-$section-text-color: $primary-color;
-$info-text-color: #9aa0a6;
-$tips-text-color: #c0c0c0;
-$disabled-text-color: rgba(0,0,0,.54);
-$link-text-color: #4285f4;
-$menu-text-color: $ui-text-color;
-$top-bar-text-color: $ui-text-color;
-$search-bar-text-color: $inverted-text-color;
-$contained-button-text-color: #ffffff;
-$primary-text-on-shadow-color: #ffffff;
-$text-field-color: $ui-text-color;
+$primary-text-color: #ffffff !default;
+$secondary-text-color: #9aa0a6 !default;
+$ui-text-color: #e8eaed !default;
+$inverted-text-color: #000000 !default;
+$section-text-color: $primary-color !default;
+$info-text-color: #9aa0a6 !default;
+$tips-text-color: #c0c0c0 !default;
+$disabled-text-color: rgba(0,0,0,.54) !default;
+$link-text-color: #4285f4 !default;
+$caution-text-color: $caution-color;
+$positive-text-color: $positive-color;
+$menu-text-color: $ui-text-color !default;
+$top-bar-text-color: $ui-text-color !default;
+$search-bar-text-color: $inverted-text-color !default;
+$contained-button-text-color: #ffffff !default;
+$primary-text-on-shadow-color: #ffffff !default;
+$text-field-color: $ui-text-color !default;
 
 // Background-color
-$bg-color: #000000;
-$menu-bg-color: #121212;
-$menu-bg-hover-color: lighten($menu-bg-color, 6%);
-$menu-bg-active-color: lighten($menu-bg-color, 10%);
-$menu-bg-active-hover-color: lighten($menu-bg-color, 16%);
-$card-bg-color: #121212;
-$card-bg-hover-color: lighten($card-bg-color, 6%);
-$succeeded-card-bg-color: lighten($verified-color, 36%);
-$list-bg-color: #000000;
-$list-bg-hover-color: lighten($list-bg-color, 6%);
-$list-bg-active-color: lighten($list-bg-color, 10%);
-$list-bg-active-hover-color: lighten($list-bg-color, 16%);
-$list-bg-inactive-color: lighten($list-bg-color, 10%);
-$text-field-bg-color: $card-bg-color;
-$dropdown-field-bg-color: lighten($bg-color, 6%);
-$dropdown-field-bg-hover-color: lighten($dropdown-field-bg-color, 6%);
-$dropdown-field-bg-active-color: lighten($dropdown-field-bg-color, 10%);
-$verified-bg-color: darken($verified-color, 20%);
-$unread-bg-color: transparentize($primary-color, 0.8);
+$bg-color: #000000 !default;
+$menu-bg-color: #121212 !default;
+$menu-bg-hover-color: lighten($menu-bg-color, 6%) !default;
+$menu-bg-active-color: lighten($menu-bg-color, 10%) !default;
+$menu-bg-active-hover-color: lighten($menu-bg-color, 16%) !default;
+$card-bg-color: #121212 !default;
+$card-bg-hover-color: lighten($card-bg-color, 6%) !default;
+$succeeded-card-bg-color: lighten($positive-color, 36%) !default;
+$list-bg-color: #000000 !default;
+$list-bg-hover-color: lighten($list-bg-color, 6%) !default;
+$list-bg-active-color: lighten($list-bg-color, 10%) !default;
+$list-bg-active-hover-color: lighten($list-bg-color, 16%) !default;
+$list-bg-inactive-color: lighten($list-bg-color, 10%) !default;
+$text-field-bg-color: $card-bg-color !default;
+$dropdown-field-bg-color: lighten($bg-color, 6%) !default;
+$dropdown-field-bg-hover-color: lighten($dropdown-field-bg-color, 6%) !default;
+$dropdown-field-bg-active-color: lighten($dropdown-field-bg-color, 10%) !default;
+$verified-bg-color: darken($positive-color, 20%) !default;
+$unread-bg-color: transparentize($primary-color, 0.8) !default;
 
 // Chip color
-$contained-chip-color: #1e1e1e;
-$chip-selected-text-color: $primary-color;
-$contained-chip-hover-color: lighten($contained-chip-color, 6%);
-$contained-chip-selected-color: transparentize($chip-selected-text-color, 0.7);
-$outlined-chip-color: #121212;
-$outlined-chip-hover-color: lighten($outlined-chip-color, 6%);
-$outlined-chip-selected-color: transparentize($chip-selected-text-color, 0.8);
-$outlined-chip-selected-border-color: transparentize($chip-selected-text-color, 0.7);
+$contained-chip-color: #1e1e1e !default;
+$chip-selected-text-color: $primary-color !default;
+$contained-chip-hover-color: lighten($contained-chip-color, 6%) !default;
+$contained-chip-selected-color: transparentize($chip-selected-text-color, 0.7) !default;
+$outlined-chip-color: #121212 !default;
+$outlined-chip-hover-color: lighten($outlined-chip-color, 6%) !default;
+$outlined-chip-selected-color: transparentize($chip-selected-text-color, 0.8) !default;
+$outlined-chip-selected-border-color: transparentize($chip-selected-text-color, 0.7) !default;
 
 // Relationship tag color
-$relationship-tag-color: transparentize(#2e2e2e, 0.2);
+$relationship-tag-color: transparentize(#2e2e2e, 0.2) !default;
 
 // Badge color
-$badge-color: $primary-color;
-//$badge-color: $secondary-color;
+$badge-color: $primary-color !default;
+//$badge-color: $secondary-color !default;
 
 // Icon color
-$icon-color: #e2e2e3;
-$icon-hover-color: #ffffff;
-$icon-bg-hover-color: transparentize(#ffffff, 0.8);
-$icon-bg-active-color: transparentize(#ffffff, 0.7);
-$disabled-icon-color: darken($icon-color, 16%);
-$top-bar-icon-color: $icon-color;
-$top-bar-icon-hover-color: $icon-hover-color;
-$top-bar-icon-active-color: $primary-color;
-$top-bar-unread-icon-color: $secondary-color;
-$media-icon-color: transparentize(#ffffff, 0.4);
-$media-icon-hover-color: transparentize(#ffffff, 0.2);
-$media-icon-bg-color: transparentize(#000000, 0.5);
-$media-icon-bg-hover-color: transparentize(#000000, 0.8);
-$boosted-icon-color: $primary-color;
-$favorite-icon-color: #ffd600;  // Star
-//$favorite-icon-color: #ff4081;  // Heart
-//$favorite-icon-color: #db4437;  // +1
-//$favorite-icon-color: #ffffff;  // inverted +1 (for plus plugin)
+$icon-color: #e2e2e3 !default;
+$icon-hover-color: #ffffff !default;
+$icon-bg-hover-color: transparentize(#ffffff, 0.8) !default;
+$icon-bg-active-color: transparentize(#ffffff, 0.7) !default;
+$disabled-icon-color: darken($icon-color, 16%) !default;
+$top-bar-icon-color: $icon-color !default;
+$top-bar-icon-hover-color: $icon-hover-color !default;
+$top-bar-icon-active-color: $primary-color !default;
+$top-bar-unread-icon-color: $secondary-color !default;
+$media-icon-color: transparentize(#ffffff, 0.4) !default;
+$media-icon-hover-color: transparentize(#ffffff, 0.2) !default;
+$media-icon-bg-color: transparentize(#000000, 0.5) !default;
+$media-icon-bg-hover-color: transparentize(#000000, 0.8) !default;
+$boosted-icon-color: $primary-color !default;
+$favorite-icon-color: #ffd600 !default;  // Star
+//$favorite-icon-color: #ff4081 !default;  // Heart
+//$favorite-icon-color: #db4437 !default;  // +1
+//$favorite-icon-color: #ffffff !default;  // inverted +1 (for plus plugin)
 
 // Control color
-$control-border-color: $icon-color;
-$control-border-active-color: $primary-color;
-$control-border-hover-color: transparentize($control-border-active-color, 0.8);
+$control-border-color: $icon-color !default;
+$control-border-active-color: $primary-color !default;
+$control-border-hover-color: transparentize($control-border-active-color, 0.8) !default;
 
 // Button color
-$icon-button-color: $icon-color;
-$icon-button-hover-color: $icon-hover-color;
-$icon-button-active-color: $primary-color;
-$icon-button-active-hover-color: lighten($icon-button-active-color, 10%);
-$contained-button-color: $primary-color;
-$contained-button-hover-color: lighten($contained-button-color, 6%);
-$contained-button-active-color: lighten($contained-button-color, 10%);
-$outlined-button-color: $primary-color;
-$outlined-button-hover-color: transparentize($outlined-button-color, 0.8);
-$outlined-button-active-color: transparentize($outlined-button-color, 0.7);
-$text-button-color: $primary-color;
-$text-button-hover-color: transparentize($text-button-color, 0.8);
-$text-button-focus-color: transparentize($text-button-color, 0.7);
-$disabled-button-color: #cccccc;
-$floating-action-button-color: $primary-color;
-$floating-action-button-hover-color: lighten($floating-action-button-color, 6%);
-$floating-action-button-active-color: lighten($floating-action-button-color, 10%);
-$floating-action-button-icon-color: #ffffff;
+$icon-button-color: $icon-color !default;
+$icon-button-hover-color: $icon-hover-color !default;
+$icon-button-active-color: $primary-color !default;
+$icon-button-active-hover-color: lighten($icon-button-active-color, 10%) !default;
+$contained-button-color: $primary-color !default;
+$contained-button-hover-color: lighten($contained-button-color, 6%) !default;
+$contained-button-active-color: lighten($contained-button-color, 10%) !default;
+$outlined-button-color: $primary-color !default;
+$outlined-button-hover-color: transparentize($outlined-button-color, 0.8) !default;
+$outlined-button-active-color: transparentize($outlined-button-color, 0.7) !default;
+$text-button-color: $primary-color !default;
+$text-button-hover-color: transparentize($text-button-color, 0.8) !default;
+$text-button-focus-color: transparentize($text-button-color, 0.7) !default;
+$disabled-button-color: #cccccc !default;
+$floating-action-button-color: $primary-color !default;
+$floating-action-button-hover-color: lighten($floating-action-button-color, 6%) !default;
+$floating-action-button-active-color: lighten($floating-action-button-color, 10%) !default;
+$floating-action-button-icon-color: #ffffff !default;
 
 // Toggle color
-$toggle-thumb-color: #ffffff;
-$toggle-track-color: darken($toggle-thumb-color, 18%);
-$toggle-thumb-active-color: #1a73e8;
-$toggle-track-active-color: lighten($toggle-thumb-active-color, 18%);
+$toggle-thumb-color: #ffffff !default;
+$toggle-track-color: darken($toggle-thumb-color, 18%) !default;
+$toggle-thumb-active-color: #1a73e8 !default;
+$toggle-track-active-color: lighten($toggle-thumb-active-color, 18%) !default;
 
 // Border color
-$border-color: #1e1e1e;
-$border-hover-color: lighten($border-color, 30%);
-$border-active-color: $primary-color;
+$border-color: #1e1e1e !default;
+$border-hover-color: lighten($border-color, 30%) !default;
+$border-active-color: $primary-color !default;
 
 // Scroll bar color
-$scroll-bar-thumb-color: lighten($bg-color, 20%);
-$scroll-bar-thumb-hover-color: lighten($scroll-bar-thumb-color, 10%);
-$scroll-bar-thumb-active-color: lighten($scroll-bar-thumb-color, 18%);
+$scroll-bar-thumb-color: lighten($bg-color, 20%) !default;
+$scroll-bar-thumb-hover-color: lighten($scroll-bar-thumb-color, 10%) !default;
+$scroll-bar-thumb-active-color: lighten($scroll-bar-thumb-color, 18%) !default;
 
 // App bar color
-$top-bar-color: #1e1e1e;
-$search-bar-color: lighten($top-bar-color, 6%);
-$search-bar-focus-color: #ffffff;
+$top-bar-color: #1e1e1e !default;
+$search-bar-color: lighten($top-bar-color, 6%) !default;
+$search-bar-focus-color: #ffffff !default;
 
 // Tab color
-$tab-item-color: transparentize(#ffffff, 0.5);
-$tab-item-active-color: $primary-color;
-$tab-bg-color: $top-bar-color;
-$tab-bg-hover-color: transparentize($tab-item-active-color, 0.9);
-$tab-bg-focus-color: transparentize($tab-item-active-color, 0.8);
+$tab-item-color: transparentize(#ffffff, 0.5) !default;
+$tab-item-active-color: $primary-color !default;
+$tab-bg-color: $top-bar-color !default;
+$tab-bg-hover-color: transparentize($tab-item-active-color, 0.9) !default;
+$tab-bg-focus-color: transparentize($tab-item-active-color, 0.8) !default;
 
 // Media indicator color
-$media-page-indicator-color: #9e9e9e;
-$media-page-indicator-active-color: #e6e6e6;
+$media-page-indicator-color: #9e9e9e !default;
+$media-page-indicator-active-color: #e6e6e6 !default;
 
 // Progress indicator color
-$progress-indicator-color: $primary-color;
-$progress-indicator-track-color: lighten($progress-indicator-color, 30%);
-$loading-indicator-color: $primary-color;
+$progress-indicator-color: $primary-color !default;
+$progress-indicator-track-color: lighten($progress-indicator-color, 30%) !default;
+$loading-indicator-color: $primary-color !default;
 
 // Contents color in read status
-$read-primary-text-color: transparentize($primary-text-color, 0.3);
-$read-secondary-text-color: transparentize($secondary-text-color, 0.3);
-$read-ui-text-color: transparentize($ui-text-color, 0.3);
-$read-poll-bar-leading-color: transparentize($progress-indicator-color, 0.3);
-$read-poll-bar-color: transparentize($progress-indicator-track-color, 0.3);
+$read-primary-text-color: transparentize($primary-text-color, 0.3) !default;
+$read-secondary-text-color: transparentize($secondary-text-color, 0.3) !default;
+$read-ui-text-color: transparentize($ui-text-color, 0.3) !default;
+$read-poll-bar-leading-color: transparentize($progress-indicator-color, 0.3) !default;
+$read-poll-bar-color: transparentize($progress-indicator-track-color, 0.3) !default;

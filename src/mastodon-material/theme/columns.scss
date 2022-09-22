@@ -1,6 +1,6 @@
 @use 'mixins' as *;
-@use 'base_config' as *;
-@use 'material-shadow' as *;
+@use '../config' as *;
+@use 'shadow' as *;
 
 .column {
     @include shadow-1dp;
@@ -212,7 +212,6 @@
     background: $top-bar-color;
     color: $top-bar-icon-color;
     padding: 16px;
-    height: 48px;
 
     span { visibility: hidden }  // hide "back" string
 

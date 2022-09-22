@@ -1,83 +1,80 @@
-@charset "UTF-8";
-
-
 // Navigation bar radius
-$nav-bar-radius: 2px;
+$nav-bar-radius: 2px !default;
 
 
 // Search bar radius
-$search-bar-radius: 2px;
+$search-bar-radius: 2px !default;
 
 
 // Button radius settings
-$button-radius: 2px;
+$button-radius: 2px !default;
 
 
 // Card radius settings
-$card-radius: 2px;
+$card-radius: 2px !default;
 
 
 // Dialog radius settings
-$dialog-radius: 2px;
+$dialog-radius: 2px !default;
 
 
 // Menu radius settings
-$menu-radius: 2px;
+$menu-radius: 2px !default;
 
 
 // Table radius settings
-$table-radius: 2px;
+$table-radius: 2px !default;
 
 
 // Media radius settings
-$media-radius: 0;
+$media-radius: 0 !default;
 
 
 // Navigation drawer item settings
-$nav-drawer-item-radius: 0;
+$nav-drawer-item-radius: 0 !default;
 
 
 // Avatar cropping settings
-$avatar-radius: 50%;  // Rounded cropping
-//$avatar-radius: 2px  // Material v1 square
-//$avatar-radius: $card-radius  // Fit to card radius
+$avatar-radius: 50% !default;  // Circular cropping
+//$avatar-radius: 2px !default;  // Material v1 rounded square
+//$avatar-radius: $card-radius !default;  // Fit to card radius
 
 
 // Tab indicator thickness
-$tab-indicator-thickness: 2px;
-//$tab-indicator-thickness: 4px;
+$tab-indicator-thickness: 2px !default;
+//$tab-indicator-thickness: 4px !default;
 
 
 // Chip settings
-$chip-type: contained;  // Material v1 styled contained chip
+$chip-type: contained !default;  // Material v1 styled contained chip
 
-//$chip-size: 16px;  // Chip height: 24px, Icon size: 16px (Mastodon default)
-//$chip-size: 20px;  // Chip height: 28px, Icon size: 20px
-$chip-size: 24px;  // Chip height: 32px, Icon size: 24px
+//$chip-size: 16px !default;  // Chip height: 24px, Icon size: 16px (Mastodon default)
+//$chip-size: 20px !default;  // Chip height: 28px, Icon size: 20px
+$chip-size: 24px !default;  // Chip height: 32px, Icon size: 24px
 
-$chip-radius: 17px;  // Oval
+$chip-radius: 17px !default;  // Oval
 
 // Button on statuses
-$button-on-status: text;  // Material v1 styled text button
-//$button-on-status: outlined;  // Material v2 styled outlined button
+$button-on-status: text !default;  // Material v1 styled text button
+//$button-on-status: outlined !default;  // Material v2 styled outlined button
 
 
 // Button shadow
-$button-shadow: true;  // Material v1 styled colored button with shadow
+$button-shadow: true !default;  // Material v1 styled colored button with shadow
 
 
 // Floating Action Button size
-$fab-size: 56px;
+$fab-size: 56px !default;
 
 
 // CW text field border
-$cw-area-border: underlined;
-//$cw-area-border: none;
+$cw-area-border: underlined !default;
+//$cw-area-border: none !default;
 
 // Compose text field border
-$compose-area-border: none;
-//$compose-area-border: underlined;
+$compose-area-border: none !default;
+//$compose-area-border: underlined !default;
 
 // Other text field border
-$other-text-area-border: underlined;
-//$other-text-area-border: none;
+$other-text-area-border: underlined !default;
+//$other-text-area-border: none !default;

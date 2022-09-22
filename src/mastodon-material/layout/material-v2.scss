@@ -1,110 +1,107 @@
-@charset "UTF-8";
-
-
 // Navigation bar radius
-//$nav-bar-radius: 0;
-$nav-bar-radius: 8px;
-//$nav-bar-radius: 28px;  // full radius
+//$nav-bar-radius: 0 !default;
+$nav-bar-radius: 8px !default;
+//$nav-bar-radius: 28px !default;  // full radius
 
 
 // Search bar radius
-//$search-bar-radius: 0;
-$search-bar-radius: 8px;
-//$search-bar-radius: 21px;  // full rounded
+//$search-bar-radius: 0 !default;
+$search-bar-radius: 8px !default;
+//$search-bar-radius: 21px !default;  // full rounded
 
 
 // Button radius settings
-//$button-radius: 0;
-$button-radius: 8px;
+//$button-radius: 0 !default;
+$button-radius: 8px !default;
 
 
 // Card radius settings
-//$card-radius: 0;
-$card-radius: 8px;
+//$card-radius: 0 !default;
+$card-radius: 8px !default;
 
 
 // Dialog radius settings
-//$dialog-radius: 0;
-$dialog-radius: 8px;
+//$dialog-radius: 0 !default;
+$dialog-radius: 8px !default;
 
 
 // Menu radius settings
-//$menu-radius: 0;
-$menu-radius: 8px;
+//$menu-radius: 0 !default;
+$menu-radius: 8px !default;
 
 
 // Table radius settings
-//$table-radius: 0;
-//$table-radius: 2px;
-$table-radius: 8px;
+//$table-radius: 0 !default;
+//$table-radius: 2px !default;
+$table-radius: 8px !default;
 
 
 // Media radius settings
-$media-radius: 0;
-//$media-radius: 2px;
-//$media-radius: 8px;
+$media-radius: 0 !default;
+//$media-radius: 2px !default;
+//$media-radius: 8px !default;
 
 
 // Navigation drawer item settings
-//$nav-drawer-item-radius: 0;  // rectangle
-$nav-drawer-item-radius: 8px;  // corner rounded
-//$nav-drawer-item-radius: 24px;  // full rounded
+//$nav-drawer-item-radius: 0 !default;  // rectangle
+$nav-drawer-item-radius: 8px !default;  // corner rounded
+//$nav-drawer-item-radius: 24px !default;  // full rounded
 
 
 // Avatar cropping settings
-$avatar-radius: 50%;  // Rounded cropping
-//$avatar-radius: $card-radius;  // Fit to card radius
-//$avatar-radius: 0;  // without cropping
-//$avatar-radius: 2px;  // Material v1 square
-//$avatar-radius: 8px;  // Material v2 square
+$avatar-radius: 50% !default;  // Circular cropping
+//$avatar-radius: $card-radius !default;  // Fit to card radius
+//$avatar-radius: 0 !default;  // without cropping
+//$avatar-radius: 2px !default;  // Material v1 rounded square
+//$avatar-radius: 8px !default;  // Material v2 rounded square
 
 
 // Tab indicator thickness
-//$tab-indicator-thickness: 0;
-//$tab-indicator-thickness: 2px;
-$tab-indicator-thickness: 4px;
+//$tab-indicator-thickness: 0 !default;
+//$tab-indicator-thickness: 2px !default;
+$tab-indicator-thickness: 4px !default;
 
 
 // Chip settings
-$chip-type: outlined;  // Material v2 styled outlined chip
-//$outlined-chip: contained;  // Material v1 styled contained chip
+$chip-type: outlined !default;  // Material v2 styled outlined chip
+//$outlined-chip: contained !default;  // Material v1 styled contained chip
 
-//$chip-size: 16px;  // Chip height: 24px, Icon size: 16px (Mastodon default)
-//$chip-size: 20px;  // Chip height: 28px, Icon size: 20px
-$chip-size: 24px;  // Chip height: 32px, Icon size: 24px
+//$chip-size: 16px !default;  // Chip height: 24px, Icon size: 16px (Mastodon default)
+//$chip-size: 20px !default;  // Chip height: 28px, Icon size: 20px
+$chip-size: 24px !default;  // Chip height: 32px, Icon size: 24px
 
-//$chip-radius: 0;  // Rectangle
-//$chip-radius: 4px;  // Rounded corner
-//$chip-radius: 8px;  // Rounded corner (Material v3)
-$chip-radius: 17px;  // Oval
+//$chip-radius: 0 !default;  // Rectangle
+//$chip-radius: 4px !default;  // Rounded corner
+//$chip-radius: 8px !default;  // Rounded corner (Material v3)
+$chip-radius: 17px !default;  // Oval
 
 
 // Button on statuses
-$button-on-status: text;  // Material v1 styled text button
-//$button-on-status: outlined;  // Material v2 styled outlined button
+$button-on-status: text !default;  // Material v1 styled text button
+//$button-on-status: outlined !default;  // Material v2 styled outlined button
 
 
 // Button shadow
-$button-shadow: true;  // Material v1 styled colored button with shadow
-//$button-shadow: false;  // Material v2 styled colored button without shadow
+$button-shadow: true !default;  // Material v1 styled colored button with shadow
+//$button-shadow: false !default;  // Material v2 styled colored button without shadow
 
 
 // Floating Action Button size
-$fab-size: 56px;  // Regular
-//$fab-size: 40px;  // Mini
+$fab-size: 56px !default;  // Regular
+//$fab-size: 40px !default;  // Mini
 
 
 // CW text field border
-$cw-area-border: none;
-//$cw-area-border: underlined;
-//$cw-area-border: outlined;
+$cw-area-border: none !default;
+//$cw-area-border: underlined !default;
+//$cw-area-border: outlined !default;
 
 // Compose text field border
-$compose-area-border: none;
-//$compose-area-border: underlined;
-//$compose-area-border: outlined;
+$compose-area-border: none !default;
+//$compose-area-border: underlined !default;
+//$compose-area-border: outlined !default;
 
 // Other text field border
-$other-text-area-border: underlined;
-//$other-text-area-border: outlined;
-//$other-text-area-border: none;
+$other-text-area-border: underlined !default;
+//$other-text-area-border: outlined !default;
+//$other-text-area-border: none !default;

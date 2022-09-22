@@ -1,5 +1,5 @@
 @use 'mixins' as *;
-@use 'base_config' as *;
+@use '../config' as *;
 
 .media-gallery {
     border-radius: $media-radius;

@@ -1,6 +1,6 @@
 @use 'mixins' as *;
-@use 'base_config' as *;
-@use 'material-shadow' as *;
+@use '../config' as *;
+@use 'shadow' as *;
 
 .simple_form {
     .fields-row {
@@ -158,7 +158,7 @@
     &.notice {
         border: none;
         background: $succeeded-card-bg-color;
-        color: $verified-color;
+        color: $positive-color;
     }
 }
 

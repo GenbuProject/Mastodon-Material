@@ -1,6 +1,6 @@
 @use 'mixins' as *;
-@use 'base_config' as *;
-@use 'material-shadow' as *;
+@use '../config' as *;
+@use 'shadow' as *;
 
 .status {
     padding: 16px 16px 8px 72px;

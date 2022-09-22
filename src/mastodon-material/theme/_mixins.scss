@@ -1,6 +1,5 @@
-@use '../theme/base_config' as *;
-@use '../theme/base_icon_config' as *;
-@use 'material-shadow' as *;
+@use '../config' as *;
+@use 'shadow' as *;
 
 @mixin material-transition { transition: .25s cubic-bezier(0,0,0.2,1) }
 

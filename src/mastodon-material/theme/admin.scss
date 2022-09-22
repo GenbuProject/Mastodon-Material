@@ -1,5 +1,5 @@
-@use 'base_config' as *;
-@use 'material-shadow' as *;
+@use '../config' as *;
+@use 'shadow' as *;
 
 .admin-wrapper {
     .sidebar-wrapper__inner { background: $bg-color }
@@ -83,9 +83,11 @@
             a { color: $link-text-color }
         }
 
-        .positive-hint { color: $verified-color }
+        .positive-hint { color: $positive-text-color }
 
         .neutral-hint { color: $tips-text-color }
+
+        .warning-hint { color: $caution-text-color }
 
         .directory__tag h4 { color: $ui-text-color }
 
@@ -170,7 +172,7 @@
 }
 
 body {
-    .positive-hint { color: $verified-color }
+    .positive-hint { color: $positive-text-color }
     
     .muted-hint {
         color: $ui-text-color;
@@ -179,6 +181,8 @@ body {
     }
 
     .neutral-hint { color: $tips-text-color }
+
+    .warning-hint { color: $caution-text-color }
 }
 
 .report-card {

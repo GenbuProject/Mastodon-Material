@@ -1,6 +1,6 @@
 @use 'mixins' as *;
-@use 'base_config' as *;
-@use 'material-shadow' as *;
+@use '../config' as *;
+@use 'shadow' as *;
 
 .account {
     border-bottom: 1px solid $border-color;

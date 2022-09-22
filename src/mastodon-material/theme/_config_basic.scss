@@ -1,0 +1,57 @@
+// Basic config
+
+// Search bar hover settings
+// You can enable/disable search bar floating.
+$search-bar-hover: false !default;
+
+
+// Status font size in timeline
+$status-font-size: 15px !default;  // mastodon default
+//$status-font-size: 16px !default;  // compatible with material design
+
+
+// Name font size in timeline status
+$name-font-size: 15px !default;  // mastodon default
+//$name-font-size: 16px !default;  // compatible with material design
+
+
+// Background image
+// If you want to use the local image, please put it in "../../".
+$bg-image: none !default;
+//$bg-image: "./image.png" !default;
+//$bg-image: "https://example.com/img/image.png" !default;
+
+
+// Columns transparency settings
+$bar-transparency: 1.0 !default;  // opacity
+//$bar-transparency: 0.8 !default;  // semi-transparent
+
+$column-transparency: 1.0 !default;  // opacity
+//$column-transparency: 0.8 !default;  // semi-transparent
+
+
+
+// Icon settings
+// Favorite icon settings
+$favorite-icon: "star" !default; $favorite-icon-border: "star_border" !default;  // Star
+//$favorite-icon: "favorite" !default; $favorite-icon-border: "favorite_border" !default;  // Heart
+//$favorite-icon: "plus_one" !default; $favorite-icon-border: "plus_one" !default;  // +1
+
+
+// Reply icon settings
+$reply-icon: "reply" !default;
+//$reply-icon: "comment" !default;  // blooming
+
+
+// Material Design Icon settings
+// If you want to use self-hosting font, please place MaterialIcons-Regular.woff2 file in '../../fonts' folder and configure below.
+$icon-font-source: google !default;  // Google Fonts
+//$icon-font-source: github !default;  // GitHub
+//$icon-font-source: self !default;  // Self-hosting
+
+// Material Icon style settings
+$icon-font-style: filled !default;
+//$icon-font-style: outlined !default;
+//$icon-font-style: round !default;
+//$icon-font-style: sharp !default;
+//$icon-font-style: two-tone !default;
