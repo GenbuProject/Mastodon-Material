@@ -1,5 +1,5 @@
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .admin-wrapper {
     .sidebar-wrapper__inner { background: $bg-color }
@@ -121,7 +121,7 @@
 
         &__content,
         &__fields {
-            @include shadow-1dp;
+            @include elevation-1dp;
             background: $list-bg-color;
             border-radius: $table-radius;
     
@@ -186,7 +186,7 @@ body {
 }
 
 .report-card {
-    @include shadow-1dp;
+    @include elevation-1dp;
     background: $card-bg-color;
     border-radius: $card-radius;
     margin-bottom: 16px;
@@ -265,7 +265,7 @@ body {
 
             &>div,
             &>a {
-                @include shadow-1dp;
+                @include elevation-1dp;
                 padding: 16px;
                 background: $card-bg-color;
                 border-radius: $card-radius;

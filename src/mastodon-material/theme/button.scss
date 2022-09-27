@@ -1,6 +1,6 @@
 @use 'mixins' as *;
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 @include button-shadow;
 
@@ -111,7 +111,7 @@ label.icon-button {
     }
 
     &:hover {
-        @include shadow-2dp;
+        @include elevation-2dp;
         background-color: $contained-button-hover-color;
     }
 
@@ -121,8 +121,13 @@ label.icon-button {
     
         &:active,
         &:focus,
-        &:hover,
-        .button--destructive:hover { background: $contained-button-hover-color }
+        &:hover { background-color: $contained-button-hover-color }
+
+        &.button--destructive {
+            &:active,
+            &:focus,
+            &:hover { background-color: $warning-button-color }
+        }
     }
 
     &:disabled,

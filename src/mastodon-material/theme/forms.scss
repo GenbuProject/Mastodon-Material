@@ -1,6 +1,6 @@
 @use 'mixins' as *;
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .simple_form {
     .fields-row {
@@ -118,14 +118,7 @@
     input[type=text],
     input[type=url],
     textarea {
-        @include text-area-border($other-text-area-border);
-        padding: 16px;
-
-        &:active,
-        &:focus {
-            background: $text-field-bg-color;
-            padding: 16px 16px 15px;
-        }
+        @include text-field($other-text-field-border, 16px, 16px);
 
         &::placeholder { color: $tips-text-color }
     }
@@ -140,7 +133,7 @@
 }
 
 .flash-message {
-    @include shadow-1dp;
+    @include elevation-1dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;

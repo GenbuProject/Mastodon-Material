@@ -40,7 +40,9 @@ $list-bg-hover-color: lighten($list-bg-color, 6%) !default;
 $list-bg-active-color: lighten($list-bg-color, 10%) !default;
 $list-bg-active-hover-color: lighten($list-bg-color, 16%) !default;
 $list-bg-inactive-color: lighten($list-bg-color, 10%) !default;
-$text-field-bg-color: $card-bg-color !default;
+$text-field-filled-bg-color: #424242 !default;
+$text-field-filled-bg-hover-color: lighten($text-field-filled-bg-color, 6%) !default;
+$text-field-filled-bg-active-color: lighten($text-field-filled-bg-color, 10%) !default;
 $dropdown-field-bg-color: lighten($bg-color, 6%) !default;
 $dropdown-field-bg-hover-color: lighten($dropdown-field-bg-color, 6%) !default;
 $dropdown-field-bg-active-color: lighten($dropdown-field-bg-color, 10%) !default;
@@ -108,6 +110,7 @@ $floating-action-button-color: $primary-color !default;
 $floating-action-button-hover-color: lighten($floating-action-button-color, 6%) !default;
 $floating-action-button-active-color: lighten($floating-action-button-color, 10%) !default;
 $floating-action-button-icon-color: #ffffff !default;
+$warning-button-color: $error-color !default;
 
 // Toggle color
 $toggle-thumb-color: #ffffff !default;
@@ -119,6 +122,7 @@ $toggle-track-active-color: lighten($primary-color, 18%) !default;
 $border-color: #393f4f !default;
 $border-hover-color: lighten($border-color, 30%) !default;
 $border-active-color: $primary-color !default;
+$card-border-color: $border-color !default;
 
 // Scroll bar color
 $scroll-bar-thumb-color: lighten($bg-color, 16%) !default;

@@ -1,6 +1,6 @@
 @use 'mixins' as *;
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .modal-root {
     transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
@@ -12,7 +12,7 @@
 
 .drawer {
     &__header {
-        @include shadow-4dp;
+        @include elevation-4dp;
         background: $top-bar-color;
         border-radius: $nav-bar-radius;
         justify-content: space-around;
@@ -41,7 +41,7 @@
     }
 
     &__pager {
-        @include shadow-1dp;
+        @include elevation-1dp;
         border-radius: $card-radius;
     }
 
@@ -71,7 +71,7 @@
         opacity: $bar-transparency;
 
         &:focus {
-            @include shadow-2dp;
+            @include elevation-2dp;
             background: $search-bar-focus-color;
             color: $search-bar-text-color;
         }
@@ -107,7 +107,7 @@
 }
 
 .search-popout {
-    @include shadow-2dp;
+    @include elevation-2dp;
     background: $search-bar-focus-color;
     border-radius: 0px $nav-bar-radius;
     border-top: 1px solid $border-color;
@@ -176,7 +176,7 @@
 .flex-spacer { margin: 8px 0 }
 
 .dropdown-menu {
-    @include shadow-8dp;
+    @include elevation-8dp;
     background: $menu-bg-color;
     padding: 8px 0;
     border-radius: $menu-radius;
@@ -189,7 +189,8 @@
         background: $menu-bg-color;
         color: $menu-text-color;
 
-        &:hover, &:active {
+        &:hover,
+        &:active {
             background: $menu-bg-hover-color;
             color: $menu-text-color;
         }
@@ -206,10 +207,10 @@
 
     .autosuggest-textarea {
         &__textarea {
-            @include text-area-border($compose-area-border);
+            @include text-field($compose-field-border, 8px, 16px);
             padding: 8px 42px 8px 16px;
 
-            @if $compose-area-border == outlined {
+            @if $compose-field-border == outlined {
                 &:focus { padding: 7px 41px 7px 15px }
             }
     
@@ -217,7 +218,7 @@
         }
 
         &__suggestions {
-            @include shadow-1dp;
+            @include elevation-1dp;
             background: $menu-bg-color;
             color: $ui-text-color;
             border-radius: $card-radius;
@@ -241,12 +242,7 @@
         &.spoiler-input--visible { margin-bottom: 16px }
 
         &__input {
-            @include text-area-border($cw-area-border);
-            padding: 8px 16px;
-
-            @if $cw-area-border == outlined {
-                &:focus { padding: 7px 15px }
-            }
+            @include text-field($cw-text-field-border, 8px, 16px);
 
             &::placeholder { color: $tips-text-color }
         }
@@ -296,11 +292,11 @@
                 margin: 0 2px;
             }
 
-            .text-icon-button { line-height: 22px !important }
+            .text-icon-button { line-height: 21px !important }
         }
 
         &__poll-wrapper {
-            @if $compose-area-border == none {
+            @if $compose-field-border == none {
                 border-top: 1px solid $border-color;
             } @else { border-top: none }
 
@@ -331,7 +327,7 @@
     border-radius: $card-radius;
 
     .compose-form {
-        @include shadow-1dp;
+        @include elevation-1dp;
         background: $card-bg-color;
         padding-bottom: 16px;
         margin-bottom: 0;
@@ -386,7 +382,7 @@
 
     &__text input[type=text] {
         color: $ui-text-color;
-        background: $text-field-bg-color;
+        background: $text-field-filled-bg-color;
         border: 1px solid $border-color;
         padding: 8px 12px;
     
@@ -408,7 +404,7 @@
 
         input[type=text] {
             color: $primary-text-color;
-            background: $text-field-bg-color;
+            background: $text-field-filled-bg-color;
             border: none;
             border-radius: 2px;
             padding: 8px 16px;
@@ -447,7 +443,7 @@
     }
 
     &__dropdown {
-        @include shadow-8dp;
+        @include elevation-8dp;
         background: $menu-bg-color;
         border-radius: $dialog-radius;
     }
@@ -504,19 +500,19 @@
 .character-counter { color: $secondary-text-color }
 
 .reply-indicator {
-    @include card-elevation(false);
+    @include elevation-0dp;
+    border-radius: $card-radius;
+    background-color: transparent;
     padding: 16px;
 
     &__header { margin-bottom: 4px }
 
-    &__display {
-        &-name {
-            color: $primary-text-color;
-            padding-right: 24px;
-        }
-
-        &-avatar { margin-right: 8px }
+    &__display-name {
+        color: $primary-text-color;
+        padding-right: 24px;
     }
+    
+    &__display-avatar { margin-right: 8px }
 
     &__content {
         color: $primary-text-color;
@@ -532,7 +528,7 @@
 }
 
 .block-modal {
-    @include shadow-24dp;
+    @include elevation-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
@@ -582,7 +578,7 @@
 
 .directory {
     &__card {
-        @include shadow-1dp;
+        @include elevation-1dp;
         border-radius: $card-radius;
         margin-bottom: 16px;
 
@@ -627,7 +623,7 @@
 }
 
 .mute-modal {
-    @include shadow-24dp;
+    @include elevation-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $card-radius;
@@ -772,3 +768,5 @@
 
     a { color: $link-text-color }
 }
+
+.inline-alert { color: $positive-text-color }

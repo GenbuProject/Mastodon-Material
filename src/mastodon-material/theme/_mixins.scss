@@ -1,25 +1,12 @@
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 @mixin material-transition { transition: .25s cubic-bezier(0,0,0.2,1) }
 
 @mixin search-bar-hover {
     @if $search-bar-hover {
-        @include shadow-2dp;
+        @include elevation-2dp;
         background: $search-bar-focus-color;
-    }
-}
-
-@mixin card-elevation($elevation) {
-    border-radius: $card-radius;
-    background: $card-bg-color;
-
-    @if $elevation {
-        @include shadow-1dp;
-        border: none;
-    } @else {
-        box-shadow: none;
-        border: 1px solid $border-color;
     }
 }
 
@@ -48,7 +35,7 @@
     font-weight: 500;
     
     @if $button-type == contained {
-        @if $button-shadow { @include shadow-1dp }
+        @if $button-shadow { @include elevation-1dp }
         background: $contained-button-color;
         color: $contained-button-text-color;
 
@@ -84,31 +71,60 @@
         .button,
         .block-button,
         .input-copy button,
-        .compose-form .compose-form__publish-button-wrapper { @include shadow-2dp }
+        .compose-form .compose-form__publish-button-wrapper { @include elevation-2dp }
     }
 }
 
-@mixin text-area-border($text-area-border) {
-    background: $text-field-bg-color;
+@mixin text-field($text-field-border, $padding-horizontal, $padding-vertical) {
     color: $text-field-color;
 
     &:hover { border-color: $border-hover-color }
 
-    @if $text-area-border == underlined {
+    @if $text-field-border == none {
+        background-color: transparent;
+        border-radius: 0;
+        border: 0;
+        padding: $padding-horizontal, $padding-vertical;
+
+        &:hover,
+        &:active,
+        &:focus { border: 0 }
+    }
+
+    @if $text-field-border == underlined {
+        background-color: $text-field-filled-bg-color;
         border-radius: $card-radius $card-radius 0 0;
         border: 0;
         border-bottom: 1px solid $border-color;
+        padding: $padding-horizontal $padding-vertical $padding-horizontal - 1px;
+
+        &:hover {
+            background-color: $text-field-filled-bg-hover-color;
+            border-bottom: 1px solid $border-hover-color;
+            padding: $padding-horizontal $padding-vertical $padding-horizontal - 1px;
+        }
 
         &:active,
-        &:focus { border-bottom: 2px solid $border-active-color }
+        &:focus,
+        &:focus-within {
+            background-color: $text-field-filled-bg-active-color;
+            border-bottom: 2px solid $border-active-color;
+            padding: $padding-horizontal $padding-vertical $padding-horizontal - 2px;
+        }
     }
 
-    @if $text-area-border == outlined {
+    @if $text-field-border == outlined {
+        background-color: transparent;
         border-radius: $card-radius;
         border: 1px solid $border-color;
+        padding: $padding-horizontal - 1px $padding-vertical - 1px;
 
         &:active,
-        &:focus { border: 2px solid $border-active-color }
+        &:focus {
+            background-color: transparent;
+            border: 2px solid $border-active-color;
+            padding: $padding-horizontal - 2px, $padding-vertical - 2px;
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 @use 'mixins' as *;
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .account {
     border-bottom: 1px solid $border-color;
@@ -138,12 +138,12 @@
         }
 
         &__account-note {
-            padding: 8px 16px;
-            border-bottom: 1px solid $border-color;
+            @include text-field($other-text-field-border, 8px, 16px);
+            margin-top: 16px;
 
             label {
                 color: $ui-text-color;
-                margin-bottom: 8px;
+                margin-bottom: 0;
             }
 
             textarea {
@@ -227,7 +227,7 @@
 
 .card {
     &>a {
-        @include shadow-1dp;
+        @include elevation-1dp;
         
         &:active .card__bar,
         &:focus .card__bar,

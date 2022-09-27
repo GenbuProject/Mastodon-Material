@@ -68,13 +68,13 @@ $fab-size: 56px !default;
 
 
 // CW text field border
-$cw-area-border: underlined !default;
-//$cw-area-border: none !default;
+$cw-text-field-border: underlined !default;
+//$cw-text-field-border: none !default;
 
 // Compose text field border
-$compose-area-border: none !default;
-//$compose-area-border: underlined !default;
+$compose-field-border: underlined !default;
+//$compose-field-border: none !default;
 
 // Other text field border
-$other-text-area-border: underlined !default;
-//$other-text-area-border: none !default;
+$other-text-field-border: underlined !default;
+//$other-text-field-border: none !default;

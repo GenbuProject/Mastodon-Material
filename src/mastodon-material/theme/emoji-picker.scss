@@ -1,16 +1,16 @@
-@use 'shadow' as *;
+@use 'elevation' as *;
 @use '../config' as *;
 
 .emoji-picker-dropdown {
     &__menu {
-        @include shadow-8dp;
+        @include elevation-8dp;
         background: $menu-bg-color;
         border-radius: $menu-radius;
         margin-top: 0;
     }
 
     &__modifiers__menu {
-        @include shadow-8dp;
+        @include elevation-8dp;
         background: $menu-bg-color;
         border-radius: $menu-radius;
 
@@ -71,7 +71,7 @@
             border-radius: $search-bar-radius;
 
             &:focus {
-                @include shadow-2dp;
+                @include elevation-2dp;
                 background: $search-bar-focus-color;
                 color: $search-bar-text-color;
             }

@@ -1,5 +1,5 @@
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .actions-modal,
 .block-modal,
@@ -7,7 +7,7 @@
 .confirmation-modal,
 .mute-modal,
 .report-modal {
-    @include shadow-24dp;
+    @include elevation-24dp;
     background: $card-bg-color;
     color: $ui-text-color;
     border-radius: $dialog-radius;

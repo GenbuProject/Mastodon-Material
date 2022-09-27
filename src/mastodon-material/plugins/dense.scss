@@ -1,3 +1,9 @@
+@mixin icon-button {
+    width: 28px !important;
+    height: 28px !important;
+    padding: 4px;
+}
+
 .drawer {
     &__header { height: 48px }
 
@@ -36,7 +42,7 @@
 
         &__buttons-wrapper {
             .icon-button,
-            .text-icon-button { padding: 4px }
+            .text-icon-button { @include icon-button }
         }
     }
 }
@@ -63,7 +69,11 @@
     &__action-bar-button {
         margin: 0 4px;
 
-        &.icon-button { padding: 4px }
+        &.icon-button {
+            @include icon-button;
+
+            &--with-counter { width: auto !important }
+        }
     }
 
     &__action-bar-dropdown {
@@ -71,7 +81,7 @@
         height: 28px !important;
         margin: 0 4px;
 
-        .icon-button { padding: 4px }
+        .icon-button { @include icon-button }
     }
 }
 

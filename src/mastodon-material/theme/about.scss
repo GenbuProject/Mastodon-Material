@@ -1,9 +1,9 @@
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .landing-page {
     &__call-to-action {
-        @include shadow-2dp;
+        @include elevation-2dp;
         background: $card-bg-color;
         border-radius: $card-radius;
         padding: 24px 36px;

@@ -1,5 +1,5 @@
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .tabs-bar {
     background: $top-bar-color;
@@ -23,7 +23,7 @@
     }
 
     &__wrapper {
-        @include shadow-4dp;
+        @include elevation-4dp;
         background: transparent;
     }
 }
@@ -31,7 +31,7 @@
 #tabs-bar__portal { overflow-y: hidden }
 
 .floating-action-button {
-    @include shadow-6dp;
+    @include elevation-6dp;
     background: $floating-action-button-color;
     color: $floating-action-button-icon-color;
     font-size: 24px;
@@ -98,7 +98,7 @@
 
     .columns-area__panels {
         &__main {
-            @include shadow-1dp;
+            @include elevation-1dp;
             padding: 0;
         }
 
@@ -144,7 +144,7 @@
             }
         }
 
-        .sidebar-wrapper { @include shadow-4dp }
+        .sidebar-wrapper { @include elevation-4dp }
     }
 
     .public-layout .public-account-header {

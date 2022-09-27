@@ -1,6 +1,6 @@
 @use 'mixins' as *;
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .status {
     padding: 16px 16px 8px 72px;
@@ -273,7 +273,7 @@ a.status-card {
 }
 
 .activity-stream {
-    @include shadow-1dp;
+    @include elevation-1dp;
     margin-bottom: 16px;
     border-radius: $card-radius;
 

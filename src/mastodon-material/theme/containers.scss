@@ -1,9 +1,9 @@
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .public-layout {
     .header {
-        @include shadow-4dp;
+        @include elevation-4dp;
         background: $top-bar-color;
         border-radius: $nav-bar-radius;
         margin: 16px 0;
@@ -59,12 +59,12 @@
     }
 
     .account__section-headline {
-        @include shadow-1dp;
+        @include elevation-1dp;
         border-radius: $card-radius $card-radius 0 0;
     }
 
     .public-account-header {
-        @include shadow-2dp;
+        @include elevation-2dp;
         margin-bottom: 16px;
 
         &__image {
@@ -105,7 +105,7 @@
 
             &__tabs {
                 .counter {
-                    color: $secondary-text-color;
+                    color: $tab-item-color;
                     padding: 8px 16px;
                     border-right: none;
 
@@ -121,7 +121,7 @@
                     &:hover { background: $tab-bg-hover-color }
 
                     .counter-number {
-                        color: $ui-text-color;
+                        color: $tab-item-active-color;
                         margin-bottom: 6px;
                     }
                 }
@@ -150,7 +150,7 @@
     }
 
     .public-account-bio {
-        @include shadow-2dp;
+        @include elevation-2dp;
         background: $card-bg-color;
         border-radius: $card-radius;
         margin-bottom: 16px;

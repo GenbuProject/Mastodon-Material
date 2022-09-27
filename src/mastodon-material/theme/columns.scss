@@ -1,9 +1,9 @@
 @use 'mixins' as *;
 @use '../config' as *;
-@use 'shadow' as *;
+@use 'elevation' as *;
 
 .column {
-    @include shadow-1dp;
+    @include elevation-1dp;
     padding: 0;
     margin: 10px 8px;
     border-radius: $card-radius;
@@ -17,12 +17,12 @@
 
     &:last-child {
         box-shadow: none;
-        &:has(.scrollable) { @include shadow-1dp }
+        &:has(.scrollable) { @include elevation-1dp }
     }
 }
 
 .column-header {
-    @include shadow-4dp;
+    @include elevation-4dp;
     background: $top-bar-color;
     border-radius: $card-radius $card-radius 0 0;
 
@@ -114,7 +114,7 @@
         .announcements { border-bottom: 1px solid $border-color }
 
         &.active {
-            @include shadow-4dp;
+            @include elevation-4dp;
 
             &::before { background: transparent }
         }
@@ -162,7 +162,7 @@
 .column-link {
     color: $ui-text-color;
     background: $bg-color;
-    padding: 14px;
+    padding: 14px 16px;
     border-radius: $nav-drawer-item-radius;
 
     &:hover { background: $list-bg-hover-color }
@@ -208,7 +208,7 @@
 }
 
 .column-back-button {
-    @include shadow-4dp;
+    @include elevation-4dp;
     background: $top-bar-color;
     color: $top-bar-icon-color;
     padding: 16px;
@@ -239,7 +239,7 @@
 
 .setting-text {
     color: $primary-text-color;
-    background: $text-field-bg-color;
+    background: $text-field-filled-bg-color;
     border-radius: $nav-bar-radius;
 
     &::placeholder { color: $tips-text-color }

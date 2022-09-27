@@ -1,4 +1,10 @@
-@use '../theme/config' as *;
+@use '../config' as *;
+@use '../theme/elevation';
+
+@mixin card {
+    border-radius: $card-radius;
+    background-color: $card-bg-color;
+}
 
 .column {
     box-shadow: none !important;
@@ -23,9 +29,8 @@
 }
 
 .status {
+    @include card;
     border-bottom: 0;
-    border-radius: $card-radius;
-    background: $card-bg-color;
 
     &__prepend { padding: 8px 8px 2px 0 }
 }
@@ -34,8 +39,7 @@
 
 .status__wrapper.status__wrapper,
 .notification.notification {
-    @include shadow-1dp;
+    @include card;
+    @include elevation-1dp;
     margin: 8px 2px;
-    border-radius: $card-radius;
-    background: $card-bg-color;
 }

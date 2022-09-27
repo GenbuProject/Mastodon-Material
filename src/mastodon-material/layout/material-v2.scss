@@ -92,16 +92,16 @@ $fab-size: 56px !default;  // Regular
 
 
 // CW text field border
-$cw-area-border: none !default;
-//$cw-area-border: underlined !default;
-//$cw-area-border: outlined !default;
+$cw-text-field-border: none !default;
+//$cw-text-field-border: underlined !default;
+//$cw-text-field-border: outlined !default;
 
 // Compose text field border
-$compose-area-border: none !default;
-//$compose-area-border: underlined !default;
-//$compose-area-border: outlined !default;
+$compose-field-border: outlined !default;
+//$compose-field-border: none !default;
+//$compose-field-border: underlined !default;
 
 // Other text field border
-$other-text-area-border: underlined !default;
-//$other-text-area-border: outlined !default;
-//$other-text-area-border: none !default;
+$other-text-field-border: underlined !default;
+//$other-text-field-border: outlined !default;
+//$other-text-field-border: none !default;
