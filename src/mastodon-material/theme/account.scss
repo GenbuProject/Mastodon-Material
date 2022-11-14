@@ -11,6 +11,7 @@
 
     &__avatar {
         border-radius: $avatar-radius;
+        background-size: 48px 48px;
 
         &-overlay {
             &-base { border-radius: $avatar-radius }

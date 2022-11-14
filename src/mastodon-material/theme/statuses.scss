@@ -202,7 +202,21 @@ a.status-card {
 }
 
 .embed .status,
-.public-layout .status { padding: 16px 16px 16px 80px }
+.public-layout .status {
+    padding: 16px 16px 8px 80px;
+
+    &__prepend {
+        padding-top: 16px;
+        margin-left: 80px;
+    }
+
+    &__avatar {
+        left: 16px;
+        top: 16px;
+    }
+
+    &__action-bar { margin-top: 8px }
+}
 
 // Detailed status in mobile
 .status.light {

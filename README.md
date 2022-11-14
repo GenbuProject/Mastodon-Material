@@ -11,6 +11,7 @@
 Mastodon Material is the native theme for Mastodon, which based on [Material Design](https://material.io). Development policy is [here (Japanese)](docs/development_policy_ja.md).
 
 ## Screenshots
+
 <details>
 <summary>show/hide</summary>
 
@@ -43,119 +44,7 @@ mastodon-dark + material-v1
 
 ## How to install
 
-1. Copy these files of this repository into `app/javascript/styles` of Mastodon source directory.
-   
-   * `/src/mastodon-material/`
-   * `/src/mastodon-material.scss`
-
-2. Add the below code on `config/themes.yml` 
-   
-   ```yml
-   default: styles/application.scss
-   contrast: styles/contrast.scss
-   mastodon-light: styles/mastodon-light.scss
-   
-   # Added theme
-   mastodon-material: styles/mastodon-material.scss # add this line
-   ```
-
-3. If you want to change the display theme name in your language, add localization strings to `config/locales/{lang}.yml` like below (At least `config/locales/en.yml` is **REQUIRED**)
-   
-   ```yml
-   themes:
-    contrast: High contrast
-    default: Mastodon
-    mastodon-light: Mastodon (light)
-   
-    # Added theme
-    mastodon-material: Mastodon Material # add this line
-   ```
-
-4. If you configure to use the webfont on Google Fonts (default) or on GitHub, you need to add an exception to *CSP (Content Security Policy)*. Make sure to change `config/initializers/content_security_policy.rb` :
-   
-   ```ruby
-   def host_to_url(str)
-    "http#{Rails.configuration.x.use_https ? 's' : ''}://#{str}" unless str.blank?
-   end
-   base_host = Rails.configuration.x.web_domain
-   assets_host = Rails.configuration.action_controller.asset_host
-   assets_host ||= host_to_url(base_host)
-   media_host = host_to_url(ENV['S3_ALIAS_HOST'])
-   media_host ||= host_to_url(ENV['S3_CLOUDFRONT_HOST'])
-   media_host ||= host_to_url(ENV['S3_HOSTNAME']) if ENV['S3_ENABLED'] == 'true'
-   media_host ||= assets_host
-   Rails.application.config.content_security_policy do |p|
-    p.base_uri :none
-    p.default_src :none
-    p.frame_ancestors :none
-    p.font_src :self, assets_host
-    p.img_src :self, :https, :data, :blob, assets_host
-    p.style_src :self, :unsafe_inline, assets_host
-    p.media_src :self, :https, :data, assets_host
-    p.frame_src :self, :https
-    p.manifest_src :self, assets_host
-   ```
-   
-   into
-   
-   ```ruby
-   def host_to_url(str)
-    "http#{Rails.configuration.x.use_https ? 's' : ''}://#{str}" unless str.blank?
-   end
-   base_host = Rails.configuration.x.web_domain
-   assets_host = Rails.configuration.action_controller.asset_host
-   assets_host ||= host_to_url(base_host)
-   media_host = host_to_url(ENV['S3_ALIAS_HOST'])
-   media_host ||= host_to_url(ENV['S3_CLOUDFRONT_HOST'])
-   media_host ||= host_to_url(ENV['S3_HOSTNAME']) if ENV['S3_ENABLED'] == 'true'
-   media_host ||= assets_host
-
-   # custom host
-   github_host = "https://raw.githubusercontent.com" # GitHub
-   google_fonts_host = "https://fonts.gstatic.com" # Google Fonts
-
-   Rails.application.config.content_security_policy do |p|
-    p.base_uri :none
-    p.default_src :none
-    p.frame_ancestors :none
-    p.font_src :self, assets_host, github_host, google_fonts_host
-    p.img_src :self, :https, :data, :blob, assets_host
-    p.style_src :self, :unsafe_inline, assets_host
-    p.media_src :self, :https, :data, assets_host
-    p.frame_src :self, :https
-    p.manifest_src :self, assets_host
-   ```
-
-   Diff
-   
-   ```diff
-   def host_to_url(str)
-    "http#{Rails.configuration.x.use_https ? 's' : ''}://#{str}" unless str.blank?
-   end
-   base_host = Rails.configuration.x.web_domain
-   assets_host = Rails.configuration.action_controller.asset_host
-   assets_host ||= host_to_url(base_host)
-   media_host = host_to_url(ENV['S3_ALIAS_HOST'])
-   media_host ||= host_to_url(ENV['S3_CLOUDFRONT_HOST'])
-   media_host ||= host_to_url(ENV['S3_HOSTNAME']) if ENV['S3_ENABLED'] == 'true'
-   media_host ||= assets_host
-
-   + # custom host
-   + github_host = "https://raw.githubusercontent.com" # GitHub
-   + google_fonts_host = "https://fonts.gstatic.com" # Google Fonts
-
-   Rails.application.config.content_security_policy do |p|
-    p.base_uri :none
-    p.default_src :none
-    p.frame_ancestors :none
-   - p.font_src :self, assets_host
-   + p.font_src :self, assets_host, github_host, google_fonts_host
-    p.img_src :self, :https, :data, :blob, assets_host
-    p.style_src :self, :unsafe_inline, assets_host
-    p.media_src :self, :https, :data, assets_host
-    p.frame_src :self, :https
-    p.manifest_src :self, assets_host
-   ```
+[Installation Guide](docs/installation_guide.md)
 
 ## Customization
 

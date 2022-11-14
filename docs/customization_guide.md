@@ -1,81 +1,70 @@
 # Customization Guide
 
 ## Language | 言語
+
 [日本語(Japanese)](customization_guide_ja.md)
 
-## Note
-These customizations are needed to modify source code. So, you need a permission to modify them.
+## Color and layout presets
 
-## Profiles
-Plugins, settings and any other customizations are stored as profiles. It can behave as multiple themes by switching profiles. The default profile is [`default`](../src/mastodon-material/profiles/default).
-
-## Create new profiles
-1. Duplicate [`default`](../src/mastodon-material/profiles/default) folder and change its name. The new folder name is called {profile_name} in this document.
-2. Duplicate [`mastodon-material.scss`](../src/mastodon-material.scss) and change its name to `{profile_name}.scss`. Confirm `{profile_name}.scss` is located in `app/javascript/styles`, Mastodon source directory as you installed this theme.
-3. Open `{profile_name}.scss` and change `@use 'mastodon-material/profiles/default/loader';` into `@use 'mastodon-material/profiles/{profile_name}/loader';`.
-4. Also refer [README.md](../README.md#How-to-install) to continue. Configure the new profile like below by editing `config/themes.yml`.
-  ```yml
-  default: styles/application.scss
-  contrast: styles/contrast.scss
-  mastodon-light: styles/mastodon-light.scss
-  
-  # Added theme
-  mastodon-material: styles/mastodon-material.scss
-  {profile_name}: styles/{profile_name}.scss # add this line
-  ```
-5. If you want to change the display theme name in your language, add localization strings to `config/locales/{lang}.yml` like below (At least `config/locales/en.yml` is **REQUIRED**)
-  ```yml
-  themes:
-   contrast: High contrast
-   default: Mastodon
-   mastodon-light: Mastodon (light)
-  
-  # Added theme
-   mastodon-material: Mastodon Material
-   {profile_name}: {display_name} # add this line
-  ```
+There are two types of profiles, color presets to set color schemes and layout presets.  
+You can configure color preset to edit the reference in `@forward '../color/v1-light'` in [`mastodon-material/config/_config_color.scss`](../src/mastodon-material/config/_config_color.scss).  
+You can configure layout preset to edit the reference in `@forward '../layout/material-v1'` in [`mastodon-material/config/_config_layout.scss`](../src/mastodon-material/config/_config_layout.scss).
 
 ## Basic Settings
-Please make reference to [`mastodon-material/theme/base_config.scss`](../src/mastodon-material/theme/base_config.scss) and write your change in `mastodon-material/profiles/{profile_name}/config.scss`. **DO NOT** edit [`base_config.scss`](../src/mastodon-material/theme/base_config.scss).
 
-### Color and layout presets
-There are two types of profiles, color presets and layout presets. Default color preset is `v1-light` and layout preset is `material-v1`. You can configure them by using `@use`.
+Please make reference to a base file, [`mastodon-material/theme/_config_basic.scss`](../src/mastodon-material/theme/_config_basic_.scss), and write your change in [`mastodon-material/config/_config_basic.scss`](../src/mastodon-material/config/_config_basic.scss). **DO NOT** edit the base file.
 
 ### Float search bar when cursor hovers
+
 <img src="res/search-bar-hover.gif" alt="search-bar hover">
 
-Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. Add `$search-bar-hover: true;`.
+`$search-bar-hover: true,`
+
+Search bar floats when cursor hovers (mouseover operation) and changes the background color into focusing one. To enable it, add `$search-bar-hover: true,`.  
+Default: `$search-bar-hover: false,`
 
 ### Change font size
-You can change font size of statuses body and display name. Set `$status-font-size` value to change font size of statuses contents and `$name-font-size` value to change of display name.
+
+You can change font size of statuses body and display name. Set `$status-font-size` value to change font size of statuses contents and `$name-font-size` value to change of display name.  
+Default:  
+`$status-font-size: 15px,`  
+`$name-font-size: 15px,`
 
 ### Set background image
-You can set a background image by `$bg-image` value. You should use relative path or URL and bracket it.
+
+You can set a background image by `$bg-image` value. You should use relative path or URL and bracket it by `""`.  
+Default: `$bg-image: none,`
 
 ### Change transparency
-You can change transparency of some elements. Change top bar and column transparency by setting `$bar-transparency` and `$column-transparency` value. Set a value between 0 and 1. 1 is opacity and 0 is transparent.
 
-## Icon settings
-Please make reference to [`mastodon-material/theme/base_icon_config.scss`](../src/mastodon-material/theme/base_icon_config.scss) and write your change in `mastodon-material/profiles/{profile_name}/icon_config.scss`. **DO NOT** edit [`base_icon_config.scss`](../src/mastodon-material/theme/base_icon_config.scss).
+You can change transparency of some elements. Change top bar and column transparency by setting `$bar-transparency` and `$column-transparency` value. Set a value between 0 and 1. 1 is opacity and 0 is transparent.  
+Default:  
+`$bar-transparency: 1,`  
+`$column-transparency: 1,`
 
 ### Change icon fonts host
+
 The default setting loads the icon fonts on Google Fonts.
 
-- **Use the font on GitHub (Unrecommended)**
-  Add `$icon-font-source: github;`.
+- **Use the font on GitHub repository (Unrecommended)**
+  
+  Add `$icon-font-source: github,`.
 
 - **Host the font on your server**
   
-  Add `$icon-font-source: self;`. Then, download font file from [official font repository](https://github.com/google/material-design-icons/tree/master/font) and put the font file into `/app/javascript/fonts`, Mastodon source directory.
+  Add `$icon-font-source: self,`. Then, download font file from [official font repository](https://github.com/google/material-design-icons/tree/master/font) and put the font file into `/app/javascript/fonts`, Mastodon source directory.
 
 ### Change icon fonts style
-The icon fonts have 5 styles, Filled, Outlined, Rounded, Two-Tone and Sharp. You can check how they look in [Icons - Material Design](https://material.io/resources/icons/). Edit `// Material Icon style settings` section to change it. The default style is Filled.
+
+The icon fonts have 5 styles, Filled, Outlined, Rounded, Two-Tone and Sharp. You can check how they look in [Material Symbols and Icons - Google Fonts](https://fonts.google.com/icons). Edit `// Material Icon style settings` section to change it. The default style is Filled.
 
 ## Plugins
-Uncomment what you want to enable in `mastodon-material/profiles/{profile_name}/loader.scss`.  
+
+Uncomment what you want to enable in [`mastodon-material/_index.scss`](../src/mastodon-material/_index.scss).  
 Check other resources in [this page](https://github.com/GenbuProject/Mastodon-Material-Gallery).
 
 ### Display statuses on timeline in a card style
+
 Change a default list style statuses in timeline into a card one. If you enable it, the less information are displayed in a card style than in a list one in a same density.
 
 Uncomment `@use 'plugins/cards';` to enable it.
@@ -87,21 +76,23 @@ Uncomment `@use 'plugins/cards';` to enable it.
 </details>
 
 ### Improve the browseability
-This theme based on Material Design Guideline strictly, the less information are displayed by the default settings than the mastodon default ones in a same density. This plugin (dense plugin) can make the information displayed more by ignoring the guideline.
+
+This theme based on Material Design Guideline strictly, the less information are displayed by the default settings than the mastodon default ones in a same density. Dense plugin can make the information displayed more by ignoring the guideline.
 
 Uncomment `@use 'plugins/dense';` to enable it.
 
 <details>
 <summary>show/hide screenshots</summary>
 
-Before
+Default
 ![before](res/mastodon-light.png)
 
-After
+Dense
 ![after](res/dense.png)
 </details>
 
-## (etc) Disable the material design icon font
-This theme use [Material Icons Font](https://google.github.io/material-design-icons/#icon-font-for-the-web) by Google to display Material Design icon. If you have some problem about license, you can use [Font Awesome](https://fontawesome.com/), default icon font without any bad effect on other UI in this theme.
+## Disable the material design icon font (Unrecommended)
 
-Open `mastodon-material/profiles/{profile_name}/loader.scss` and comment out `@use 'theme/material-icons';` to disable it.
+This theme use [Material Icons Font](https://fonts.google.com/icons) by Google to display Material Design icon. If you have some problem about license, you can use [Font Awesome](https://fontawesome.com/), default icon font without any bad effect on other UI in this theme.
+
+Open [`mastodon-material/theme/icons.scss`](../src/mastodon-material/theme/icons.scss) and comment out `@use 'material-icons';` to disable it.
