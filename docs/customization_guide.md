@@ -95,4 +95,4 @@ Dense
 
 This theme use [Material Icons Font](https://fonts.google.com/icons) by Google to display Material Design icon. If you have some problem about license, you can use [Font Awesome](https://fontawesome.com/), default icon font without any bad effect on other UI in this theme.
 
-Open [`mastodon-material/theme/icons.scss`](../src/mastodon-material/theme/icons.scss) and comment out `@use 'material-icons';` to disable it.
+Open [`mastodon-material/theme/_icons-loader.scss`](../src/mastodon-material/theme/_icons-loader.scss) and comment out `@forward 'material-icons';` to disable it.

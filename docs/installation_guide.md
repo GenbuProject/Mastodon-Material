@@ -1,5 +1,9 @@
 # Installation Guide
 
+## Language | 言語
+
+[日本語(Japanese)](installation_guide_ja.md)
+
 ## TOC
 
 > - [Requirements](installation_guide.md#requirements)

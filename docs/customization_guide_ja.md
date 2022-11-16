@@ -95,4 +95,4 @@
 
 このテーマでは、マテリアルデザインアイコンの表示にGoogle製[Material Iconsフォント](https://fonts.google.com/icons)を採用しています。ライセンス上の問題がある場合などに、このテーマの他のUIに影響を及ぼすことなくデフォルトのアイコンフォントである[Font Awesome](https://fontawesome.com/)を利用できます。
 
-[`mastodon-material/theme/icons.scss`](../src/mastodon-material/theme/icons.scss)を開き、`@use 'material-icons';`をコメントアウトしてください。
+[`mastodon-material/theme/_icons-loader.scss`](../src/mastodon-material/theme/_icons-loader.scss)を開き、`@forward 'material-icons';`をコメントアウトしてください。

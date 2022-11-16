@@ -1,5 +1,9 @@
 # 導入ガイド
 
+## 言語 | Language
+
+[English (英語)](installation_guide.md)
+
 ## 目次
 
 > - [必要なもの](installation_guide_ja.md#必要なもの)
@@ -157,7 +161,7 @@
 
    </details>
 
-> Mastodonを異なる環境で実行する場合や、Mastodon Materialをアップデートする際には`git`コマンドで`--recursive --remote`オプションを付けてsubmoduleのソースコードも取得するようにしてください。
+> Mastodonを異なる環境で実行する場合や、Mastodon Materialをアップデートする際には`git`コマンドで`--recursive --remote`オプションを付けてサブモジュールのソースコードも取得するようにしてください。
 
 ### 複数のMastodon Materialを導入する(サブモジュール)
 
