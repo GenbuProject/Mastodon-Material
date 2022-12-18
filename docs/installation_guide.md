@@ -288,6 +288,43 @@ git submodule update --recursive --remote
    
    </details>
 
+5. Edit [`/src/mastodon-material.scss`](../src/mastodon-material.scss) like below.
+   
+   Diff
+
+   ```diff
+   - @use '../../../application'; // for git submodule install
+   - //@use '../application'; // for copying file install
+   + //@use '../../../application'; // for git submodule install
+   + @use '../application'; // for copying file install
+   
+   @use 'mastodon-material';
+   ```
+   
+   <details>
+   <summary>Before</summary>
+
+   ```scss
+   @use '../../../application'; // for git submodule install
+   //@use '../application'; // for copying file install
+   
+   @use 'mastodon-material';
+   ```
+   
+   </details>
+
+   <details>
+   <summary>After</summary>
+
+   ```scss
+   //@use '../../../application'; // for git submodule install
+   @use '../application'; // for copying file install
+   
+   @use 'mastodon-material';
+   ```
+   
+   </details>
+
 5. Follow the steps from 4. in [Installing multiple Mastodon Material (by using submodules)](installation_guide.md#installing-multiple-mastodon-material-by-using-submodules).
 
 ### Updating Mastodon Material (by copying files)

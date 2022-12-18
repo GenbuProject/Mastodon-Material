@@ -288,7 +288,44 @@ git submodule update --recursive --remote
    
    </details>
 
-5. [複数のMastodon Materialを導入する(サブモジュール)](installation_guide_ja.md#複数のMastodon-Materialを導入する(サブモジュール))の4.以降に従ってください。
+5. [`/src/mastodon-material.scss`](../src/mastodon-material.scss)を以下のように編集してください。
+   
+   Diff
+
+   ```diff
+   - @use '../../../application'; // for git submodule install
+   - //@use '../application'; // for copying file install
+   + //@use '../../../application'; // for git submodule install
+   + @use '../application'; // for copying file install
+   
+   @use 'mastodon-material';
+   ```
+   
+   <details>
+   <summary>変更前</summary>
+
+   ```scss
+   @use '../../../application'; // for git submodule install
+   //@use '../application'; // for copying file install
+   
+   @use 'mastodon-material';
+   ```
+   
+   </details>
+
+   <details>
+   <summary>変更後</summary>
+
+   ```scss
+   //@use '../../../application'; // for git submodule install
+   @use '../application'; // for copying file install
+   
+   @use 'mastodon-material';
+   ```
+   
+   </details>
+
+6. [複数のMastodon Materialを導入する(サブモジュール)](installation_guide_ja.md#複数のMastodon-Materialを導入する(サブモジュール))の4.以降に従ってください。
 
 ### Mastodon Materialのアップデート(ファイルコピー)
 

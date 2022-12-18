@@ -1,2 +1,4 @@
-@use 'application';
+@use '../../../application'; // for git submodule install
+//@use '../application'; // for copying file install
+
 @use 'mastodon-material';
