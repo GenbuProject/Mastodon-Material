@@ -7,12 +7,12 @@
 ## Color and layout presets
 
 There are two types of profiles, color presets to set color schemes and layout presets.  
-You can configure color preset to edit the reference in `@forward '../color/v1-light'` in [`mastodon-material/config/_config_color.scss`](../src/mastodon-material/config/_config_color.scss).  
-You can configure layout preset to edit the reference in `@forward '../layout/material-v1'` in [`mastodon-material/config/_config_layout.scss`](../src/mastodon-material/config/_config_layout.scss).
+You can configure color preset to edit the reference in `@forward '../../color/v1-light'` in [`mastodon-material/config/default/_config_color.scss`](../src/mastodon-material/config/default/_config_color.scss).  
+You can configure layout preset to edit the reference in `@forward '../../layout/material-v1'` in [`mastodon-material/config/default/_config_layout.scss`](../src/mastodon-material/config/default/_config_layout.scss).
 
 ## Basic Settings
 
-Please make reference to a base file, [`mastodon-material/theme/_config_basic.scss`](../src/mastodon-material/theme/_config_basic_.scss), and write your change in [`mastodon-material/config/_config_basic.scss`](../src/mastodon-material/config/_config_basic.scss). **DO NOT** edit the base file.
+Please make reference to a base file, [`mastodon-material/theme/_config_basic.scss`](../src/mastodon-material/theme/_config_basic_.scss), and write your change in [`mastodon-material/config/default/_config_basic.scss`](../src/mastodon-material/config/default/_config_basic.scss). **DO NOT** edit the base file.
 
 ### Float search bar when cursor hovers
 

@@ -7,12 +7,12 @@
 ## 配色とレイアウトのプリセット
 
 配色を設定するカラープリセットとレイアウトプリセットの2種類があります。  
-カラープリセットは[`mastodon-material/config/_config_color.scss`](../src/mastodon-material/config/_config_color.scss)の`@forward '../color/v1-light'`で参照するファイルを設定します。  
-レイアウトプリセットは[`mastodon-material/config/_config_layout.scss`](../src/mastodon-material/config/_config_layout.scss)の`@forward '../layout/material-v1'`で参照するファイルを設定します。
+カラープリセットは[`mastodon-material/config/default/_config_color.scss`](../src/mastodon-material/config/default/_config_color.scss)の`@forward '../../color/v1-light'`で参照するファイルを設定します。  
+レイアウトプリセットは[`mastodon-material/config/default/_config_layout.scss`](../src/mastodon-material/config/default/_config_layout.scss)の`@forward '../../layout/material-v1'`で参照するファイルを設定します。
 
 ## 基本設定
 
-[`mastodon-material/config/_config_basic.scss`](../src/mastodon-material/config/_config_basic.scss)に記述します。ベースファイルである[`mastodon-material/theme/_config_basic.scss`](../src/mastodon-material/theme/_config_basic_.scss)を参考にしてください。ただし、ベースファイルは**編集しないでください**。
+[`mastodon-material/config/default/_config_basic.scss`](../src/mastodon-material/config/default/_config_basic.scss)に記述します。ベースファイルである[`mastodon-material/theme/_config_basic.scss`](../src/mastodon-material/theme/_config_basic_.scss)を参考にしてください。ただし、ベースファイルは**編集しないでください**。
 
 ### 検索バーをホバー時に浮き上がらせる
 
