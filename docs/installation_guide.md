@@ -182,7 +182,7 @@ If you want to use Mastodon Material with multiple settings, refer [Install mult
    mastodon-light: styles/mastodon-light.scss
    
    # Added theme
-   {profile_name}: styles/{profile_name}/src/{profile_name}.scss # Add this line
+   {profile_name}: styles/{profile_name}/src/mastodon-material.scss # Add this line
    …
    ```
 

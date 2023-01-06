@@ -182,7 +182,7 @@
    mastodon-light: styles/mastodon-light.scss
    
    # 追加テーマ
-   {プロファイル名}: styles/{プロファイル名}/src/{プロファイル名}.scss # この行を追記
+   {プロファイル名}: styles/{プロファイル名}/src/mastodon-material.scss # この行を追記
    …
    ```
 
